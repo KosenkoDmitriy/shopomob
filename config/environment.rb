@@ -12,6 +12,5 @@ require File.expand_path('../application', __FILE__)
 #    :enable_starttls_auto => true
 #}
 
-
 # Initialize the Rails application.
 Rails.application.initialize!

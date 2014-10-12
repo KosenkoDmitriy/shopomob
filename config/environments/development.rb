@@ -37,15 +37,15 @@ Rails.application.configure do
   #config.action_mailer.perform_deliveries = true
   #config.action_mailer.raise_delivery_errors = true
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-      :address              => "imap.gmail.com",
-      :port                 => 993,
-      :domain               => 'shopomob.ru',
-      :user_name            => 'kosenkodmitryv@gmail.com',
-      :password             => 'g15101989',
-      :authentication       => 'plain',
-      :enable_starttls_auto => true  }
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #    :address              => "imap.gmail.com",
+  #    :port                 => 993,
+  #    :domain               => 'shopomob.ru',
+  #    :user_name            => 'kosenkodmitryv@gmail.com',
+  #    :password             => 'g15101989',
+  #    :authentication       => 'plain',
+  #    :enable_starttls_auto => true  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
