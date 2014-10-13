@@ -3,25 +3,7 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-        <div class="row" style="background-color:white">
-            <div class="col-xs-12 col-md-6">
-                Звоните нам:
-                <img src="<%=root_url%>assets/contacts/contacts_call.png" style="width: 24px;"> +7 (938) 861 67 88 <img src="<%=root_url%>assets/contacts/contacts_call.png" style="width: 24px;"> +7 (989) 748 03 10 <a href="skype:shopomob.ru?call" onclick="return skypeCheck();"><img src="<%=root_url%>assets/contacts/contacts_skype.png" style="width: 24px;"> shopomob.ru</a></span>
-            </div>
-            <!--<div class="col-xs-12 col-md-4">-->
-                <!--<img src="<%=root_url%>assets/contacts/contacts_map.png" style="width: 24px;"> Приходите: Владикавказ, Кирова 3 (напротив Осетинского театра) </span>-->
-
-            <!--</div>-->
-            <div class="col-xs-12 col-md-6">
-                <img src="<%=root_url%>assets/contacts/contacts_mail.png" style="width: 24px;"> Пишите нам: <a href="mailto:shopomob@shopomob.ru">shopomob@shopomob.ru</a></span>
-
-                <a href="http://blog.shopomob.ru"><img src="<%=root_url%>assets/contacts/contacts_wordpress.png" style="width: 24px;"></a>
-                <a href="http://vk.com/shopomob"><img src="<%=root_url%>assets/contacts/contacts_vk.png" style="width: 24px;"></a>
-                <a href="https://www.facebook.com/groups/1431288837131060/">
-                    <img src="<%=root_url%>assets/contacts/contacts_facebook.png" style="width: 24px;"></a>
-                <a href="http://blog.shopomob.ru"><img src="<%=root_url%>assets/contacts/contacts_twitter.png" style="width: 24px;"></a>
-            </div>
-        </div>
+        <%= render :partial=>'home/contacts' %>
 
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -65,6 +47,7 @@
                 <!--</li>-->
                 <li class=""><a href="http://blog.shopomob.ru">Блог/Статьи</a></li>
                 <li class=""><a href="#order">Заказать</a></li>
+                <li class=""><a href="#contacts">Контакты</a></li>
                 <!--<li class=""><a href="#contacts">Контакты</a></li>-->
 
                 <!--render_navigation :expand_all => true, :renderer => :bootstrap-->

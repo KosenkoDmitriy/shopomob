@@ -42,8 +42,11 @@ gem 'simple-navigation-bootstrap'
 gem 'simple_navigation_renderers'
 gem 'bootstrap-will_paginate'
 
-
-gem 'monologue', github: 'jipiboily/monologue' #blog
+#for admin panel
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
+gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
+#end for admin panel
 
 #gem 'haml'
 #gem 'unicode'
