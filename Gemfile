@@ -46,6 +46,8 @@ gem 'bootstrap-will_paginate'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
+gem "paperclip", "~> 4.2" #for image support
+
 #end for admin panel
 
 #gem 'haml'
