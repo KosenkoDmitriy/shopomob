@@ -24,14 +24,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <small><i></i>Add alerts if form ok... success, else error.</i></small>
-                <div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message
-                    sent. (If form ok!)</strong></div>
-                <div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please
-                    check the inputs. (If form error!)</strong></div>
+                <!--<small><i></i>Add alerts if form ok... success, else error.</i></small>-->
+                <!--<div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message-->
+                    <!--sent. (If form ok!)</strong></div>-->
+                <!--<div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please-->
+                    <!--check the inputs. (If form error!)</strong></div>-->
 
-
-                <form role="form" action="" method="post">
+                <form role="form" action="/order" method="post">
                     <div class="col-md-6">
                         <h2>Заказать</h2>
 
@@ -142,7 +141,7 @@
 
                     <div class="panel panel-danger">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Развиваю бизнес и повышаю продажи (до 25-45%)</h3>
+                            <h3 class="panel-title">Хочу развивать бизнес и повышать продажи (до 25-45%)</h3>
                         </div>
                         <div class="panel-body">
                             <p>Темы, затрагиваемые в рассылке:</p>
@@ -153,23 +152,28 @@
                                 <li>Современные инструменты ведения бизнеса</li>
                             </ul>
 
+
+
+                            <%= form_tag("/subscribe", method: "post", id: "nav-search-form", class: "", role:"search") do %>
                             <div class="form-group">
                                 <!--<label for="exampleInputPassword1">Password</label>-->
-                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                <input type="text" class="form-control" id="exampleInputPassword1"
                                        placeholder="введите имя">
                             </div>
                             <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-addon">@</div>
-                                    <input class="form-control" type="email" placeholder="введите email">
+                                    <input class="form-control " type="email" placeholder="введите email">
                                 </div>
                             </div>
 
                             <input type="submit" name="submit" id="submit" value="Подписаться"
                                    class="btn btn-danger pull-right col-xs-12">
-                            <!--<p>-->
-                                <!--<a href="#signup" class="btn btn-danger col-xs-12" role="button">Подписаться на рассылку</a>-->
-                            <!--</p>-->
+
+                            <%#= label_tag(:q, "Search for:") #%>
+                            <%#= text_field_tag(:email, "", id: "nav-search", class: "form-control", placeholder: I18n.t('search_hint')) %>
+                            <%#= submit_tag(t("search"), class:"btn btn-danger pull-right col-xs-12") %>
+                            <% end %>
                         </div>
                     </div>
 
