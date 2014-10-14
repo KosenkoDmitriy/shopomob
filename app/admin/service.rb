@@ -33,7 +33,7 @@ ActiveAdmin.register Service do
       image_tag ad.image.image.url(:thumb)
     end
     column :title
-    column :text
+    column :stext
     column :price
     column :link
     #columns
