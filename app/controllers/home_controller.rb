@@ -13,7 +13,9 @@ class HomeController < ApplicationController
   end
 
   def subscribe
-    UserMailer.subscribe_email(params).deliver
+    if params['email'].present?
+      UserMailer.subscribe_email(params['email']).deliver
+    end
     #redirect_to action: 'index'
     respond_to do |format|
       format.html { render json: params}
