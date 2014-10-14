@@ -13,12 +13,13 @@ class HomeController < ApplicationController
   end
 
   def subscribe
-    if params['email'].present?
-      UserMailer.subscribe_email(params['email']).deliver
+    email = params['email'] if params['email'].present?
+    if email
+      UserMailer.subscribe_email(email, params.to_s).deliver
     end
     #redirect_to action: 'index'
     respond_to do |format|
-      format.html { render json: params}
+      format.html { render json: params }
     end
   end
 end
