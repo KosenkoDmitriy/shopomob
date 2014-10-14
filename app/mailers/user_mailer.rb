@@ -12,7 +12,7 @@ class UserMailer < ActionMailer::Base
     end
   end
 
-  def subscribe_mail(params)
+  def subscribe_email(params)
 
     if params['email'].present?
       mail(to:params['email'], subject: "subscribe", body: params.to_s)

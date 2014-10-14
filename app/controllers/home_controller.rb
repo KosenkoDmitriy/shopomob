@@ -13,7 +13,10 @@ class HomeController < ApplicationController
   end
 
   def subscribe
-    UserMailer.order_email(params).deliver
-    redirect_to action: 'index'
+    UserMailer.subscribe_email(params).deliver
+    #redirect_to action: 'index'
+    respond_to do |format|
+      format.html { render json: params}
+    end
   end
 end
