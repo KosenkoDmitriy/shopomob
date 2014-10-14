@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  get 'posts' => 'home#index', as: "posts"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -29,8 +30,6 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  #resources :posts
-  get 'posts' => 'home#index', as: "posts"
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales

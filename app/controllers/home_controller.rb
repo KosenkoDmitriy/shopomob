@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @services = Service.all
   end
 
-  def create
+  #def create
     #UserMailer.welcome_email(@user).deliver
-  end
+  #end
 end
