@@ -1,6 +1,3 @@
-
-
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <%= render :partial=>'home/contacts' %>
@@ -8,7 +5,8 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -21,10 +19,10 @@
                 <%= image_tag "home/shopomob.png" %>
             </a>
             <a class="navbar-brand hidden-xs hidden-sm" href="<%=root_path%>">
-                <%=t('nav.title')%> <small><%=t('nav.subtitle')%></small>
+                <%=t('nav.title')%>
+                <small><%=t('nav.subtitle')%></small>
             </a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
 
@@ -33,56 +31,64 @@
                 <!--<li class="active"><a href="#">Главная</a></li>-->
                 <!--<li class="active"><a href="#about">О проекте</a></li>-->
                 <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu" role="menu">-->
-                        <!--<li><a href="#">Реклама в справочнике</a></li>-->
-                        <!--<li class="divider"></li>-->
-                        <!--<li><a href="#">Аренда мобильных приложений (Android &amp; iOS)</a></li>-->
-                        <!--<li><a href="#">Аренда интернет-магазинов</a></li>-->
-                        <!--<li class="divider"></li>-->
-                        <!--<li><a href="#">СМС-рассылка</a></li>-->
-                        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<li><a href="#">Заказная разработка (мобильных приложения и игры, интернет-магазины)</a></li>&ndash;&gt;-->
-                    <!--</ul>-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#">Реклама в справочнике</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Аренда мобильных приложений (Android &amp; iOS)</a></li>-->
+                <!--<li><a href="#">Аренда интернет-магазинов</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">СМС-рассылка</a></li>-->
+                <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">Заказная разработка (мобильных приложения и игры, интернет-магазины)</a></li>&ndash;&gt;
+                -->
+                <!--</ul>-->
                 <!--</li>-->
-                <li class=""><a href="http://blog.shopomob.ru">Блог/Статьи</a></li>
+
+                <li class=""><a href="http://blog.shopomob.ru">Посетить Блог</a></li>
                 <li class=""><a href="#order">Заказать</a></li>
                 <li class=""><a href="#contacts">Контакты</a></li>
                 <!--<li class=""><a href="#contacts">Контакты</a></li>-->
 
                 <!--render_navigation :expand_all => true, :renderer => :bootstrap-->
                 <!--<li>-->
-                    <!--<%#= link_to "#{shops_path}?page=1", 'data-no-turbolink' => true do %>-->
-                    <!--<%#=t("companies")%>-->
-                    <!--<%# end %>-->
+                <!--<%#= link_to "#{shops_path}?page=1", 'data-no-turbolink' => true do %>-->
+                <!--<%#=t("companies")%>-->
+                <!--<%# end %>-->
                 <!--</li>-->
 
-                <%#= render_navigation(level: 1, expand_all: true, renderer: :bootstrap ) %>
-                <%#= render_navigation( expand_all: true, renderer: :bootstrap_topbar_list) %>
-                <%#= render_navigation( expand_all: true, renderer: :bootstrap_list) %>
-                <%#= render_navigation( expand_all: true, renderer: :bootstrap ) %>
-                <%#= render_navigation( expand_all: true, renderer: :bootstrap3 ) %>
-                <%#= render_navigation( expand_all: true, renderer: :bootstrap2 ) %>
 
                 <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu" role="menu">-->
-                        <!--<li><a href="#">Реклама в справочнике</a></li>-->
-                        <!--<li class="divider"></li>-->
-                        <!--<li><a href="#">Аренда мобильных приложений (Android & iOS)</a></li>-->
-                        <!--<li><a href="#">Аренда интернет-магазинов</a></li>-->
-                        <!--<li class="divider"></li>-->
-                        <!--<li><a href="#">СМС-рассылка</a></li>-->
-                        <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
-                        <!--&lt;!&ndash;<li><a href="#">Заказная разработка (мобильных приложения и игры, интернет-магазины)</a></li>&ndash;&gt;-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#">Реклама в справочнике</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Аренда мобильных приложений (Android & iOS)</a></li>-->
+                <!--<li><a href="#">Аренда интернет-магазинов</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">СМС-рассылка</a></li>-->
+                <!--&lt;!&ndash;<li class="divider"></li>&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">Заказная разработка (мобильных приложения и игры, интернет-магазины)</a></li>&ndash;&gt;
+                -->
+                <!--</ul>-->
+                <!--</li>-->
+
+
+                <!--<li class="dropdown" id="key_1">-->
+                    <!--<a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="#">Услуги <b class="caret"></b></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li id="услуг вау"><a href="#">услуг вау</a></li>-->
                     <!--</ul>-->
                 <!--</li>-->
             </ul>
 
+            <%= render_navigation( expand_all: true, renderer: :bootstrap3 ) %>
 
 
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
 
 

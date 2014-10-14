@@ -38,8 +38,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'simple-navigation-bootstrap'
-gem 'simple_navigation_renderers'
+#gem 'simple-navigation'
+#gem 'simple-navigation-bootstrap'
+#gem 'simple_navigation_renderers'
+gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_renderers'
+#gem 'simple_navigation_renderers', path: "../simple_navigation_renderers" #for local testing
 gem 'bootstrap-will_paginate'
 
 #for admin panel
@@ -50,6 +53,8 @@ gem "paperclip", "~> 4.2" #for image support
 
 #end for admin panel
 
+#gem 'simple-navigation-bootstrap'
+#gem 'rails_bootstrap_navbar'
 #gem 'haml'
 #gem 'unicode'
 
