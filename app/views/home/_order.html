@@ -30,8 +30,19 @@
                 <!--<div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please-->
                     <!--check the inputs. (If form error!)</strong></div>-->
 
-                <form role="form" action="/order" method="post">
-                    <div class="col-md-6">
+                <!--<form role="form" action="/order" method="post">-->
+                <!--<%= form_for @order, :as => :order, :url => "/order" do |f| %>-->
+                    <!--<%= f.text_area :details %>-->
+                    <!--<%= f.check_box :is_offer %>-->
+
+
+                <!--<%= f.submit %>-->
+
+                <!--<% end %>-->
+
+                <%= form_tag("/order", method: "post", id: "order-form", class: "", role:"") do %>
+
+                <div class="col-md-6">
                         <h2>Заказать</h2>
 
                         <!--<div class="well well-sm"><strong><i class="glyphicon glyphicon-ok form-control-feedback"></i>-->
@@ -45,7 +56,7 @@
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="mobile_app">
+                                    <input type="checkbox" value="internet_shop">
                                     Интернет-магазин
                                 </label>
                             </div>
@@ -63,20 +74,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <!--<label for="exampleInputPassword1">Password</label>-->
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                   placeholder="введите имя">
+                            <!--<label for="exampleInputPassword1">Username</label>-->
+                            <input type="text" name="username" class="form-control" id="order_username"
+                                   placeholder="введите имя" >
                         </div>
                         <div class="form-group">
                             <div class="input-group">
                                 <div class="input-group-addon">@</div>
-                                <input class="form-control" type="email" placeholder="введите email">
+                                <input class="form-control" name="order_email" type="email" placeholder="введите email">
                             </div>
                         </div>
                         <div class="form-group">
                             <!--<label for="InputMessage">Message</label>-->
                             <div class="input-group col-xs-12">
-                                <textarea name="InputMessage" id="InputMessage" class="form-control " rows="3"
+                                <textarea name="order_message" id="InputMessage" class="form-control " rows="3"
                                           placeholder="укажите область деятельности компании"></textarea></div>
                         </div>
                         <!--<div class="form-group">-->
@@ -109,14 +120,14 @@
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="need_offer">
-                                    Запросить коомерческое предложение
+                                    Запросить коммерческое предложение
                                 </label>
                             </div>
                             </div>
                         <input type="submit" name="submit" id="submit" value="Отправить"
                                class="btn btn-info pull-right col-xs-12">
                     </div>
-                </form>
+                <% end %>
 
                 <hr class="featurette-divider hidden-lg">
                 <div class="col-md-5 col-md-push-1">

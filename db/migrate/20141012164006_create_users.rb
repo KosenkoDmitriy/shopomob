@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :login
-
+      t.boolean :subscribed, :default => :false
       t.timestamps
     end
   end
