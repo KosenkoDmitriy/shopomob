@@ -9,6 +9,11 @@
 #Service.create(title:"Мобильное приложение и/или интернет-магазин", text:"для продажи товаров или услуг", stext:"для продажи товаров или услуг")
 #Service.create(title:"электронный справочник Владикавказа", text:"популярные мобильные плтатформы: Android и iOS (iPhone, iPad)", stext:"популярные мобильные плтатформы: Android и iOS (iPhone, iPad)")
 #Service.create(title:"СМС-рассылка", text:"от 30 копеек", stext:"от 30 копеек")
+AdminUser.delete_all
+user=AdminUser.find_by(:email=>"shopomob@shopomob.ru")
+AdminUser.create!(:email => 'shopomob@shopomob.ru', :password => 'shopomobpass', :password_confirmation => 'shopomobpass') if user.nil?
+
+
 require 'csv'
 path_to_app = Rails.root.join('db', 'csv') #File.dirname(__FILE__)+'/csv/'
 path_to_img = Rails.root.join('db', 'images') #File.dirname(__FILE__)+'/images/'

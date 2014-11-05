@@ -4,6 +4,7 @@ class HomeController < ApplicationController
     @posts = Post.all
     @services = Service.all
     @order = Order.new
+    @galleries = Gallery.all
     #@order.users.build
   end
 
