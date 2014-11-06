@@ -10,8 +10,17 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require bootstrap.min
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+// require jquery
+//= require home/jquery
+//= require home/jquery.easing.1.3
+//= require home/jquery.ui.totop
+//= require home/jquery.mobile.customized.min
+//= require home/camera
+//= require home/superfish
+//= require home/bootstrap
+// require home/bootstrap.min
+
+// require bootstrap.min
+// require jquery_ujs
+// require turbolinks
+// require_tree .
