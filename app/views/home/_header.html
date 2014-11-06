@@ -60,9 +60,13 @@
     </div>
     <div class="slider">
         <div class="camera_wrap">
-            <div data-src="<%=asset_path('home/slide1.jpg')%>"></div>
-            <div data-src="<%=asset_path('home/slide2.jpg')%>"></div>
-            <div data-src="<%=asset_path('home/slide3.jpg')%>"></div>
+            <% @galleries.first.images.each do |image| %>
+            <!--<div data-src="<%=asset_path(image.image_url)%>"></div>-->
+            <div data-src="<%=asset_path(image.image.url)%>"></div>
+            <!--<div data-src="<%=asset_path('home/slide1.jpg')%>"></div>-->
+            <!--<div data-src="<%=asset_path('home/slide2.jpg')%>"></div>-->
+            <!--<div data-src="<%=asset_path('home/slide3.jpg')%>"></div>-->
+            <% end %>
         </div>
     </div>
 </header>
