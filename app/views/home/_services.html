@@ -1,40 +1,81 @@
-<section class="projects_wrapper text-center" id="about">
-    <div class="container-fluid">
-
-        <div class="row">
-            <h1>"ШопоМоб" - мобильные и веб приложения для развития бизнеса</h1>
-
-            <h2>в сфере розничной торговли и услуг</h2>
-
-            <h3>в городе Владикавказ</h3>
-
-        </div>
-
-
-        <div class="row">
+<div class="row">
+    <div class="span12">
+        <ul class="thumbnails">
             <% @services.each do |service| %>
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <li class="span3">
                 <div class="thumbnail">
-
-                    <!--<img data-src="holder.js/300x300" alt="...">-->
-                    <%=image_tag(service.image.image.url, class:"", style:"height:150px")%>
-
                     <div class="caption">
-                        <h3><%=service.title%></h3>
-
+                        <%=image_tag(service.try(:image).try(:image).try(:url), class:"", style:"height:150px")%>
+                        <h5><%=service.title%></h5>
+                        <h3><%=service.price%></h3>
+                    </div>
+                    <div class="thumbnail-pad">
                         <p><%=service.stext%></p>
-
-                        <p>
-                            <a href="<%=service.link%>" class="btn btn-primary" role="button">посетить сайт</a>
-                            <a href="#" class="btn btn-default" role="button">подробности</a>
-                        </p>
+                        <a href="<%=service.link%>" class="btn btn_">подробнее</a>
                     </div>
                 </div>
-            </div>
+            </li>
             <% end %>
-        </div>
+
+            <!--<li class="span3">-->
+            <!--<div class="thumbnail">-->
+            <!--<div class="caption">-->
+            <!--&lt;!&ndash;<img src="<img/img-1.png" alt="">&ndash;&gt;-->
+            <!--<%=image_tag "home/img-1.png" %>-->
+            <!--<h5>Most</h5>-->
+            <!--<h3>popular</h3>-->
+            <!--</div>-->
+            <!--<div class="thumbnail-pad">-->
+            <!--<p>Praesent vestibulum molestie lacus. Aenean noy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. </p>-->
+            <!--<a href="#" class="btn btn_">more info</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li class="span3">-->
+            <!--<div class="thumbnail">-->
+            <!--<div class="caption">-->
+            <!--<%=image_tag "home/img-2.png" %>-->
+            <!--<h5>Beauty</h5>-->
+            <!--<h3>Gifts</h3>-->
+            <!--</div>-->
+            <!--<div class="thumbnail-pad">-->
+            <!--<p>Praesent vestibulum molestie lacus. Aenean my hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. </p>-->
+            <!--<a href="#" class="btn btn_">more info</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li class="span3">-->
+            <!--<div class="thumbnail">-->
+            <!--<div class="caption">-->
+            <!--<%=image_tag "home/img-3.png" %>-->
+            <!--<h5>Attention</h5>-->
+            <!--<h3>to Detail</h3>-->
+            <!--</div>-->
+            <!--<div class="thumbnail-pad">-->
+            <!--<p>Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suipit varius mi. Cum sociis natoque penatibus et.</p>-->
+            <!--<a href="#" class="btn btn_">more info</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--<li class="span3">-->
+            <!--<div class="thumbnail">-->
+            <!--<div class="caption">-->
+            <!--<%=image_tag "home/img-4.png" %>-->
+            <!--<h5>Award-Winning</h5>-->
+            <!--<h3>Fragrances</h3>-->
+            <!--</div>-->
+            <!--<div class="thumbnail-pad">-->
+            <!--<p>Nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis.</p>-->
+            <!--<a href="#" class="btn btn_">more info</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
     </div>
-</section>
+</div>
+
+
+
 <script>
     $(document).ready(function () {
         var heights = $(".thumbnail").map(function () {
