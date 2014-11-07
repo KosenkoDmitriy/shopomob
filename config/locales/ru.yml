@@ -20,13 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  title: "ШопоМоб"
+  title: "ООО \"Адек\""
   hello: "Привет Мир!"
   nav:
-    title: "ШопоМоб"
-    subtitle: "бизнес-приложения"
+    title: "Адек"
+    subtitle: "проектирование зданий и сооружений, архитектура, дизайн интерьера"
   footer:
-    title: "ШопоМоб"
+    title: "ООО \"Адек\""
 
   date:
     formats:

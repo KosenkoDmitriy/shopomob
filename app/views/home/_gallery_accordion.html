@@ -1,23 +1,13 @@
-<div class="row">
+<div class="row" id="gallery">
     <div class="span12">
         <!-- Nav tabs -->
-        <br/>
+        <h3 align="center">Галерея</h3>
         <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#gallery_all" role="tab" data-toggle="tab">Все</a></li>
             <% @galleries.each do |gallery| %>
             <li><a href="#<%=gallery.title%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
             <% end %>
         </ul>
-
-        <!--<ul class="nav nav-tabs" role="tablist">-->
-            <!--<li class="active"><a href="#home" role="tab" data-toggle="tab">Приложение для компании</a></li>-->
-            <!--<li><a href="#auto" role="tab" data-toggle="tab">Автосервисам и автодилерам</a></li>-->
-            <!--<li><a href="#relax" role="tab" data-toggle="tab">Отдых и развлечения</a></li>-->
-            <!--<li><a href="#medicine" role="tab" data-toggle="tab">Медицина и лечение</a></li>-->
-            <!--<li><a href="#health" role="tab" data-toggle="tab">Красота и здоровье</a></li>-->
-            <!--<li><a href="#sport" role="tab" data-toggle="tab">Спорт и фитнес</a></li>-->
-            <!--<li><a href="#services" role="tab" data-toggle="tab">Услуги</a></li>-->
-        <!--</ul>-->
     </div>
     <div class="span12">
         <!-- Tab panes -->
@@ -41,7 +31,6 @@
             <% end %>
             </div>
             <% end %>
-
         </div>
     </div>
 </div>

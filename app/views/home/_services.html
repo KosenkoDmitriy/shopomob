@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="services">
     <div class="span12">
         <ul class="thumbnails">
             <% @services.each do |service| %>
@@ -73,16 +73,3 @@
         </ul>
     </div>
 </div>
-
-
-
-<script>
-    $(document).ready(function () {
-        var heights = $(".thumbnail").map(function () {
-                    return $(this).height();
-                }).get(),
-
-        maxHeight = Math.max.apply(null, heights);
-        $(".thumbnail").height(maxHeight);
-    });
-</script>
