@@ -15,4 +15,6 @@
  *= require home/responsive
  *= require home/camera
  *= require home/style
+ *= require fancybox
+ *= require home/gallery_fancy_customize
  */

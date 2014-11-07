@@ -18,6 +18,7 @@
 //= require home/camera
 //= require home/superfish
 //= require home/bootstrap
+//= require fancybox
 // require home/bootstrap.min
 
 // require bootstrap.min

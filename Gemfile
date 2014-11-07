@@ -58,3 +58,4 @@ gem "paperclip", "~> 4.2" #for image support
 #gem 'haml'
 #gem 'unicode'
 
+gem 'fancybox2-rails', '~> 0.2.8'
