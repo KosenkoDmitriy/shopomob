@@ -17,6 +17,7 @@
 //= require home/jquery.mobile.customized.min
 //= require home/camera
 //= require home/superfish
+//= require home/forms
 //= require home/bootstrap
 //= require fancybox
 // require home/bootstrap.min

@@ -1,193 +1,68 @@
-<!--<section id="order">-->
-<!--<div class="row">-->
-<!--<div class="col-md-6">-->
-<!---->
-<!--</div>-->
-<!--<div class="col-md-6">-->
-<!--<h1>Заказать</h1>-->
-<!--<%= form_tag("", method: "post", id: "nav-search-form", class: "navbar-form navbar-left", role:"search") do %>-->
 
-<!--<div class="input-group">-->
-<!--<span class="input-group-btn">-->
-<!--<%= button_tag(type: "submit", class: "btn btn-default") do %>-->
-<!--<span class="glyphicon glyphicon-search"></span>-->
-<!--<% end %>-->
-<!--</span>-->
-<!--<input type="text" class="form-control"/>-->
-<!--<%#= text_field_tag(:order, "", id: "nav-search", class: "form-control", placeholder: I18n.t('enter_email')) #%>-->
-<!--</div>-->
-<!--<% end %>-->
-<!--</div>-->
-<!--</div>-->
-<!--</section>-->
-<section id="order">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!--<small><i></i>Add alerts if form ok... success, else error.</i></small>-->
-                <!--<div class="alert alert-success"><strong><span class="glyphicon glyphicon-send"></span> Success! Message-->
-                    <!--sent. (If form ok!)</strong></div>-->
-                <!--<div class="alert alert-danger"><span class="glyphicon glyphicon-alert"></span><strong> Error! Please-->
-                    <!--check the inputs. (If form error!)</strong></div>-->
+<section id="content">
+    <div class="sub-content" id="order">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <h4>Контакты</h4>
+                    <div class="map">
+                        <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>
+                    <address>
+                        <strong class="clr">Архитектурная фирма Адек<br>
+                            ул. Кирова 3,<br>
+                            Владикавказ, 362000.</strong><br>
+                        <span>Телефон:</span>+7 (918) 829 02 93<br>
+                        E-mail: <a href="mailto:adec@adec.name"><u>adec@adec.name</u></a>
+                    </address>
 
-                <!--<form role="form" action="/order" method="post">-->
-                <!--<%= form_for @order, :as => :order, :url => "/order" do |f| %>-->
-                    <!--<%= f.text_area :details %>-->
-                    <!--<%= f.check_box :is_offer %>-->
+                </div><h4>Заказать услуги</h4>
 
-
-                <!--<%= f.submit %>-->
-
-                <!--<% end %>-->
-
-                <%= form_tag("/order", method: "post", id: "order-form", class: "", role:"") do %>
-
-                <div class="col-md-6">
-                        <h2>Заказать</h2>
-
-                        <!--<div class="well well-sm"><strong><i class="glyphicon glyphicon-ok form-control-feedback"></i>-->
-                            <!--Required Field</strong></div>-->
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="mobile_app">
-                                    Мобильное приложение
+                <div class="span6">
+                    <div class="contact-form">
+                        <!--<%#= form_for(@product) do |f| #%>-->
+                        <%= form_tag("/order", method: "post", id:"", class: "contact-form", role:"") do %>
+                        <% if flash[:notice] %>
+                            <div class="success" style="display: none;">Заказ успешно отправлен!<strong><br>Мы свяжемся с Вам в ближайшее время.</strong> </div>
+                        <% end %>
+                            <fieldset>
+                                <!--<label class="service">-->
+                                    <!--<span class="error" style="display: block;"> Выберите интересующие услуги</span>-->
+                                    <%#= select_tag( "services", options_for_select(@services.map{|service| [service.title, service.id]})) #%>
+                                    <%@services.each do |service|%>
+                                    <p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
+                                    <% end %>
+                                <!--</label>-->
+                                <label class="name">
+                                    <%#= label_tag(:q, "Search for:") #%>
+                                    <%= text_field_tag(:name, "", required:"true", type: "text", placeholder: "Как к Вам обращаться?") %>
+                                    <!--<input type="text" value="Как к Вам обращаться?">-->
+                                    <span class="error" style="display: none;">*Ошибочное имя.</span> <span class="empty" style="display: block;">*Обязательно для заполнения.</span>
                                 </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="internet_shop">
-                                    Интернет-магазин
+                                <label class="email">
+                                    <!--<input type="email" value="Ваш E-mail:">-->
+                                    <%= text_field_tag(:email, "", required:"true", type: "email", placeholder: "Ваш электронный адрес") %>
+                                    <span class="error" style="display: none;">*Ошибочный электронный адрес.</span> <span class="empty" style="display: block;">*Обязательно для заполнения.</span>
                                 </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="sms">
-                                    СМС-рассылку от 30 копеек
+                                <label class="phone">
+                                    <!--<input type="text" value="Ваш телефон:">-->
+                                    <%= text_field_tag(:phone, "", required:"true", type: "number", placeholder: "Ваш телефон") %>
+                                    <span class="error" style="display: none;">*Ошибочный телефонный номер.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>
                                 </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="adv_ref">
-                                    Рекламу и продвижение в справочнике Владикавказа
+                                <label class="message">
+                                    <textarea placeholder="Сообщение:"></textarea>
+                                    <!--<span class="error" style="display: none;">*Слишком коротко.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>-->
                                 </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <!--<label for="exampleInputPassword1">Username</label>-->
-                            <input type="text" name="username" class="form-control" id="order_username"
-                                   placeholder="введите имя" >
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon">@</div>
-                                <input class="form-control" name="order_email" type="email" placeholder="введите email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <!--<label for="InputMessage">Message</label>-->
-                            <div class="input-group col-xs-12">
-                                <textarea name="order_message" id="InputMessage" class="form-control " rows="3"
-                                          placeholder="укажите область деятельности компании"></textarea></div>
-                        </div>
-                        <!--<div class="form-group">-->
-                            <!--<label for="InputName">Your Name</label>-->
+                            </fieldset>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn_ btn-small_" data-type="reset">Очистить</a>
+                                <!--<a href="#" class="btn btn_ btn-small_" data-type="submit">Заказать</a>-->
+                                <%= submit_tag("Заказать", class:"btn btn_ btn-small_") %>
 
-                            <!--<div class="input-group">-->
-                                <!--<input type="text" class="form-control" name="InputName" id="InputName"-->
-                                       <!--placeholder="Enter Name" required>-->
-                                <!--<span class="input-group-addon"><i-->
-                                        <!--class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                            <!--<label for="InputEmail">Your Email</label>-->
-
-                            <!--<div class="input-group">-->
-                                <!--<input type="email" class="form-control" id="InputEmail" name="InputEmail"-->
-                                       <!--placeholder="Enter Email" required>-->
-                                <!--<span class="input-group-addon"><i-->
-                                        <!--class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>-->
-                        <!--</div>-->
-                        <!--<div class="form-group">-->
-                        <!--<label for="InputReal">What is 4+3? (Simple Spam Checker)</label>-->
-
-                        <!--<div class="input-group">-->
-                        <!--<input type="text" class="form-control" name="InputReal" id="InputReal" required>-->
-                        <!--<span class="input-group-addon"><i-->
-                        <!--class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>-->
-                        <!--</div>-->
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" value="need_offer">
-                                    Запросить коммерческое предложение
-                                </label>
                             </div>
-                            </div>
-                        <input type="submit" name="submit" id="submit" value="Отправить"
-                               class="btn btn-info pull-right col-xs-12">
+                        <% end %>
                     </div>
-                <% end %>
-
-                <hr class="featurette-divider hidden-lg">
-                <div class="col-md-5 col-md-push-1">
-
-                    <!--<h2>Получайте привелегии</h2>-->
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Зарегистрируйтесь на сайте и получайте:</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul class="">
-                                <li>подарки, бонусы и скидки до 15% на наши услуги </li>
-                                <li>полезную информацию по электронной коммерции </li>
-                                <li>доступ к закрытым разделам сайта</li>
-                            </ul>
-                            <p>
-                            <p>
-                                <a href="#signup" class="btn btn-success col-xs-12" role="button">Зарегистрироваться на сайте</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Хочу развивать бизнес и повышать продажи (до 25-45%)</h3>
-                        </div>
-                        <div class="panel-body">
-                            <p>Темы, затрагиваемые в рассылке:</p>
-                            <ul class="">
-                                <li>Способы повышения продаж. Электронная и мобильная коммерция</li>
-                                <li>Привлечение новых клиентов</li>
-                                <li>Продвижение мобильного приложения и интернет-магазина</li>
-                                <li>Современные инструменты ведения бизнеса</li>
-                            </ul>
-
-
-
-                            <%= form_tag("/subscribe", method: "post", id: "nav-search-form", class: "", role:"search") do %>
-                            <div class="form-group">
-                                <!--<label for="exampleInputPassword1">Password</label>-->
-                                <input type="text" class="form-control" id="exampleInputPassword1"
-                                       placeholder="введите имя" name="username">
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <div class="input-group-addon">@</div>
-                                    <input class="form-control " name="email" type="email" placeholder="введите email">
-                                </div>
-                            </div>
-
-                            <input type="submit" name="submit" id="submit" value="Подписаться"
-                                   class="btn btn-danger pull-right col-xs-12">
-
-                            <%#= label_tag(:q, "Search for:") #%>
-                            <%#= text_field_tag(:email, "", id: "nav-search", class: "form-control", placeholder: I18n.t('search_hint')) %>
-                            <%#= submit_tag(t("search"), class:"btn btn-danger pull-right col-xs-12") %>
-                            <% end %>
-                        </div>
-                    </div>
-
                 </div>
             </div>
+        </div>
+    </div>
 </section>

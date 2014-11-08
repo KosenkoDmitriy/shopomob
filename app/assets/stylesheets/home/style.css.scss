@@ -200,7 +200,7 @@ ul.list-2 li a:hover {
 }
 .btn-small_ {
   padding: 8px 18px 8px 18px;
-  color: #f9f4d3;
+//  color: #f9f4d3;
 }
 .btn_:hover {
   color: #000;
@@ -322,13 +322,32 @@ h1.brand span {
 .navbar-form a:hover {
 //  background: asset-data-url("home/search.png) right 0 no-repeat;
   background: asset-data-url("home/search.png") right 0 no-repeat;
-
 }
+
+.subscribe-form {
+//  background: asset-data-url("home/form-search.jpg") 0 0 repeat-x #1c1c1c;
+//  border-bottom: #515152 1px solid;
+//  -webkit-border-radius: 3px;
+//  -moz-border-radius: 3px;
+//  border-radius: 3px;
+//  margin: 19px 0px 0 0;
+  float: right;
+}
+.subscribe-form input {
+//  width:80%;
+}
+.subscribe-form a {
+//  width:20%;
+}
+//.subscribe-form input {
+//  float: left;
+//}
 /**/
 /* navbar */
 .navbar_ {
   margin: 0px 0 0 0;
 }
+
 .navbar_ .navbar-inner_ {
   padding: 18px 0px 19px 45px;
   margin: 0;
@@ -784,7 +803,7 @@ address span {
 .contact-form {
   padding-top: 11px;
 }
-.contact-form input {
+.contact-form input,.contact-form select {
   color: #c4c3c4;
   height: 36px;
   width: 270px;
@@ -850,6 +869,34 @@ address span {
 .contact-form .btn_ {
   margin: 31px 0 0 16px;
 }
+
+input[type="submit"].btn, .contact-form input[type="submit"].btn {
+  height:32px;
+  background: #f0e8a7;
+  border: none;
+  text-shadow: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+//  text-decoration: none;
+  padding: 7px 13px 8px 13px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+////  margin-top: 20px;
+  line-height: 15px;
+  width: auto;
+}
+
+.contact-form input[type="submit"].btn:hover {
+  background: #EBE5B5;
+}
+
 /*privacy*/
 .float {
   float: left;
@@ -972,6 +1019,7 @@ form#newsletter {
   border-radius: 5px;
   padding: 25px 27px 28px 28px;
 }
+
 form#newsletter input {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -983,28 +1031,29 @@ form#newsletter input {
   -moz-border-radius-bottomright: 0px;
   border-bottom-right-radius: 0px;
   border: none;
-  background: #fff;
-  color: #1e1d20;
+//  background: #fff;
+//  color: #1e1d20;
   margin: 0;
   box-shadow: none;
   height: 30px;
   line-height: 15px;
   padding: 7px 10px 8px 10px;
-  width: 154px;
+//  width: 154px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
+//  float: left;
 }
+
 form#newsletter input:focus {
   box-shadow: none;
 }
 form#newsletter a.btn_ {
   margin-top: 0;
-  width: 91px;
+//  width: 91px;
   text-align: center;
-  padding-right: 0;
-  padding-left: 0;
+//  padding-right: 0;
+//  padding-left: 0;
   -webkit-border-top-left-radius: 0px;
   -moz-border-radius-topleft: 0px;
   border-top-left-radius: 0px;
@@ -1016,6 +1065,22 @@ form#newsletter a.btn_:hover {
   color: #f0e8a7;
   background: #171619;
 }
+
+form#newsletter input[type="submit"].btn_:hover {
+  color: #f0e8a7;
+  background: #171619;
+}
+
+form#newsletter input#email{
+  color: #f0e8a7;
+//  background: #000;
+  background: asset-data-url("home/form-search.jpg") 0 0 repeat-x #1c1c1c;
+}
+//form#newsletter input#email:focus{
+//  color: #fff;
+//  background: #fff;
+//}
+
 form#newsletter label {
   font-family: "Open Sans", sans-serif;
   color: #f9f4d3;
@@ -1047,7 +1112,7 @@ form#newsletter label {
     font-size: 28px;
   }
   form#newsletter input {
-    width: 224px;
+//    width: 224px;
   }
   .lists-width2 {
     margin-left: -30px;

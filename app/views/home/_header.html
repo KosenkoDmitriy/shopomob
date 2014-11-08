@@ -8,10 +8,14 @@
                             <!--<img src="img/adec_logo.png" width="192" height="" alt="">-->
                             <%=image_tag("home/adec_logo.png", width:"200", height:"100", class:"")%>
                         </a><span>Архитектурная фирма ООО "Адек"</span></h1>
-                        <form id="search-form" action="search.php" method="GET" accept-charset="utf-8" class="navbar-form" >
-                            <input type="text" name="s" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"  >
-                            <a href="#" onClick="document.getElementById('search-form').submit()"></a>
-                        </form>
+
+                        <div id="subscribe-form" class="subscribe-form">
+                            <%= render :partial=>'home/subscribe' %>
+                        </div>
+                        <!--<form id="search-form" action="search.php" method="GET" accept-charset="utf-8" class="navbar-form" >-->
+                            <!--<input type="text" name="s" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"  >-->
+                            <!--<a href="#" onClick="document.getElementById('search-form').submit()"></a>-->
+                        <!--</form>-->
                         <span class="contacts">
                             Звоните нам:  <span>+7 (918) 829 02 93</span>
                             <br>Скайп: <span>madina.adec</span>
@@ -24,6 +28,7 @@
             </div>
         </div>
     </div>
+    <% if (@galleries.count>0) %>
     <div class="slider" id="main">
         <div class="camera_wrap">
             <% @galleries.first.images.each do |image| %>
@@ -32,4 +37,5 @@
             <% end %>
         </div>
     </div>
+    <% end %>
 </header>

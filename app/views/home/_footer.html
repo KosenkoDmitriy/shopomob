@@ -2,13 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="span4 float2">
-                <form id="newsletter" method="post" >
-                    <label>Получать новости на email</label>
-                    <div class="clearfix">
-                        <input type="text" onFocus="if(this.value =='Введите электронную почту' ) this.value=''" onBlur="if(this.value=='') this.value='Введите электронную почту'" value="Введите электронную почту" >
-                        <a href="#" onClick="document.getElementById('newsletter').submit()" class="btn btn_">Подписаться</a>
-                    </div>
-                </form>
+                <%= render :partial=>'home/subscribe' %>
             </div>
             <div class="span8 float">
                 <ul class="footer-menu">
