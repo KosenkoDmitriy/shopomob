@@ -1602,6 +1602,11 @@ form#newsletter label {
   background: #f0e8a7;
 }
 
-.nav-tabs > .active > a, .nav-tabs > .active > a:hover {
+#posts a:hover, #posts .nav-list > .active > a, #posts .nav-list > .active > a:hover {
+  color: #000000;
+  background: #f0e8a7;
+}
+
+#gallery .nav-tabs > .active > a, #gallery .nav-tabs > .active > a:hover {
   background: #EBE5B5;
 }
