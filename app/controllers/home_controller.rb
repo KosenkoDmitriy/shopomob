@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     #@order.users.build
     @order = Order.new
     @customer = Customer.new
+    @teamers = Teamer.all
   end
 
   #def create
