@@ -14,5 +14,23 @@ ActiveAdmin.register Post do
   #   permitted
   # end
 
-  permit_params :slug, :title, :text, :stext, :tags
+  permit_params :slug, :title, :text, :stext, :tags, :image, images_attributes: [:id, :image, :_destroy], post_categories_attributes: [:id, :title, :_destroy]
+
+  form do |f|
+    f.inputs
+    f.inputs I18n.t("images") do
+      f.has_many :images, :heading => 'Images' do |ff|
+        ff.input :image, :label => "Image", :hint => ff.template.image_tag(ff.object.image.url(:thumb))
+        ff.input :_destroy, :as=>:boolean, :required => false, :label => I18n.t('remove')
+      end
+    end
+    f.inputs I18n.t("post_category") do
+      f.has_many :post_categories, :heading => 'post_categories' do |ff|
+        ff.input :title, :label => "Title"
+        ff.input :_destroy, :as=>:boolean, :required => false, :label => I18n.t('remove')
+      end
+    end
+
+    f.actions
+  end
 end
