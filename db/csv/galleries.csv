@@ -1,0 +1,27 @@
+id,title,gallery_id,image_name,image
+1,Интерьеры,1,Кабинет,cabinet.jpg
+1,Интерьеры,1,Детская для мальчика 2,detskya_for_malchika_2.jpg
+1,Интерьеры,1,Детская для мальчика,detskya_for_malchika.jpg
+1,Интерьеры,1,Красная гостинная,gostinnaya_red.jpg
+1,Интерьеры,1,Гостинная,gostinnaya.png
+1,Интерьеры,1,Холл в классическом стиле,holl_classic.jpg
+1,Интерьеры,1,Холл Евроклимат,holl_euroclimat.jpg
+1,Интерьеры,1,Кухня,holl_kithchen.jpg
+1,Интерьеры,1,Зал ресторана в осетинском стиле,holl_of_the_restaurant_in_ossetian_style.jpg
+1,Интерьеры,1,Зал филиала Рубина,holl_rubin_filial.jpg
+2,Экстерьеры,2,Мамсурова,exterier_mamsurova.jpg
+2,Экстерьеры,2,Чкалова,exterior_chkalova_street.jpg
+2,Экстерьеры,2,Коттедж,exterior_cottedg.jpg
+2,Экстерьеры,2,Коттедж 2,exterior_cottedg2.jpg
+2,Экстерьеры,2,Фасад Рубина,exterior_facad_rubin_shop.jpg
+2,Экстерьеры,2,Частный дом на Костанаева,exterior_private_home_on_costanaeva_street.jpg
+2,Экстерьеры,2,Частный дом,exterior_private_home.jpg
+2,Экстерьеры,2,Экстерьер Рубин,exterior_rubin.jpg
+2,Экстерьеры,2,Торговый центр на Калинина,exterior_sales_centr_on_calinina_street.jpg
+2,Экстерьеры,2,Торговый центр Greenfield,exterior_shop_greenfield.jpg
+2,Экстерьеры,2,Магазин,exterior_shops.jpg
+2,Экстерьеры,2,Супермаркет,exterior_supermarket.jpg
+2,Экстерьеры,2,Узи центр,exterior_uzi_centr.jpg
+2,Экстерьеры,2,Детский мир (реконструкция),exterior_world_for_kid_reconstruction.jpg
+2,Экстерьеры,2,Аптека,exterior_apteka.jpg
+3,Ландшафтный дизайн,3,Двор Заманкул,dvor_zamackul.jpg
