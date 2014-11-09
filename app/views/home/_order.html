@@ -49,7 +49,8 @@
                                     <span class="error" style="display: none;">*Ошибочный телефонный номер.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>
                                 </label>
                                 <label class="message">
-                                    <textarea placeholder="Сообщение:"></textarea>
+                                    <%#= text_area :details, rows: 2 #%>
+                                    <textarea name="details" placeholder="Сообщение:"></textarea>
                                     <!--<span class="error" style="display: none;">*Слишком коротко.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>-->
                                 </label>
                             </fieldset>

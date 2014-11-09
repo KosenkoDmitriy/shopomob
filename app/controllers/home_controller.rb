@@ -21,6 +21,7 @@ class HomeController < ApplicationController
     email = params['email'] if params['email'].present?
     phone = params['phone'] if params['phone'].present?
     services = params['services'] if params['services'].present?
+    details = params['details'] if params['details'].present?
 
     if (name && email && phone)
       customer = Customer.find_or_create_by(email:email)
@@ -28,11 +29,14 @@ class HomeController < ApplicationController
       customer.email = email
       customer.phone = phone
       order = Order.new
+      order.details = details
+      if (services.present?)
       services.each do |service|
         s=Service.find(service[0].to_i)
         if s
           order.services.append(s)
         end
+      end
       end
 
       customer.orders.append(order)
