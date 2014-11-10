@@ -6,7 +6,7 @@
         <ul class="nav nav-tabs" role="tablist">
             <li class="active"><a href="#gallery_all" role="tab" data-toggle="tab">Все</a></li>
             <% @galleries.each do |gallery| %>
-            <li><a href="#<%=gallery.title%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
+            <li><a href="#gallery<%=gallery.id%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
             <% end %>
         </ul>
     </div>
@@ -24,7 +24,7 @@
             </div>
 
             <% @galleries.each do |gallery| %>
-            <div class="tab-pane" id="<%=gallery.title%>">
+            <div class="tab-pane" id="gallery<%=gallery.id%>">
             <% gallery.images.each do |image| %>
                 <a class="fancybox" rel="group" href="<%=image.image.url%>">
                     <%=image_tag(image.image.url, class:"", style:"height:150px")%>
