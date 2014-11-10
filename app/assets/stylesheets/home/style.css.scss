@@ -236,6 +236,7 @@ header {
 }
 .header-block {
   background: asset-data-url("home/header-block.jpg") 0 0 repeat-x #1b1b1c;
+
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -1304,6 +1305,7 @@ form#newsletter label {
   .header-block-pad {
     padding: 18px 23px 14px 22px;
   }
+
   .contacts {
     padding-right: 0;
     margin-right: 0;
@@ -1609,4 +1611,21 @@ form#newsletter label {
 
 #gallery .nav-tabs > .active > a, #gallery .nav-tabs > .active > a:hover {
   background: #EBE5B5;
+}
+
+img.logo {
+  width: 300px;
+  height: 120px;
+}
+div.clearfix.header-block-pad {
+//  background: asset-data-url("home/adec_logo_old_revert.jpg") right top no-repeat;
+//  width: 960px;
+//  height: 400px;
+//  opacity: 1;
+//  opacity: 0.8;
+//  background: asset-data-url("home/adec_logo_old_revert.jpg") right top no-repeat;
+
+}
+.p0 {
+
 }
