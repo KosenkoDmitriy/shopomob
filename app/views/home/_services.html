@@ -8,11 +8,11 @@
                     <div class="caption">
                         <%=image_tag(service.try(:image).try(:image).try(:url), class:"", style:"height:150px")%>
                         <h5><%=service.title%></h5>
-                        <h3><%=service.price%></h3>
+                        <!--<h3><%=service.price%></h3>-->
                     </div>
                     <div class="thumbnail-pad">
                         <p><%=service.stext%></p>
-                        <a href="<%=service.link%>" class="btn btn_">подробнее</a>
+                        <a href="<%=service.link%>" class="btn btn_">от <%=service.price.to_s%> рублей</a>
                     </div>
                 </div>
             </li>

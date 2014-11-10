@@ -25,7 +25,7 @@ file_path = "#{path_to_app}/services.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   #item = Service.find_or_create_by( order_id: row['order_id'].to_i, title: row['title'], text: row['text'], url: row['url'])
-  item = Service.find_or_create_by( title: row['title'], stext:row['stext'], text: row['text'], link: row['url'])
+  item = Service.find_or_create_by( title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'])
   if (!row['image'].blank?)
     img_path = path_to_img + row['image']
     if (File.exists?(img_path))
