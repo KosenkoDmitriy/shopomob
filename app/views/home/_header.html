@@ -33,7 +33,7 @@
         <div class="camera_wrap">
             <% @galleries.first.images.each do |image| %>
             <!--<div data-src="<%=asset_path(image.image_url)%>"></div>-->
-            <div data-src="<%=asset_path(image.image.url)%>"></div>
+            <div data-src="<%=asset_path(image.image.url(:slider))%>"></div>
             <% end %>
         </div>
     </div>

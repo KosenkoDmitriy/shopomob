@@ -16,8 +16,8 @@
             <div class="tab-pane active" id="gallery_all">
                 <% @galleries.each do |gallery| %>
                 <% gallery.images.each do |image| %>
-                <a class="fancybox" rel="group" href="<%=image.image.url%>">
-                    <%=image_tag(image.image.url, class:"", style:"height:150px")%>
+                <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
+                    <%=image_tag(image.image.url(:medium), class:"", style:"height:150px")%>
                 </a>
                 <% end %>
                 <% end %>
