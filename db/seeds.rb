@@ -48,15 +48,14 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
 end
 
 
-[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].each do |index|
-  title = "Post#{index}";
-  slug = "post#{index}";
-  stext = "Post#{index} "*50;
-  text = "Post#{index} "*500;
-  tags = "post#{index}";
-  post=Post.find_or_create_by!(slug:slug,title:title, stext:stext, text:text, tags:tags)
-end
-
+#[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].each do |index|
+#  title = "Post#{index}";
+#  slug = "post#{index}";
+#  stext = "Post#{index} "*50;
+#  text = "Post#{index} "*500;
+#  tags = "post#{index}";
+#  post=Post.find_or_create_by!(slug:slug,title:title, stext:stext, text:text, tags:tags)
+#end
 
 path_to_img = Rails.root.join('db', 'images', 'gallery')
 file_path = "#{path_to_app}/galleries.csv"
@@ -75,7 +74,7 @@ path_to_img = Rails.root.join('db', 'images', 'posts')
 file_path = "#{path_to_app}/posts.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-  item = Post.find_or_create_by( title: row['title'], slug: row['slug'], text: row['text'] )
+  item = Post.find_or_create_by( title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'] )
   if (!row['image'].blank?)
     img_path = path_to_img + row['image']
     if (File.exists?(img_path))
