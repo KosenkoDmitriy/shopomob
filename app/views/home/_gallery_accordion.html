@@ -15,23 +15,31 @@
         <div class="tab-content">
             <div class="tab-pane active" id="gallery_all">
                 <% @galleries.each do |gallery| %>
-                <% gallery.images.each do |image| %>
-                <div class="span2">
-                <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
-                    <%=image_tag(image.image.url(:medium), class:"", style:"height:150px")%>
-                </a>
+                <div class="thumbnails_4">
+                    <% gallery.images.each do |image| %>
+                    <div class="span3">
+                        <!--<div class="thumbnail thumbnail_4">-->
+                            <!--<figure>-->
+                                <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
+                                <%=image_tag(image.image.url(:medium), class:"img-radius", style:"")%>
+                            </a>
+                            <!--</figure>-->
+                            <!--<p class="lead p2"><a href="#" class="lead">Donec sagittis euismod purus</a></p>-->
+                            <!--Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio. Morbi nunc odio, gravida at, cursus nec, luctus a, lorem.-->
+                        <!--</div>-->
+                    </div>
+                    <% end %>
                 </div>
-                <% end %>
                 <% end %>
             </div>
 
             <% @galleries.each do |gallery| %>
             <div class="tab-pane" id="gallery<%=gallery.id%>">
-            <% gallery.images.each do |image| %>
+                <% gallery.images.each do |image| %>
                 <a class="fancybox" rel="group" href="<%=image.image.url%>">
                     <%=image_tag(image.image.url, class:"", style:"height:150px")%>
                 </a>
-            <% end %>
+                <% end %>
             </div>
             <% end %>
         </div>
