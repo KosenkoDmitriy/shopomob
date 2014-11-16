@@ -20,7 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
-  title: "ООО \"Адек\""
+  head:
+    meta:
+      title: "ООО \"Адек\""
+      description: "архитектура, дизайн интерьера, проектирование зданий и сооружений"
+      keywords: "архитектура, дизайн интерьера, проектирование"
+      author: "Dmitry Kosenko"
   hello: "Привет Мир!"
   nav:
     title: "Адек"

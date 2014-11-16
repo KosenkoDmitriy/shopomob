@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109135623) do
+ActiveRecord::Schema.define(version: 20141116094602) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -104,11 +104,22 @@ ActiveRecord::Schema.define(version: 20141109135623) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "seo_id"
   end
+
+  add_index "posts", ["seo_id"], name: "index_posts_on_seo_id"
 
   create_table "posts_post_category_ids", force: true do |t|
     t.integer  "post_id"
     t.integer  "post_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seos", force: true do |t|
+    t.string   "meta_title"
+    t.text     "meta_description"
+    t.string   "meta_keywords"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

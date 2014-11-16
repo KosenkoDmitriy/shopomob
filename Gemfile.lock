@@ -198,6 +198,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   fancybox2-rails (~> 0.2.8)
+  formtastic (~> 3.0)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2)

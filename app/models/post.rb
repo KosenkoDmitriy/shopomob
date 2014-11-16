@@ -1,4 +1,8 @@
 class Post < ActiveRecord::Base
+  belongs_to :seo
+  # следующая строка указывает на вложенность формы seo в page
+  accepts_nested_attributes_for :seo, :allow_destroy => true#, :reject_if => :all_blank
+
   has_many :images, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true
 
