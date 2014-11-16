@@ -13,7 +13,11 @@ class UserMailer < ActionMailer::Base
   end
 
   def subscribe_email(email, data)
-      mail(to:email, subject: "Адек. Вы подписаны на рассылку!")#, body: data)
+    mail(to:email, subject: "Адек. Вы подписаны на рассылку!")#, body: data)
+  end
+
+  def notify_me(email, subject, body)
+    mail(to:email, subject: subject, body: body)
   end
 
 end

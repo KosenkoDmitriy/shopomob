@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-
   def index
     @posts = Post.all
     @services = Service.all
@@ -12,7 +11,7 @@ class HomeController < ApplicationController
   end
 
   #def create
-    #UserMailer.welcome_email(@user).deliver
+  #UserMailer.welcome_email(@user).deliver
   #end
 
   def order
@@ -25,25 +24,26 @@ class HomeController < ApplicationController
     details = params['details'] if params['details'].present?
 
     if (name && email && phone)
-      customer = Customer.find_or_create_by(email:email)
+      customer = Customer.find_or_create_by(email: email)
       customer.name = name
       customer.email = email
       customer.phone = phone
       order = Order.new
       order.details = details
       if (services.present?)
-      services.each do |service|
-        s=Service.find(service[0].to_i)
-        if s
-          order.services.append(s)
+        services.each do |service|
+          s=Service.find(service[0].to_i)
+          if s
+            order.services.append(s)
+          end
         end
-      end
       end
 
       customer.orders.append(order)
       if (customer.save!)
         flash[:notice] = "saved"
         UserMailer.order_email(params).deliver
+        UserMailer.notify_me("adec@adec.name", "adec. new order", params.to_s).deliver
       else
         flash[:error] = "not saved"
       end
@@ -62,25 +62,27 @@ class HomeController < ApplicationController
     u.save!
     if email
       UserMailer.subscribe_email(email, params.to_s).deliver
+      UserMailer.notify_me("adec@adec.name", "adec. new user subscribed", params.to_s).deliver
+      flash[:notice] = "успешно подписаны на рассылку"
     end
     #respond_to do |format|
     #  format.html { render json: params }
     #end
 
-    redirect_to :index_path
+    redirect_to :root
     #redirect_to action: 'index'
 
   end
 
   private
-    def create_user
-      email = params['email'] if params['email'].present?
-      username = params['username'] if params['username'].present?
-      user = User.find_by(email:email)
-      if user
-        flash[:notice] = "already have email"
-      else
-        user = User.create(email:email, name:username)
-      end
+  def create_user
+    email = params['email'] if params['email'].present?
+    username = params['username'] if params['username'].present?
+    user = User.find_by(email: email)
+    if user
+      flash[:notice] = "already have email"
+    else
+      user = User.create(email: email, name: username)
     end
+  end
 end
