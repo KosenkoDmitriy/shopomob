@@ -19,7 +19,7 @@
 
 var adjustModal = function($modal) {
     var top;
-    if ($(window).width() <= 480) {
+    if ($(window).width() <= 320) {
         if ($modal.hasClass('modal-fullscreen')) {
             if ($modal.height() >= $(window).height()) {
                 top = $(window).scrollTop();

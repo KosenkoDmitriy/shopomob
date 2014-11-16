@@ -992,7 +992,7 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .modal-fullscreen {
       left: 0 !important;
       right: 0 !important;
