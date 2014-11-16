@@ -34,3 +34,6 @@ ru:
 
 
   enter_email: "Введите email"
+  will_paginate:
+      previous_label: "<"
+      next_label: ">"

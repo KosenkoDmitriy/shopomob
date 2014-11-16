@@ -1629,6 +1629,18 @@ div.clearfix.header-block-pad {
 .p0 {
 
 }
+
 body {
   font-size: 14px;
+}
+
+ul.pagination li a {
+  color: #f9f4d3;
+  background: #000;
+  border-color: #f9f4d3;
+}
+
+ul.pagination li a:hover,ul.pagination li.active a {
+  color: #000000;
+  background: #f9f4d3;
 }
