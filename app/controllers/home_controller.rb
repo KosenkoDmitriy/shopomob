@@ -49,7 +49,8 @@ class HomeController < ApplicationController
       end
     end
 
-    redirect_to :index_path #TODO: show resule template or flash.notice
+    redirect_to :root
+    #redirect_to :index_path #TODO: show resule template or flash.notice
     #respond_to do |format|
     #  format.html { render json: params }
     #end
