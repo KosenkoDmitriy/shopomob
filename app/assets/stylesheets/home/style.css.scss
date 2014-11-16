@@ -1670,4 +1670,20 @@ ul.pagination li a:hover,ul.pagination li.active a {
   background-color: #f9f4d3;
 }
 
+.modal-body {
+  max-height: 320px;
+  min-height: 120px;
+}
+
+.close {
+  color: #f9f4d3;
+//  background-color:f9f4d3 ;
+  opacity: 1;
+}
+
+.close:hover {
+  color: #f0e8a7;
+  //  background-color:f9f4d3 ;
+  opacity: 1;
+}
 
