@@ -7,8 +7,19 @@
 
 <% if @post.present? %>
 <h4><%=@post.title%></h4>
+
+<!--<div class="span3">-->
+    <!--<%=image_tag(@post.images.first.image.url, class:"img-radius", style:"") if @post.images.count > 0 %>-->
+<!--</div>-->
+<!--<div class="span4">-->
+    <!--<%=@post.text%>-->
+<!--</div>-->
 <div class="text-block-1">
-    <%=image_tag(@post.images.first.image.url, class:"img-radius", style:"") if @post.images.count > 0 %>
+    <% if @post.images.present? && @post.images.count > 0 %>
+    <% @post.images.each do |image| %>
+    <%=image_tag(image.image.url, class:"img-radius", style:"width:370px;") if image.image.present? %>
+    <% end %>
+    <% end %>
     <div>
         <p class="lead p2"><%=@post.stext%> </p>
         <%=@post.text%>
@@ -16,8 +27,11 @@
         <!--<a href="more.html" class="btn btn_">more info</a>-->
     </div>
 </div>
+</div>
 <% else %>
 <h4>запись не найдена</h4>
-
 <% end %>
+
+
+
 
