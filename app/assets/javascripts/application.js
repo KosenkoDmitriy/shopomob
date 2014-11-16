@@ -18,11 +18,9 @@
 //= require home/camera
 //= require home/superfish
 //= require home/forms
-//= require home/bootstrap
+//= require home/bootstrap.min
+//= require home/bootstrap-responsive
 //= require fancybox
-// require home/bootstrap.min
-
-// require bootstrap.min
 // require jquery_ujs
 // require turbolinks
 // require_tree .
