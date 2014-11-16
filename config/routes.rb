@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index', as: :index_path
+  root 'home#index'#, as: "index_path"
   #get 'posts' => 'home#index', as: "posts"
   resources :posts
   post 'order' => 'home#order'
