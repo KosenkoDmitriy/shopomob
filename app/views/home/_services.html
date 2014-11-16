@@ -4,6 +4,22 @@
             <div class="row" id="services">
                 <div class="span12">
                     <h4>Услуги</h4>
+                    <!--<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>-->
+                    <!--<button type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>-->
+                    <!--&lt;!&ndash; Modal &ndash;&gt;-->
+                    <!--<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">-->
+                        <!--<div class="modal-header">-->
+                            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>-->
+                            <!--<h3 id="myModalLabel">Modal header</h3>-->
+                        <!--</div>-->
+                        <!--<div class="modal-body">-->
+                            <!--<p>One fine body…</p>-->
+                        <!--</div>-->
+                        <!--<div class="modal-footer">-->
+                            <!--<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>-->
+                            <!--<button class="btn btn-primary">Save changes</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <ul class="thumbnails">
                         <% @services.each do |service| %>
                         <li class="span3">
@@ -12,11 +28,30 @@
                                     <%=image_tag(service.try(:image).try(:image).try(:url), class:"",
                                     style:"height:150px")%>
                                     <h5><%=service.title%></h5>
-                                    <!--<h3><%=service.price%></h3>-->
+                                    <h3>от <%=service.price%> рублей</h3>
                                 </div>
                                 <div class="thumbnail-pad">
-                                    <p><%=service.stext%></p>
-                                    <a href="<%=service.link%>" class="btn btn_">от <%=service.price.to_s%> рублей</a>
+                                    <p><%=service.stext.html_safe if service.stext.present?%></p>
+                                    <!-- Button to trigger modal -->
+                                    <a href="#serviceModal<%=service.id%>" role="button" class="btn btn_" data-toggle="modal">Подробнee</a>
+                                    <a href="#order" class="btn btn_ btn-primary" role="button" >Заказать</a>
+
+                                    <!-- Modal -->
+                                    <div id="serviceModal<%=service.id%>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="smodalLabel<%=service.id%>" aria-hidden="true">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h3 id="#smodalLabel<%=service.id%>"><%=service.title%></h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p><%=service.text.html_safe if service.text.present?%></p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <!--<button class="btn btn_" data-dismiss="modal" aria-hidden="true">Закрыть</button>-->
+                                            <!--<button class="btn btn-primary">Save changes</button>-->
+                                            <a href="<%=root_url%>#services" data-dismiss="modal" aria-hidden="true" class="btn btn_">Закрыть</a>
+                                            <a href="#order" class="btn btn_ btn-primary">Заказать</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </li>

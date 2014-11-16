@@ -35,6 +35,12 @@
                                     <p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
                                     <% end %>
                                 <!--</label>-->
+
+                                <!--<div class="btn-group" data-toggle="buttons-checkbox">-->
+                                    <!--<button type="button" class="btn btn-primary">Left</button>-->
+                                    <!--<button type="button" class="btn btn-primary">Middle</button>-->
+                                    <!--<button type="button" class="btn btn-primary">Right</button>-->
+                                <!--</div>-->
                                 <label class="name">
                                     <%#= label_tag(:q, "Search for:") #%>
                                     <%= text_field_tag(:name, "", required:"true", type: "text", placeholder: "Как к Вам обращаться?") %>
@@ -51,6 +57,7 @@
                                     <%= text_field_tag(:phone, "", required:"true", type: "number", placeholder: "Ваш телефон") %>
                                     <span class="error" style="display: none;">*Ошибочный телефонный номер.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>
                                 </label>
+
                                 <label class="message">
                                     <%#= text_area :details, rows: 2 #%>
                                     <textarea name="details" placeholder="Сообщение:"></textarea>

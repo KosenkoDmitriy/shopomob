@@ -1644,3 +1644,30 @@ ul.pagination li a:hover,ul.pagination li.active a {
   color: #000000;
   background: #f9f4d3;
 }
+
+//.modal.fade.in {
+//  top: 55%;
+//}
+
+.modal {
+  background-color: #000;
+  color: #f9f4d3;
+  border-color: #f9f4d3;
+}
+
+.modal .footer, .modal .modal-footer {
+  background-color: #000;
+  color: #f9f4d3;
+}
+
+#services .btn-primary {
+  background-color: #f0e8a7;
+  color:#000;
+}
+
+#services .btn-primary:hover {
+  border-color: #f9f4d3;
+  background-color: #f9f4d3;
+}
+
+
