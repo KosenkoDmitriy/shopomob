@@ -990,3 +990,13 @@
     overflow: visible !important;
   }
 }
+
+
+@media (max-width: 480px) {
+    .modal-fullscreen {
+      left: 0 !important;
+      right: 0 !important;
+      margin-top: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
