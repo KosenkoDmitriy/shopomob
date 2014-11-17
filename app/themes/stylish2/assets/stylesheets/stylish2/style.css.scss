@@ -79,7 +79,7 @@ img.img-radius {
   line-height: 20px;
   font-weight: bold;
   display: inline-block;
-  background: "marker.gif" right 7px no-repeat;
+  background: asset-data-url("stylish2/marker.gif") right 7px no-repeat;
   padding-right: 10px;
   margin-top: 20px;
   text-decoration: none;
@@ -380,7 +380,7 @@ h1.brand span {
   display: inline-block;
   width: 17px;
   height: 15px;
-  background: ("stylish2.png") 0 0 no-repeat;
+//  background: asset-data-url("stylish2/stylish2.png") 0 0 no-repeat;
 }
 .nav-collapse_ .nav > li.li-first {
   background: none;
