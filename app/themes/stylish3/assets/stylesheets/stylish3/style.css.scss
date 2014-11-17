@@ -415,7 +415,7 @@ h1.brand span {
 }
 
 .navbar_ .navbar-inner_ {
-//  padding: 18px 0px 19px 45px;
+  //  padding: 18px 0px 19px 45px;
   margin: 0;
   background: asset-data-url("stylish2/navbar.png") 0 0 repeat-x;
   border: none;
@@ -1869,15 +1869,15 @@ ul.pagination li a:hover, ul.pagination li.active a {
 }
 
 .modal-content {
-//  max-height: 320px;
-//  min-height: 120px;
-  background-color:#000;
+  //  max-height: 320px;
+  //  min-height: 120px;
+  background-color: #000;
   border: 2px solid #f9f4d3;
 }
 
-.modal-header{
-//  min-height: 16.42857143px;
-//  padding: 15px;
+.modal-header {
+  //  min-height: 16.42857143px;
+  //  padding: 15px;
   border-bottom: 2px solid #f9f4d3;
 }
 
@@ -1915,7 +1915,7 @@ ul.pagination li a:hover, ul.pagination li.active a {
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: #f0e8a7;
-  color:#000;
+  color: #000;
   border: 1px solid #f0e8a7;
 }
 
@@ -1936,26 +1936,27 @@ ul.pagination li a:hover, ul.pagination li.active a {
 }
 
 .navbar-nav > li > a {
-  color:#f9f4d3;
-  font-size:16px;
+  color: #f9f4d3;
+  font-size: 16px;
   text-transform: uppercase;
   //  background:#f9f4d3 ;
 }
+
 .navbar-nav > li > a:hover {
-  color:#f0e8a7;
-  background:#262528;
+  color: #f0e8a7;
+  background: #262528;
 }
 
 a {
-  color:#f9f4d3;
+  color: #f9f4d3;
 }
 
 a:hover {
-  color:#f0e8a7;
+  color: #f0e8a7;
 }
 
 .modal.in .modal-dialog {
-  z-index:inherit;
+  z-index: inherit;
 }
 
 #gallery img {
@@ -1987,7 +1988,5 @@ a:hover {
 .thumbnail .btn_ {
   color: #f9f4d3;
   background: #000;
-//  border-color: #f9f4d3;
   border: 1px solid #f0e8a7;
 }
-
