@@ -2,19 +2,12 @@
 <section id="content">
     <div class="sub-content">
         <div class="container">
-
-            <div role="tabpanel">
+            <div role="tabpanel" id="gallery">
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" id="galleryTab">
-                    <li role="presentation" class="active"><a href="#gallery_all" aria-controls="home" role="tab" data-toggle="tab">Все</a></li>
-
-                    <!--<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>-->
-                    <!--</li>-->
-                    <!--<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a>-->
-                    <!--</li>-->
-                    <!--<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a>-->
-                    <!--</li>-->
+                    <li role="presentation" class="active"><a href="#gallery_all" aria-controls="home" role="tab"
+                                                              data-toggle="tab">Все</a></li>
                     <% @galleries.each do |gallery| %>
                     <li><a href="#gallery<%=gallery.id%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
                     <% end %>
@@ -23,16 +16,21 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="gallery_all">
-                        <% @galleries.each do |gallery| %>
-                        <% gallery.images.each do |image| %>
-                        <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
-                            <%=image_tag(image.image.url(:medium), class:"", style:"height:150px")%>
-                        </a>
-                        <% end %>
-                        <% end %>
+                        <div class="row">
+                            <% @galleries.each do |gallery| %>
+                            <% gallery.images.each do |image| %>
+                            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                                <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
+                                    <%=image_tag(image.image.url(:medium), class:"", style:"height:150px")%>
+                                </a>
+                            </div>
+                            <% end %>
+                            <% end %>
+                        </div>
+
                     </div>
                     <% @galleries.each do |gallery| %>
-                    <div role="tabpanel" class="tab-pane active" id="gallery<%=gallery.id%>">
+                    <div role="tabpanel" class="tab-pane" id="gallery<%=gallery.id%>">
                         <%#=gallery.title#%>
                         <% gallery.images.each do |image| %>
                         <a class="fancybox" rel="group" href="<%=image.image.url(:normal)%>">
@@ -41,23 +39,16 @@
                         <% end %>
                     </div>
                     <% end %>
-
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 <script>
     $("a.fancybox").fancybox();
-//        $('#galleryTab a').click(function (e) {
-//            e.preventDefault()
-//            $(this).tab('show')
-//        })
-
-//$(document).on('ready page:load', function () {
-//    $("a.fancybox").fancybox();
-//});
-
+    //        $('#galleryTab a').click(function (e) {
+    //            e.preventDefault()
+    //            $(this).tab('show')
+    //        })
 </script>
 <% end %>
