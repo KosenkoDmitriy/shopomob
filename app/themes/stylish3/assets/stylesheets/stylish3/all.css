@@ -5,9 +5,10 @@
  *
  *= require stylish3/bootstrap
  *= require stylish3/style
- *= require stylish3/gallery_fancy_customize
 
  *= require_self
  *= require fancybox
+ *= require stylish3/gallery_fancy_customize
+
  * require_tree .
 */

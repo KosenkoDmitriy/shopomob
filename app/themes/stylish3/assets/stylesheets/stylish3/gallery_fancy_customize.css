@@ -1,3 +1,7 @@
 .fancybox-nav span {
     visibility: visible;
 }
+
+.fancybox-skin {
+    background-color: #000;
+}
