@@ -21,5 +21,7 @@ module Shopomob
     #config.i18n.load_path += Dir[Rails.root.join('app', 'themes','stylish2','locales', '*.{rb,yml}').to_s]
     config.i18n.load_path += Dir[Rails.root.join('app/themes/*', 'locales', '**', '*.yml').to_s]
     config.i18n.default_locale = :ru
+    #config.assets.enabled = true
+
   end
 end

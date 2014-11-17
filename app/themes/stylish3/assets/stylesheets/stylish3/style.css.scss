@@ -1990,3 +1990,26 @@ a:hover {
   background: #000;
   border: 1px solid #f0e8a7;
 }
+
+.scroll-top {
+  position:fixed;
+  bottom:0;
+  right:1%;
+  z-index:100;
+  background: #f0e8a7;
+  font-size:24px;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+}
+
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+}
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/assets/glyphicons-halflings-regular.eot');
+  src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
