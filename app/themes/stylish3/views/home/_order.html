@@ -1,0 +1,78 @@
+<section id="content">
+    <div class="sub-content" id="order">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h4>Контакты</h4>
+                    <div class="map">
+                        <!--<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe></div>-->
+                        <!--<iframe src="https://www.google.com/maps/embed/v1/place/&q=Kirova+3,+Vladikavkaz,+Respublika+Severnaya+Osetiya-Alaniya"></iframe>-->
+                        <!--<iframe src="http://maps.google.ru/maps?f=q&amp;source=s_q&amp;hl=ru&amp;language=ru&amp;geocode=&amp;q=Владикавказ,Кирова+3&amp;output=embed"></iframe></div>-->
+                        <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=Владикавказ,Кирова+3&amp;output=embed&amp;language=ru"></iframe></div>
+
+                        <address>
+                        <strong class="clr">Архитектурная фирма Адек<br>
+                            ул. Кирова 3,<br>
+                            Владикавказ, 362000.</strong><br>
+                        <span>Телефон:</span>+7 (918) 829 02 93<br>
+                        E-mail: <a href="mailto:adec@adec.name"><u>adec@adec.name</u></a>
+                    </address>
+
+                </div><h4>Заказать услуги</h4>
+
+                <div class="col-xs-12 col-md-6">
+                    <div class="contact-form">
+                        <!--<%#= form_for(@product) do |f| #%>-->
+                        <%= form_tag("/order", method: "post", id:"", class: "contact-form", role:"") do %>
+                        <% if flash[:notice] %>
+                            <div class="success" style="display: none;">Заказ успешно отправлен!<strong><br>Мы свяжемся с Вам в ближайшее время.</strong> </div>
+                        <% end %>
+                            <fieldset>
+                                <!--<label class="service">-->
+                                    <!--<span class="error" style="display: block;"> Выберите интересующие услуги</span>-->
+                                    <%#= select_tag( "services", options_for_select(@services.map{|service| [service.title, service.id]})) #%>
+                                    <%@services.each do |service|%>
+                                    <p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
+                                    <% end %>
+                                <!--</label>-->
+
+                                <!--<div class="btn-group" data-toggle="buttons-checkbox">-->
+                                    <!--<button type="button" class="btn btn-primary">Left</button>-->
+                                    <!--<button type="button" class="btn btn-primary">Middle</button>-->
+                                    <!--<button type="button" class="btn btn-primary">Right</button>-->
+                                <!--</div>-->
+                                <label class="name">
+                                    <%#= label_tag(:q, "Search for:") #%>
+                                    <%= text_field_tag(:name, "", required:"true", type: "text", placeholder: "Как к Вам обращаться?") %>
+                                    <!--<input type="text" value="Как к Вам обращаться?">-->
+                                    <span class="error" style="display: none;">*Ошибочное имя.</span> <span class="empty" style="display: block;">*Обязательно для заполнения.</span>
+                                </label>
+                                <label class="email">
+                                    <!--<input type="email" value="Ваш E-mail:">-->
+                                    <%= text_field_tag(:email, "", required:"true", type: "email", placeholder: "Ваш электронный адрес") %>
+                                    <span class="error" style="display: none;">*Ошибочный электронный адрес.</span> <span class="empty" style="display: block;">*Обязательно для заполнения.</span>
+                                </label>
+                                <label class="phone">
+                                    <!--<input type="text" value="Ваш телефон:">-->
+                                    <%= text_field_tag(:phone, "", required:"true", type: "number", placeholder: "Ваш телефон") %>
+                                    <span class="error" style="display: none;">*Ошибочный телефонный номер.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>
+                                </label>
+
+                                <label class="message">
+                                    <%#= text_area :details, rows: 2 #%>
+                                    <textarea name="details" placeholder="Сообщение:"></textarea>
+                                    <!--<span class="error" style="display: none;">*Слишком коротко.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>-->
+                                </label>
+                            </fieldset>
+                            <div class="pull-right">
+                                <a href="#" class="btn btn_ btn-small_" data-type="reset">Очистить</a>
+                                <!--<a href="#" class="btn btn_ btn-small_" data-type="submit">Заказать</a>-->
+                                <%= submit_tag("Заказать", class:"btn btn_ btn-small_") %>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

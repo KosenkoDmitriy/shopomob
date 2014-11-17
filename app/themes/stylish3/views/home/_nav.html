@@ -1,0 +1,121 @@
+<%#= render :partial=>'home/contacts' #%>
+<%#= render_navigation( expand_all: true, renderer: :bootstrap2 ) #%>
+<nav class="navbar navbar_" role="navigation">
+    <div class="navbar-inner navbar-inner_">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Меню</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#">Brand</a>-->
+                <div class="navbar-header navbar-header_">
+                    <a class="navbar-brand" href="#">
+                        <%#=image_tag("stylish2/adec_logo_old5.png", width:"100%", alt:"Адек",class:"logo")%>
+                        <%#=image_tag("stylish2/adec_logo.png", width:"", alt:"Адек",class:"logo")#%>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                    <!--<li><a href="#">Link</a></li>-->
+                    <li><a href="<%=root_path%>#about">О нас</a></li>
+                    <li><a href="<%=root_path%>#services">Услуги</a></li>
+                    <li><a href="<%=root_path%>#gallery">Галерея</a></li>
+                    <li><a href="<%=posts_url%>">Статьи</a></li>
+                    <li><a href="<%=root_path%>#order">Контакты</a></li>
+                    <li><a href="<%=root_path%>#order">Заказать</a></li>
+                    <!--<li class="dropdown">-->
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown-->
+                            <!--<span class="caret"></span></a>-->
+                        <!--<ul class="dropdown-menu" role="menu">-->
+                            <!--<li><a href="#">Action</a></li>-->
+                            <!--<li><a href="#">Another action</a></li>-->
+                            <!--<li><a href="#">Something else here</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li><a href="#">Separated link</a></li>-->
+                            <!--<li class="divider"></li>-->
+                            <!--<li><a href="#">One more separated link</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+                <!--<form class="navbar-form navbar-left" role="search">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" class="form-control" placeholder="Search">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-default">Submit</button>-->
+                <!--</form>-->
+
+                <ul class="nav navbar-nav navbar-right social-icons">
+                    <li><a href="#">
+                        <%=image_tag("stylish2/icon-1.png", class:"")%>
+                    </a></li>
+                    <li><a href="#"><%=image_tag("stylish2/icon-2.png", class:"")%></a></li>
+                    <li><a href="#"><%=image_tag("stylish2/icon-3.png", class:"")%></a></li>
+                    <li><a href="#"><%=image_tag("stylish2/icon-4.png", class:"")%></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+</nav>
+
+
+<!--<div class="navbar navbar_ clearfix">-->
+    <!--<div class="navbar-inner navbar-inner_">-->
+        <!--<div class="container">-->
+            <!--<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">Меню навигации</a>-->
+
+            <!--<div class="nav-collapse nav-collapse_ collapse">-->
+
+                <!--<ul class="nav sf-menu">-->
+                    <!--<li class="active li-first"><a href="#main"><em class="hidden-phone"></em><span-->
+                            <!--class="visible-phone">Главная</span></a></li>-->
+                    <!--&lt;!&ndash;<li class="sub-menu">&ndash;&gt;-->
+                    <!--<li>-->
+                        <!--<a href="<%=root_path%>#about">О нас</a>-->
+                        <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Welcome Message</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li class="sub-menu"><a href="#">Company Profile</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Our Capabilities</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Advantages</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Work Team</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Partnership</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Support</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Our History</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<li><a href="#">Testimonials</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                    <!--</li>-->
+                    <!--<li><a href="<%=root_path%>#services">Услуги</a></li>-->
+                    <!--<li><a href="<%=root_path%>#gallery">Галерея</a></li>-->
+                    <!--<li><a href="<%=posts_url%>">Статьи</a></li>-->
+                    <!--<li><a href="<%=root_path%>#order">Контакты</a></li>-->
+                    <!--<li><a href="<%=root_path%>#order">Заказать</a></li>-->
+
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<ul class="social-icons">-->
+                <!--<li><a href="#">-->
+                    <!--<%=image_tag("stylish2/icon-1.png", class:"")%>-->
+                <!--</a></li>-->
+                <!--<li><a href="#"><%=image_tag("stylish2/icon-2.png", class:"")%></a></li>-->
+                <!--<li><a href="#"><%=image_tag("stylish2/icon-3.png", class:"")%></a></li>-->
+                <!--<li><a href="#"><%=image_tag("stylish2/icon-4.png", class:"")%></a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
