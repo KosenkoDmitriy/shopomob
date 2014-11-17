@@ -1925,7 +1925,6 @@ ul.pagination li a:hover, ul.pagination li.active a {
 
 .nav-tabs > li > a {
   border: 1px solid #f0e8a7;
-
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
@@ -1970,3 +1969,25 @@ a:hover {
 .navbar-dark .navbar-toggle .icon-bar {
   background-color: #f0e8a7;
 }
+
+.thumbnail {
+  background-color: #000;
+  border: 1px solid #f0e8a7;
+}
+
+.thumbnail h4 {
+  margin: 0px 0 18px 0;
+}
+
+.thumbnail .btn_:hover {
+  color: #f0e8a7;
+  background: #000;
+}
+
+.thumbnail .btn_ {
+  color: #f9f4d3;
+  background: #000;
+//  border-color: #f9f4d3;
+  border: 1px solid #f0e8a7;
+}
+

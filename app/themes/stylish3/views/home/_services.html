@@ -3,65 +3,63 @@
     <div class="sub-content">
         <div class="container">
             <div class="row" id="services">
-                <div class="col-xs-12">
-                    <h4>Услуги</h4>
-                    <ul class="thumbnails">
-                        <% @services.each do |service| %>
-                        <li class="col-md-3">
-                            <div class="thumbnail">
-                                <div class="caption">
-                                    <%=image_tag(service.try(:image).try(:image).try(:url), class:"",
-                                    style:"height:150px")%>
-                                    <h5><%=service.title%></h5>
+                <h4>Услуги</h4>
+                <% @services.each do |service| %>
+                <div class="col-xs-12 col-md-3">
+                    <div class="thumbnail">
+                        <!--<img data-src="holder.js/300x300" alt="...">-->
+                        <%=image_tag(service.try(:image).try(:image).try(:url), class:"",
+                        style:"height:150px")%>
+                        <div class="caption">
+                            <h4><%=service.title%></h4>
+                            <h5>от <%=service.price%> рублей</h5>
+                            <div class="thumbnail-pad">
+                                <!--<p><%=service.stext.html_safe if service.stext.present?%></p>-->
+                                <!-- Button to trigger modal -->
+                                <a href="#serviceModal<%=service.id%>" role="button" class="btn btn_"
+                                   data-toggle="modal">Подробнee</a>
+                                <a href="#order" class="btn btn_ btn-primary" role="button">Заказать</a>
 
-                                    <h3>от <%=service.price%> рублей</h3>
-                                </div>
-                                <div class="thumbnail-pad">
-                                    <p><%=service.stext.html_safe if service.stext.present?%></p>
-                                    <!-- Button to trigger modal -->
-                                    <a href="#serviceModal<%=service.id%>" role="button" class="btn btn_"
-                                       data-toggle="modal">Подробнee</a>
-                                    <a href="#order" class="btn btn_ btn-primary" role="button">Заказать</a>
-
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="serviceModal<%=service.id%>" tabindex="-1" role="dialog"
-                                         aria-labelledby="serviceModalLabel<%=service.id%>" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal"><span
-                                                            aria-hidden="true">&times;</span><span
-                                                            class="sr-only">Close</span></button>
-                                                    <h4 class="modal-title" id="serviceModalLabel<%=service.id%>">
-                                                        <%=service.title%></h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p><%=service.text.html_safe if service.text.present?%></p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
-                                                    <a href="<%=root_url%>#services" data-dismiss="modal"
-                                                       aria-hidden="true"
-                                                       class="btn btn_">Закрыть</a>
-                                                    <a href="#order" class="btn btn_ btn-primary">Заказать</a>
-                                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="serviceModal<%=service.id%>" tabindex="-1" role="dialog"
+                                     aria-labelledby="serviceModalLabel<%=service.id%>" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span
+                                                        aria-hidden="true">&times;</span><span
+                                                        class="sr-only">Close</span></button>
+                                                <h4 class="modal-title" id="serviceModalLabel<%=service.id%>">
+                                                    <%=service.title%></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><%=service.text.html_safe if service.text.present?%></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                                                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                                <a href="<%=root_url%>#services" data-dismiss="modal" aria-hidden="true" class="btn btn_">Закрыть</a>
+                                                <!--<a href="#order" class="btn btn_ btn-primary">Заказать</a>-->
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-                        </li>
-                        <% end %>
-                    </ul>
+
+
+                        </div>
+                    </div>
+
                 </div>
+                <% end %>
+
             </div>
         </div>
     </div>
     <br>
 </section>
+
+
 <script>
     //    $(document).ready(function () {
     var heights = $(".thumbnail").map(function () {
