@@ -11,10 +11,10 @@
  * file per style scope.
  *
 
- *= require home/bootstrap
- *= require home/responsive
- *= require home/camera
- *= require home/style
- *= require fancybox
- *= require home/gallery_fancy_customize
+ * require home/bootstrap
+ * require home/responsive
+ * require home/camera
+ * require home/style
+ * require fancybox
+ * require home/gallery_fancy_customize
  */

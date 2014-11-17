@@ -11,16 +11,16 @@
 // about supported directives.
 //
 // require jquery
-//= require home/jquery
-//= require home/jquery.easing.1.3
-//= require home/jquery.ui.totop
-//= require home/jquery.mobile.customized.min
-//= require home/camera
-//= require home/superfish
-//= require home/forms
-//= require home/bootstrap.min
-//= require home/bootstrap-responsive
-//= require fancybox
+// require home/jquery
+// require home/jquery.easing.1.3
+// require home/jquery.ui.totop
+// require home/jquery.mobile.customized.min
+// require home/camera
+// require home/superfish
+// require home/forms
+// require home/bootstrap.min
+// require home/bootstrap-responsive
+// require fancybox
 // require jquery_ujs
 // require turbolinks
 // require_tree .

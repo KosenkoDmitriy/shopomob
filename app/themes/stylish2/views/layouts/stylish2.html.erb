@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <% if content_for?(:head) %>
+      <%= content_for(:head) %>
+  <% else %>
+      <title><%= t("head.meta.title") %></title>
+      <meta name="keywords" content="<%= t("head.meta.keywords") %>"/>
+      <meta name="description" content="<%= t("head.meta.description") %>"/>
+      <meta name="author" content="<%= t("head.meta.author") %>">
+  <% end %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <%= stylesheet_link_tag "stylish2/all", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "stylish2/all", "data-turbolinks-track" => true %>
+  <script>
+      $(document).ready(function () {
+          jQuery('.camera_wrap').camera();
+      });
+  </script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render :partial => 'home/header' %>
+
+<section>
+  <%= yield %>
+</section>
+
+<%= render :partial => 'home/footer' %>
+<script>
+    $(document).ready(function () {
+        $("a.fancybox").fancybox();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var heights = $(".thumbnail").map(function () {
+                    return $(this).height();
+                }).get(),
+
+                maxHeight = Math.max.apply(null, heights);
+        $(".thumbnail").height(maxHeight);
+    });
+</script>
+</body>
+
+</html>

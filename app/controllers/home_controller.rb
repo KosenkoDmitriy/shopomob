@@ -1,4 +1,10 @@
 class HomeController < ApplicationController
+
+  theme :theme_resolver
+  before_action :set_locale
+
+
+
   def index
     @posts = Post.all
     @services = Service.all
@@ -76,6 +82,12 @@ class HomeController < ApplicationController
   end
 
   private
+  def theme_resolver
+    params[:theme].presence || 'stylish2'
+  end
+  def set_locale
+    I18n.locale = params[:locale] || "ru" #I18n.default_locale
+  end
   def create_user
     email = params['email'] if params['email'].present?
     username = params['username'] if params['username'].present?

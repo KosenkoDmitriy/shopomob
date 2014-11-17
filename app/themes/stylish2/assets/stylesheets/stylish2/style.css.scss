@@ -79,7 +79,7 @@ img.img-radius {
   line-height: 20px;
   font-weight: bold;
   display: inline-block;
-  background: asset-data-url("home/marker.gif") right 7px no-repeat;
+  background: "marker.gif" right 7px no-repeat;
   padding-right: 10px;
   margin-top: 20px;
   text-decoration: none;
@@ -152,7 +152,7 @@ ul.list-2 {
 }
 ul.list li {
   padding: 5px 0 5px 13px;
-  background: asset-data-url("home/marker.gif") 0 12px no-repeat;
+  background: asset-data-url("stylish2/marker.gif") 0 12px no-repeat;
   font-size: 12px;
   line-height: 20px;
 }
@@ -165,7 +165,7 @@ ul.list li a:hover {
 }
 ul.list-2 li {
   padding: 5px 0 5px 13px;
-  background: asset-data-url("home/marker.gif") 0 12px no-repeat;
+  background: asset-data-url("stylish2/marker.gif") 0 12px no-repeat;
   font-size: 12px;
   line-height: 20px;
 }
@@ -213,7 +213,7 @@ ul.list-2 li a:hover {
   width: 37px;
   height: 37px;
   overflow: hidden;
-  background: asset-data-url("home/totop.png") 0 0 no-repeat;
+  background: asset-data-url("stylish2/totop.png") 0 0 no-repeat;
   position: fixed;
   margin-right: -640px !important;
   right: 50%;
@@ -230,12 +230,12 @@ ul.list-2 li a:hover {
 /*------ header ------- */
 header {
   padding: 30px 0 41px 0;
-  background: asset-data-url("home/header.jpg") 0 0 repeat-x #1b1a1d;
+  background: asset-data-url("stylish2/header.jpg") 0 0 repeat-x #1b1a1d;
   position: relative;
   z-index: 999;
 }
 .header-block {
-  background: asset-data-url("home/header-block.jpg") 0 0 repeat-x #1b1b1c;
+  background: asset-data-url("stylish2/header-block.jpg") 0 0 repeat-x #1b1b1c;
 
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -277,7 +277,7 @@ h1.brand span {
   padding: 6px 45px 10px 0;
   color: #f9f4d3;
   line-height: 22px;
-  background: asset-data-url("home/line-1.png") right 0 repeat-y;
+  background: asset-data-url("stylish2/line-1.png") right 0 repeat-y;
 }
 .contacts span,
 .contacts a {
@@ -288,7 +288,7 @@ h1.brand span {
   color: #fff;
 }
 /* search-form */.navbar-form {
-  background: asset-data-url("home/form-search.jpg") 0 0 repeat-x #1c1c1c;
+  background: asset-data-url("stylish2/form-search.jpg") 0 0 repeat-x #1c1c1c;
   border-bottom: #515152 1px solid;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -315,18 +315,18 @@ h1.brand span {
   display: inline-block;
   width: 40px;
   height: 33px;
-    /*background: asset-data-url("home/search.png) 0 0 no-repeat;*/
-  background: asset-data-url("home/search.png") 0 0 no-repeat;
+    /*background: asset-data-url("stylish2/search.png) 0 0 no-repeat;*/
+  background: asset-data-url("stylish2/search.png") 0 0 no-repeat;
 
   float: right;
 }
 .navbar-form a:hover {
-//  background: asset-data-url("home/search.png) right 0 no-repeat;
-  background: asset-data-url("home/search.png") right 0 no-repeat;
+//  background: asset-data-url("stylish2/search.png) right 0 no-repeat;
+  background: asset-data-url("stylish2/search.png") right 0 no-repeat;
 }
 
 .subscribe-form {
-//  background: asset-data-url("home/form-search.jpg") 0 0 repeat-x #1c1c1c;
+//  background: asset-data-url("stylish2/form-search.jpg") 0 0 repeat-x #1c1c1c;
 //  border-bottom: #515152 1px solid;
 //  -webkit-border-radius: 3px;
 //  -moz-border-radius: 3px;
@@ -352,7 +352,7 @@ h1.brand span {
 .navbar_ .navbar-inner_ {
   padding: 18px 0px 19px 45px;
   margin: 0;
-  background: asset-data-url("home/navbar.png") 0 0 repeat-x;
+  background: asset-data-url("stylish2/navbar.png") 0 0 repeat-x;
   border: none;
   min-height: inherit;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -372,7 +372,7 @@ h1.brand span {
   zoom: 1;
 }
 .nav-collapse_ .nav > li {
-  background: asset-data-url("home/line-1.png") 0 0 repeat-y;
+  background: asset-data-url("stylish2/line-1.png") 0 0 repeat-y;
   padding: 0 18px 0 18px;
   line-height: 17px;
 }
@@ -380,7 +380,7 @@ h1.brand span {
   display: inline-block;
   width: 17px;
   height: 15px;
-  background: asset-data-url("home/home.png") 0 0 no-repeat;
+  background: ("stylish2.png") 0 0 no-repeat;
 }
 .nav-collapse_ .nav > li.li-first {
   background: none;
@@ -422,7 +422,7 @@ h1.brand span {
 .nav-collapse_ .nav > li.sub-menu > a:before {
   content: " ";
   position: absolute;
-  background: asset-data-url("home/li-marker.png") left top no-repeat;
+  background: asset-data-url("stylish2/li-marker.png") left top no-repeat;
   width: 7px;
   height: 5px;
   right: 50%;
@@ -445,7 +445,7 @@ h1.brand span {
 .nav-collapse_ .nav > li li.sub-menu > a:before {
   content: " ";
   position: absolute;
-  background: asset-data-url('home/li-marker.png') left top no-repeat;
+  background: asset-data-url('stylish2/li-marker.png') left top no-repeat;
   width: 7px;
   height: 5px;
   right: 10px;
@@ -553,13 +553,13 @@ h1.brand span {
 /*--- header end ------*/
 /*------ content ------- */
 #content {
-  background: asset-data-url("home/bg-content.jpg") 0 0 repeat #1f1e21;
+  background: asset-data-url("stylish2/bg-content.jpg") 0 0 repeat #1f1e21;
 }
 .main-content {
   padding-bottom: 46px;
 }
 .sub-content {
-  background: asset-data-url("home/sub-content.jpg") 0 0 repeat-x;
+  background: asset-data-url("stylish2/sub-content.jpg") 0 0 repeat-x;
   padding-bottom: 46px;
 }
 /* thumbnails */
@@ -570,7 +570,7 @@ h1.brand span {
   margin-bottom: 0px;
 }
 .thumbnails .thumbnail {
-  background: asset-data-url("home/thumbnail-bg.png") 0 0 repeat;
+  background: asset-data-url("stylish2/thumbnail-bg.png") 0 0 repeat;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -583,7 +583,7 @@ h1.brand span {
 }
 .thumbnails .thumbnail .caption {
   padding: 27px 0px 23px 21px;
-//background: asset-data-url("home/thumbnail-caption.png") 0 0 repeat-x #161618;
+//background: asset-data-url("stylish2/thumbnail-caption.png") 0 0 repeat-x #161618;
   background: 0 0 repeat-x #161618;
   -webkit-border-top-right-radius: 6px;
   -moz-border-radius-topright: 6px;
@@ -600,7 +600,7 @@ h1.brand span {
   margin: -3px 0 0 0;
 }
 .thumbnails .thumbnail:hover .caption {
-//    background: asset-data-url("home/thumbnail-caption.png) 0 -204px repeat-x #ac283a;
+//    background: asset-data-url("stylish2/thumbnail-caption.png) 0 -204px repeat-x #ac283a;
     background: 0 -204px repeat-x #f0e8a7;
 }
 .thumbnails .thumbnail img {
@@ -820,7 +820,7 @@ address span {
   border-radius: 0;
   box-shadow: none;
   float: left;
-  background: asset-data-url("home/form-bg.png") 0 0 repeat;
+  background: asset-data-url("stylish2/form-bg.png") 0 0 repeat;
 }
 .contact-form label {
   min-height: 56px;
@@ -861,7 +861,7 @@ address span {
   border-radius: 0;
   box-shadow: none;
   float: left;
-  background: asset-data-url("home/form-bg.png") 0 0 repeat;
+  background: asset-data-url("stylish2/form-bg.png") 0 0 repeat;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
@@ -974,7 +974,7 @@ input[type="submit"].btn, .contact-form input[type="submit"].btn {
 /*------ footer ------- */
 footer {
   padding: 26px 0 38px 0;
-  background: asset-data-url("home/footer.jpg") 0 0 repeat-x;
+  background: asset-data-url("stylish2/footer.jpg") 0 0 repeat-x;
   color: #8e8e8e;
 }
 footer .span8 > a {
@@ -1014,7 +1014,7 @@ footer .span8 > a:hover {
 /* form newsletter */
 form#newsletter {
   margin: 0;
-  background: asset-data-url("home/newsletter-bg.png") 0 0 repeat;
+  background: asset-data-url("stylish2/newsletter-bg.png") 0 0 repeat;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1075,7 +1075,7 @@ form#newsletter input[type="submit"].btn_:hover {
 form#newsletter input#email{
   color: #f0e8a7;
 //  background: #000;
-  background: asset-data-url("home/form-search.jpg") 0 0 repeat-x #1c1c1c;
+  background: asset-data-url("stylish2/form-search.jpg") 0 0 repeat-x #1c1c1c;
 }
 //form#newsletter input#email:focus{
 //  color: #fff;
@@ -1404,7 +1404,7 @@ form#newsletter label {
   .nav-collapse_ .nav > li li.sub-menu > a:before {
     content: "";
     position: absolute;
-    background: asset-data-url("home/li-marker.png") left top no-repeat;
+    background: asset-data-url("stylish2/li-marker.png") left top no-repeat;
     width: 7px;
     height: 5px;
     right: 10px ;
@@ -1618,12 +1618,12 @@ img.logo {
   height: 120px;
 }
 div.clearfix.header-block-pad {
-//  background: asset-data-url("home/adec_logo_old_revert.jpg") right top no-repeat;
+//  background: asset-data-url("stylish2/adec_logo_old_revert.jpg") right top no-repeat;
 //  width: 960px;
 //  height: 400px;
 //  opacity: 1;
 //  opacity: 0.8;
-//  background: asset-data-url("home/adec_logo_old_revert.jpg") right top no-repeat;
+//  background: asset-data-url("stylish2/adec_logo_old_revert.jpg") right top no-repeat;
 
 }
 .p0 {
