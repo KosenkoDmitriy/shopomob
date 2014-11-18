@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   resources :posts
   post 'order' => 'home#order'
   post 'subscribe' => 'home#subscribe'
+  post 'calculate' => 'home#calculate'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

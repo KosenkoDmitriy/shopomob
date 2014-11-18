@@ -21,7 +21,6 @@
                 </div><h4>Заказать услуги</h4>
 
                 <div class="col-xs-12 col-md-6">
-                    <div class="contact-form">
                         <!--<%#= form_for(@product) do |f| #%>-->
                         <%= form_tag("/order", method: "post", id:"", class: "contact-form", role:"") do %>
                         <% if flash[:notice] %>
@@ -70,7 +69,6 @@
                                 <%= submit_tag("Заказать", class:"btn btn_ btn-small_") %>
                             </div>
                         <% end %>
-                    </div>
                 </div>
             </div>
         </div>

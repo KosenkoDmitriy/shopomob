@@ -82,3 +82,17 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
     end
   end
 end
+
+file_path = "#{path_to_app}/service_tarifs.csv"
+puts file_path
+CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+  service = Service.find_by( title: row['service_title'] )
+
+  if service
+    s_tarif = ServiceTarif.find_or_create_by(title: row['title'], text: row['text'], service: service)
+    st_price = ServiceTarifPrice.find_or_create_by(price: row['price'].to_f, condition1: row['condition1'].to_f, condition2: row['condition2'].to_f, service_tarif: s_tarif)
+    #service.service_tarifs.append(s_tarif)
+  else
+    puts "service not found: #{row['service_title']}"
+  end
+end

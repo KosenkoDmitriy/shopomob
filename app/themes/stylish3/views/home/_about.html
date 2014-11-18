@@ -208,25 +208,31 @@
                         полученного результата - готового дизайн-проекта!</p>
                     <p></p>
                 </div>
+
+                <h4>Наша команда</h4>
                 <div class="col-xs-12 col-md-5">
-                    <h4>Наша команда</h4>
-                    <ul class="thumbnails_2">
-                        <% @teamers.each do |teamer| %>
-                        <li class="thumbnail_2">
-                            <figure class="img-indent">
-                                <% if teamer.image.blank?%>
+
+                <% @teamers.each do |teamer| %>
+                <div class="col-xs-6 col-md-6">
+                    <div class="thumbnail">
+
+                        <% if teamer.image.blank?%>
                                 <%=image_tag("stylish2/adec_logo.png", class:"img-radius", style:"width:170px;height:153px")  %>
                                 <% else %>
-                                <%=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius", style:"width:170px;height:153px") %>
+                                <%#=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius", style:"width:170px;height:153px") #%>
+                                <%=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius") %>
                                 <% end %>
-                            </figure>
+
+                        <div class="caption">
                             <p class="text-info"><%=teamer.firstname%> <%=teamer.secondname%></p>
                             <%=teamer.text%>
                             <!--<a href="#" class="underline">&gt;&gt;</a>-->
-                        </li>
-                        <% end %>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
+                <% end %>
+                </div>
+
             </div>
         </div>
     </div>
