@@ -215,19 +215,18 @@
                 <% @teamers.each do |teamer| %>
                 <div class="col-xs-6 col-md-6">
                     <div class="thumbnail">
-
                         <% if teamer.image.blank?%>
                                 <%=image_tag("stylish2/adec_logo.png", class:"img-radius", style:"width:170px;height:153px")  %>
                                 <% else %>
-                                <%#=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius", style:"width:170px;height:153px") #%>
-                                <%=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius") %>
+                                <%=image_tag(teamer.try(:image).try(:image).try(:url), class:"img-radius", style:"") %>
                                 <% end %>
-
-                        <div class="caption">
-                            <p class="text-info"><%=teamer.firstname%> <%=teamer.secondname%></p>
-                            <%=teamer.text%>
-                            <!--<a href="#" class="underline">&gt;&gt;</a>-->
-                        </div>
+                        <p ><%=teamer.firstname%> <%=teamer.secondname%></p>
+                        <p class="text-info"><%=teamer.text%></p>
+                        <!--<div class="caption">-->
+                            <!--<p class="text-info"><%=teamer.firstname%> <%=teamer.secondname%></p>-->
+                            <!--<p><%=teamer.text%></p>-->
+                            <!--&lt;!&ndash;<a href="#" class="underline">&gt;&gt;</a>&ndash;&gt;-->
+                        <!--</div>-->
                     </div>
                 </div>
                 <% end %>
@@ -237,3 +236,13 @@
         </div>
     </div>
 </section>
+
+<script>
+    //    $(document).ready(function () {
+    var heights = $(".thumbnail").map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+    $(".thumbnail").height(400);
+    //    });
+</script>

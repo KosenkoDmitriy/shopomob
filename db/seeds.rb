@@ -34,7 +34,7 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   end
 end
 
-
+path_to_img = Rails.root.join('db', 'images', 'teamers')
 file_path = "#{path_to_app}/teamers.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|

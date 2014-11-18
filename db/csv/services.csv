@@ -1,6 +1,6 @@
 id,order_id,title,price,url,image,text,stext
-1,3,Обмеры,100,#services,black.png,,краткое описание краткое описание краткое описание краткое описание краткое описание
-2,2,Проектирование зданий и сооружений,300,#services,orange.png,"<table width=""100%"">
+1,3,Обмеры,100,#services,adec_logo.png,,краткое описание краткое описание краткое описание краткое описание краткое описание
+2,2,Проектирование зданий и сооружений,300,#services,gallery/exterior_world_for_kid_reconstruction.jpg,"<table width=""100%"">
 <tbody>
 </tbody><colgroup><col id=""c_one"">
 	<col id=""c_two"">
@@ -439,7 +439,7 @@ id,order_id,title,price,url,image,text,stext
 		</td>
 	</tr>
 </tbody></table>",краткое описание краткое описание краткое описание краткое описание краткое описание
-3,1,Дизайн интерьера,700,#services,pictures.png,"<table cellpadding=""4"" width=""100%"">
+3,1,Дизайн интерьера,700,#services,gallery/holl_kithchen.jpg,"<table cellpadding=""4"" width=""100%"">
  
 	<colgroup><col id=""c_one"">
 	<col id=""c_two"">
@@ -887,4 +887,4 @@ id,order_id,title,price,url,image,text,stext
 	</tr>
 	</tbody>
 </table>",краткое описание краткое описание краткое описание краткое описание краткое описание
-4,4,Ландшафтный дизайн,150,#services,white.png,,краткое описание краткое описание краткое описание краткое описание краткое описание
+4,4,Ландшафтный дизайн,150,#services,gallery/dvor_zamackul.jpg,,краткое описание краткое описание краткое описание краткое описание краткое описание

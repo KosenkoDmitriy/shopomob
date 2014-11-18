@@ -6,14 +6,13 @@
                 <h4>Услуги</h4>
                 <% @services.each do |service| %>
                 <div class="col-xs-12 col-md-3">
-                    <div class="thumbnail">
+                    <div class="thumbnail thumbnail_">
                         <!--<img data-src="holder.js/300x300" alt="...">-->
-                        <%=image_tag(service.try(:image).try(:image).try(:url), class:"",
-                        style:"height:150px")%>
+                        <%=image_tag(service.try(:image).try(:image).try(:url), class:"", style:"height:150px")%>
                         <div class="caption">
                             <h4><%=service.title%></h4>
                             <h5>от <%=service.price%> рублей</h5>
-                            <div class="thumbnail-pad">
+                            <!--<div class="thumbnail-pad">-->
                                 <!--<p><%=service.stext.html_safe if service.stext.present?%></p>-->
                                 <!-- Button to trigger modal -->
                                 <a href="#serviceModal<%=service.id%>" role="button" class="btn btn_"
@@ -44,7 +43,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <!--</div>-->
 
 
                         </div>
@@ -62,12 +61,12 @@
 
 <script>
     //    $(document).ready(function () {
-    var heights = $(".thumbnail").map(function () {
+    var heights = $(".thumbnail.thumbnail_").map(function () {
                 return $(this).height();
             }).get(),
 
             maxHeight = Math.max.apply(null, heights);
-    $(".thumbnail").height(maxHeight);
+    $(".thumbnail.thumbnail_").height(maxHeight);
     //    });
 </script>
 
