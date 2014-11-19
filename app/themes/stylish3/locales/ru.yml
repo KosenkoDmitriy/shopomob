@@ -20,6 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  shop:
+    title: "Магазин"
+    url: "http://shop.adec.name/"
   head:
     meta:
       title: "ООО \"Адек\"|Архитектура, проектирование, дизайн интерьера"
