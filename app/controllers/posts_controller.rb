@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def theme_resolver
-    params[:theme].presence || 'stylish2'
+    params[:theme].presence || 'stylish3'
   end
   def set_locale
     I18n.locale = params[:locale] || "ru" #I18n.default_locale #TODO:
