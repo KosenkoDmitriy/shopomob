@@ -8,7 +8,7 @@
                 <div class="col-xs-12 col-md-3">
                     <div class="thumbnail thumbnail_">
                         <!--<img data-src="holder.js/300x300" alt="...">-->
-                        <%=image_tag(service.try(:image).try(:image).try(:url), class:"", style:"height:150px")%>
+                        <%=image_tag(service.try(:image).try(:image).try(:url, :medium), class:"", style:"height:150px")%>
                         <div class="caption">
                             <h4><%=service.title%></h4>
                             <h5>от <%=service.price%> рублей</h5>
