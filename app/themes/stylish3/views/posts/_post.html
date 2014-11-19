@@ -7,13 +7,8 @@
 
 <% if @post.present? %>
 <h4><%=@post.title%></h4>
+<%= render :partial => 'home/social_sharing' %>
 
-<!--<div class="span3">-->
-    <!--<%=image_tag(@post.images.first.image.url, class:"img-radius", style:"") if @post.images.count > 0 %>-->
-<!--</div>-->
-<!--<div class="span4">-->
-    <!--<%=@post.text%>-->
-<!--</div>-->
 <div class="text-block-1">
     <% if @post.images.present? && @post.images.count > 0 %>
     <% @post.images.each do |image| %>
@@ -27,7 +22,8 @@
         <!--<a href="more.html" class="btn btn_">more info</a>-->
     </div>
 </div>
-</div>
+<%= render :partial => 'home/social_sharing' %>
+
 <% else %>
 <h4>запись не найдена</h4>
 <% end %>
