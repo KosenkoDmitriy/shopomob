@@ -2025,3 +2025,43 @@ a:hover {
 body, .thumbnail .caption {
   color: #888;
 }
+
+ul.big-btns, ul.big-btns ul li {
+  list-style-type: none;
+  list-style: none;
+}
+
+.big-btns li a {
+  width: 120px;
+  height: 46px;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  filter: alpha(opacity=50);
+  opacity: 0.7;
+}
+
+.btn_download {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  filter: alpha(opacity=50);
+  opacity: 0.7;
+  width: 120px;
+  height: 46px;
+}
+
+.gapps {
+  background: asset-data-url("stylish3/buttons.png") no-repeat -132px -142px;
+}
+
+.iapps {
+  background: asset-data-url("stylish3/buttons.png") no-repeat 0px -142px;
+}
+
+.gapps:hover, .iapps:hover {
+  opacity: 0.9;
+}
