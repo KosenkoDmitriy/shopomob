@@ -38,6 +38,16 @@
   <li><a href="#" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
 </ul>
 <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53794940-6', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
     $(document).ready(function () {
         /* affix the navbar after scroll below header */
         $('#nav').affix({
@@ -61,17 +71,14 @@
             $('body,html').animate({scrollTop:posi},700);
         });
     });
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-53794940-6', 'auto');
-    ga('send', 'pageview');
-
+    // Все элементы класса .social_share считаем кнопками шаринга see share.js
+//    $(document).on('click', '.social_share', function(){
+//        Share.go(this);
+//    });
 </script>
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+
 </body>
 
 </html>

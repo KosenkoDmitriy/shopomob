@@ -2,8 +2,8 @@
 <section id="content">
     <div class="sub-content">
         <div class="container">
+            <h4>Галерея</h4>
             <div role="tabpanel" id="gallery">
-
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" id="galleryTab">
                     <li role="presentation" class="active"><a href="#gallery_all" aria-controls="home" role="tab"
@@ -12,7 +12,7 @@
                     <li><a href="#gallery<%=gallery.id%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
                     <% end %>
                 </ul>
-
+                <%= render :partial => 'home/social_sharing' %>
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane active" id="gallery_all">
