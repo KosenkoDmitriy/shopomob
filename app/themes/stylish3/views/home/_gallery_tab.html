@@ -3,6 +3,7 @@
     <div class="sub-content">
         <div class="container">
             <h4>Галерея</h4>
+            <p><%= render :partial => 'home/social_sharing' %></p>
 
             <div role="tabpanel" id="gallery">
                 <!-- Nav tabs -->
@@ -44,17 +45,17 @@
         </div>
     </div>
 </section>
-<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"/>
+<!--<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>-->
 <script>
-    $(".fancybox").attr('rel', 'gallery').fancybox({
-        beforeShow: function () {
-            var caption = $(this.element).data("caption") ? $(this.element).data("caption") : "";
-            this.title = this.title ? this.title + caption : '<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug,gplus,surfingbird"></div>' + caption;
-},
-afterShow: function () {
-//            stButtons.locateElements();
-}
-});
+//    $(".fancybox").attr('rel', 'gallery').fancybox({
+//        beforeShow: function () {
+//            var caption = $(this.element).data("caption") ? $(this.element).data("caption") : "";
+//            this.title = this.title ? this.title + caption : '<div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="button" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,lj,friendfeed,moikrug,gplus,surfingbird"></div>' + caption;
+//},
+//afterShow: function () {
+////            stButtons.locateElements();
+//}
+//});
 
     $("a.fancybox").fancybox();
 </script>

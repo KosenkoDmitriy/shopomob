@@ -52,6 +52,7 @@
                         <%= submit_tag("Заказать", class:"btn btn_ btn-small_") %>
                     </div>
                     <% end %>
+                    <%= render :partial => 'home/social_sharing' %>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <%# form_for(@order, url: "calculate") do |f| #%>
@@ -108,6 +109,7 @@
                             <%= submit_tag("Рассчитать", class:"btn btn_ btn-small_") %>
                         </div>
                         <% end %>
+                    <%= render :partial => 'home/social_sharing' %>
                 </div>
             </div>
         </div>
