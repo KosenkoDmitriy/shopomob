@@ -8,29 +8,32 @@
             <div role="tabpanel" id="gallery">
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist" id="galleryTab">
-                    <li role="presentation" class="active"><a href="#gallery_all" aria-controls="home" role="tab"
-                                                              data-toggle="tab">Все</a></li>
-                    <% @galleries.each do |gallery| %>
-                    <li><a href="#gallery<%=gallery.id%>" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
-                    <% end %>
+                    <!--<li role="presentation" class="active"><a href="#gallery_all" aria-controls="home" role="tab"-->
+                                                              <!--data-toggle="tab">Все</a></li>-->
+                    <% i = 0
+                    @galleries.each do |gallery| %>
+                    <li role="presentation" class="<%='active' if i == 0 %>"><a href="#gallery<%=gallery.id%>" aria-controls="home" role="tab" data-toggle="tab"><%=gallery.title%></a></li>
+                    <% i+=1
+                    end %>
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content">
-                    <div class="tab-pane active" id="gallery_all">
-                        <div class="row">
-                            <% @galleries.each do |gallery| %>
-                            <% gallery.images.each do |image| %>
-                            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                                <a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:normal)%>">
-                                    <%=image_tag(image.image.url(:medium), class:"", style:"")%>
-                                </a>
-                            </div>
-                            <% end %>
-                            <% end %>
-                        </div>
-                    </div>
-                    <% @galleries.each do |gallery| %>
-                    <div role="tabpanel" class="tab-pane" id="gallery<%=gallery.id%>">
+                    <!--<div class="tab-pane active" id="gallery_all">-->
+                        <!--<div class="row">-->
+                            <!--<% @galleries.each do |gallery| %>-->
+                            <!--<% gallery.images.each do |image| %>-->
+                            <!--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">-->
+                                <!--<a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:normal)%>">-->
+                                    <!--<%=image_tag(image.image.url(:medium), class:"", style:"")%>-->
+                                <!--</a>-->
+                            <!--</div>-->
+                            <!--<% end %>-->
+                            <!--<% end %>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <% i = 0
+                    @galleries.each do |gallery| %>
+                    <div role="tabpanel" class="tab-pane <%='active' if i == 0%>" id="gallery<%=gallery.id%>">
                         <% gallery.images.each do |image| %>
                         <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
                         <a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:normal)%>">
@@ -39,6 +42,7 @@
                         </div>
                         <% end %>
                     </div>
+                    <% i += 1 %>
                     <% end %>
                 </div>
             </div>
