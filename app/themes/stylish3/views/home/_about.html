@@ -239,10 +239,10 @@
 
 <script>
     //    $(document).ready(function () {
-    var heights = $(".thumbnail").map(function () {
+    var heights = $("#about .thumbnail").map(function () {
                 return $(this).height();
             }).get(),
             maxHeight = Math.max.apply(null, heights);
-    $(".thumbnail").height(400);
+    $("#about .thumbnail").height(400);
     //    });
 </script>
