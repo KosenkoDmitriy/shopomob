@@ -35,5 +35,5 @@
         </div>
     </div>
 
-    <%= render :partial=>'home/slider' %>
+    <%= render :partial=>'home/slider' if controller.action_name != "portfolios" %>
 </header>

@@ -5,8 +5,10 @@
 <meta name="author" content="<%=t('head.meta.author')%>">
 <% end %>
 
+
 <% if @post.present? %>
 <h4><%=@post.title%></h4>
+
 <%= render :partial => 'home/social_sharing' %>
 
 <div class="text-block-1">

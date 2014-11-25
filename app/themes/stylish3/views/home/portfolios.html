@@ -1,0 +1,20 @@
+<!--<section id="content">-->
+    <!--<div class="sub-content">-->
+        <!--<div class="container">-->
+            <!--<% if (@galleries.count>0) %>-->
+            <!--<div class="row" id="gallery">-->
+                <!--<p><%= render_breadcrumbs :separator => ' > ' %></p>-->
+                <!--<% @galleries.each do |gallery| %>-->
+                <!--<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">-->
+                    <!--<h4><%=gallery.title%></h4>-->
+                    <!--<a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">-->
+                        <!--<%=image_tag(gallery.images.last.image.url(:medium), style:"height:160px", alt:gallery.title, class:"img-circle")%>-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<% end %>-->
+            <!--</div>-->
+            <!--<% end %>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->
+<%= render :partial=>'home/gallery_tab' %>

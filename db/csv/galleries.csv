@@ -1,159 +1,182 @@
 id,title,gallery_id,image_name,image
-1,Интерьеры,1,Кабинет,cabinet.jpg
-1,Интерьеры,1,Детская для мальчика 2,detskya_for_malchika_2.jpg
-1,Интерьеры,1,Детская для мальчика,detskya_for_malchika.jpg
-1,Интерьеры,1,Красная гостинная,gostinnaya_red.jpg
-1,Интерьеры,1,Гостинная,gostinnaya.png
-1,Интерьеры,1,Холл в классическом стиле,holl_classic.jpg
-1,Интерьеры,1,Холл Евроклимат,holl_euroclimat.jpg
-1,Интерьеры,1,Кухня,holl_kithchen.jpg
-1,Интерьеры,1,Зал ресторана в осетинском стиле,holl_of_the_restaurant_in_ossetian_style.jpg
-1,Интерьеры,1,Зал филиала Рубина,holl_rubin_filial.jpg
-2,Экстерьеры,2,Мамсурова,exterier_mamsurova.jpg
-2,Экстерьеры,2,Чкалова,exterior_chkalova_street.jpg
-2,Экстерьеры,2,Коттедж,exterior_cottedg.jpg
-2,Экстерьеры,2,Коттедж 2,exterior_cottedg2.jpg
-2,Экстерьеры,2,Фасад Рубина,exterior_facad_rubin_shop.jpg
-2,Экстерьеры,2,Частный дом на Костанаева,exterior_private_home_on_costanaeva_street.jpg
-2,Экстерьеры,2,Частный дом,exterior_private_home.jpg
-2,Экстерьеры,2,Экстерьер Рубин,exterior_rubin.jpg
-2,Экстерьеры,2,Торговый центр на Калинина,exterior_sales_centr_on_calinina_street.jpg
-2,Экстерьеры,2,Торговый центр Greenfield,exterior_shop_greenfield.jpg
-2,Экстерьеры,2,Магазин,exterior_shops.jpg
-2,Экстерьеры,2,Супермаркет,exterior_supermarket.jpg
-2,Экстерьеры,2,Узи центр,exterior_uzi_centr.jpg
-2,Экстерьеры,2,Детский мир (реконструкция),exterior_world_for_kid_reconstruction.jpg
-2,Экстерьеры,2,Аптека,exterior_apteka.jpg
-3,Ландшафтный дизайн,3,Двор Заманкул,dvor_zamackul.jpg
-4, Подушки,4,,korkub6.png
-4, Подушки,4,,oleni5.png
-4, Подушки,4,,oranz6.png
-4, Подушки,4,,spiral6.png
-5,Готовые объекты,5,,apple_of_nards.jpg
-5,Готовые объекты,5,,blue_bird.jpg
-5,Готовые объекты,5,,bolgar_stroy_flat_2.jpg
-5,Готовые объекты,5,,bolgar_stroy_flat_3.jpg
-5,Готовые объекты,5,,bolgar_stroy_flat_bedroom.jpg
-5,Готовые объекты,5,,bolgar_stroy_flat_kids.jpg
-5,Готовые объекты,5,,bolgar_stroy_flat.jpg
-5,Готовые объекты,5,,cabinet_bolgar_stroy.jpg
-5,Готовые объекты,5,,gorispolcom_conference_zall.jpg
-5,Готовые объекты,5,,infinium_sport_reception.jpg
-5,Готовые объекты,5,,infinium_sport_zall.jpg
-5,Готовые объекты,5,,infinium.jpg
-5,Готовые объекты,5,,mir_obuvi.jpg
-5,Готовые объекты,5,,mirobuvi_exterior.jpg
-5,Готовые объекты,5,,office_adec.jpg
-5,Готовые объекты,5,,private_home_gostinnaya_2.jpg
-5,Готовые объекты,5,,private_home_gostinnaya.jpg
-5,Готовые объекты,5,,private_home_holl.jpg
-5,Готовые объекты,5,,private_home_kitchen_2.jpg
-5,Готовые объекты,5,,private_home_kitchen.jpg
-5,Готовые объекты,5,,private_home_zall.jpg
-5,Готовые объекты,5,,rubin.jpg
-5,Готовые объекты,5,,shop_on_prospekt.jpg
-5,Готовые объекты,5,,tatoo_salon_1.jpg
-5,Готовые объекты,5,,tatoo_salon_2.jpg
-5,Готовые объекты,5,,tatoo_salon_3.jpg
-5,Готовые объекты,5,,tatoo_salon_4.jpg
-5,Готовые объекты,5,,tatoo_salon_5.jpg
-5,Готовые объекты,5,,tatoo_salon_6.jpg
-5,Готовые объекты,5,,yamaika.jpg
-5,Готовые объекты,5,,zal_zasedanij.jpg
-5,Готовые объекты,5,,zall_bolgar_stroy.jpg
-5,Готовые объекты,5,,exterior_vacheslav_home_2.jpg
-5,Готовые объекты,5,,exterior_vacheslav_home.jpg
-5,Готовые объекты,5,,tsagolova_apple_tree_fragment_2.jpg
-5,Готовые объекты,5,,tsagolova_apple_tree_fragment.jpg
-5,Готовые объекты,5,,tsagolova_apple_tree.jpg
-1,Интерьеры,1,,tsey_cafe_2.jpg
-1,Интерьеры,1,,tsey_cafe.jpg
+1,Интерьеры,1,,bedroom_batman.jpg
+1,Интерьеры,1,,bedroom_digora.jpg
+1,Интерьеры,1,,bedroom_for_boy.jpg
+1,Интерьеры,1,,bedroom_for_footbalist.jpg
+1,Интерьеры,1,,bedroom_for_girl.jpg
+1,Интерьеры,1,,bedroom_for_man.jpg
+1,Интерьеры,1,,bolgar_stroy_bedroom_2.jpg
+1,Интерьеры,1,,bolgar_stroy_bedroom.jpg
+1,Интерьеры,1,,bolgar_stroy_blue_bedroom_of_red_hall.jpg
+1,Интерьеры,1,,bolgar_stroy_red_zall.jpg
+2,Интерьеры,1,,cabinet.jpg
+2,Интерьеры,1,,cafe_classic_2.jpg
+2,Интерьеры,1,,children_room_for_man.jpg
+2,Интерьеры,1,,classic_cafe_1level.jpg
+2,Интерьеры,1,,coll_hall.jpg
+2,Интерьеры,1,,cool_kitchen.jpg
+2,Интерьеры,1,,cool_zal.jpg
+2,Интерьеры,1,,detskya_for_malchika_2.jpg
+2,Интерьеры,1,,detskya_for_malchika.jpg
+2,Интерьеры,1,,digora_chikola_bedroom.jpg
+2,Интерьеры,1,,digora_hall_2.jpg
+2,Интерьеры,1,,digora_hall.jpg
+2,Интерьеры,1,,digora_kitchen.jpg
+2,Интерьеры,1,,digora_zal.jpg
+2,Интерьеры,1,,dubua_bedroom.jpg
+3,Интерьеры,1,,dubua_cabinet.jpg
+4,Интерьеры,1,,fiagdon_cafe.jpg
+4,Интерьеры,1,,fiagdon_kitchen.jpg
+4,Интерьеры,1,,fiagdon.jpg
+4,Интерьеры,1,,gadieva_hall.jpg
+5,Интерьеры,1,,gadieva_kitchen_variant.jpg
+5,Интерьеры,1,,gadieva_kitchen.jpg
+5,Интерьеры,1,,gazprom_kitchen_2.jpg
+5,Интерьеры,1,,gazprom_kitchen.jpg
+5,Интерьеры,1,,gostinnaya_red.jpg
+5,Интерьеры,1,,gostinnaya.png
+5,Интерьеры,1,,hamam_cafe.jpg
+5,Интерьеры,1,,hamam.jpg
+5,Интерьеры,1,,hamam2.jpg
+5,Интерьеры,1,,hamam3.jpg
+5,Интерьеры,1,,holl_classic.jpg
+5,Интерьеры,1,,holl_euroclimat.jpg
+5,Интерьеры,1,,holl_kithchen.jpg
+5,Интерьеры,1,,holl_of_the_restaurant_in_ossetian_style.jpg
+5,Интерьеры,1,,holl_rubin_filial.jpg
+5,Интерьеры,1,,interior_rubin_shop.jpg
+5,Интерьеры,1,,kamin.jpg
+5,Интерьеры,1,,kid_home_game_room.jpg
+5,Интерьеры,1,,kitchen_batman.jpg
+5,Интерьеры,1,,kuhnya_stolovaya.jpg
+5,Интерьеры,1,,man_shop.jpg
+5,Интерьеры,1,,mirobuvi_bedroom.jpg
+5,Интерьеры,1,,mirobuvi_bedroom2.jpg
+5,Интерьеры,1,,podushki.jpg
+5,Интерьеры,1,,prihozaya_cool.jpg
+5,Интерьеры,1,,rubin.jpg
+5,Интерьеры,1,,shop_hall.jpg
+5,Интерьеры,1,,shop_mexx.jpg
+5,Интерьеры,1,,shop_of_kids_wear.jpg
+5,Интерьеры,1,,tsagolova_bedroom.jpg
+5,Интерьеры,1,,tsagolova_children_bedroom_.jpg
+5,Интерьеры,1,,tsagolova_hall.jpg
+5,Интерьеры,1,,tsagolova_kitchen.jpg
+5,Интерьеры,1,,tsey_cafe_2.jpg
+5,Интерьеры,1,,tsey_cafe.jpg
+5,Интерьеры,1,,vacheslav_cabinet.jpg
+5,Интерьеры,1,,vacheslav_gostinaya.jpg
 1,Интерьеры,1,,vacheslav_hall.jpg
-1,Интерьеры,1,,vacheslav_gostinaya.jpg
-1,Интерьеры,1,,vacheslav_cabinet.jpg
-1,Интерьеры,1,,fiagdon_kitchen.jpg
-1,Интерьеры,1,,shop_of_kids_wear.jpg
-1,Интерьеры,1,,tsagolova_bedroom.jpg
-1,Интерьеры,1,,tsagolova_kitchen.jpg
-1,Интерьеры,1,,tsagolova_hall.jpg
-1,Интерьеры,1,,gazprom_kitchen_2.jpg
-1,Интерьеры,1,,gazprom_kitchen.jpg
+1,Интерьеры,1,,zal_cool.jpg
+1,Интерьеры,1,,zal_kuchnya_batman.jpg
+1,Интерьеры,1,,zal_kuchnya_v_polosku.jpg
 1,Интерьеры,1,,zall_of_sea_pehota_2.jpg
 1,Интерьеры,1,,zall_of_sea_pehota.jpg
-1,Интерьеры,1,,gadieva_kitchen_variant.jpg
-1,Интерьеры,1,,gadieva_hall.jpg
-1,Интерьеры,1,,gadieva_kitchen.jpg
-1,Интерьеры,1,,bolgar_stroy_bedroom_2.jpg
-1,Интерьеры,1,,classic_cafe_1level.jpg
-1,Интерьеры,1,,cafe_classic_2.jpg
-1,Интерьеры,1,,digora_hall_2.jpg
-1,Интерьеры,1,,digora_hall.jpg
-1,Интерьеры,1,,digora_chikola_bedroom.jpg
-1,Интерьеры,1,,bolgar_stroy_blue_bedroom_of_red_hall.jpg
-1,Интерьеры,1,,bedroom_for_boy.jpg
-1,Интерьеры,1,,bedroom_for_man.jpg
-1,Интерьеры,1,,bedroom_for_girl.jpg
-1,Интерьеры,1,,digora_kitchen.jpg
-1,Интерьеры,1,,bolgar_stroy_red_zall.jpg
-1,Интерьеры,1,,cool_zal.jpg
-1,Интерьеры,1,,bolgar_stroy_bedroom.jpg
-1,Интерьеры,1,,digora_zal.jpg
-1,Интерьеры,1,,tsagolova_children_bedroom_.jpg
-1,Интерьеры,1,,hamam3.jpg
-1,Интерьеры,1,,hamam2.jpg
-1,Интерьеры,1,,coll_hall.jpg
-1,Интерьеры,1,,bedroom_digora.jpg
 1,Интерьеры,1,,zall_robert.jpg
-1,Интерьеры,1,,cool_kitchen.jpg
-1,Интерьеры,1,,children_room_for_man.jpg
-1,Интерьеры,1,,fiagdon.jpg
-1,Интерьеры,1,,rubin.jpg
-1,Интерьеры,1,,mirobuvi_bedroom2.jpg
-1,Интерьеры,1,,mirobuvi_bedroom.jpg
-1,Интерьеры,1,,shop_mexx.jpg
-1,Интерьеры,1,,shop_hall.jpg
-1,Интерьеры,1,,kitchen_batman.jpg
-1,Интерьеры,1,,kid_home_game_room.jpg
-1,Интерьеры,1,,dubua_cabinet.jpg
-1,Интерьеры,1,,fiagdon_cafe.jpg
-1,Интерьеры,1,,bedroom_for_footbalist.jpg
-1,Интерьеры,1,,dubua_bedroom.jpg
-1,Интерьеры,1,,prihozaya_cool.jpg
-1,Интерьеры,1,,zal_cool.jpg
-1,Интерьеры,1,,zal_kuchnya_v_polosku.jpg
-1,Интерьеры,1,,bedroom_batman.jpg
-1,Интерьеры,1,,hamam_cafe.jpg
-1,Интерьеры,1,,zal_kuchnya_batman.jpg
-1,Интерьеры,1,,kamin.jpg
-1,Интерьеры,1,,man_shop.jpg
-1,Интерьеры,1,,hamam.jpg
-1,Интерьеры,1,,kuhnya_stolovaya.jpg
-2,Экстерьеры,2,,exterior_world_kids_hotel_aleksandrovskiy.jpg
-2,Экстерьеры,2,,exterior_duty_fee_lars.jpg
-2,Экстерьеры,2,,exterior_private_home_beslan.jpg
-2,Экстерьеры,2,,exterior_vesennya_2.jpg
-2,Экстерьеры,2,,exterior_lanvin_man_shop.jpg
-2,Экстерьеры,2,,exterior_dovatora_sales_home_center.jpg
-2,Экстерьеры,2,,exterior_crazy_dvor.jpg
-2,Экстерьеры,2,,exterior_parus.jpg
-2,Экстерьеры,2,,exterior_home_in_moscow.jpg
+2,Архитектура,2,,exterier_mamsurova.jpg
+2,Архитектура,2,,exterior_apteka.jpg
+2,Архитектура,2,,exterior_cafe_classic.jpg
+2,Архитектура,2,,exterior_cafe_coffee.jpg
+2,Архитектура,2,,exterior_chkalova_street.jpg
+2,Архитектура,2,,exterior_cottedg.jpg
+2,Архитектура,2,,exterior_cottedg2.jpg
+2,Архитектура,2,,exterior_crazy_dvor.jpg
+2,Архитектура,2,,exterior_degorskoe_uchele_mavritanskiy_style.jpg
+2,Архитектура,2,,exterior_dovatora_sales_home_center.jpg
+2,Архитектура,2,,exterior_duty_fee_lars.jpg
+2,Архитектура,2,,exterior_facad_rubin_shop.jpg
+2,Архитектура,2,,exterior_fasad.jpg
+2,Архитектура,2,,exterior_fasad1.jpg
+2,Архитектура,2,,exterior_fasad2.jpg
+2,Архитектура,2,,exterior_fasad3.jpg
+2,Архитектура,2,,exterior_fasad4.jpg
+2,Архитектура,2,,exterior_home_in_moscow.jpg
+2,Архитектура,2,,exterior_hotel_metelaska.jpg
+2,Архитектура,2,,exterior_lanvin_man_shop.jpg
+2,Архитектура,2,,exterior_michailovskiy_sales_home.jpg
+2,Архитектура,2,,exterior_mir_obuvi.jpg
+2,Архитектура,2,,exterior_parus.jpg
+2,Архитектура,2,,exterior_private_home_2.jpg
+2,Архитектура,2,,exterior_private_home_beslan.jpg
+2,Архитектура,2,,exterior_private_home_castle.jpg
+2,Архитектура,2,,exterior_private_home_nogirksiy.jpg
+2,Архитектура,2,,exterior_private_home_on_costanaeva_street.jpg
+2,Архитектура,2,,exterior_private_home_prospekt_kosta.jpg
+2,Архитектура,2,,exterior_private_home_razdora.jpg
+2,Архитектура,2,,exterior_private_home.jpg
+2,Архитектура,2,,exterior_sales_center_mamsurova.jpg
+2,Архитектура,2,,exterior_sales_centr_on_calinina_street.jpg
+2,Архитектура,2,,exterior_sales_home_center.jpg
+2,Архитектура,2,,exterior_sales_home_on_vesennya.jpg
+2,Архитектура,2,,exterior_salon_beaty.jpg
+2,Архитектура,2,,exterior_shop_greenfield.jpg
+2,Архитектура,2,,exterior_shops.jpg
+2,Архитектура,2,,exterior_supermarket.jpg
+2,Архитектура,2,,exterior_tsey_besedka.jpg
+2,Архитектура,2,,exterior_tsey_sport_zall.jpg
+2,Архитектура,2,,exterior_unknow_private_home_fac.jpg
+2,Архитектура,2,,exterior_unknow_private_home_facad.jpg
+2,Архитектура,2,,exterior_unknow_private_home.jpg
+2,Архитектура,2,,exterior_unkown_home.jpg
+2,Архитектура,2,,exterior_uzi_centr.jpg
+2,Архитектура,2,,exterior_vesennya_2.jpg
+2,Архитектура,2,,exterior_vorota.jpg
+2,Архитектура,2,,exterior_world_for_kid_reconstruction.jpg
+2,Архитектура,2,,exterior_world_kids_hotel_aleksandrovskiy.jpg
+2,Архитектура,2,,exterior_castle.jpg
+3,Ландшафтный дизайн,3,,dvor_zamackul.jpg
 3,Ландшафтный дизайн,3,,ladscape.jpg
-2,Экстерьеры,2,,exterior_private_home_razdora.jpg
-2,Экстерьеры,2,,exterior_sales_home_on_vesennya.jpg
-2,Экстерьеры,2,,exterior_degorskoe_uchele_mavritanskiy_style.jpg
-2,Экстерьеры,2,,exterior_hotel_metelaska.jpg
-2,Экстерьеры,2,,exterior_sales_home_center.jpg
-2,Экстерьеры,2,,exterior_cafe_classic.jpg
-2,Экстерьеры,2,,exterior_cafe_coffee.jpg
-2,Экстерьеры,2,,exterior_private_home_nogirksiy.jpg
-2,Экстерьеры,2,,exterior_tsey_besedka.jpg
-2,Экстерьеры,2,,exterior_tsey_sport_zall.jpg
-2,Экстерьеры,2,,exterior_private_home_castle.jpg
-2,Экстерьеры,2,,exterior_private_home_2.jpg
-2,Экстерьеры,2,,exterior_michailovskiy_sales_home.jpg
-4, Подушки,4,,live.jpg
-4, Подушки,4,,poduchki_orange_black.jpg
-4, Подушки,4,,poduchki.jpg
-4, Подушки,4,,sakura.jpg
-4, Подушки,4,,spiral.jpg
-4, Подушки,4,,star_sun.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_beslan.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_fiagdon_hotel_2.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_fiagdon_hotel_3.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_fiagdon_hotel.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_of_midey_2.jpg
+3,Ландшафтный дизайн,3,,landscape_dvor_of_midey.jpg
+3,Ландшафтный дизайн,3,,landscape_sad_prospekt_kosta_2.jpg
+3,Ландшафтный дизайн,3,,landscape_sad_prospekt_kosta.jpg
+3,Ландшафтный дизайн,3,,landscape_zamankul_2.jpg
+3,Ландшафтный дизайн,3,,landscape_zamankul_3.jpg
+3,Ландшафтный дизайн,3,,landscape_zamankul_fontan.jpg
+4,Роспись стен,4,,tatoo_salon_1.jpg
+4,Роспись стен,4,,tatoo_salon_2.jpg
+4,Роспись стен,4,,tatoo_salon_3.jpg
+4,Роспись стен,4,,tatoo_salon_4.jpg
+4,Роспись стен,4,,tatoo_salon_5.jpg
+4,Роспись стен,4,,tatoo_salon_6.jpg
+4,Роспись стен,4,,yamaika.jpg
+5,Дизайнерские штучки,5,,live.jpg
+5,Дизайнерские штучки,5,,poduchki_orange_black.jpg
+5,Дизайнерские штучки,5,,poduchki.jpg
+5,Дизайнерские штучки,5,,sakura.jpg
+5,Дизайнерские штучки,5,,spiral.jpg
+5,Дизайнерские штучки,5,,star_sun.jpg
+6,Готовые объекты,6,,apple_of_nards.jpg
+6,Готовые объекты,6,,blue_bird.jpg
+6,Готовые объекты,6,,bolgar_stroy_flat_2.jpg
+6,Готовые объекты,6,,bolgar_stroy_flat_3.jpg
+6,Готовые объекты,6,,bolgar_stroy_flat_bedroom.jpg
+6,Готовые объекты,6,,bolgar_stroy_flat_kids.jpg
+6,Готовые объекты,6,,bolgar_stroy_flat.jpg
+6,Готовые объекты,6,,cabinet_bolgar_stroy.jpg
+6,Готовые объекты,6,,exterior_vacheslav_home_2.jpg
+6,Готовые объекты,6,,exterior_vacheslav_home.jpg
+6,Готовые объекты,6,,gorispolcom_conference_zall.jpg
+6,Готовые объекты,6,,infinium_sport_reception.jpg
+6,Готовые объекты,6,,infinium_sport_zall.jpg
+6,Готовые объекты,6,,infinium.jpg
+6,Готовые объекты,6,,mir_obuvi.jpg
+6,Готовые объекты,6,,mirobuvi_exterior.jpg
+6,Готовые объекты,6,,office_adec.jpg
+6,Готовые объекты,6,,private_home_gostinnaya_2.jpg
+6,Готовые объекты,6,,private_home_gostinnaya.jpg
+6,Готовые объекты,6,,private_home_holl.jpg
+6,Готовые объекты,6,,private_home_kitchen_2.jpg
+6,Готовые объекты,6,,private_home_kitchen.jpg
+6,Готовые объекты,6,,private_home_zall.jpg
+6,Готовые объекты,6,,rubin_2.jpg
+6,Готовые объекты,6,,shop_on_prospekt.jpg
+6,Готовые объекты,6,,tsagolova_apple_tree_fragment_2.jpg
+6,Готовые объекты,6,,tsagolova_apple_tree_fragment.jpg
+6,Готовые объекты,6,,tsagolova_apple_tree.jpg
+6,Готовые объекты,6,,zal_zasedanij.jpg
+6,Готовые объекты,6,,zall_bolgar_stroy.jpg

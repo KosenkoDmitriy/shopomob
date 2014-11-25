@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   theme :theme_resolver
   before_action :set_locale
 
+  add_breadcrumb "Главная", :root_path
+
   def index
     @posts = Post.all
     @services = Service.all
@@ -138,6 +140,21 @@ class HomeController < ApplicationController
     redirect_to :root
   end
 
+  def portfolio
+    if params['id'].present?
+      id = params['id']
+      @gallery = Gallery.find(id)
+    end
+
+    add_breadcrumb "Проекты", :portfolios_path
+    add_breadcrumb "Проект", :portfolio_path
+  end
+
+  def portfolios
+    @galleries=Gallery.all
+
+    add_breadcrumb "Проекты", :portfolios_path
+  end
 
   private
   def theme_resolver

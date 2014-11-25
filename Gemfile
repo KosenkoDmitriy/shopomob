@@ -63,3 +63,4 @@ gem 'fancybox2-rails', '~> 0.2.8'
 
 #gem 'meta-tags' #seo
 gem 'themes_on_rails'
+gem "breadcrumbs_on_rails"

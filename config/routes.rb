@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   post 'subscribe' => 'home#subscribe'
   post 'calculate' => 'home#calculate'
 
+  get 'portfolios' => 'home#portfolios', as: :portfolios
+  get 'portfolio/:id' => 'home#portfolio', as: :portfolio
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
