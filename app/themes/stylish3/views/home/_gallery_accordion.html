@@ -3,17 +3,17 @@
         <div class="container">
             <% if (@galleries.count>0) %>
             <div class="row" id="gallery">
-                <h2><a href="<%=portfolios_url%>"> Наши проекты</a></h2>
+                <h2><a href="<%=portfolios_url%>"> Наши проекты</a><span></h2>
+
                 <% @galleries.each do |gallery| %>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                    <h4><a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">
-                        <%=gallery.title%></a></h4>
                     <a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">
                         <%=image_tag(gallery.images.last.image.url(:medium), style:"height:160px", alt:gallery.title, class:"img-circle")%>
                     </a>
+                    <h4><a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">
+                        <%=gallery.title%></a></h4>
                 </div>
                 <% end %>
-                <h5><a href="<%=portfolios_url%>"> Смотреть все проекты</a></h5>
 
             </div>
             <% end %>

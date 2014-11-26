@@ -14,13 +14,14 @@
 //$("button.navbar-toggle.collapsed").is(":visible")
 
 $( window ).resize(function() {
-//    var menuHeight = $("nav.navbar").height();
+    var menuHeight = $("nav.navbar").height();
     if ($("button.navbar-toggle.collapsed").is(":visible"))
     {
         $(".carousel").css({"margin-top": "0px"});
     }
     else
     {
-        $(".carousel").css({"margin-top": "-60px"});
+        if (menuHeight > 50 ) menuHeight = 50;
+        $(".carousel").css({"margin-top": -menuHeight});
     }
 });

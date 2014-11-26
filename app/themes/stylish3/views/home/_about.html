@@ -216,9 +216,9 @@
                 <div class="col-xs-6 col-md-6">
                     <div class="thumbnail">
                         <% if teamer.image.blank?%>
-                            <%=image_tag("stylish2/adec_logo.png", class:"img-radius", style:"width:170px;height:153px")  %>
+                            <%=image_tag("stylish2/adec_logo.png", alt:"#{teamer.firstname} #{teamer.secondname}", class:"img-radius", style:"width:170px;height:153px")  %>
                             <% else %>
-                            <%=image_tag(teamer.try(:image).try(:image).try(:url, :medium), class:"img-radius", style:"") %>
+                            <%=image_tag(teamer.try(:image).try(:image).try(:url, :medium), alt:"#{teamer.firstname} #{teamer.secondname}",  class:"img-radius", style:"") %>
                         <% end %>
                         <p><%=teamer.firstname%> <%=teamer.secondname%></p>
                         <p class="text-info"><%=teamer.text%></p>
