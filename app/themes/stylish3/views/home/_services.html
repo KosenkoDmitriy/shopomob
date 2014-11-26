@@ -6,9 +6,9 @@
                 <h4>Услуги</h4>
                 <% @services.each do |service| %>
                 <div class="col-xs-12 col-md-3">
-                    <div class="thumbnail thumbnail_">
+                    <div class="thumbnail">
                         <!--<img data-src="holder.js/300x300" alt="...">-->
-                        <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"", style:"height:150px")%>
+                        <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"", style:"")%>
                         <div class="caption">
                             <h4><%=service.title%></h4>
                             <h5>от <%=service.price%> рублей</h5>
@@ -61,12 +61,16 @@
 
 <script>
     //    $(document).ready(function () {
-    var heights = $(".thumbnail.thumbnail_").map(function () {
+    var heights = $("#services .thumbnail").map(function () {
                 return $(this).height();
             }).get(),
-
             maxHeight = Math.max.apply(null, heights);
-    $(".thumbnail.thumbnail_").height(maxHeight);
+    var heights2 = $("#services .thumbnail .caption").map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight2 = Math.max.apply(null, heights2);
+
+    $("#services .thumbnail").height(maxHeight+maxHeight2+$(".btn").height());
     //    });
 </script>
 
