@@ -57,13 +57,13 @@ end
 #  post=Post.find_or_create_by!(slug:slug,title:title, stext:stext, text:text, tags:tags)
 #end
 
-path_to_img = Rails.root.join('db', 'images', 'gallery')
+path_to_img = Rails.root.join('db', 'images', 'gallery_watermark')
 file_path = "#{path_to_app}/galleries.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   item = Gallery.find_or_create_by( title: row['title'] )
   if (!row['image'].blank?)
-    img_path = path_to_img + row['image']
+    puts img_path = path_to_img + row['image']
     if (File.exists?(img_path))
       item.images.append(Image.create(:image=>File.open(img_path)))
     end

@@ -1,7 +1,7 @@
+<% if (@galleries.count>0) %>
 <section id="content">
     <div class="sub-content">
         <div class="container">
-            <% if (@galleries.count>0) %>
             <div class="row" id="gallery">
                 <p><%= render_breadcrumbs :separator => ' > ' %></p>
                 <% @galleries.each do |gallery| %>
@@ -15,7 +15,16 @@
                 </div>
                 <% end %>
             </div>
-            <% end %>
         </div>
     </div>
 </section>
+<script>
+    //    $(document).ready(function () {
+    var heights = $("#gallery .thumbnail").map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+    $("#gallery .thumbnail").height(maxHeight);
+    //    });
+</script>
+<% end %>
