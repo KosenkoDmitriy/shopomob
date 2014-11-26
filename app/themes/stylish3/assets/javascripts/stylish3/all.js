@@ -8,5 +8,6 @@
 //= require fancybox
 //= require stylish3/gallery_fancy_customize
 
-//= require stylish3/bootstrap.min
+//=  require stylish3/bootstrap.min
+//= require stylish3/gallery_fancy_customize
 // require_tree .
