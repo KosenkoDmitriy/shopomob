@@ -8,12 +8,16 @@ class UserMailer < ActionMailer::Base
 
   def order_email(params)
     if params['email'].present?
-      mail(to:params['email'], subject: "order", body: params.to_s)
+      mail(to:params['email'], subject: "Адек. Заказ успешно создан.")#, body: params.to_s)
     end
   end
 
   def subscribe_email(email, data)
-      mail(to:email, subject: "subscribe", body: data)
+    mail(to:email, subject: "Адек. Вы подписаны на рассылку!")#, body: data)
+  end
+
+  def notify_me(email, subject, body)
+    mail(to:email, subject: subject, body: body)
   end
 
 end

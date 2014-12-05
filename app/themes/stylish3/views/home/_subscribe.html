@@ -1,0 +1,15 @@
+<%= form_tag("/subscribe", method: "post", id: "newsletter", class: "", role:"search") do %>
+<label>Получать новости на email</label>
+
+<div class="clearfix">
+    <!--<input type="text" name="email" type="email" required="true" onFocus="if(this.value =='Введите электронную почту' ) this.value=''" onBlur="if(this.value=='') this.value='Введите электронную почту'" value="Введите электронную почту" >-->
+    <!--<a href="#" onClick="document.getElementById('newsletter').submit()" class="btn btn_">Получать</a>-->
+    <%#= label_tag(:q, "Search for:") #%>
+    <%#= text_field_tag(:email, "", id: "nav-search", class: "form-control", placeholder: I18n.t('search_hint')) %>
+    <%#= submit_tag(t("search"), class:"btn btn-danger pull-right col-xs-12") #%>
+
+    <%= text_field_tag(:email, "", required:"true", type: "email", placeholder: "Введите электронную почту") %>
+    <%= submit_tag("Получать", class:"btn btn_ btn-small_") %>
+</div>
+
+<% end %>

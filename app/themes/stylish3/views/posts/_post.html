@@ -1,0 +1,35 @@
+<% content_for :head do %>
+<title><%=@page_title %></title>
+<meta name="keywords" content="<%=@page_description  %>"/>
+<meta name="description" content="<%=@page_keywords %>"/>
+<meta name="author" content="<%=t('head.meta.author')%>">
+<% end %>
+
+
+<% if @post.present? %>
+<h4><%=@post.title%></h4>
+
+<%= render :partial => 'home/social_sharing' %>
+
+<div class="text-block-1">
+    <% if @post.images.present? && @post.images.count > 0 %>
+    <% @post.images.each do |image| %>
+    <%=image_tag(image.image.url, class:"img-radius", style:"width:370px;") if image.image.present? %>
+    <% end %>
+    <% end %>
+    <div>
+        <p class="lead p2"><%=@post.stext%> </p>
+        <%=@post.text%>
+        <br>
+        <!--<a href="more.html" class="btn btn_">more info</a>-->
+    </div>
+</div>
+<%= render :partial => 'home/social_sharing' %>
+
+<% else %>
+<h4>запись не найдена</h4>
+<% end %>
+
+
+
+

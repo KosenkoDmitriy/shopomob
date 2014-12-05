@@ -47,10 +47,11 @@ gem 'bootstrap-will_paginate'
 
 #for admin panel
 gem 'activeadmin', github: 'gregbell/active_admin'
+#gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
 gem "paperclip", "~> 4.2" #for image support
-
+gem 'formtastic', '~> 3.0'
 #end for admin panel
 
 #gem 'simple-navigation-bootstrap'
@@ -60,4 +61,6 @@ gem "paperclip", "~> 4.2" #for image support
 
 gem 'fancybox2-rails', '~> 0.2.8'
 
-
+#gem 'meta-tags' #seo
+gem 'themes_on_rails'
+gem "breadcrumbs_on_rails"

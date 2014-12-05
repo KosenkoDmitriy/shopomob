@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <% if content_for?(:head) %>
+      <%= content_for(:head) %>
+  <% else %>
+      <title><%= t("head.meta.title") %></title>
+      <meta name="keywords" content="<%= t("head.meta.keywords") %>"/>
+      <meta name="description" content="<%= t("head.meta.description") %>"/>
+      <meta name="author" content="<%= t("head.meta.author") %>">
+  <% end %>
+  <meta name='yandex-verification' content='4f74487f14742e6d' />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <%= stylesheet_link_tag "stylish3/all", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "stylish3/all", "data-turbolinks-track" => true %>
+  <script>
+      $(document).ready(function () {
+          jQuery('.camera_wrap').camera();
+      });
+  </script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render :partial => 'home/header' %>
+
+<section>
+  <%= yield %>
+</section>
+
+<%= render :partial => 'home/footer' %>
+<ul class="nav pull-right scroll-top">
+  <li><a href="#main" title="Scroll to top"><i class="glyphicon glyphicon-chevron-up"></i></a></li>
+</ul>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53794940-6', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    $(document).ready(function () {
+        /* affix the navbar after scroll below header */
+        $('#nav').affix({
+            offset: {
+                top: $('header').height()-$('#nav').height()
+            }
+        });
+
+        /* highlight the top nav as scrolling occurs */
+        $('body').scrollspy({ target: '#nav' })
+
+        /* smooth scrolling for scroll to top */
+        $('.scroll-top').click(function(){
+            $('body,html').animate({scrollTop:0},1000);
+        })
+
+        /* smooth scrolling for nav sections */
+        $('#nav .navbar-nav li>a').click(function(){
+            var link = $(this).attr('href');
+            var posi = $(link).offset().top;
+            $('body,html').animate({scrollTop:posi},700);
+        });
+    });
+
+    // Все элементы класса .social_share считаем кнопками шаринга see share.js
+//    $(document).on('click', '.social_share', function(){
+//        Share.go(this);
+//    });
+</script>
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+</body>
+
+</html>

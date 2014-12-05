@@ -1,0 +1,23 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="span4 float2">
+                <%= render :partial=>'home/subscribe' %>
+            </div>
+            <div class="span8 float">
+                <ul class="footer-menu">
+                    <li><a href="<%=root_path%>#main" class="current">Главная</a>|</li>
+                    <li><a href="<%=root_path%>#about">О нас</a>|</li>
+                    <li><a href="<%=root_path%>#services">Услуги</a>|</li>
+                    <li><a href="<%=portfolios_url%>">Портфолио</a>|</li>
+                    <li><a href="<%=posts_path%>">Статьи</a>|</li>
+                    <li><a href="<%=root_path%>#contacts">Контакты</a>|</li>
+                    <li><a href="<%=root_path%>#calculate">Заказать</a>|</li>
+                    <li><a href="<%=root_path%>#calculate">Рассчитать</a></li>
+                    <li><a href="<%=t("shop.url")%>"><%=t("shop.title")%></a></li>
+                </ul>
+                <%=t("footer.title")%> &copy; <%=Date.today.year%>.
+            </div>
+        </div>
+    </div>
+</footer>

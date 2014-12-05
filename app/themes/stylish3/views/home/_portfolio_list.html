@@ -1,0 +1,30 @@
+<% if (@galleries.count>0) %>
+<section id="content">
+    <div class="sub-content">
+        <div class="container">
+            <div class="row" id="gallery">
+                <p><%= render_breadcrumbs :separator => ' > ' %></p>
+                <% @galleries.each do |gallery| %>
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="thumbnail">
+                        <a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">
+                            <%=image_tag(gallery.images.last.image.url(:medium), style:"height:160px", alt:gallery.title, class:"img-circle")%>
+                        </a>
+                        <h5><a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>"><%=gallery.title%></a></h5>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    //    $(document).ready(function () {
+    var heights = $("#gallery .thumbnail").map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+    $("#gallery .thumbnail").height(maxHeight);
+    //    });
+</script>
+<% end %>

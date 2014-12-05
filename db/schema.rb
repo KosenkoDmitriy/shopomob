@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014182801) do
+ActiveRecord::Schema.define(version: 20141118121405) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 20141014182801) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "customers", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "galleries", force: true do |t|
     t.string   "title"
     t.string   "url"
@@ -70,7 +79,17 @@ ActiveRecord::Schema.define(version: 20141014182801) do
     t.datetime "image_updated_at"
   end
 
+  create_table "order_service_ids", force: true do |t|
+    t.integer  "order_id"
+    t.integer  "service_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 # Could not dump table "orders" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+# Could not dump table "post_categories" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
   create_table "posts", force: true do |t|
@@ -81,6 +100,45 @@ ActiveRecord::Schema.define(version: 20141014182801) do
     t.string   "tags"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "seo_id"
+  end
+
+  add_index "posts", ["seo_id"], name: "index_posts_on_seo_id"
+
+  create_table "posts_post_category_ids", force: true do |t|
+    t.integer  "post_id"
+    t.integer  "post_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seos", force: true do |t|
+    t.string   "meta_title"
+    t.text     "meta_description"
+    t.string   "meta_keywords"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "service_tarif_prices", force: true do |t|
+    t.float    "price"
+    t.float    "condition1"
+    t.float    "condition2"
+    t.integer  "service_tarif_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "service_tarifs", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "service_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "services", force: true do |t|
@@ -89,6 +147,18 @@ ActiveRecord::Schema.define(version: 20141014182801) do
     t.text     "stext"
     t.string   "link"
     t.decimal  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "teamers", force: true do |t|
+    t.string   "firstname"
+    t.string   "secondname"
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"

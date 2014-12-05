@@ -1,14 +1,22 @@
-<%=t("footer.title")%> <%=Date.today.year%>.
-<script>
-    //      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    //          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    //              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    //      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    //
-    //      ga('create', 'UA-53794940-1', 'auto');
-    //      ga('send', 'pageview');
-    //      console.log("ga send pageview ");
-
-</script>
-<%#= yield(:custom_js) if content_for?(:custom_js) %>
-<!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?language=ru"></script>-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="span4 float2">
+                <%= render :partial=>'home/subscribe' %>
+            </div>
+            <div class="span8 float">
+                <ul class="footer-menu">
+                    <li><a href="<%=root_path%>#main" class="current">Главная</a>|</li>
+                    <li><a href="<%=root_path%>#about">О нас</a>|</li>
+                    <li><a href="<%=root_path%>#services">Услуги</a>|</li>
+                    <li><a href="<%=root_path%>#gallery">Галерея</a>|</li>
+                    <li><a href="<%=posts_path%>">Статьи</a>|</li>
+                    <li><a href="<%=root_path%>#contacts">Контакты</a>|</li>
+                    <li><a href="<%=root_path%>#order">Заказать</a>|</li>
+                    <li><a href="<%=root_path%>#calculate">Рассчитать</a></li>
+                </ul>
+                <%=t("footer.title")%> &copy; <%=Date.today.year%>.
+            </div>
+        </div>
+    </div>
+</footer>
