@@ -1,0 +1,109 @@
+<!--contact start-->
+
+<div id="contact">
+    <div class="line5">
+        <div class="container">
+            <div class="row Ama">
+                <div class="col-md-12">
+                    <h3><%=t("contacts.title")%></h3>
+                    <p><%=t("contacts.sub_title")%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contacts">
+        <div class="row">
+            <div class="col-md-9 col-xs-12 forma">
+                <%= render :partial=>'home/order' %>
+            </div>
+            <div class="col-md-3 col-xs-12 cont">
+                <ul>
+                    <li><i class="fa fa-home"></i><%=t("contacts.address")%></li>
+                    <li><i class="fa fa-phone"></i><%=t("contacts.phones")%></li>
+                    <li><a href="mailto:<%=t('contacts.email')%>" rel="nofollow"><i class="fa fa-envelope"></i><%=t("contacts.email")%></li></a>
+                    <li><i class="fa fa-skype"></i><%=t("contacts.skype")%></li>
+                    <!--<li><a href="#"><i class="fa fa-twitter"></i><%=t("contacts.twitter")%></li></a>-->
+                    <li><a href="<%=t('contacts.facebook_url')%>" rel="nofollow" ><i class="fa fa-facebook-square"></i><%=t("contacts.facebook")%></li></a>
+                    <li><a href="<%=t('contacts.vk_url')%>" rel="nofollow"><i class="fa fa-vk"></i><%=t("contacts.vk")%></li></a>
+                    <li><a href="<%=t('contacts.linkedin_url')%>" rel="nofollow"><i class="fa fa-linkedin"></i><%=t("contacts.linkedin")%></li></a>
+                    <!--<li><a href="<%=t('contacts.linkedin_url')%>" rel="nofollow"><i class="fa"></i><%=t("contacts.linkedin")%></li></a>-->
+                    <!--<li><a href="<%=t('contacts.linkedin_url')%>" rel="nofollow"><i class="fa"></i><%=t("contacts.linkedin")%></li></a>-->
+                    <!--<li><a href="#"><i class="fa fa-dribbble"></i><%=t("contacts.dribble")%></li></a>-->
+                    <!--<li><a href="#"><i class="fa fa-flickr"></i><%=t("contacts.flickr")%></li></a>-->
+                    <!--<li><a href="#"><i class="fa fa-youtube-play"></i><%=t("contacts.youtube")%></li></a>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="line6">
+        <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=Владикавказ,Кирова+3&amp;output=embed&amp;language=ru" width="100%" height="750" frameborder="0" style="border:0"></iframe>
+    </div>
+    <div class="container">
+        <div class="row ftext">
+            <div class="col-md-12">
+                <a id="features"></a>
+                <h3><%=t("care.title")%></h3>
+                <p><%=t("care.text")%></p>
+            </div>
+            <div class="cBtn">
+                <ul style="margin-top: 23px; margin-bottom: 0px; padding-left: 26px;">
+                    <li class="dowbload"><a href="#projects"><i class="fa fa-star"></i><%=t("care.button1")%></a></li>
+                    <li class="buy"><a href="#order"><i class="fa fa-download"></i><%=t("care.button2")%></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="line7">
+        <div class="container">
+            <div class="row footer">
+                <div class="col-md-12">
+                    <%= render :partial=>'home/subscribe' %>
+                </div>
+                <div class="soc col-md-12">
+                    <ul>
+                        <li class="soc1"><a href="<%=t('contacts.linkedin_url')%>" rel="nofollow"></a></li>
+                        <li class="soc2"><a href="<%=t('contacts.facebook_url')%>" rel="nofollow"></a></li>
+                        <li class="soc3"><a href="#" rel="nofollow"></a></li>
+                        <li class="soc4"><a href="#" rel="nofollow"></a></li>
+                        <li class="soc5"><a href="#" rel="nofollow"></a></li>
+                        <li class="soc6"><a href="#" rel="nofollow"></a></li>
+                        <li class="soc7"><a href="#" rel="nofollow"></a></li>
+                        <li class="soc8"><a href="#" rel="nofollow"></a></li>
+
+                        <!--<li class=""><a href="<%=t('contacts.facebook_url')%>" rel="nofollow"><i class="fa fa-skype"></i></a></li>-->
+                        <!--<li class="soc3"><a href="<%=t('contacts.twitter_url')%>" rel="nofollow"></a></li>-->
+                        <!--<li class="soc4"><a href="<%=t('contacts.pin_url')%>" rel="nofollow"></a></li>-->
+                        <!--<li class="soc5"><a href="<%=t('contacts.tpoint_url')%>" rel="nofollow"></a></li>-->
+                        <!--<li class="soc6"><a href="<%=t('contacts.youtube_url')%>" rel="nofollow"></a></li>-->
+                        <!--<li class="soc7"><a href="<%=t('contacts.google_plus_url')%>" rel="nofollow"></a></li>-->
+                        <!--<li class="soc8"><a href="<%=t('contacts.globus_url')%>" rel="nofollow"></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lineBlack">
+        <div class="container">
+            <div class="row downLine">
+                <div class="col-md-12 text-right">
+                    <!--input  id="searchPattern" type="search" name="pattern" value="Search the Site" onblur="if(this.value=='') {this.value='Search the Site'; }" onfocus="if(this.value =='Search the Site' ) this.value='';this.style.fontStyle='normal';" style="font-style: normal;"/-->
+                    <!--<input  id="searchPattern" type="search" placeholder="Search the Site"/><i class="glyphicon glyphicon-search" style="font-size: 13px; color:#a5a5a5;" id="iS"></i>-->
+                </div>
+                <div class="col-md-4 text-left copy">
+                    <p><%=t("footer_sm.title").html_safe()%></p>
+                </div>
+                <div class="col-md-8 text-right dm">
+                    <ul id="downMenu">
+                        <li class="active"><a href="#home"><%=t("menu.main")%></a></li>
+                        <li><a href="#about"><%=t("menu.about")%></a></li>
+                        <li><a href="#services"><%=t("menu.services")%></a></li>
+                        <li><a href="#projects"><%=t("menu.projects")%></a></li>
+                        <li><a href="#news"><%=t("menu.news")%></a></li>
+                        <li class="last"><a href="#contact"><%=t("menu.contacts")%></a></li>
+                        <!--li><a href="#features">Features</a></li-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

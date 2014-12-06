@@ -1,0 +1,97 @@
+<!--project start-->
+<div id="projects">
+    <div class="line3">
+        <div class="container">
+            <div id="project1" ></div>
+            <div class="row Ama">
+                <div class="col-md-12">
+                    <span name="projects" id="projectss"></span>
+                    <h3><%=t("projects.title")%></h3>
+                    <p><%=t("projects.sub_title")%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <!-- filter_block -->
+            <div id="options" class="col-md-12" style="text-align: center;">
+                <ul id="filter" class="option-set" data-option-key="filter">
+                    <li><a class="selected" href="#filter" data-option-value="*"><%=t("projects.all")%></a></li>
+                    <% @galleries.each do |gallery| %>
+                    <li><a class="" href="#filter" data-option-value=".gallery<%=gallery.id%>"><%=gallery.title%></a></li>
+                    <% end %>
+                </ul>
+            </div><!-- //filter_block -->
+
+            <div class="portfolio_block columns3   pretty" data-animated="fadeIn">
+                <% i = 0
+                @galleries.each do |gallery| %>
+                    <% gallery.images.each do |image| %>
+                <div class="element col-sm-4 gall gallery<%=gallery.id%>">
+
+                    <a class="plS" rel="prettyPhoto[gallery<%=gallery.id%>]" href="<%=image.image.url(:normal)%>">
+                        <%=image_tag(image.image.url(:medium), class:"img-responsive picsGall", style:"", alt:image.title)%>
+                    </a>
+
+                    <div class="view project_descr ">
+                        <h3><a href="#"><%=image.title%></a></h3>
+                        <!--<ul>-->
+                            <!--<li><i class="fa fa-eye"></i>215</li>-->
+                            <!--<li><a class="heart" href="#"><i class="fa-heart-o"></i>14</a></li>-->
+                        <!--</ul>-->
+                    </div>
+                </div>
+
+                <% end %>
+                <% i += 1 %>
+                <% end %>
+            </div>
+
+            <!--<div class="col-md-12 cBtn  lb" style="text-align: center;">-->
+                <!--<ul class="load_more_cont ">-->
+                    <!--<li class="dowbload btn_load_more">-->
+                        <!--<a href="javascript:void(0);" >-->
+                            <!--<i class="fa fa-arrow-down"></i>Load More Projects-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="buy">-->
+                        <!--<a href="#">-->
+                            <!--<i class="fa fa-shopping-cart"></i>Buy on Themeforest-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    jQuery(window).load(function(){
+        items_set = [
+
+            {category : 'branding', lika_count : '77', view_count : '234', src : 'images/prettyPhotoImages/pic9.jpg', title : 'Foil Mini Badges', content : '' },
+
+            {category : 'polygraphy', lika_count : '45', view_count : '100', src : 'images/prettyPhotoImages/pic7.jpg', title : 'Darko – Business Card Mock Up', content : '' },
+
+            {category : 'text_styles', lika_count : '22', view_count : '140', src : 'images/prettyPhotoImages/pic8.jpg', title : 'Woody Poster Text Effect', content : '' }
+
+
+        ];
+        jQuery('.portfolio_block').portfolio_addon({
+            type : 1, // 2-4 columns simple portfolio
+            load_count : 3,
+
+            items : items_set
+        });
+        $('#container').isotope({
+            animationOptions: {
+                duration: 900,
+                queue: false
+            }
+        });
+    });
+</script>

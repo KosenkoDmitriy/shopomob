@@ -1,0 +1,45 @@
+<!--news start-->
+<% if (@posts.present? && @posts.count > 0) %>
+<div id="news">
+    <div class="line4">
+        <div class="container">
+            <div class="row Ama">
+                <div class="col-md-12">
+                    <h3><%=t("news.title")%></h3>
+                    <p><%=t("news.sub_title")%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row news">
+            <% @posts.each do |post| %>
+            <div class="col-md-6 text-left">
+                <% if post.images.present? && post.images.count > 0 %>
+                    <%=image_tag(post.images.first.image.image.url, class:"img-responsive picsGall", style:"") if post.images.first.image.image.present? %>
+                <% end %>
+                <h3><a href="<%=post_url(post)%>?page=<%=params[:page]%>"><%=post.title%></a></h3>
+                <ul>
+                    <li><i class="fa fa-calendar"></i><%=post.updated_at%></li>
+                    <!--<li><a href="#"><i class="fa fa-folder-open"></i>Staff</a></li>-->
+                    <!--<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>-->
+                </ul>
+                <p><%=post.text[0..250]%> <a href="<%=post_url(post)%>?page=<%=params[:page]%>" class="readMore"> <%=t("news.read_more")%> <i class="fa fa-angle-right"></i></a></p>
+                <hr class="hrNews">
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row cBtn">
+            <div class="col-md-12" style="text-align: center; margin-bottom: -90px; z-index: 10;">
+                <ul class="mNews">
+                    <li class="dowbload"><a href="<%=posts_url%>"><i class="fa fa-arrow-down"></i><%=t("news.all_news")%></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<% else %>
+<!--<h4>записи не найдены</h4>-->
+<% end %>

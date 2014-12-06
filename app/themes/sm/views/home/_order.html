@@ -1,0 +1,33 @@
+
+<%= form_tag("/order", method: "post", id:"", class: "contact-form", role:"") do %>
+<% if flash[:notice] %>
+<div class="success" style="display: none;">Заказ успешно отправлен!<strong><br>Мы свяжемся с Вам в ближайшее время.</strong> </div>
+<% end %>
+<%@services.each do |service|%>
+<p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
+<% end %>
+<%= text_field_tag(:name, "", required:"true", type: "text", class:"col-md-6 col-xs-12 name", placeholder: "Имя Отчество (*)") %>
+<%= text_field_tag(:email, "", required:"true", type: "email", class:"col-md-6 col-xs-12 Email", placeholder: "Ваш электронный адрес (*)") %>
+<%= text_field_tag(:phone, "", required:"true", type: "number", class:"col-md-12 col-xs-12 Subject", placeholder: "Ваш телефон (*)") %>
+<%#= text_area :details, placeholder:"Сообщение:", class:"col-md-12 col-xs-12 Message" #%>
+<textarea name="details" placeholder="Сообщение:" class="col-md-12 col-xs-12 Message"></textarea>
+
+<!--<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>-->
+<!--<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>-->
+<!--<input type="text" class="col-md-12 col-xs-12 Subject" name='Subject' placeholder='Subject'/>-->
+<!--<textarea type="text" class="col-md-12 col-xs-12 Message" name='Message' placeholder='Message *'></textarea>-->
+<!--<div class="cBtn col-xs-12">-->
+    <!--<ul>-->
+        <!--<li class="clear"><a href="#"><i class="fa fa-times"></i>clear form</a></li>-->
+        <!--<li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="row col-xs-12">
+    <%= submit_tag("Заказать", class:"btn_submit") %>
+</div>
+
+<!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
+    <!--<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>-->
+<!--</button>-->
+
+<% end %>

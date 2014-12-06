@@ -1,0 +1,15 @@
+<h3><%=t("subscribe.title")%></h3>
+<p><%=t("subscribe.sub_title")%></p>
+<div class="fr">
+    <div style="display: inline-block;">
+        <%= form_tag("/subscribe", method: "post", id: "newsletter", class: "", role:"search") do %>
+        <!--<input class="col-md-6 fEmail" name='Email' placeholder='Enter Your Email'/>-->
+        <!--<a href="#" class="subS">Subscribe!</a>-->
+        <div class="clearfix">
+            <%= text_field_tag(:email, "", required:"true", type: "email", class:"col-md-6 fEmail", placeholder: "Введите электронную почту") %>
+            <%= submit_tag(t("subscribe.label"), class:"subS") %>
+        </div>
+        <% end %>
+    </div>
+</div>
+

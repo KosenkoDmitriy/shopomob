@@ -889,7 +889,7 @@ body {
   cursor: pointer;
   background: #2d8d29;
   color: #fff;
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
 #filter {
@@ -943,12 +943,12 @@ body {
   cursor: pointer;
   background: #2d8d29;
   //color:#fff;
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
 #filter .current {
   background: #2d8d29;
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
 /**/
@@ -1097,7 +1097,7 @@ body {
 }
 
 .cBtn .buy {
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
   background: #2d8d29;
 }
 
@@ -1440,7 +1440,7 @@ textarea {
 }
 
 .forma .cBtn .send {
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
   background: #2d8d29;
 }
 
@@ -1696,11 +1696,12 @@ textarea {
   color: #fff;
   border-radius: 0 4px 4px 0;
   text-decoration: none;
-  box-shadow: 0px 2px 0px 0px #2d8d00;
+  box-shadow: 0px 2px 0px 0px #0b240a;
   background: #2d8d29;
   padding: 10px;
   padding-right: 20px;
   padding-left: 20px;
+  border-width: 0px;
 }
 
 .fr {
@@ -1709,10 +1710,11 @@ textarea {
   //margin: 40px 0 0 357px;
 }
 
-.footer a:hover {
+.footer a:hover, .footer input:hover {
   background: #2f2f2f;
   box-shadow: 0px 2px 0px 0px #000;
 }
+
 
 /**/
 .soc ul li {
@@ -2199,7 +2201,7 @@ margin-bottom: 35px !important;
   cursor: pointer;
   background: #2d8d29;
   color: #fff;
-  box-shadow: 0px 2px 0px 0px #2d8d00f;
+  box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
 #projects .columns1 .project {
@@ -2296,4 +2298,24 @@ background: rgba(0,0,0,0);
   padding: 20px 0;
   width: 100%;
   background-color: #101010 !important;
+}
+
+input[type="submit"].btn_submit {
+  margin-bottom: 0;
+  margin-top: 10px;
+
+  padding: 10px;
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 11px;
+  border-radius: 4px;
+
+  box-shadow: 0px 2px 0px 0px #0b240a;
+  background: #2d8d29;
+  color:#fafafa;
+}
+
+input[type="submit"].btn_submit:hover {
+  background: #2f2f2f;
+  box-shadow: 0px 2px 0px 0px #000;
 }

@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   add_breadcrumb "Главная", :root_path
 
   def index
-    @posts = Post.all
+    @posts = Post.last(12)
     @services = Service.all
     @galleries = Gallery.all
     #@posts = Post.all

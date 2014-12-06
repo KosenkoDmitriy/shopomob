@@ -1,0 +1,107 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ru:
+  lang: "Язык:"
+  menu:
+    main: "Главная"
+    about: "Кто мы?"
+    services: "Услуги"
+    projects: "Проекты"
+    contacts: "Контакты"
+    news: "Новости"
+  slider:
+    we_listen: "Мы слушаем ..."
+    we_discuss: "Мы обсуждаем ..."
+    we_develop: "Мы разрабатываем ..."
+  stats:
+    title1: "Потрясающих проектов"
+    title2: "Довольных заказчиков"
+    title3: "Счастливых клиентов"
+    text1: ""
+    text2: ""
+    text3: ""
+  home:
+    title1: "ШопоМоб - мобильные и веб приложения для телефонов и планшетов на Android и iOS (iPhone, iPad)"
+    text1: "Продавайте продукты и услуги вместе с ШопоМоб! Сохраните деньги и время - готовые решения для онлайн-бизнеса."
+    title2: "Лучший способ создать бизнес-сайт – Посадочная/продающая страница/страница захвата/промо-сайт!"
+    text2: "Откройте элегантные решения для вашего онлайн бизнеса быстро, удобно, доступно."
+  technologies:
+    rails: "Ruby-on-Rails"
+    spree: "Spree-commerce"
+    bootstrap: "Bootstrap 3.x"
+    ios: "iOS(iPhone/iPad)"
+    android: "Android"
+  about:
+    title: "Кто мы? Встречайте нашу команду!"
+    sub_title: "Мы слушаем, мы обсуждаем, мы советуем и разрабатываем. Мы любим изучать и использовать последние технологии."
+  services:
+    title: "Услуги"
+  projects:
+    all: "Все проекты"
+    title: "Наши удивительные работы"
+    sub_title: "Прямо здесь у нас есть то, что вы собираетесь любить"
+  news:
+    title: "Что нового?"
+    sub_title: "Получайте последние новости из нашего блога"
+    more: "Перейти на наш блог"
+    read_more: "Читать дальше"
+    all_news: "Читать все новости"
+  contacts:
+    title: "Есть вопрос? Мы здесь. Ответим, подскажем, проконсультируем!"
+    sub_title: "Свяжитесь с нами"
+    address: "Кирова 3, Владикавказ"
+    phones: "+7 (938) 861 67 88, +7 (989) 748 03 10 "
+    email: "shopomob@shopomob.ru"
+    skype: "shopomob.ru"
+    facebook_url: "https://www.facebook.com/groups/1431288837131060/"
+    facebook: "Фейсбук"
+    vk: "Контакт"
+    vk_url: "http://vk.com/shopomob"
+    linkedin: "Линкед Ин"
+    linkedin_url: "https://www.linkedin.com/groups/ShopoMob-%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-6703874"
+  subscribe:
+    label: "Получать новости"
+    title: "Подпишитесь на новостную рассылку ШопоМоб!"
+    sub_title: "Подпишитесь на новостную рассылку и будьте в курсу свежих новостей, последних промо-акциях, скидках, подарках от проекта ШопоМоб. Идите в ногу со временем вместе с ШопоМоб."
+  care:
+    title: "Мы заботимся о наших клиентах и можем сделать их жизнь легче!"
+    text: "Главная особенность наших бизнес-приложений - заказ товаров или услуг с телефона или планшета без интернета, а также удобный и легкий поиск необходимой информации о вашей компании"
+    button1: "Смотреть проекты"
+    button2: "Заказать сейчас"
+  head:
+    meta:
+      title: "ШопоМоб|мобильные и веб приложения для бизнеса"
+      description: "мобильные и веб приложения для развития бизнеса"
+      keywords: "архитектура, дизайн интерьера, проектирование"
+      author: "Dmitry Kosenko"
+  nav:
+    title: "Адек"
+    subtitle: "проектирование зданий и сооружений, архитектура, дизайн интерьера"
+  footer_sm:
+    title: "Авторские права &copy; 2013 ШопоМоб. Все права защищены."
+  date:
+    formats:
+      long: "Y%M%D%"
+  enter_email: "Введите email"
+  will_paginate:
+      previous_label: "<"
+      next_label: ">"
