@@ -6,11 +6,11 @@
 <%@services.each do |service|%>
 <p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
 <% end %>
-<%= text_field_tag(:name, "", required:"true", type: "text", class:"col-md-6 col-xs-12 name", placeholder: "Имя Отчество (*)") %>
-<%= text_field_tag(:email, "", required:"true", type: "email", class:"col-md-6 col-xs-12 Email", placeholder: "Ваш электронный адрес (*)") %>
-<%= text_field_tag(:phone, "", required:"true", type: "number", class:"col-md-12 col-xs-12 Subject", placeholder: "Ваш телефон (*)") %>
+<%= text_field_tag(:name, "", required:"true", type: "text", class:"col-md-6 col-xs-12 name", placeholder: "#{t("order.name")}") %>
+<%= text_field_tag(:email, "", required:"true", type: "email", class:"col-md-6 col-xs-12 Email", placeholder: "#{t("order.email")}") %>
+<%= text_field_tag(:phone, "", required:"true", type: "number", class:"col-md-12 col-xs-12 Subject", placeholder: "#{t("order.phone")}") %>
 <%#= text_area :details, placeholder:"Сообщение:", class:"col-md-12 col-xs-12 Message" #%>
-<textarea name="details" placeholder="Сообщение:" class="col-md-12 col-xs-12 Message"></textarea>
+<textarea name="details" placeholder=<%=t("order.msg")%> class="col-md-12 col-xs-12 Message"></textarea>
 
 <!--<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>-->
 <!--<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>-->
@@ -23,7 +23,7 @@
     <!--</ul>-->
 <!--</div>-->
 <div class="row col-xs-12">
-    <%= submit_tag("Заказать", class:"btn_submit") %>
+    <%= submit_tag("#{t("order.order_button")}", class:"btn_submit") %>
 </div>
 
 <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
