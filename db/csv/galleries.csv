@@ -1,42 +1,41 @@
 id,locale,title,gallery_id,image_name,image_text,image,url
-,en,Web Applications,,Adec Website ,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,www.adec.su
-,en,Web Applications,,My old Portfolio,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,www.isit.su
-,en,Web Applications,,Shop eCommerce,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,shop.adec.name
-,en,Web Applications,,Adec Old Website,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,www.adec.name
-,en,Web Applications,,Parfenon Website,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,www.parfenon-design.ru
-,en,Web Applications,,ShopoMob Website,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,www.shopomob.ru
-,en,Web Applications,,Parfenon Old Website,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,www.parfenon-design.ru
-,en,Web Applications,,Online Shop,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,shop.adec.name
-,en,Web Applications,,Companies Reference,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,ref.shopomob.ru
-,en,Web Applications,,Landing Page for Mobile App,"HTML5, CSS3",mobile.shopomob.ru.png,http://mobile.shopomob.ru/
-,en,Web Applications,,Tape of Events,"ASP.NET/C#, SQL Server. CSS3, XHTML, Ajax/JQuery. WCF Rest Service. Semantic crossbrowsing markup.",timeline.like.facebook.png,"http://myhome21.ru/
+1,en,Web Applications,1,Adec Website ,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,www.adec.su
+2,en,Web Applications,1,My old Portfolio,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,www.isit.su
+3,en,Web Applications,1,Shop eCommerce,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,shop.adec.name
+4,en,Web Applications,1,Adec Old Website,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,www.adec.name
+5,en,Web Applications,1,Parfenon Website,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,www.parfenon-design.ru
+6,en,Web Applications,1,ShopoMob Website,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,www.shopomob.ru
+7,en,Web Applications,1,Parfenon Old Website,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,www.parfenon-design.ru
+8,en,Web Applications,1,Online Shop,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,shop.adec.name
+9,en,Web Applications,1,Companies Reference,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,ref.shopomob.ru
+10,en,Web Applications,1,Landing Page for Mobile App,"HTML5, CSS3",mobile.shopomob.ru.png,http://mobile.shopomob.ru/
+11,en,Web Applications,1,Tape of Events,"ASP.NET/C#, SQL Server. CSS3, XHTML, Ajax/JQuery. WCF Rest Service. Semantic crossbrowsing markup.",timeline.like.facebook.png,"http://myhome21.ru/
 "
-,en,Game on Android and iOS,,Frog Shooter,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,
-,en,Game on Android and iOS,,Sea Battle,"Android, iOS, HTML5, libGDX",,
-,en,Mobile Applications,,Sale products and services,"Android, iOS, iPhone, iPad",,
-,en,Mobile Applications,,Reference App on Android,"Android, iOS, iPhone, iPad",ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
-,en,Mobile Applications,,Reference App on iOS,"Android, iOS, iPhone, iPad",ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
-,en,Mobile Applications,,Store App on Android,"Android, iOS, iPhone, iPad",shop.app.png,https://play.google.com/store/apps/details?id=com.shopomob.demo.android
-,en,Mobile Applications,,Store App on iOS,"Android, iOS, iPhone, iPad",shopomob.app.jpeg,https://itunes.apple.com/us/app/shopomob-sopomob-mobil-noe/id861438900?mt=8
-,en,Mobile Applications,,Adec App on Android,"Android, iOS, iPhone, iPad",adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
-,en,Mobile Applications,,Adec App on iOS,"Android, iOS, iPhone, iPad",adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
-,ru,Веб-приложения,,Веб-сайт компании Адек,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,www.adec.su
-,ru,Веб-приложения,,Мое старое портфолио,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,www.isit.su
-,ru,Веб-приложения,,Интернет-магазин,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,shop.adec.name
-,ru,Веб-приложения,,Устаревший сайт компании Адек,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,www.adec.name
-,ru,Веб-приложения,,Веб-сайт компании Парфенон,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,www.parfenon-design.ru
-,ru,Веб-приложения,,Веб-сайт проекта ШопоМоб,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,www.shopomob.ru
-,ru,Веб-приложения,,Устаревший сайт компании Парфенон,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,www.parfenon-design.ru
-,ru,Веб-приложения,,Онлайн-Магазин,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,shop.adec.name
-,ru,Веб-приложения,,Бизнес Справочник Компаний,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,ref.shopomob.ru
-,ru,Веб-приложения,,Целевая страница для мобильного приложения,"HTML5, CSS3",mobile.shopomob.ru.png,http://mobile.shopomob.ru/
-,ru,Веб-приложения,,Лента событий (фейсбук),"ASP.NET/C#, SQL Server. CSS3, XHTML, Ajax/JQuery. WCF Rest Service. Semantic crossbrowsing markup.",timeline.like.facebook.png,"http://myhome21.ru/
+12,en,Game on Android and iOS,2,Frog Shooter,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,
+13,en,Game on Android and iOS,2,Sea Battle,"Android, iOS, HTML5, libGDX",,
+14,en,Mobile Applications,3,Reference App on Android,"Android, iOS, iPhone, iPad",ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
+15,en,Mobile Applications,3,Reference App on iOS,"Android, iOS, iPhone, iPad",ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
+16,en,Mobile Applications,3,Store App on Android,"Android, iOS, iPhone, iPad",shop.app.png,https://play.google.com/store/apps/details?id=com.shopomob.demo.android
+17,en,Mobile Applications,3,Store App on iOS,"Android, iOS, iPhone, iPad",shopomob.app.jpeg,https://itunes.apple.com/us/app/shopomob-sopomob-mobil-noe/id861438900?mt=8
+18,en,Mobile Applications,3,Adec App on Android,"Android, iOS, iPhone, iPad",adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
+19,en,Mobile Applications,3,Adec App on iOS,"Android, iOS, iPhone, iPad",adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
+1,ru,Веб-приложения,1,Веб-сайт компании Адек,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,www.adec.su
+2,ru,Веб-приложения,1,Мое старое портфолио,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,www.isit.su
+3,ru,Веб-приложения,1,Интернет-магазин,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,shop.adec.name
+4,ru,Веб-приложения,1,Устаревший сайт компании Адек,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,www.adec.name
+5,ru,Веб-приложения,1,Веб-сайт компании Парфенон,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,www.parfenon-design.ru
+6,ru,Веб-приложения,1,Веб-сайт проекта ШопоМоб,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,www.shopomob.ru
+7,ru,Веб-приложения,1,Устаревший сайт компании Парфенон,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,www.parfenon-design.ru
+8,ru,Веб-приложения,1,Онлайн-Магазин,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,shop.adec.name
+9,ru,Веб-приложения,1,Бизнес Справочник Компаний,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,ref.shopomob.ru
+10,ru,Веб-приложения,1,Целевая страница для мобильного приложения,"HTML5, CSS3",mobile.shopomob.ru.png,http://mobile.shopomob.ru/
+11,ru,Веб-приложения,1,Лента событий (фейсбук),"ASP.NET/C#, SQL Server. CSS3, XHTML, Ajax/JQuery. WCF Rest Service. Semantic crossbrowsing markup.",timeline.like.facebook.png,"http://myhome21.ru/
 "
-,ru,Игры на Android and iOS,,Лягушка Охотник,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,
-,ru,Игры на Android and iOS,,Морской бой,"Android, iOS, HTML5, libGDX",,
-,ru,Мобильные приложения,,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
-,ru,Мобильные приложения,,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
-,ru,Мобильные приложения,,Магазин в телефоне и планшете,"Android, iOS, iPhone, iPad",shop.app.png,https://play.google.com/store/apps/details?id=com.shopomob.demo.android
-,ru,Мобильные приложения,,Магазин в телефоне и планшете,"Android, iOS, iPhone, iPad",shopomob.app.jpeg,https://itunes.apple.com/us/app/shopomob-sopomob-mobil-noe/id861438900?mt=8
-,ru,Мобильные приложения,,Мобильное приложение Адек,"Android, iOS, iPhone, iPad",adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
-,ru,Мобильные приложения,,Мобильное приложение Адек,"Android, iOS, iPhone, iPad",adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
+12,ru,Игры на Android and iOS,2,Лягушка Охотник,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,
+13,ru,Игры на Android and iOS,2,Морской бой,adec.app.png,,
+14,ru,Мобильные приложения,3,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
+15,ru,Мобильные приложения,3,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
+16,ru,Мобильные приложения,3,Магазин в телефоне и планшете,"Android, iOS, iPhone, iPad",shop.app.png,https://play.google.com/store/apps/details?id=com.shopomob.demo.android
+17,ru,Мобильные приложения,3,Магазин в телефоне и планшете,"Android, iOS, iPhone, iPad",shopomob.app.jpeg,https://itunes.apple.com/us/app/shopomob-sopomob-mobil-noe/id861438900?mt=8
+18,ru,Мобильные приложения,3,Мобильное приложение Адек,"Android, iOS, iPhone, iPad",adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
+19,ru,Мобильные приложения,3,Мобильное приложение Адек,"Android, iOS, iPhone, iPad",adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8

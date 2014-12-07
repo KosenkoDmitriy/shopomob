@@ -13,6 +13,15 @@ class HomeController < ApplicationController
     @order = Order.new
     @customer = Customer.new
     @teamers = Teamer.with_translations(I18n.locale)
+
+    #@posts = Post.with_translations(params[:locale]).last(12)
+    #@services = Service.with_translations(params[:locale])
+    #@galleries = Gallery.with_translations(params[:locale])
+    ##@posts = Post.all
+    ##@order.users.build
+    #@order = Order.new
+    #@customer = Customer.new
+    #@teamers = Teamer.with_translations(params[:locale])
   end
 
   #def create
@@ -162,7 +171,7 @@ class HomeController < ApplicationController
     'sm'
   end
   def set_locale
-    I18n.locale = params[:locale] || "ru" #I18n.default_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
   def create_user
     email = params['email'] if params['email'].present?
