@@ -5,9 +5,9 @@ class TranslatePosts < ActiveRecord::Migration
        :title => :string,
        :stext => :text,
        :text => :text,
-       :tags => :string
+       :tags => :string,
     }, {
-       :migrate_data => true
+      :migrate_data => true
     })
   end
 
