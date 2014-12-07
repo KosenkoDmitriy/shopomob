@@ -1,4 +1,7 @@
 class Image < ActiveRecord::Base
+  translates :title, :text
+  active_admin_translates :title, :text
+
   belongs_to :imageable, polymorphic: true
 
   has_attached_file :image, :styles => { :slider=>"1674x550!", :slider_small => "370x193!", :normal =>"640x640", :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/stylish3/adec_logo.png"
