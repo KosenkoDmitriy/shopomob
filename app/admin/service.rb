@@ -4,7 +4,7 @@ ActiveAdmin.register Service do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, :text, :stext, :price, :link, :image, image_attributes: [:id, :image, :_destroy]
+  permit_params :id, :title, :text, :stext, :price, :link, :image, image_attributes: [:id, :image, :_destroy], translations_attributes: [:id, :locale, :link, :title, :text, :stext, :price]
   #
   # or
   #
@@ -15,7 +15,15 @@ ActiveAdmin.register Service do
   # end
 
   form do |f|
-    f.inputs
+    #f.inputs
+
+    f.translated_inputs I18n.t("services"), switch_locale: false do |f|
+      f.input :title
+      f.input :stext
+      f.input :text
+      f.input :link
+      f.input :price
+    end
 
     f.inputs "Images" do
       f.has_many :image, :heading => 'Images' do |ff|

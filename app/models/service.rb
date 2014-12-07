@@ -1,4 +1,6 @@
 class Service < ActiveRecord::Base
+  translates :title, :text, :stext, :link, :price
+  active_admin_translates :title, :text, :stext, :link, :price
 
   has_many :order_service_ids
   has_many :orders, through: :order_service_ids
