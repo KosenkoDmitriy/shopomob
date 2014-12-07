@@ -20,72 +20,34 @@ require 'csv'
 path_to_app = Rails.root.join('db', 'csv') #File.dirname(__FILE__)+'/csv/'
 path_to_img = Rails.root.join('db', 'images') #File.dirname(__FILE__)+'/images/'
 
-#file_path = "#{path_to_app}/services.csv"
-#puts file_path
-#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-#  #item = Service.find_or_create_by( order_id: row['order_id'].to_i, title: row['title'], text: row['text'], url: row['url'])
-#  item = Service.find_or_create_by( title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'])
-#  if (!row['image'].blank?)
-#    img_path = path_to_img + row['image']
-#    if (File.exists?(img_path))
-#      item.image = Image.create(:image=>File.open(img_path))
-#    end
-#  end
-#end
-#
-#path_to_img = Rails.root.join('db', 'images', 'teamers')
-#file_path = "#{path_to_app}/teamers.csv"
-#puts file_path
-#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-#  item = Teamer.find_or_create_by( secondname: row['sname'], firstname:row['fname'], text: row['text'])
-#  if (!row['image'].blank?)
-#    img_path = path_to_img + row['image']
-#    if (File.exists?(img_path))
-#      item.image = Image.create(:image=>File.open(img_path))
-#    end
-#  end
-#end
+file_path = "#{path_to_app}/services.csv"
+puts file_path
+CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+  #item = Service.find_or_create_by( order_id: row['order_id'].to_i, title: row['title'], text: row['text'], url: row['url'])
+  item = Service.find_or_create_by!( title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'])
+  if (!row['image'].blank?)
+    img_path = path_to_img + row['image']
+    if (File.exists?(img_path))
+      item.image = Image.create(:image=>File.open(img_path))
+    end
+  end
+  item.translations.find_or_create_by(title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'], locale: row['locale'])
 
+end
 
-#path_to_img = Rails.root.join('db', 'images', 'gallery_watermark')
-#file_path = "#{path_to_app}/galleries.csv"
-#puts file_path
-#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-#  item = Gallery.find_or_create_by( title: row['title'] )
-#  if (!row['image'].blank?)
-#    puts img_path = path_to_img + row['image']
-#    if (File.exists?(img_path))
-#      item.images.append(Image.create(:image=>File.open(img_path)))
-#    end
-#  end
-#end
-
-#path_to_img = Rails.root.join('db', 'images', 'posts')
-#file_path = "#{path_to_app}/posts.csv"
-#puts file_path
-#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-#  item = Post.find_or_create_by( title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'] )
-#  if (!row['image'].blank?)
-#    img_path = path_to_img + row['image']
-#    if (File.exists?(img_path))
-#      item.images.append(Image.create(:image=>File.open(img_path)))
-#    end
-#  end
-#end
-#
-#file_path = "#{path_to_app}/service_tarifs.csv"
-#puts file_path
-#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-#  service = Service.find_by( title: row['service_title'] )
-#
-#  if service
-#    s_tarif = ServiceTarif.find_or_create_by(title: row['title'], text: row['text'], service: service)
-#    st_price = ServiceTarifPrice.find_or_create_by(price: row['price'].to_f, condition1: row['condition1'].to_f, condition2: row['condition2'].to_f, service_tarif: s_tarif)
-#    #service.service_tarifs.append(s_tarif)
-#  else
-#    puts "service not found: #{row['service_title']}"
-#  end
-#end
+path_to_img = Rails.root.join('db', 'images', 'teamers')
+file_path = "#{path_to_app}/teamers.csv"
+puts file_path
+CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+  item = Teamer.find_or_create_by!( secondname: row['sname'], firstname:row['fname'], text: row['text'])
+  if (!row['image'].blank?)
+    img_path = path_to_img + row['image']
+    if (File.exists?(img_path))
+      item.image = Image.create(:image=>File.open(img_path))
+    end
+  end
+  item.translations.find_or_create_by(secondname: row['sname'], firstname:row['fname'], text: row['text'], locale: row['locale'])
+end
 
 
 path_to_img = Rails.root.join('db', 'images', 'posts')
@@ -101,3 +63,35 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   end
   item.translations.find_or_create_by(title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'], locale: "ru")
 end
+
+
+path_to_img = Rails.root.join('db', 'images', "sm", 'gallery')
+file_path = "#{path_to_app}/galleries.csv"
+puts file_path
+CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+  item = Gallery.find_or_create_by( title: row['title'] )
+  if (!row['image'].blank?)
+    puts img_path = path_to_img + row['image']
+    if (File.exists?(img_path))
+      item.images.append(Image.create(:image=>File.open(img_path),:title=>row['image_name'], :text=>row['image_text'],:url=>row['url']))
+    end
+  end
+  item.translations.find_or_create_by(title: row['title'], locale: row['locale'])
+end
+
+
+#file_path = "#{path_to_app}/service_tarifs.csv"
+#puts file_path
+#CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+#  service = Service.find_by( title: row['service_title'] )
+#
+#  if service
+#    s_tarif = ServiceTarif.find_or_create_by!(title: row['title'], text: row['text'], service: service)
+#    st_price = ServiceTarifPrice.find_or_create_by(price: row['price'].to_f, condition1: row['condition1'].to_f, condition2: row['condition2'].to_f, service_tarif: s_tarif)
+#    #service.service_tarifs.append(s_tarif)
+#  else
+#    puts "service not found: #{row['service_title']}"
+#  end
+#  item.translations.find_or_create_by(title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'], locale: "ru")
+#
+#end

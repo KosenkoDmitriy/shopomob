@@ -5,14 +5,14 @@ class HomeController < ApplicationController
   add_breadcrumb "Главная", :root_path
 
   def index
-    @posts = Post.last(12)
-    @services = Service.all
-    @galleries = Gallery.all
+    @posts = Post.with_translations(I18n.locale).last(12)
+    @services = Service.with_translations(I18n.locale)
+    @galleries = Gallery.with_translations(I18n.locale)
     #@posts = Post.all
     #@order.users.build
     @order = Order.new
     @customer = Customer.new
-    @teamers = Teamer.all
+    @teamers = Teamer.with_translations(I18n.locale)
   end
 
   #def create
