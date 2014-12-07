@@ -20,6 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  active_admin:
+    globalize:
+      language:
+        ru: "Русский"
+        en-US: "en-US"
+        en: "English"
   lang: "Language:"
   menu:
     main: "Home"

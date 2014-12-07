@@ -1,7 +1,7 @@
 <div class="navmenu"style="text-align: center;">
 
     <ul id="menu">
-        <li><%=t("lang")%> <a href="<%=root_url%>?locale=ru">ru</a>|<a href="<%=root_url%>?locale=en">en</a>
+        <li><%=t("lang")%> <a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a>|<a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a>
         </li>
         <li class="active" ><a href="#home"><%=t("menu.main")%></a></li>
         <li><a href="#about"><%=t("menu.about")%></a></li>

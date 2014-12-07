@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   def index
     page = params[:page].present? ? params[:page] : 1
-    @posts = Post.all.paginate(:page => page, :per_page => 10)
+    @posts = Post.with_translations(I18n.locale).all.paginate(:page => page, :per_page => 10)
     @post = @posts.first
 
     add_breadcrumb "Все", posts_path

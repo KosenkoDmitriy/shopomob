@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118121405) do
+ActiveRecord::Schema.define(version: 20141207083444) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -91,6 +91,21 @@ ActiveRecord::Schema.define(version: 20141118121405) do
 
 # Could not dump table "post_categories" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
+
+  create_table "post_translations", force: true do |t|
+    t.integer  "post_id",    null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "title"
+    t.text     "stext"
+    t.text     "text"
+    t.string   "tags"
+  end
+
+  add_index "post_translations", ["locale"], name: "index_post_translations_on_locale"
+  add_index "post_translations", ["post_id"], name: "index_post_translations_on_post_id"
 
   create_table "posts", force: true do |t|
     t.string   "slug"

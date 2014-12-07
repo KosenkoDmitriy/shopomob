@@ -1,22 +1,23 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'#, as: "index_path"
-  #get 'posts' => 'home#index', as: "posts"
-  resources :posts
-  post 'order' => 'home#order'
-  post 'subscribe' => 'home#subscribe'
-  post 'calculate' => 'home#calculate'
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  get 'portfolios' => 'home#portfolios', as: :portfolios
-  get 'portfolio/:id' => 'home#portfolio', as: :portfolio
+    root 'home#index'#, as: "index_path"
+    #get 'posts' => 'home#index', as: "posts"
+    resources :posts
+    post 'order' => 'home#order'
+    post 'subscribe' => 'home#subscribe'
+    post 'calculate' => 'home#calculate'
 
+    get 'portfolios' => 'home#portfolios', as: :portfolios
+    get 'portfolio/:id' => 'home#portfolio', as: :portfolio
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
