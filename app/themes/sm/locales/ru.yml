@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  visit_url: "перейти"
   active_admin:
     globalize:
       language:

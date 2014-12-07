@@ -19,19 +19,19 @@ id,locale,title,gallery_id,image_name,image_text,image,url
 17,en,Mobile Applications,3,Store App on iOS,"Android, iOS, iPhone, iPad",shopomob.app.jpeg,https://itunes.apple.com/us/app/shopomob-sopomob-mobil-noe/id861438900?mt=8
 18,en,Mobile Applications,3,Adec App on Android,"Android, iOS, iPhone, iPad",adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
 19,en,Mobile Applications,3,Adec App on iOS,"Android, iOS, iPhone, iPad",adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
-1,ru,Веб-приложения,1,Веб-сайт компании Адек,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,www.adec.su
-2,ru,Веб-приложения,1,Мое старое портфолио,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,www.isit.su
-3,ru,Веб-приложения,1,Интернет-магазин,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,shop.adec.name
-4,ru,Веб-приложения,1,Устаревший сайт компании Адек,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,www.adec.name
-5,ru,Веб-приложения,1,Веб-сайт компании Парфенон,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,www.parfenon-design.ru
-6,ru,Веб-приложения,1,Веб-сайт проекта ШопоМоб,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,www.shopomob.ru
-7,ru,Веб-приложения,1,Устаревший сайт компании Парфенон,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,www.parfenon-design.ru
-8,ru,Веб-приложения,1,Онлайн-Магазин,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,shop.adec.name
-9,ru,Веб-приложения,1,Бизнес Справочник Компаний,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,ref.shopomob.ru
+1,ru,Веб-приложения,1,Веб-сайт компании Адек,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",adec.su.png,http://www.adec.su
+2,ru,Веб-приложения,1,Мое старое портфолио,"Django-cms, Custom plugins, MySQL, HTML, CSS, jQuery, Apache2 + wsgi, Mercurial",isit.su.png,http://www.isit.su
+3,ru,Веб-приложения,1,Интернет-магазин,"Spree-commerce, Git, Heroku",mobile.shopomob.ru.png,http://shop.adec.name
+4,ru,Веб-приложения,1,Устаревший сайт компании Адек,"Python/Django, HTML5, CSS3, Crossbrowsing Markup, jQuery, MySQL, Google Map, Mercurial",adec.name.png,http://www.adec.name
+5,ru,Веб-приложения,1,Веб-сайт компании Парфенон,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",parfenon-design.ru.png,http://www.parfenon-design.ru
+6,ru,Веб-приложения,1,Веб-сайт проекта ШопоМоб,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",shopomob.ru.png,http://www.shopomob.ru
+7,ru,Веб-приложения,1,Устаревший сайт компании Парфенон,"Django, MySQL, HTML5, CSS3, jQuery, Apache2 + wsgi, Mercurial",parfenon-design.ru.old.png,http://www.parfenon-design.ru
+8,ru,Веб-приложения,1,Онлайн-Магазин,"Satchmo, Python, Django, Mercurial",shop.adec.name.old.png,http://shop.adec.name
+9,ru,Веб-приложения,1,Бизнес Справочник Компаний,"Rails 4, Bootstrap 3.x, jQuery, Git, Nginx",ref.shopomob.ru.png,http://ref.shopomob.ru
 10,ru,Веб-приложения,1,Целевая страница для мобильного приложения,"HTML5, CSS3",mobile.shopomob.ru.png,http://mobile.shopomob.ru/
 11,ru,Веб-приложения,1,Лента событий (фейсбук),"ASP.NET/C#, SQL Server. CSS3, XHTML, Ajax/JQuery. WCF Rest Service. Semantic crossbrowsing markup.",timeline.like.facebook.png,"http://myhome21.ru/
 "
-12,ru,Игры на Android and iOS,2,Лягушка Охотник,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,
+12,ru,Игры на Android and iOS,2,Лягушка Охотник,"Android, iOS, HTML5, libGDX",frog_shooter_game.png,https://play.google.com/store/apps/details?id=name.adec.game.frog_shooter
 13,ru,Игры на Android and iOS,2,Морской бой,adec.app.png,,
 14,ru,Мобильные приложения,3,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
 15,ru,Мобильные приложения,3,Справочник Компаний,"Android, iOS, iPhone, iPad",ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
