@@ -3,6 +3,7 @@ class Post < ActiveRecord::Base
   active_admin_translates :title, :text, :stext, :slug, :tags do
     validates_presence_of :title
   end
+
   belongs_to :seo
   # следующая строка указывает на вложенность формы seo в page
   accepts_nested_attributes_for :seo, :allow_destroy => true#, :reject_if => :all_blank

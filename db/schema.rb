@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141207083444) do
+ActiveRecord::Schema.define(version: 20141207131304) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -169,6 +169,19 @@ ActiveRecord::Schema.define(version: 20141207083444) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "teamer_translations", force: true do |t|
+    t.integer  "teamer_id",  null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "firstname"
+    t.string   "secondname"
+    t.text     "text"
+  end
+
+  add_index "teamer_translations", ["locale"], name: "index_teamer_translations_on_locale"
+  add_index "teamer_translations", ["teamer_id"], name: "index_teamer_translations_on_teamer_id"
 
   create_table "teamers", force: true do |t|
     t.string   "firstname"
