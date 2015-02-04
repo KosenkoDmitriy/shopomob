@@ -29,6 +29,8 @@ class HomeController < ApplicationController
   #end
 
   def order
+
+    if simple_captcha_valid?
     #params['']
     #Order.new(is_offer:)
     name = params['name'] if params['name'].present?
@@ -68,6 +70,17 @@ class HomeController < ApplicationController
     #respond_to do |format|
     #  format.html { render json: params }
     #end
+    #do this
+    else
+      #do that
+      flash[:error] = I18n.t("simple_captcha.message.default")
+      #redirect_to "/#contacts"
+      #redirect_to request.path, :params => params
+      redirect_to :root, :params => params# + "#contacts"
+      #s = params.to_s
+      #redirect_to "/ru/#contacts?name=12312&phone=123&note=duplicate"
+      #redirect_to "/"+params[:locale] || ""+"/#contact", :params => params# + "#contacts"
+    end
   end
 
   def subscribe

@@ -20,6 +20,13 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  simple_captcha:
+    placeholder: "Введите код на картинке"
+    label: "Введите код в текстовое поле выше:"
+    refresh_button_text: "Обновить"
+    message:
+      default: "Коды отличаются"
+      user: "Код картинки и введенный вами отличаются/несовпадают"
   visit_url: "перейти"
   active_admin:
     globalize:

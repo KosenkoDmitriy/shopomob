@@ -1,16 +1,16 @@
 
-<%= form_tag("/order", method: "post", id:"", class: "contact-form", role:"") do %>
+<%= form_tag("/"+params[:locale]+"/order", method: "post", id:"", class: "contact-form", role:"") do %>
 <% if flash[:notice] %>
 <div class="success" style="display: none;">Заказ успешно отправлен!<strong><br>Мы свяжемся с Вам в ближайшее время.</strong> </div>
 <% end %>
 <%@services.each do |service|%>
 <p><%= service.title%><%=check_box_tag("services[#{service.id}]", service.title)%></p>
 <% end %>
-<%= text_field_tag(:name, "", required:"true", type: "text", class:"col-md-6 col-xs-12 name", placeholder: "#{t("order.name")}") %>
-<%= text_field_tag(:email, "", required:"true", type: "email", class:"col-md-6 col-xs-12 Email", placeholder: "#{t("order.email")}") %>
-<%= text_field_tag(:phone, "", required:"true", type: "number", class:"col-md-12 col-xs-12 Subject", placeholder: "#{t("order.phone")}") %>
+<%= text_field_tag(:name, params[:name]||"empty name", required:"true", type: "text", class:"col-md-6 col-xs-12 name", placeholder: "#{t("order.name")}") %>
+<%= text_field_tag(:email, params[:email], required:"true", type: "email", class:"col-md-6 col-xs-12 Email", placeholder: "#{t("order.email")}") %>
+<%= text_field_tag(:phone, params[:phone], required:"true", type: "number", class:"col-md-12 col-xs-12 Subject", placeholder: "#{t("order.phone")}") %>
 <%#= text_area :details, placeholder:"Сообщение:", class:"col-md-12 col-xs-12 Message" #%>
-<textarea name="details" placeholder=<%=t("order.msg")%> class="col-md-12 col-xs-12 Message"></textarea>
+<textarea name="details" placeholder=<%=t("order.msg")%> class="col-md-12 col-xs-12 Message"><%=params[:details]||"empty"%></textarea>
 
 <!--<input type="text" class="col-md-6 col-xs-12 name" name='name' placeholder='Name *'/>-->
 <!--<input type="text" class="col-md-6 col-xs-12 Email" name='Email' placeholder='Email *'/>-->
@@ -22,6 +22,8 @@
         <!--<li class="send"><a href="#"><i class="fa fa-share"></i>Send Message</a></li>-->
     <!--</ul>-->
 <!--</div>-->
+<%= show_simple_captcha %>d
+
 <div class="row col-xs-12">
     <%= submit_tag("#{t("order.order_button")}", class:"btn_submit") %>
 </div>

@@ -67,3 +67,5 @@ gem "breadcrumbs_on_rails"
 
 gem 'globalize', '~> 4.0.2'
 gem "activeadmin-globalize", github: 'stefanoverna/activeadmin-globalize', branch: 'master'
+
+gem 'simple_captcha2', require: 'simple_captcha'
