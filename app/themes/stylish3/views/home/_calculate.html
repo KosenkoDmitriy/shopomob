@@ -46,7 +46,10 @@
                             <!--<span class="error" style="display: none;">*Слишком коротко.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>-->
                         </label>
                     </fieldset>
+                    <%= show_simple_captcha %>
+
                     <div class="pull-right">
+
                         <!--<a class="btn btn_ btn-small_" data-type="reset">Очистить</a>-->
                         <!--<a href="#" class="btn btn_ btn-small_" data-type="submit">Заказать</a>-->
                         <%= submit_tag("Заказать", class:"btn btn_ btn-small_") %>
@@ -103,7 +106,10 @@
                                 <!--<span class="error" style="display: none;">*Слишком коротко.</span> <span class="empty" style="display: none;">*Обязательно для заполнения.</span>-->
                             </label>
                         </fieldset>
-                        <div class="pull-right">
+                    <%= show_simple_captcha %>
+
+                    <div class="pull-right">
+
                             <!--<a class="btn btn_ btn-small_" data-type="reset">Очистить</a>-->
                             <!--<a href="#" class="btn btn_ btn-small_" data-type="submit">Заказать</a>-->
                             <%= submit_tag("Рассчитать", class:"btn btn_ btn-small_") %>

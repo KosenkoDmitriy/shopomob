@@ -1,3 +1,13 @@
+<% if flash.present? %>
+<div class="alert alert-danger" style="margin:0px" role="alert">
+    <% flash.each do |name, msg| %>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    <span class="sr-only <%=name%>">msg:</span>
+    <%=msg%>
+    <% end %>
+</div>
+<% end %>
+
 <%#= render :partial=>'home/bootstrap3' #%>
 <%#= render :partial=>'home/gallery_tab' #%>
 <%= render :partial=>'home/portfolio_list' %>

@@ -20,37 +20,48 @@ class HomeController < ApplicationController
   #end
 
   def order
-    #params['']
-    #Order.new(is_offer:)
-    name = params['name'] if params['name'].present?
-    email = params['email'] if params['email'].present?
-    phone = params['phone'] if params['phone'].present?
-    services = params['services'] if params['services'].present?
-    details = params['details'] if params['details'].present?
+    if simple_captcha_valid?
+        #params['']
+      #Order.new(is_offer:)
+      name = params['name'] if params['name'].present?
+      email = params['email'] if params['email'].present?
+      phone = params['phone'] if params['phone'].present?
+      services = params['services'] if params['services'].present?
+      details = params['details'] if params['details'].present?
 
-    if (name && email && phone)
-      customer = Customer.find_or_create_by(email: email)
-      customer.name = name
-      customer.email = email
-      customer.phone = phone
-      order = Order.new
-      order.details = details
-      if (services.present?)
-        services.each do |service|
-          s=Service.find(service[0].to_i)
-          if s
-            order.services.append(s)
+      if (name && email && phone)
+        customer = Customer.find_or_create_by(email: email)
+        customer.name = name
+        customer.email = email
+        customer.phone = phone
+        order = Order.new
+        order.details = details
+        if (services.present?)
+          services.each do |service|
+            s=Service.find(service[0].to_i)
+            if s
+              order.services.append(s)
+            end
           end
         end
-      end
 
-      customer.orders.append(order)
-      if (customer.save!)
-        flash[:notice] = "saved"
-        UserMailer.order_email(params).deliver
-        UserMailer.notify_me("adec@adec.name", "adec. new order", params.to_s).deliver
+        customer.orders.append(order)
+        if (customer.save!)
+          flash[:notice] = "saved"
+          UserMailer.order_email(params).deliver
+          UserMailer.notify_me("adec@adec.name", "adec. new order", params.to_s).deliver
+        else
+          flash[:error] = "not saved"
+        end
       else
-        flash[:error] = "not saved"
+        #do that
+        flash[:error] = I18n.t("simple_captcha.message.default")
+        #redirect_to "/#contacts"
+        #redirect_to request.path, :params => params
+        redirect_to :root, :params => params# + "#contacts"
+        #s = params.to_s
+        #redirect_to "/ru/#contacts?name=12312&phone=123&note=duplicate"
+        #redirect_to "/"+params[:locale] || ""+"/#contact", :params => params# + "#contacts"
       end
     end
 
@@ -80,7 +91,9 @@ class HomeController < ApplicationController
   end
 
   def calculate
-    name = params['name'] if params['name'].present?
+    if simple_captcha_valid?
+
+      name = params['name'] if params['name'].present?
     email = params['email'] if params['email'].present?
     phone = params['phone'] if params['phone'].present?
     services = params['services'] if params['services'].present?
@@ -136,7 +149,16 @@ class HomeController < ApplicationController
         flash[:error] = "not saved"
       end
     end
-
+    else
+      #do that
+      flash[:error] = I18n.t("simple_captcha.message.default")
+      #redirect_to "/#contacts"
+      #redirect_to request.path, :params => params
+      redirect_to :root, :params => params# + "#contacts"
+      #s = params.to_s
+      #redirect_to "/ru/#contacts?name=12312&phone=123&note=duplicate"
+      #redirect_to "/"+params[:locale] || ""+"/#contact", :params => params# + "#contacts"
+    end
     redirect_to :root
   end
 
