@@ -118,7 +118,8 @@ en:
     title: "ShopoMob"
     subtitle: "mobile and web applications for online business"
   footer_sm:
-    title: "Copyright &copy; 2013 ShopoMob. All Rights Reserved."
+    title: "Copyright &copy; "
+    subtitle: "ShopoMob. All Rights Reserved."
   date:
     formats:
       long: "Y%M%D%"
