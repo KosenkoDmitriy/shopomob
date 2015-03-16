@@ -1,7 +1,7 @@
 id,order_id,locale,fname,sname,image,text
-1,1,ru,Ольга,Владимировна,olga.png,Генеральный директор ООО «Адек». Член Союза Архитекторов. Закончила СКГТУ по специальности «Архитектура».
-2,2,ru,Дмитрий, Владимирович,dmitry.png,ИТ-директор. Закончил ТТИ ЮФУ «Информационные системы и технологии».
-3,3,ru,Маргарита, Солтанова,rita.png,Художник. Аэрографист. Закончила СОГУ. Отделение «Живопись».
+1,1,ru,Ольга,,olga.png,
+2,2,ru,Дмитрий,,dmitry.png,
+3,3,ru,Маргарита,,rita.png,
 1,1,en,Olga,Khubulova,olga.png,Web-Designer
 2,2,en,Dmitry,Kosenko,dmitry.png,Mobile & Web Developer
 3,3,en,Rita,Soltanova,rita.png,Artist

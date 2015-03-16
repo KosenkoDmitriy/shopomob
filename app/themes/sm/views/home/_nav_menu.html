@@ -3,12 +3,13 @@
     <ul id="menu">
         <li><%=t("lang")%> <a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a>|<a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a>
         </li>
-        <li class="active" ><a href="#home"><%=t("menu.main")%></a></li>
-        <li><a href="#about"><%=t("menu.about")%></a></li>
-        <li><a href="#projects"><%=t("menu.projects")%></a></li>
-        <li><a href="#services"><%=t("menu.services")%></a></li>
-        <li><a href="#news"><%=t("menu.news")%></a></li>
-        <li class="last"><a href="#contact"><%=t("menu.contacts")%></a></li>
+        <li class="active" ><a href="<%=root_path%>#home"><%=t("menu.main")%></a></li>
+        <!--<li><a href="<%=root_path%>#about"><%=t("menu.about")%></a></li>-->
+        <li><a href="<%=root_path%>#projects"><%=t("menu.projects")%></a></li>
+        <li><a href="<%=root_path%>#services"><%=t("menu.services")%></a></li>
+        <li><a href="<%=root_path%>#news"><%=t("menu.news")%></a></li>
+        <li><a href="<%=posts_path%>"><%=t("menu.posts")%></a></li>
+        <li class="last"><a href="<%=root_path%>#contact"><%=t("menu.contacts")%></a></li>
         <!--li><a href="#features">Features</a></li-->
     </ul>
 </div>
