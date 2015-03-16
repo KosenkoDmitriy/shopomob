@@ -39,7 +39,7 @@ file_path = "#{path_to_app}/services.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   item = Service.find_by( id: row['id'])
-  item.translations.find_or_create_by(service_id: item.id, title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'], locale: row['locale'])
+  item.translations.find_or_create_by(service_id: item.id, title: row['title'], stext:row['stext'], text: row['text'], price: row['price'].to_i, link: row['url'], locale: row['locale']) if item.present?
 end
 #end translations for services
 
@@ -108,7 +108,7 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   end
   end
 end
-#start translations for galleries
+start translations for galleries
 file_path = "#{path_to_app}/galleries.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|

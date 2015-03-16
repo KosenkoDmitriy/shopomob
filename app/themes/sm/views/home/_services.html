@@ -10,7 +10,7 @@
                 <div class="col-md-4 Fully">
                     <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"img-responsive", style:"")%>
                     <h4><%=service.title%></h4>
-                    <p><%=service.stext%></p>
+                    <%=service.stext.html_safe() if service.stext.present? %>
                 </div>
                 <% end %>
             </div>
