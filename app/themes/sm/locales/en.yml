@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  post:
+    not_found: "record not found"
+  posts:
+    not_found: "records not found"
   simple_captcha:
     placeholder: "Enter the image value"
     label: "Enter the code in the box:"

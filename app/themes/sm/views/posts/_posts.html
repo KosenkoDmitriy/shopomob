@@ -10,5 +10,5 @@
 </ul>
 <%= will_paginate @posts %>
 <% else %>
-<h4>записи не найдены</h4>
+<h4><%=t("posts.not_found")%></h4>
 <% end %>

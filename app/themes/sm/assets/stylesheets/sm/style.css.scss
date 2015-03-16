@@ -2328,3 +2328,91 @@ input[type="submit"].btn_submit:hover {
   font-url('glyphicons-halflings-regular.ttf') format('truetype'),
   font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+//.navbar-inverse .navbar-nav > li {
+//  -moz-osx-font-smoothing: grayscale;
+//  -webkit-font-smoothing: antialiased;
+//  font-family: 'Roboto', 'sans-serif';
+//  font-size: 14px;
+//  color: #fff;
+//  list-style: none;
+//  text-transform: uppercase;
+//}
+//
+//.navbar-inverse .navbar-nav > li > a {
+//  color: #fff;
+//}
+//
+//.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li:active > a {
+//  border: none;
+//  outline: none;
+//  color: #2d8d29;
+//}
+
+
+.navbar-inverse .navbar-nav > li a:active {
+  color: #2d8d29;
+}
+
+
+.navbar-inverse .navbar-nav .active a:focus {
+  outline: none;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav .active a:active {
+  outline: none;
+  border: none;;
+}
+
+.navbar-inverse .navbar-nav .active a:link {
+  outline: none;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav .active a:visited {
+  outline: none;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav > li {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  border-right: 1px solid #000;
+//  padding-left: 17px;
+//  padding-right: 16px;
+  float: left;
+  font-family: 'Roboto', 'sans-serif';
+  font-size: 14px;
+  color: #fff;
+  list-style: none;
+  text-transform: uppercase;
+  font-style: bold;
+//  font-weight: 700;
+}
+
+.navbar-inverse .navbar-nav > li:last-child {
+  border-right: 0;
+  padding-right: 0px;
+}
+//
+//.navbar-inverse .navbar-nav {
+//  //margin-top: 33px;
+//  margin-top: 74px;
+//  float: right;
+//}
+
+.navbar-inverse .navbar-nav > li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav > li a:hover, .navbar-inverse .navbar-nav > li a:hover, .navbar-inverse .navbar-nav > li a:active, .navbar-inverse .navbar-nav > li.active, .navbar-inverse .navbar-nav > li.active a {
+  border: none;
+  outline: none;
+  color: #2d8d29;
+}
+
+.dropdown-menu {
+  background-color: #101010;
+}

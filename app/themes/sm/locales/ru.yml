@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  post:
+    not_found: "записи не найдены"
+  posts:
+    not_found: "записи не найдены"
   simple_captcha:
     placeholder: "Введите код на картинке"
     label: "Введите код в текстовое поле выше:"
