@@ -94,13 +94,7 @@
                 </div>
                 <div class="col-md-8 text-right dm">
                     <ul id="downMenu">
-                        <li class="active"><a href="#home"><%=t("menu.main")%></a></li>
-                        <li><a href="#about"><%=t("menu.about")%></a></li>
-                        <li><a href="#services"><%=t("menu.services")%></a></li>
-                        <li><a href="#projects"><%=t("menu.projects")%></a></li>
-                        <li><a href="#news"><%=t("menu.news")%></a></li>
-                        <li class="last"><a href="#contact"><%=t("menu.contacts")%></a></li>
-                        <!--li><a href="#features">Features</a></li-->
+                        <%= render :partial=>'home/nav_menu_list' %>
                     </ul>
                 </div>
             </div>
