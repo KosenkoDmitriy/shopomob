@@ -108,7 +108,7 @@ CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
   end
   end
 end
-start translations for galleries
+#start translations for galleries
 file_path = "#{path_to_app}/galleries.csv"
 puts file_path
 CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
