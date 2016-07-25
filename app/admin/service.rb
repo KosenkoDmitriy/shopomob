@@ -30,7 +30,7 @@ ActiveAdmin.register Service do
     #actions
     column :id
     column :image do |ad|
-      image_tag ad.image.image.url(:thumb)
+      image_tag ad.try(:image).try(:image).try(:url,:thumb) if ad.present?
     end
     column :title
     column :stext
