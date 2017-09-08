@@ -4,7 +4,7 @@
             <% @galleries.each do |gallery| %>
             <%#=gallery.title#%>
 
-            <% gallery.images.each do |image| %>
+            <% gallery.images.reverse.each do |image| %>
             <a class="fancybox" rel="group" href="<%=image.image.url%>">
                 <!--<img src="small_image_1.jpg" alt=""/>-->
                 <%#=image_tag(image.image.url, class:"", style:"height:150px")#%>
