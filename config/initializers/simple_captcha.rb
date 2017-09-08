@@ -1,9 +1,9 @@
 SimpleCaptcha.setup do |sc|
   # default: 100x28
-  sc.image_size = '120x40'
+  sc.image_size = '150x30'
 
   # default: 5
-  sc.length = 6
+  sc.length = 10
 
   # default: simply_blue
   # possible values:
@@ -20,11 +20,11 @@ SimpleCaptcha.setup do |sc|
 
   # default: low
   # possible values: 'low', 'medium', 'high', 'random'
-  sc.distortion = 'medium'
+  sc.distortion = 'random' #'high'
 
   # default: medium
   # possible values: 'none', 'low', 'medium', 'high'
-  sc.implode = 'low'
+  sc.implode = 'high'
 
   # own style
   sc.image_style = 'mycaptha'
