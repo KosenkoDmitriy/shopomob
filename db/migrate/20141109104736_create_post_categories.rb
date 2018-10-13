@@ -4,6 +4,7 @@ class CreatePostCategories < ActiveRecord::Migration
       t.string :title
       t.timestamps
     end
-    add_column :post_categories, :posts, :has_many
+    # add_column :post_categories, :posts, :has_many
+    # add_reference :post_categories, :post
   end
 end

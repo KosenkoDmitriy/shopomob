@@ -2,8 +2,10 @@
 
 one:
   price: 1.5
-  condition: 1.5
+  condition1: 1.5
+  condition2: 2.5
 
 two:
   price: 1.5
-  condition: 1.5
+  condition1: 1.5
+  condition1: 2.5
