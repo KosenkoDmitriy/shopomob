@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     root 'home#index'#, as: "index_path"
     #get 'posts' => 'home#index', as: "posts"
     resources :posts
+    resources :users
     post 'order' => 'home#order'
     post 'subscribe' => 'home#subscribe'
     post 'calculate' => 'home#calculate'
