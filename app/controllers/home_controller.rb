@@ -181,7 +181,7 @@ class HomeController < ApplicationController
   private
   def theme_resolver
     #params[:theme].presence || 'stylish3'
-    'sm'
+    'portfolio'
   end
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale

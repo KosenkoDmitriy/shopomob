@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <% if content_for?(:head) %>
+  <%= content_for(:head) %>
+  <% else %>
+  <title>
+    <%= t("head.meta.title") %>
+  </title>
+  <meta name="keywords" content="<%= t(" head.meta.keywords") %>"/>
+  <meta name="description" content="<%= t(" head.meta.description") %>"/>
+  <meta name="author" content="<%= t(" head.meta.author") %>">
+  <% end %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <%= stylesheet_link_tag    "portfolio/all", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "portfolio/all", "data-turbolinks-track" => true %>
+  <!-- Google fonts - Roboto + Roboto Slab-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700%7CRoboto:400,700,300">
+
+  <%= csrf_meta_tags %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="all,follow">
+
+  <!-- Favicon-->
+  <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+
+  <!-- Bootstrap CSS-->
+  <!-- <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"> -->
+  <!-- Font Awesome CSS-->
+  <!-- <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"> -->
+  <!-- owl carousel-->
+  <!-- <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.css"> -->
+  <!-- <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.css"> -->
+  <!-- animate.css-->
+  <!-- <link rel="stylesheet" href="vendor/animate.css/animate.css"> -->
+  <!-- theme stylesheet-->
+  <!-- <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet"> -->
+  <!-- Custom stylesheet - for your changes-->
+  <!-- <link rel="stylesheet" href="css/custom.css"> -->
+
+  <!-- Tweaks for older IEs-->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+</head>
+
+<body>
+
+  <%= yield %>
+
+  <!-- JavaScript files-->
+  <!-- <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/popper.js/umd/popper.min.js"> </script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+  <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="vendor/jquery.counterup/jquery.counterup.js"></script>
+  <script src="js/front.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+
+</body>
+
+</html>
