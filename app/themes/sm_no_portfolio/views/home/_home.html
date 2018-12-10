@@ -1,0 +1,97 @@
+<!--home start-->
+<div id="home">
+    <div class="headerLine">
+        <div id="menuF" class="default">
+            <div class="container">
+                <div class="row">
+                    <div class="logo col-md-4">
+                        <div>
+                            <a href="<%=root_url%>">
+                                <%#=image_tag("sm/logo2.jpg", alt:"ShopoMob",  class:"", style:"height:56px;") #%>
+                                <!--<%=image_tag("sm/logo3.jpg", alt:"ShopoMob",  class:"", style:"height:64px;") %>-->
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8">
+                        <%#= render :partial=>'home/nav_menu' #%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row wrap">
+                <div class="col-md-12 gallery">
+                    <div class="camera_wrap camera_white_skin" id="camera_wrap_1">
+                        <div data-thumb="" data-src="<%=asset_url("sm/slides/blank.gif")%>">
+                            <div class="img-responsive camera_caption fadeFromBottom">
+                                <h2><%=t("slider.we_listen")%></h2>
+                            </div>
+                        </div>
+                        <div data-thumb="" data-src="<%=asset_url("sm/slides/blank.gif")%>">
+                            <div class="img-responsive camera_caption fadeFromBottom">
+                                <h2><%=t("slider.we_discuss")%></h2>
+                            </div>
+                        </div>
+                        <div data-thumb="" data-src="<%=asset_url("sm/slides/blank.gif")%>">
+                            <div class="img-responsive camera_caption fadeFromBottom">
+                                <h2><%=t("slider.we_develop")%></h2>
+                            </div>
+                        </div>
+                    </div><!-- #camera_wrap_1 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 project">
+                <h3 id="counter">0</h3>
+                <h4><%=t("stats.title1")%></h4>
+                <p><%=t("stats.text1")%></p>
+            </div>
+            <div class="col-md-4 project">
+                <h3 id="counter1">0</h3>
+                <h4><%=t("stats.title2")%></h4>
+                <p><%=t("stats.text2")%></p>
+            </div>
+            <div class="col-md-4 project">
+                <h3 id="counter2" style="margin-left: 20px;">0</h3>
+                <h4 style="margin-left: 20px;"><%=t("stats.title3")%></h4>
+                <p><%=t("stats.text3")%></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 cBusiness">
+                <h3><%=t("home.title1")%></h3>
+                <h4><%=t("home.text1")%></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 centPic">
+                <%=image_tag("sm/bizPic2.png", alt:"",  class:"img-responsive", style:"height:300px") %>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 cBusiness">
+                <h3><%=t("home.title2")%></h3>
+                <h4><%=t("home.text2")%></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 centPic">
+                <%=image_tag("sm/bizPic.png", alt:"",  class:"img-responsive", style:"height:300px") %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<!--about start-->
+
+<div>
+    <% if (@services.count > 0) %>
+    <div class="line2">
+        <div class="container" id="services">
+            <div class="row Fresh">
+                <h1><%=t("services.title")%></h1>
+                <% @services.each do |service| %>
+                <div class="col-md-4 Fully">
+                    <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"img-responsive", style:"")%>
+                    <h4><%=service.title%></h4>
+                    <p><%=service.stext%></p>
+                </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+
+    <div class="container" id="about">
+        <div class="row">
+            <div class="col-md-12 wwa">
+                <!--<span name="about"></span>-->
+                <h3><%=t("about.title")%></h3>
+                <h4><%=I18n.t("about.sub_title")%></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row team">
+            <% @teamers.each do |teamer| %>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <% if teamer.image.blank?%>
+                    <%=image_tag("stylish2/adec_logo.png", alt:"#{teamer.firstname} #{teamer.secondname}", class:"img-radius ", style:"width:170px;height:153px")  %>
+                    <% else %>
+                    <%=image_tag(teamer.try(:image).try(:image).try(:url, :medium), alt:"#{teamer.firstname} #{teamer.secondname}",  class:"img-radius ", style:"") %>
+                    <% end %>
+                    <h4><%=teamer.firstname%> <%=teamer.secondname%></h4>
+                    <!--<h5>CEO</h5>-->
+                    <p><%=teamer.text%></p>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" ></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <%#= render :partial=>'home/space' #%>
+    <%#= render :partial=>'home/technologies' #%>
+    <%#= render :partial=>'home/reviews' #%>
+</div>
+<script>
+    $(window).load(function(){
+        var heights = $(".team .thumbnail").map(function () {
+                return $(this).height();
+            }).get(),
+            maxHeight = Math.max.apply(null, heights);
+        $(".team .thumbnail").height(maxHeight);
+    });
+</script>

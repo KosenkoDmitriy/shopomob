@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <% if content_for?(:head) %>
+      <%= content_for(:head) %>
+  <% else %>
+      <title><%= t("head.meta.title") %></title>
+      <meta name="keywords" content="<%= t("head.meta.keywords") %>"/>
+      <meta name="description" content="<%= t("head.meta.description") %>"/>
+      <meta name="author" content="<%= t("head.meta.author") %>">
+  <% end %>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <%= stylesheet_link_tag    "sm/all", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "sm/all", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+
+  <%= csrf_meta_tags %>
+  <script>
+      jQuery(function(){
+          jQuery('#camera_wrap_1').camera({
+              transPeriod: 500,
+              time: 3000,
+              height: '490px',
+              thumbnails: false,
+              pagination: true,
+              playPause: false,
+              loader: false,
+              navigation: false,
+              hover: false
+          });
+      });
+  </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

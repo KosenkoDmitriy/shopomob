@@ -1,0 +1,14 @@
+<p><%= render_breadcrumbs :separator => ' > ' %></p>
+
+<% if (@posts.present? && @posts.count > 0) %>
+<h4>Статьи</h4>
+<%#= will_paginate @posts #%>
+<ul class="list">
+    <% @posts.each do |post| %>
+    <li><a href="<%=post_url(post)%>?page=<%=params[:page]%>"><%=post.title%></a></li>
+    <% end %>
+</ul>
+<%= will_paginate @posts %>
+<% else %>
+<h4><%=t("posts.not_found")%></h4>
+<% end %>
