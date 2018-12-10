@@ -1,0 +1,36 @@
+<!--services start-->
+
+<div>
+  <% if (@services.count > 0) %>
+  <div class="line2">
+    <div class="container" id="services">
+      <div class="row Fresh">
+        <h1>
+          <%=t("services.title")%>
+        </h1>
+        <% @services.each do |service| %>
+        <div class="col-md-4 Fully">
+          <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"img-responsive", style:"")%>
+          <h4>
+            <%=service.title%>
+          </h4>
+          <%=service.stext.html_safe() if service.stext.present? %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<script>
+  $(window).load(function () {
+    var heights = $(".team .thumbnail").map(function () {
+      return $(this).height();
+    }).get(),
+      maxHeight = Math.max.apply(null, heights);
+    $(".team .thumbnail").height(maxHeight);
+  });
+</script>
+
+
+<%=render partial: 'timeline' %>
