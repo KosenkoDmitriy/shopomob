@@ -6,6 +6,6 @@
 //=  require ./waypoints/lib/jquery.waypoints.min.js 
 //=  require ./jquery.counterup/jquery.counterup.js 
 
-//=  require ../portfolio/front.js
+//=  require portfolio/front.js
 //=  require portfolio/modernizr-2.8.3.js
 // require_tree .
