@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
   def index
     @posts = Post.with_translations(I18n.locale).last(12)
-    @services = Service.with_translations(I18n.locale)
+    @services = Service.with_translations(I18n.locale).where(is_visible: true)
     @galleries = Gallery.with_translations(I18n.locale)
     #@posts = Post.all
     #@order.users.build

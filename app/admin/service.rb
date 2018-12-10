@@ -4,7 +4,7 @@ ActiveAdmin.register Service do
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :id, :title, :text, :stext, :price, :link, :image, image_attributes: [:id, :image, :_destroy], translations_attributes: [:id, :locale, :link, :title, :text, :stext, :price]
+  permit_params :id, :is_visible, :title, :text, :stext, :price, :link, :image, image_attributes: [:id, :image, :_destroy], translations_attributes: [:id, :locale, :link, :title, :text, :stext, :price]
   #
   # or
   #
@@ -31,6 +31,9 @@ ActiveAdmin.register Service do
         ff.input :_destroy, :as=>:boolean, :required => false, :label => 'Remove image'
       end
     end
+
+    f.input :is_visible
+
     f.actions
   end
 
@@ -38,12 +41,13 @@ ActiveAdmin.register Service do
     #actions
     column :id
     column :image do |ad|
-      image_tag ad.image.image.url(:thumb)
+      image_tag ad.try(:image).try(:image).try(:url, :thumb)
     end
     column :title
     column :stext
     column :price
     column :link
+    column :is_visible
     #columns
     actions
   end

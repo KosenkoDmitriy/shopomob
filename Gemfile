@@ -13,8 +13,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 #gem 'therubyracer',  platforms: :ruby
-gem 'therubyracer', '0.12.0'
-#gem uninstall libv8 && gem install libv8 -v '3.16.14.3' -- --with-system-v8
+gem 'therubyracer', '0.12.3'
+#gem uninstall libv8 && gem install libv8 -v '3.16.14.19' -- --with-system-v8
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
