@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181211170347) do
+ActiveRecord::Schema.define(version: 20181211203743) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -66,13 +66,15 @@ ActiveRecord::Schema.define(version: 20181211170347) do
     t.datetime "image_updated_at"
   end
 
-  create_table "galleries_projects", id: false, force: true do |t|
+  create_table "galleries_projects", force: true do |t|
     t.integer "gallery_id"
     t.integer "project_id"
   end
 
-  add_index "galleries_projects", ["gallery_id"], name: "index_galleries_projects_on_gallery_id"
-  add_index "galleries_projects", ["project_id"], name: "index_galleries_projects_on_project_id"
+  create_table "gallery_project", force: true do |t|
+    t.integer "gallery_id"
+    t.integer "project_id"
+  end
 
   create_table "gallery_translations", force: true do |t|
     t.integer  "gallery_id", null: false
