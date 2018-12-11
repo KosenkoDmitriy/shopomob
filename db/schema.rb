@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181210173837) do
+ActiveRecord::Schema.define(version: 20181211150852) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -155,6 +155,17 @@ ActiveRecord::Schema.define(version: 20181210173837) do
     t.datetime "updated_at"
   end
 
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "text"
+    t.text     "tags"
+    t.text     "url"
+    t.boolean  "is_draft"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "seos", force: true do |t|
     t.string   "meta_title"
     t.text     "meta_description"
@@ -207,7 +218,7 @@ ActiveRecord::Schema.define(version: 20181210173837) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-    t.boolean  "is_visible", default: true
+    t.boolean  "is_visible"
   end
 
   create_table "simple_captcha_data", force: true do |t|
