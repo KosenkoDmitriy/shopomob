@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181211153200) do
+ActiveRecord::Schema.define(version: 20181211162611) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -183,7 +183,10 @@ ActiveRecord::Schema.define(version: 20181211153200) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "gallery_id"
   end
+
+  add_index "projects", ["gallery_id"], name: "index_projects_on_gallery_id"
 
   create_table "seos", force: true do |t|
     t.string   "meta_title"

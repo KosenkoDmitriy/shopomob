@@ -21,12 +21,24 @@ ActiveAdmin.register Gallery do
 
     f.inputs I18n.t("images") do
       f.input :url, :label => 'gallery url/website'
-
+      # f.inputs :projects, for: [:project, gallery.project || Project.new] do |u|
+      #   u.input :title
+      #   # u.input :subtitle
+      # end
       f.has_many :images, :heading => 'Images' do |ff|
         ff.input :image, :label => "Image", :hint => ff.template.image_tag(ff.object.image.url(:thumb))
         ff.input :_destroy, :as=>:boolean, :required => false, :label => I18n.t('remove')
       end
     end
+
+    # f.inputs I18n.t("projects") do
+
+    #   f.has_many :projects, :heading => 'Projects' do |ff|
+    #     ff.input :title, :label => "Project"#, :hint => ff.template.image_tag(ff.object.image.url(:thumb))
+    #     ff.input :_destroy, :as=>:boolean, :required => false, :label => I18n.t('remove')
+    #   end
+    # end
+
 
     f.actions
   end

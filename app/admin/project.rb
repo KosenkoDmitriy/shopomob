@@ -20,7 +20,7 @@ ActiveAdmin.register Project do
         ff.input :image, :label => "Image", :hint => ff.template.image_tag(ff.object.image.url(:thumb))
         ff.input :_destroy, :as => :boolean, :required => false, :label => I18n.t('remove')
       end
-
+      f.input :gallery
       f.input :is_draft
 
     end
