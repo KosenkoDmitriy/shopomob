@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181211150852) do
+ActiveRecord::Schema.define(version: 20181211153200) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -155,6 +155,21 @@ ActiveRecord::Schema.define(version: 20181211150852) do
     t.datetime "updated_at"
   end
 
+  create_table "project_translations", force: true do |t|
+    t.integer  "project_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "url"
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "text"
+    t.text     "tags"
+  end
+
+  add_index "project_translations", ["locale"], name: "index_project_translations_on_locale"
+  add_index "project_translations", ["project_id"], name: "index_project_translations_on_project_id"
+
   create_table "projects", force: true do |t|
     t.string   "title"
     t.string   "subtitle"
@@ -164,6 +179,10 @@ ActiveRecord::Schema.define(version: 20181211150852) do
     t.boolean  "is_draft"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "seos", force: true do |t|
