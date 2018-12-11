@@ -1,11 +1,11 @@
 ActiveAdmin.register Project do
 
-  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, images_attributes: [:id, :image, :_destroy], translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
+  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, images_attributes: [:id, :image, :_destroy], galleries_attributes: [:id, :title, :_destroy], translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
 
   form do |f|
-    #f.inputs
+    # f.inputs
 
-    f.translated_inputs I18n.t("project"), switch_locale: false do |f|
+    f.translated_inputs I18n.t("project"), switch_locale: true do |f|
       f.input :title #, :label => 'title'
       f.input :subtitle
       f.input :text
@@ -19,6 +19,12 @@ ActiveAdmin.register Project do
       f.has_many :images, :heading => 'Images' do |ff|
         ff.input :image, :label => "Image", :hint => ff.template.image_tag(ff.object.image.url(:thumb))
         ff.input :_destroy, :as => :boolean, :required => false, :label => I18n.t('remove')
+      end
+
+      f.has_many :galleries, :heading => 'Galleries', allow_destroy: false, new_record: true   do |ff|
+        ff.input :id, :label => "Gallery", as: :select, collection: Gallery.all.map{|u| ["#{u.id}, #{u.title}", u.id]}
+        # ff.input :id, label: "Gallery", as: :select, collection: Gallery.with_translations(I18n.locale).map{|u| ["#{u.id}, #{u.title}", u.id]}
+        # ff.input :_destroy, :as => :boolean, :required => false, :label => I18n.t('remove')
       end
 
       f.input :is_draft
