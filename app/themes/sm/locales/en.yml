@@ -81,6 +81,7 @@ en:
     all: "All Projects"
     title: "Our Amazing Works"
     sub_title: "Right here we've got something you gonna love"
+  all: "All"
   news:
     title: "What’s New?"
     sub_title: "Get the latest news from our blog"
@@ -122,7 +123,7 @@ en:
       keywords: "mobile applications, web applications, online business, ecommerce, mobile app, ios app, android app, iphone app, eshop, responsive website, bootstrap website, spree commerce"
       author: "Dmitry Kosenko"
   nav:
-    title: "ShopoMob"
+    title: "Portfolio"
     subtitle: "mobile and web applications for online business"
   footer_sm:
     title: "Copyright &copy; "
