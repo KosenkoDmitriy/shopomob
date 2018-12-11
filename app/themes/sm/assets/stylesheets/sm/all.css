@@ -12,7 +12,7 @@
  *= require sm/style
 
  *= require owl.carousel/owl.carousel.css
- *= require owl.carousel/owl.theme.green.css
+ *= require owl.carousel/owl.theme.default.css
 
 
  * require_self
