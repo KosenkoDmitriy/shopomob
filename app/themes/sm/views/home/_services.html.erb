@@ -9,7 +9,7 @@
           <%=t("services.title")%>
         </h1>
         <% @services.each do |service| %>
-        <div class="col-md-4 Fully">
+        <div class="col-sm-4 Fully">
           <%=image_tag(service.try(:image).try(:image).try(:url, :medium), alt:service.title, class:"img-responsive", style:"")%>
           <h4>
             <%=service.title%>

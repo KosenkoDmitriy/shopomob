@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  portfolio: 'Portfolio'
   post:
     not_found: "record not found"
   posts:
@@ -48,6 +49,7 @@ en:
     news: "News"
     posts: "Articles"
     tarifs: "Tarifs"
+    timeline: 'Timeline'
   slider:
     we_listen: "We listen ..."
     we_discuss: "We discuss ..."

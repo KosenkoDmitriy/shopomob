@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  portfolio: 'Портфолио'
   post:
     not_found: "записи не найдены"
   posts:
@@ -48,6 +49,7 @@ ru:
     news: "Новости"
     posts: "Статьи"
     tarifs: "Тарифы"
+    timeline: 'История'
   slider:
     we_listen: "Мы слушаем ..."
     we_discuss: "Мы обсуждаем ..."

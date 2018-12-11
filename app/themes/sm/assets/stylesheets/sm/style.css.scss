@@ -1,3 +1,5 @@
+@import 'variables';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,7 +65,7 @@ body {
 }
 
 .logo span {
-  color: #2d8d29;
+  color: $green;;
 }
 
 .logo p {
@@ -82,7 +84,7 @@ body {
 }
 
 #menu a:active {
-  color: #2d8d29;
+  color: $green;;
 }
 
 #menu select {
@@ -91,7 +93,7 @@ body {
 
 #menu .active a {
   border: 0;
-  color: #2d8d29;
+  color: $green;;
 }
 
 #menu .active a:focus {
@@ -148,7 +150,7 @@ body {
 #menu li a:hover {
   border: none;
   outline: none;
-  color: #2d8d29;
+  color: $green;;
 }
 
 .gallery {
@@ -161,7 +163,7 @@ body {
 }
 
 .camera_caption h2 {
-  border-bottom: 4px solid #2d8d29;
+  border-bottom: 4px solid $green;;
   font-family: 'Open Sans', sans-serif;
   font-size: 100px;
   font-weight: 700;
@@ -566,7 +568,7 @@ body {
 }
 
 .team ul li a:hover {
-  color: #2d8d29;
+  color: $green;;
 }
 
 /**/
@@ -887,7 +889,7 @@ body {
 
 .cBtn ul li:hover {
   cursor: pointer;
-  background: #2d8d29;
+  background: $green;;
   color: #fff;
   box-shadow: 0px 2px 0px 0px #0b240a;
 }
@@ -941,13 +943,13 @@ body {
 
 #filter li a:hover {
   cursor: pointer;
-  background: #2d8d29;
+  background: $green;;
   //color:#fff;
   box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
 #filter .current {
-  background: #2d8d29;
+  background: $green;;
   box-shadow: 0px 2px 0px 0px #0b240a;
 }
 
@@ -1015,7 +1017,7 @@ body {
 }
 
 .view a:hover {
-  color: #2d8d29;
+  color: $green;;
 }
 
 .view ul {
@@ -1098,7 +1100,7 @@ body {
 
 .cBtn .buy {
   box-shadow: 0px 2px 0px 0px #0b240a;
-  background: #2d8d29;
+  background: $green;;
 }
 
 .cBtn .buy:hover {
@@ -1195,7 +1197,7 @@ body {
 }
 
 .readMore {
-  color: #2d8d29;
+  color: $green;;
 }
 
 .readMore i {
@@ -1220,7 +1222,7 @@ body {
 }
 
 .news h3 a:hover {
-  color: #2d8d29;
+  color: $green;;
 }
 
 .news ul {
@@ -1263,7 +1265,7 @@ body {
 }
 
 .news ul li a:hover {
-  color: #2d8d29;
+  color: $green;;
 }
 
 .hrNews {
@@ -1441,7 +1443,7 @@ textarea {
 
 .forma .cBtn .send {
   box-shadow: 0px 2px 0px 0px #0b240a;
-  background: #2d8d29;
+  background: $green;;
 }
 
 .forma .cBtn .send:hover {
@@ -1478,7 +1480,7 @@ textarea {
 
 .cont a {
   text-decoration: none;
-  color: #2d8d29;
+  color: $green;;
 }
 
 .cont a:hover {
@@ -1697,7 +1699,7 @@ textarea {
   border-radius: 0 4px 4px 0;
   text-decoration: none;
   box-shadow: 0px 2px 0px 0px #0b240a;
-  background: #2d8d29;
+  background: $green;;
   padding: 10px;
   padding-right: 20px;
   padding-left: 20px;
@@ -2199,7 +2201,7 @@ margin-bottom: 35px !important;
 }*/
 #filter li a.selected {
   cursor: pointer;
-  background: #2d8d29;
+  background: $green;;
   color: #fff;
   box-shadow: 0px 2px 0px 0px #0b240a;
 }
@@ -2311,7 +2313,7 @@ input[type="submit"].btn_submit {
   border-radius: 4px;
 
   box-shadow: 0px 2px 0px 0px #0b240a;
-  background: #2d8d29;
+  background: $green;;
   color:#fafafa;
 }
 
@@ -2346,12 +2348,12 @@ input[type="submit"].btn_submit:hover {
 //.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li:active > a {
 //  border: none;
 //  outline: none;
-//  color: #2d8d29;
+//  color: $green;;
 //}
 
 
 .navbar-inverse .navbar-nav > li a:active {
-  color: #2d8d29;
+  color: $green;;
 }
 
 
@@ -2410,9 +2412,11 @@ input[type="submit"].btn_submit:hover {
 .navbar-inverse .navbar-nav > li a:hover, .navbar-inverse .navbar-nav > li a:hover, .navbar-inverse .navbar-nav > li a:active, .navbar-inverse .navbar-nav > li.active, .navbar-inverse .navbar-nav > li.active a {
   border: none;
   outline: none;
-  color: #2d8d29;
+  color: $green;;
 }
 
 .dropdown-menu {
   background-color: #101010;
 }
+
+@import 'timeline';
