@@ -105,7 +105,7 @@ en:
     phone: "Your phone (*)"
     email: "Your email (*)"
     msg: "Message:"
-    order_button: "Order now!"
+    order_button: "Send message!"
   subscribe:
     label: "Get news on email"
     title: "Subscribe for Our Newsletter!"
@@ -126,7 +126,7 @@ en:
     subtitle: "mobile and web applications for online business"
   footer_sm:
     title: "Copyright &copy; "
-    subtitle: "ShopoMob. All Rights Reserved."
+    subtitle: "Portfolio. All Rights Reserved."
   date:
     formats:
       long: "Y%M%D%"
