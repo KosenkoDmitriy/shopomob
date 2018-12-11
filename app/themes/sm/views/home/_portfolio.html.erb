@@ -386,10 +386,33 @@
 
   jQuery(window).load(function () {
     /* =========================================
+    * filter
+    *  =======================================*/
+
+    $('#filter a').click(function (e) {
+      e.preventDefault();
+
+      $('#filter li').removeClass('active');
+      $(this).parent('li').addClass('active');
+
+      var categoryToFilter = $(this).attr('data-filter');
+
+      $('.reference-item').each(function () {
+
+        if ($(this).data('category') === categoryToFilter || categoryToFilter === 'all') {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+
+    });
+
+    /* =========================================
      * reference functionality
      *  =======================================*/
     $('.reference a').on('click', function (e) {
-
+      alert('ref a click');
       e.preventDefault();
 
       var title = $(this).find('.reference-title').text(),
