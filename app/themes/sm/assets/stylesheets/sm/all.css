@@ -11,6 +11,9 @@
  *= require sm/prettyPhoto
  *= require sm/style
 
+ *= require owl.carousel/owl.carousel.css
+ *= require owl.carousel/owl.theme.green.css
+
 
  * require_self
  * require_tree .

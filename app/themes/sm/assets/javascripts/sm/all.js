@@ -17,5 +17,7 @@
 //= require sm/bootstrap.min
 //= require sm/jquery.slicknav
 
+//= require owl.carousel/owl.carousel.min.js
+
 //  require sm/bootstrap.min
 // require_tree .
