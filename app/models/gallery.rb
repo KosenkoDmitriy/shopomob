@@ -8,7 +8,6 @@ class Gallery < ActiveRecord::Base
   # has_and_belongs_to_many :projects
   has_many :gallery_projects
   has_many :projects, through: :gallery_projects
-  # accepts_nested_attributes_for :projects#, :allow_destroy => true
   accepts_nested_attributes_for :gallery_projects, :allow_destroy => true
 
 end
