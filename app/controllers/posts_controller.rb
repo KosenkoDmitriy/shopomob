@@ -2,15 +2,15 @@ class PostsController < ApplicationController
   theme :theme_resolver
   before_action :set_locale
 
-  add_breadcrumb "Главная", :root_path
-  add_breadcrumb "Статьи", :posts_path
+  add_breadcrumb I18n.t("menu.main").upcase, :root_path
+  add_breadcrumb I18n.t('menu.posts').upcase, :posts_path
 
   def index
     page = params[:page].present? ? params[:page] : 1
     @posts = Post.with_translations(I18n.locale).all.paginate(:page => page, :per_page => 10)
     @post = @posts.first
 
-    add_breadcrumb "Все", posts_path
+    add_breadcrumb I18n.t(:all).upcase, posts_path
   end
 
   def show

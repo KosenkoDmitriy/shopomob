@@ -1,5 +1,9 @@
 ActiveAdmin.register Project do
-  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, images_attributes: [:id, :image, :_destroy], gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy], galleries_attributes: [:id, :title, :_destroy], translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
+  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, 
+  images_attributes: [:id, :image, :_destroy], 
+  gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy], 
+  galleries_attributes: [:id, :title, :_destroy], 
+  translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
 
   form do |f|
     f.translated_inputs I18n.t("project"), switch_locale: true do |f|
