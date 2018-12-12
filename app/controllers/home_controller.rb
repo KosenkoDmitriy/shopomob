@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   theme :theme_resolver
   before_action :set_locale
 
-  add_breadcrumb "Главная", :root_path
+  add_breadcrumb I18n.t("menu.main").upcase, :root_path
 
   def index
     @posts = Post.with_translations(I18n.locale).last(12)
@@ -22,6 +22,10 @@ class HomeController < ApplicationController
     #@order = Order.new
     #@customer = Customer.new
     #@teamers = Teamer.with_translations(params[:locale])
+  end
+
+  def index2
+    redirect_to root_path
   end
 
   #def create

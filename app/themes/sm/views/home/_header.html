@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="<%=root_url%>#home">
-        <%#=image_tag("sm/logo2.jpg", alt:"ShopoMob",  class:"", style:"height:64px;") #%>
+        <%#=image_tag("sm/logo2.jpg", alt:"ShopoMob", class:"", style:"height:64px;") #%>
         <%=t(:portfolio) %>
       </a>
     </div>
@@ -21,6 +21,8 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>ru</a></li>
             <li><a href='<%="#{request.protocol}#{request.host_with_port}/en/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>en</a></li>
+            <!-- <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a></li> -->
           </ul>
         </li>
       </ul>
@@ -32,9 +34,9 @@
   </div>
 </nav>
 <script>
-  // $('a[href="' + location.pathname + location.hash + '"]').parent().addClass('active');
-  // $(window).on('hashchange', function () {
-  //   $('ul.nav.navbar-nav > li > a').parent().removeClass('active');
-  //   $('a[href="' + location.pathname + location.hash + '"]').parent().addClass('active');
-  // });
+  $('a[href="' + location.pathname + location.hash + '"]').parent().addClass('active');
+  $(window).on('hashchange', function () {
+    $('ul.nav.navbar-nav > li > a').parent().removeClass('active');
+    $('a[href="' + location.pathname + location.hash + '"]').parent().addClass('active');
+  });
 </script>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
     root 'home#index'#, as: "index_path"
+    get 'home' => 'home#index2'
     #get 'posts' => 'home#index', as: "posts"
     resources :posts
     resources :users
