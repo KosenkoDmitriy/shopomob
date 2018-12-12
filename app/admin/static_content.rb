@@ -20,9 +20,10 @@ ActiveAdmin.register StaticContent do
       f.input :title
       f.input :subtitle
       f.input :text
-      f.input :tags
+      
     end
     f.inputs do
+      f.input :tags
       f.input :is_draft
     end
     f.actions
