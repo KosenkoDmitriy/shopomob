@@ -13,6 +13,7 @@ ActiveAdmin.register Gallery do
   #   permitted << :other if resource.something?
   #   permitted
   # end
+  
   form do |f|
     #f.inputs
     f.translated_inputs I18n.t("gallery"), switch_locale: false do |f|

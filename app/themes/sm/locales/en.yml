@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  remove: 'Remove'
   portfolio: 'Portfolio'
   post:
     not_found: "record not found"

@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
   has_many :images, as: :imageable, dependent: :destroy
   accepts_nested_attributes_for :images, :allow_destroy => true
 
-  has_and_belongs_to_many :galleries
-  accepts_nested_attributes_for :galleries
+  # has_and_belongs_to_many :galleries
+  has_many :gallery_projects
+  has_many :galleries, through: :gallery_projects
+  accepts_nested_attributes_for :gallery_projects, :allow_destroy => true
 end
