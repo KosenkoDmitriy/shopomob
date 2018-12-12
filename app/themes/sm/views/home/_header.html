@@ -19,8 +19,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <%=t("lang")%> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a></li>
-            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>ru</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>en</a></li>
           </ul>
         </li>
       </ul>
