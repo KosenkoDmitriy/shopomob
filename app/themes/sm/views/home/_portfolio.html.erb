@@ -214,7 +214,7 @@
             <div class="reference">
               <a href="#">
                 <!-- <img src="assets/sm/picNews/news1.jpg" alt="" class="img-fluid"> -->
-                <%=image_tag(prj.images.first.image.url(:medium), class: "img-fluid", style: "", alt: prj.title)%>
+                <%=image_tag(prj.try(:images).try(:first).try(:image).try(:url, :medium), class: "img-fluid", style: "", alt: prj.title)%>
 
                 <div class="overlay">
                   <div class="inner">

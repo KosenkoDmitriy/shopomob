@@ -7,14 +7,19 @@ ActiveAdmin.register Gallery do
   permit_params :title, :url, :image, 
   images_attributes: [:id, :image, :_destroy], translations_attributes: [:id, :locale, :title],
   gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy]
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:permitted, :attributes]
-  #   permitted << :other if resource.something?
-  #   permitted
-  # end
+
+  index do
+    actions
+
+    column :id
+    column :images do |ad|
+      image_tag ad.try(:images).try(:first).try(:image).try(:url, :thumb)
+    end
+    column :title
+    column :url
+    column :created_at
+    column :updated_at
+  end
   
   form do |f|
     #f.inputs

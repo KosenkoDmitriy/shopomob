@@ -35,7 +35,6 @@ ActiveAdmin.register Project do
 
     column :id
     column :images do |ad|
-      # image_tag Image.first.image.url(:thumb)
       image_tag ad.try(:images).try(:first).try(:image).try(:url, :thumb)
     end
     column :title
@@ -43,7 +42,7 @@ ActiveAdmin.register Project do
     column :url
     column :tags
     column :is_draft
-    
+
     # column :image_content_type
     # column :image_file_name
     # column :image_file_size
