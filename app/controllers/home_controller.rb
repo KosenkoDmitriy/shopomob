@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   add_breadcrumb I18n.t("menu.main").upcase, :root_path
 
   def index
+    @about = StaticContent.find_by(tags: 'about')
+    @timeline = StaticContent.find_by(tags: 'timeline')
+
     @posts = Post.with_translations(I18n.locale).last(12)
     @services = Service.with_translations(I18n.locale).where(is_visible: true)
     @galleries = Gallery.with_translations(I18n.locale)

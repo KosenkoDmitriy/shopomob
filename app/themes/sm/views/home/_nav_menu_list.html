@@ -1,20 +1,32 @@
 <!-- <li><a href="<%=root_path%>#home"><%=t("menu.main")%></a></li> -->
 
+<%# if @about.present? #%>
 <li><a href="<%=root_path%>#about">
     <%=t("menu.about")%></a></li>
+<%# end #%>
 
+<%# if @services.present? #%>
 <li><a href="<%=root_path%>#services">
     <%=t("menu.services")%></a></li>
+<%# end #%>
 
+<%# if @timeline.present? #%>
 <li><a href="<%=root_path%>#timeline">
     <%=t("menu.timeline")%></a></li>
+<%# end #%>
 
+<%# if @galleries.present? #%>
 <!-- <li><a href="<%=root_path%>#tarifs"><%=t("menu.tarifs")%></a></li> -->
 <li><a href="<%=root_path%>#projects">
     <%=t("menu.projects")%></a></li>
+<%# end #%>
+
+<%# if @posts.present? #%>
 <!-- <li><a href="<%=root_path%>#news"><%=t("menu.news")%></a></li> -->
 <li><a href="<%=posts_path%>">
     <%=t("menu.posts")%></a></li>
+<%# end #%>
+
 <li class="last"><a href="<%=root_path%>#contact">
     <%=t("menu.contacts")%></a></li>
 <!--li><a href="#features">Features</a></li-->

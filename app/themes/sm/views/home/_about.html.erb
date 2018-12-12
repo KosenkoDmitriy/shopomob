@@ -2,9 +2,12 @@
   <div class="container">
     <header class="text-center">
       <h2 data-animate="fadeInDown" class="title animated fadeInDown">
-        <%=t('menu.about')%>
+        <%= @about.try(:title) || t('menu.about') %>
       </h2>
     </header>
+    <% if @about.present? %>
+    <%= @about.try(:text).try(:html_safe) %>
+    <% else %>
     <div class="row">
       <div data-animate="fadeInUp" class="col-lg-6 animated fadeInUp">
         <p>An sincerity so extremity he additions. Her yet <strong>there truth merit</strong>. Mrs all projecting
@@ -54,5 +57,6 @@
         <img src="assets/sm/picAbout/aboutP2.png" alt="This is me - Fullstack Developer" class="image rounded-circle img-fluid">
       </div> -->
     </div>
+    <% end %>
   </div>
 </section>

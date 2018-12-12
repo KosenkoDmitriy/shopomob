@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181212133102) do
+ActiveRecord::Schema.define(version: 20181212204952) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -268,6 +268,26 @@ ActiveRecord::Schema.define(version: 20181212133102) do
   end
 
   add_index "simple_captcha_data", ["key"], name: "idx_key"
+
+  create_table "static_content_translations", force: true do |t|
+    t.integer  "static_content_id", null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "text"
+    t.string   "tags"
+  end
+
+  add_index "static_content_translations", ["locale"], name: "index_static_content_translations_on_locale"
+  add_index "static_content_translations", ["static_content_id"], name: "index_static_content_translations_on_static_content_id"
+
+  create_table "static_contents", force: true do |t|
+    t.boolean  "is_draft"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "teamer_translations", force: true do |t|
     t.integer  "teamer_id",  null: false

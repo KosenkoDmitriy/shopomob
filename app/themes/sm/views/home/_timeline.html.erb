@@ -1,6 +1,10 @@
 <!-- time line start -->
 <section id="timeline">
+  <% if @timeline.present? %>
+  <%= @timeline.try(:text).try(:html_safe) %>
+  <% else %>
   <div class="container">
+
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">Timeline</h2>
@@ -89,4 +93,5 @@
       </div>
     </div>
   </div>
+  <% end %>
 </section>
