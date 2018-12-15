@@ -36,7 +36,7 @@ ActiveAdmin.register StaticContent do
     column :title
     column :subtitle
     column :tags
-    column :id_draft
+    column :is_draft
 
     actions
   end
