@@ -134,21 +134,19 @@ def seeding_galleries()
 end
 
 def seeding_tarifs()
-  #file_path = "#{@path_to_app}/service_tarifs.csv"
-  #puts file_path
-  #CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-  #  service = Service.find_by( title: row['service_title'] )
-  #
-  #  if service
-  #    s_tarif = ServiceTarif.find_or_create_by!(title: row['title'], text: row['text'], service: service)
-  #    st_price = ServiceTarifPrice.find_or_create_by(price: row['price'].to_f, condition1: row['condition1'].to_f, condition2: row['condition2'].to_f, service_tarif: s_tarif)
-  #    #service.service_tarifs.append(s_tarif)
-  #  else
-  #    puts "service not found: #{row['service_title']}"
-  #  end
-  #  item.translations.find_or_create_by(title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'], locale: "ru")
-  #
-  #end
+  file_path = "#{@path_to_app}/service_tarifs.csv"
+  puts file_path
+  CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+   service = Service.find_by( title: row['service_title'] )
+   if service
+     s_tarif = ServiceTarif.find_or_create_by!(title: row['title'], text: row['text'], service: service)
+     st_price = ServiceTarifPrice.find_or_create_by(price: row['price'].to_f, condition1: row['condition1'].to_f, condition2: row['condition2'].to_f, service_tarif: s_tarif)
+     #service.service_tarifs.append(s_tarif)
+   else
+     puts "service not found: #{row['service_title']}"
+   end
+   item.translations.find_or_create_by(title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'], locale: "ru")
+  end
 end
 
 def seeding_project_categories()
@@ -175,17 +173,17 @@ def seeding_projects()
   puts file_path
   CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
     if row['locale'] == 'en'
-      item = Project.find_or_create_by(id: row['id'].to_i, title: row['title'], subtitle: row['subtitle'], text: row['text'], url: row['url'], tags: row['tags'], is_draft: row['is_draft'].to_i > 0)
+      # item = Project.find_or_create_by(id: row['id'].to_i, title: row['title'], subtitle: row['subtitle'], text: row['text'], url: row['url'], tags: row['tags'], is_draft: row['is_draft'].to_i > 0)
 
-      # item = Project.find_or_create_by!( id: row['id'].to_i )
-      # item.title = row['title']
-      # # item.date = row['date']
-      # item.subtitle = row['subtitle']
-      # item.text = row['text']
-      # # item.stext = row['stext']
-      # item.tags = row['tags']
-      # item.url = row['url']
-      # item.is_draft = row['is_draft'].to_i > 0
+      item = Project.find_or_create_by!( id: row['id'].to_i)
+      item.title = row['title']
+      # item.date = row['date']
+      item.subtitle = row['subtitle']
+      item.text = row['text']
+      # item.stext = row['stext']
+      item.tags = row['tags']
+      item.url = row['url']
+      item.is_draft = row['is_draft'].to_i > 0
       
       GalleryProject.find_or_create_by(gallery_id: row['gallery_id'].to_i, project_id: item.id)
 
@@ -194,8 +192,10 @@ def seeding_projects()
         puts "img path: #{img_path}"
         if (File.exists?(img_path))
           begin
-            item.images.append(Image.create(:image=>File.open(img_path)))
-            # item.images.find_or_create_by(:image=>File.open(img_path))  
+            if !Image.exists?(image_file_name:row['image'])
+              item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
+              # item.images.append(Image.create(:image=>File.open(img_path)))
+            end
           rescue => exception
             puts "img saving error: #{exception} \n #{item.title} #{img_path} "
           end
@@ -206,15 +206,13 @@ def seeding_projects()
       else
         puts "error saving: #{item.title}"
       end
-    end
-    # else # other locale
+    elsif row['locale'] == 'ru' # other locale
       if Project.exists?(row['id'].to_i)
-        item = Project.find(row['id'].to_i )
+        item = Project.find( row['id'].to_i )
 
-        item.translations.find_or_create_by(title: row['title'], subtitle: row['subtitle'], text: row['text'], locale: row['locale'])
+        item.translations.find_or_create_by(title: row['title'], subtitle: row['subtitle'], text: row['text'], tags: row['tags'], locale: row['locale'])
         # date: row['date'],
         # stext: row['stext'],
-        # tags: row['tags'],
         # url: row['url'],
         # is_draft: row['is_draft'].to_i > 0
         
@@ -223,8 +221,10 @@ def seeding_projects()
         # else
         #   puts "error saving translations: #{item.title}"
         # end
+      else
+        puts "couldn't add #{row['locale']} translation for item: #{row['title']}"
       end
-    # end
+    end
   end
 end
 
@@ -233,7 +233,7 @@ end
 # seeding_teamers()
 # seeding_images()
 # seeding_posts()
-# seeding_galleries()
-## seeding_tarifs()
+# seeding_galleries() # for adec
+## seeding_tarifs() # for adec and sm
 seeding_project_categories() # seeding_galleries()
 seeding_projects()
