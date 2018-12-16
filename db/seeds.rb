@@ -174,7 +174,7 @@ def seeding_projects()
   file_path = "#{@path_to_app}/projects.csv"
   puts file_path
   CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-    if row['locale'] == 'en'
+    if row['locale'] == @default_locale
       # item = Project.find_or_create_by(id: row['id'].to_i, title: row['title'], subtitle: row['subtitle'], text: row['text'], url: row['url'], tags: row['tags'], is_draft: row['is_draft'].to_i > 0)
 
       item = Project.find_or_create_by!(id: row['id'].to_i)
@@ -195,8 +195,8 @@ def seeding_projects()
         if (File.exists?(img_path))
           begin
             if !Image.exists?(image_file_name:row['image'])
-              item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
-              # item.images.append(Image.create(:image=>File.open(img_path)))
+              # item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
+              item.images.append(Image.create(:image=>File.open(img_path)))
             end
           rescue => exception
             puts "img saving error: #{exception} \n #{item.title} #{img_path} "
@@ -208,11 +208,15 @@ def seeding_projects()
       else
         puts "error saving: #{item.title}"
       end
-    elsif row['locale'] == 'ru' # other locale
+    end
+  end
+  # adding en translations
+  CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+    if row['locale'] == 'en'
       if Project.exists?(row['id'].to_i)
         item = Project.find( row['id'].to_i )
 
-        item.translations.find_or_create_by(title: row['title'], subtitle: row['subtitle'], text: row['text'], tags: row['tags'], locale: row['locale'])
+        item.translations.find_or_create_by(project_id: item.id, title: row['title'], subtitle: row['subtitle'], text: row['text'], tags: row['tags'], locale: row['locale'])
         # date: row['date'],
         # stext: row['stext'],
         # url: row['url'],
