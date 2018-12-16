@@ -234,6 +234,31 @@ def seeding_projects()
   end
 end
 
+def seeding_static_content()
+  file_path = "#{@path_to_app}/static_content.csv"
+  CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
+    if row['locale'] == @default_locale
+      item = StaticContent.find_or_create_by(id: row['id'].to_i)
+      item.title = row['title']
+      item.subtitle = row['subtitle']
+      item.text = row['text']
+      item.tags = row['tags']
+      item.is_draft = row['is_draft'].to_i > 0
+      item.save
+    else # if row['locale'] == 'en'
+      if StaticContent.exists?(row['id'].to_i)
+        item = StaticContent.find( row['id'].to_i )
+
+        item.translations.find_or_create_by(
+          # static_content_id: item.id,
+          title: row['title'], subtitle: row['subtitle'], text: row['text'], tags: row['tags'], locale: row['locale'])
+      else
+        puts "couldn't add #{row['locale']} translation for item: #{row['title']}"
+      end
+    end
+  end
+end
+
 seeding_services()
 seeding_teamers()
 seeding_posts()
@@ -242,3 +267,4 @@ seeding_images()
 ## seeding_tarifs() # for adec and sm
 seeding_project_categories()
 seeding_projects()
+seeding_static_content()

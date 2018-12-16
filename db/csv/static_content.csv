@@ -1,0 +1,445 @@
+id,is_draft,locale,title,subtitle,tags,text
+1,,ru,Разработчик веб и мобильных приложений,Ruby On Rails / C# (Xamarin / Unity 3D),about,"    <div class=""row"">
+      <div data-animate=""fadeInUp"" class=""col-lg-6 animated fadeInUp"">
+        <p>Hi! My name is Dmitry and I like develop e-commerce websites (Ruby On Rails/Django) and native mobile applications (Xamarin/C#).
+<br/><br/>
+Services:
+<br/>
++ C# cross-platform mobile application development on Android, iOS and Windows Phone.
+<br/>
++ Cross-platform game development. IOS (iPhone/iPad), Android, HTML5, Desktop.
+<br/>
++ Develop web-services, web-portals, content management systems, sites, shops, etc.
+<br/>
+<br/>
+Some of old projects with NDA:
+<br/>
+Web Service (Management Tools for QuantCenter)
+<br/>
+Python, jQuery, Ajax, HTML5, CSS3, PostgreSQL, MongoDB, GridFS, Mercurial
+<br/>
+<br/>
+London Framework (Django Framework Analog)
+<br/>
+Wiki Plugin. Collection Core App. Navigation Menu App
+<br/>
+Python, Jinja, HTML5, mongoDB, Supervisor, Nginx, GIT.
+<br/>
+<br/>
+Parfenon Corporative Website
+<br/>
+Django, HTML5, CSS3, jQuery, PostgreSQL, South, Mercurial
+<br/>
+<br/>
+Cloudike (Dropbox analog)
+<br/>
+Design Architecture of the Python Backend, Nginx, HAProxy, mongoDB, GridFS, Squid, Hadoop, Memcached, Amazon (ELB, SimpleDB, EMS, S3, Amazon Cloud Front), SMB/NFS, Mercurial
+<br/>
+<br/>
+Highly loaded scalable web-project using Python/Django/MySQL/Postgre/MongoDB/GridFS/Nginx/. Authorization and registration of other account types (publishers, readers). Account upgrades. Edit articles and subscriptions using the MongoDB. Gettings keywords, tags from the text analytics web-service. Financial transactions are stored in MySQL or PostgreSQL databases. Integration with PayPal, Social Networks (twitter, facebook), desktop client application and python server.
+<br/>
+<br/>
+Highly loaded website for agencies, journalists, traders, analytics, using LAMP/MongoDB/JSON/Ajax/JQuery/HTML/CSS/. Integration with PayPal, social networks. Media Gallery. Journalist Room. Blog. Events. Text Analytics Service.
+<br/>
+<br/>
+Tape of Events (as facebook). ASP.NET 4.0, WCF, SQL Server, JQuery/Ajax, XHTML.
+<br/>
+<br/>
+CMS and Store of the architectural design firm ADEC (Django/Python/JQuery/CSS3/HTML4.2)
+<br/>
+<br/>
+Database synchronization script located on different servers (Python/MySQL)
+<br/>
+<br/>
+Information navigation-hydrographic system. This system allows to determine the coordinates of underwater objects with high accuracy, in order to create high underwater maps (C/C++/C#).
+<br/>
+<br/>
+Video driver for tracking moving objects (C/C++)
+<br/>
+<br/>
+Find and drawing the shortest path between the vertices of the graph. Calculating and drawing the shortest path between the vertices of the graph. Adding an arbitrary number of edges, vertices, and their subsequent editing, saving into the file or database. (C++ without using any libraries)
+<br/>
+<br/>
+Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks;
+reallocation of tasks among processors. (C#)
+<br/>
+<br/>
+Emulator of the Laboratory Stand using protocol modbus (work with comport).(C#)
+<br/>
+<br/>
+Emulator GPS. (C#)
+<br/>
+<br/>
+Testing system. The drafting, passing tests. Statistics tests passed. Authorization and registration of users. The administrator panel. (CodeIgniter/MySQL/PHP/jQuery)
+<br/>
+<br/>
+PDA module interface with the information system ""Emergency Social Services at Home"" under Linux and Windows (C/C++/LAMP/jQuery/Ajax/HTML/CSS/Shell)
+<br/>
+<br/>
+Blogs, sites, portals, information systems, web-services using not only Django (ASP.NET/LAMP)
+</p>
+
+      </div>
+      <div data-animate=""fadeInUp"" class=""col-lg-6 animated fadeInUp"">
+        <div class=""skill-item"">
+          <div class=""progress-title"">Ruby On Rails</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 90%"" aria-valuenow=""0"" aria-valuemin=""60"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill1""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">Javascript</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""70"" aria-valuemin=""60"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill2""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">SQL</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 60%"" aria-valuenow=""80"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill3""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">HTML</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""90"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill4""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">CSS</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""70"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill5""></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div data-animate=""fadeInUp"" class=""col-sm-6 mx-auto mt-5 animated fadeInUp"">
+        <img src=""assets/sm/picAbout/aboutP2.png"" alt=""This is me - Fullstack Developer"" class=""image rounded-circle img-fluid"">
+      </div> -->
+    </div>"
+1,,en,Fullstack Developer,Ruby On Rails / C# (Xamarin / Unity 3D),about,"    <div class=""row"">
+      <div data-animate=""fadeInUp"" class=""col-lg-6 animated fadeInUp"">
+        <p>Hi! My name is Dmitry and I like develop e-commerce websites (Ruby On Rails/Django) and native mobile applications (Xamarin/C#).
+<br/><br/>
+Services:
+<br/>
++ C# cross-platform mobile application development on Android, iOS and Windows Phone.
+<br/>
++ Cross-platform game development. IOS (iPhone/iPad), Android, HTML5, Desktop.
+<br/>
++ Develop web-services, web-portals, content management systems, sites, shops, etc.
+<br/>
+<br/>
+Some of old projects with NDA:
+<br/>
+Web Service (Management Tools for QuantCenter)
+<br/>
+Python, jQuery, Ajax, HTML5, CSS3, PostgreSQL, MongoDB, GridFS, Mercurial
+<br/>
+<br/>
+London Framework (Django Framework Analog)
+<br/>
+Wiki Plugin. Collection Core App. Navigation Menu App
+<br/>
+Python, Jinja, HTML5, mongoDB, Supervisor, Nginx, GIT.
+<br/>
+<br/>
+Parfenon Corporative Website
+<br/>
+Django, HTML5, CSS3, jQuery, PostgreSQL, South, Mercurial
+<br/>
+<br/>
+Cloudike (Dropbox analog)
+<br/>
+Design Architecture of the Python Backend, Nginx, HAProxy, mongoDB, GridFS, Squid, Hadoop, Memcached, Amazon (ELB, SimpleDB, EMS, S3, Amazon Cloud Front), SMB/NFS, Mercurial
+<br/>
+<br/>
+Highly loaded scalable web-project using Python/Django/MySQL/Postgre/MongoDB/GridFS/Nginx/. Authorization and registration of other account types (publishers, readers). Account upgrades. Edit articles and subscriptions using the MongoDB. Gettings keywords, tags from the text analytics web-service. Financial transactions are stored in MySQL or PostgreSQL databases. Integration with PayPal, Social Networks (twitter, facebook), desktop client application and python server.
+<br/>
+<br/>
+Highly loaded website for agencies, journalists, traders, analytics, using LAMP/MongoDB/JSON/Ajax/JQuery/HTML/CSS/. Integration with PayPal, social networks. Media Gallery. Journalist Room. Blog. Events. Text Analytics Service.
+<br/>
+<br/>
+Tape of Events (as facebook). ASP.NET 4.0, WCF, SQL Server, JQuery/Ajax, XHTML.
+<br/>
+<br/>
+CMS and Store of the architectural design firm ADEC (Django/Python/JQuery/CSS3/HTML4.2)
+<br/>
+<br/>
+Database synchronization script located on different servers (Python/MySQL)
+<br/>
+<br/>
+Information navigation-hydrographic system. This system allows to determine the coordinates of underwater objects with high accuracy, in order to create high underwater maps (C/C++/C#).
+<br/>
+<br/>
+Video driver for tracking moving objects (C/C++)
+<br/>
+<br/>
+Find and drawing the shortest path between the vertices of the graph. Calculating and drawing the shortest path between the vertices of the graph. Adding an arbitrary number of edges, vertices, and their subsequent editing, saving into the file or database. (C++ without using any libraries)
+<br/>
+<br/>
+Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks;
+reallocation of tasks among processors. (C#)
+<br/>
+<br/>
+Emulator of the Laboratory Stand using protocol modbus (work with comport).(C#)
+<br/>
+<br/>
+Emulator GPS. (C#)
+<br/>
+<br/>
+Testing system. The drafting, passing tests. Statistics tests passed. Authorization and registration of users. The administrator panel. (CodeIgniter/MySQL/PHP/jQuery)
+<br/>
+<br/>
+PDA module interface with the information system ""Emergency Social Services at Home"" under Linux and Windows (C/C++/LAMP/jQuery/Ajax/HTML/CSS/Shell)
+<br/>
+<br/>
+Blogs, sites, portals, information systems, web-services using not only Django (ASP.NET/LAMP)
+</p>
+
+      </div>
+      <div data-animate=""fadeInUp"" class=""col-lg-6 animated fadeInUp"">
+        <div class=""skill-item"">
+          <div class=""progress-title"">Ruby On Rails</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 90%"" aria-valuenow=""0"" aria-valuemin=""60"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill1""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">Javascript</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""70"" aria-valuemin=""60"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill2""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">SQL</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 60%"" aria-valuenow=""80"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill3""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">HTML</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""90"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill4""></div>
+          </div>
+        </div>
+        <div class=""skill-item"">
+          <div class=""progress-title"">CSS</div>
+          <div class=""progress"">
+            <div role=""progressbar"" style=""width: 70%"" aria-valuenow=""70"" aria-valuemin=""0"" aria-valuemax=""100"" class=""progress-bar progress-bar-success progress-bar-skill5""></div>
+          </div>
+        </div>
+      </div>
+      <!-- <div data-animate=""fadeInUp"" class=""col-sm-6 mx-auto mt-5 animated fadeInUp"">
+        <img src=""assets/sm/picAbout/aboutP2.png"" alt=""This is me - Fullstack Developer"" class=""image rounded-circle img-fluid"">
+      </div> -->
+    </div>"
+2,,ru,История,События,timeline,"  <div class=""container"">
+
+    <div class=""row"">
+      <div class=""col-lg-12 text-center"">
+        <h2 class=""section-heading text-uppercase"">Timeline</h2>
+        <h3 class=""section-subheading text-muted"">Events.</h3>
+      </div>
+    </div>
+    <div class=""row"">
+      <div class=""col-lg-12"">
+        <ul class=""timeline"">
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/1.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>2006-2009</h4>
+                <h4 class=""subheading"">Programmer | Biga </h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">creating websites and shops (html, css, php)</p>
+              </div>
+            </div>
+          </li>
+
+
+          <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/2.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>February 2009 - October 2010</h4>
+                <h4 class=""subheading"">Software Engineer | Deagnostic</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">Creation of medical information systems (LAMP/C/C++)</p>
+              </div>
+            </div>
+          </li>
+
+
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/3.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>2006 - 2011</h4>
+                <h4 class=""subheading""> Engineer | Southern Federal University</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">I have Master Degree (5 years) in Information Systems and Technologies. </p>
+              </div>
+            </div>
+          </li>
+
+
+
+          <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/3.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>April 2011 - September 2012</h4>
+                <h4 class=""subheading"">Web Developer | Saifas (Top-Notch Code Export)</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">Develops software based on open source software (Open Source). Python/Django/mongoDB/SVN/Mecrurial/HTML/CSS/jQuery.</p>
+              </div>
+            </div>
+          </li>
+
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/4.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>September 2012 - Present</h4>
+                <h4 class=""subheading"">Chief Information Officer | Adec LLC</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">I was responsible for web and mobile cross-platform software development. Creating SaaS eCommerce applications. Publishing mobile apps to Google Play and Apple Store. Integrating them with remotely Web Services.</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <h4>Be Part
+                <br>Of Our
+                <br>Story!</h4> 
+            </div>
+          </li>-->
+
+        </ul>
+      </div>
+    </div>
+  </div>"
+2,,en,Timeline,Events,timeline,"  <div class=""container"">
+
+    <div class=""row"">
+      <div class=""col-lg-12 text-center"">
+        <h2 class=""section-heading text-uppercase"">Timeline</h2>
+        <h3 class=""section-subheading text-muted"">Events.</h3>
+      </div>
+    </div>
+    <div class=""row"">
+      <div class=""col-lg-12"">
+        <ul class=""timeline"">
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/1.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>2006-2009</h4>
+                <h4 class=""subheading"">Programmer | Biga </h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">creating websites and shops (html, css, php)</p>
+              </div>
+            </div>
+          </li>
+
+
+          <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/2.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>February 2009 - October 2010</h4>
+                <h4 class=""subheading"">Software Engineer | Deagnostic</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">Creation of medical information systems (LAMP/C/C++)</p>
+              </div>
+            </div>
+          </li>
+
+
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/3.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>2006 - 2011</h4>
+                <h4 class=""subheading""> Engineer | Southern Federal University</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">I have Master Degree (5 years) in Information Systems and Technologies. </p>
+              </div>
+            </div>
+          </li>
+
+
+
+          <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/3.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>April 2011 - September 2012</h4>
+                <h4 class=""subheading"">Web Developer | Saifas (Top-Notch Code Export)</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">Develops software based on open source software (Open Source). Python/Django/mongoDB/SVN/Mecrurial/HTML/CSS/jQuery.</p>
+              </div>
+            </div>
+          </li>
+
+
+          <li>
+            <div class=""timeline-image"">
+              <img class=""rounded-circle img-fluid"" src=""img/about/4.jpg"" alt="""">
+            </div>
+            <div class=""timeline-panel"">
+              <div class=""timeline-heading"">
+                <h4>September 2012 - Present</h4>
+                <h4 class=""subheading"">Chief Information Officer | Adec LLC</h4>
+              </div>
+              <div class=""timeline-body"">
+                <p class=""text-muted"">I was responsible for web and mobile cross-platform software development. Creating SaaS eCommerce applications. Publishing mobile apps to Google Play and Apple Store. Integrating them with remotely Web Services.</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- <li class=""timeline-inverted"">
+            <div class=""timeline-image"">
+              <h4>Be Part
+                <br>Of Our
+                <br>Story!</h4> 
+            </div>
+          </li>-->
+
+        </ul>
+      </div>
+    </div>
+  </div>"
