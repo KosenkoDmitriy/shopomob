@@ -260,4 +260,4 @@ id,order_id,locale,title,price,url,image,text,stext
 2,2,en,Renta Mobile Applications (Android & iOS),,,sm/service_renta_2.png,,
 3,1,en,"Games (Android, iOS, HTML5)",,,sm/service_renta.png,,
 4,4,en,SMS Dispatch,,,sm/service_sms.png,,
-4,5,en,Advertisement in Vladikavkaz Reference,,,sm/service_adv_ref.png,,
+5,5,en,Advertisement in Vladikavkaz Reference,,,sm/service_adv_ref.png,,
