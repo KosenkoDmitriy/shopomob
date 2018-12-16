@@ -1,1 +1,3 @@
-id,title,slug,image,text,text,tags,stext,tags
+id,locale,title,slug,image,text,text,tags,stext,tags
+1,ru,тест,slug,image,text,text,tags,stext,tags
+1,en,test,slug,image,text,text,tags,stext,tags
