@@ -1,6 +1,6 @@
 id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,image,url
-1,1,,,en,SoulPad – spree-commerce website,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,soulpad.com
-1,1,,,ru,Соул Пад – онлайн магазин палаток,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,soulpad.com
+1,1,,,en,SoulPad – spree-commerce website,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,https://soulpad.com
+1,1,,,ru,Соул Пад – онлайн магазин палаток,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,https://soulpad.com
 2,1,,,en,Music App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 2,1,,,ru,Музыкальное Приложение на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 3,1,,,en,Shop on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
@@ -13,19 +13,19 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 6,1,,,ru,Движок Бронирования на Вуе,,,,"Vue,HTML,CSS,Material Design",,,http://js.isit.su/vue_booking_engine/index.html
 7,1,,,en,React Shopper,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_shopper/index.html
 7,1,,,ru,Магазин на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_shopper/index.html
-8,1,,,en,React Github file list,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
-8,1,,,ru,Каталог файлов Гитхаб на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
+8,1,,,en,Github File List (React Component),,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
+8,1,,,ru,Файловый список как в ГитХаб (Реакт Компонент) ,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
 9,1,,,en,React Tweet Static,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
 9,1,,,ru,Твит на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
 10,1,,,en,Runur - Enterprise Logistics Web Service ,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,dev.runur.net
 10,1,,,ru,Рунур – Корпоративный Логистический Веб-сервис,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,dev.runur.net
-11,1,,,en,Your Place For Fun,Website for poker game with PayPal integration,,Play in Awesome Games Online,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform","Rails 4, Bootstrap 3.x, jQuery, Git, Nginx, Facebook Login, PayPal integration, Google Cloud Platform","Rails 4, Bootstrap 3.x, jQuery, Git, Nginx, Facebook Login, PayPal integration, Google Cloud Platform",yourplaceforfun.com
-11,1,,,ru,Игровой сайт “Твое место для веселья”,Играй в игры онлайн,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform","Rails 4, Bootstrap 3.x, jQuery, Git, Nginx, Facebook Login, PayPal integration, Google Cloud Platform","Rails 4, Bootstrap 3.x, jQuery, Git, Nginx, Facebook Login, PayPal integration, Google Cloud Platform",yourplaceforfun.com
+11,1,,,en,Your Place For Fun,Website for poker game with PayPal integration,,Play in Awesome Games Online,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
+11,1,,,ru,Игровой сайт “Твое место для веселья”,Играй в игры онлайн,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
 12,1,,,en,Tracksmith online sport shop with a lot of spree-extensions,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",,,"track.isit.su,www.tracksmith.com"
 12,1,,,ru,Tracksmith - спортивный магазин с расширениями spree,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",,,"track.isit.su,www.tracksmith.com"
 13,1,,,en,OFN (Open Food Network) with some customizations for Africa,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",,,https://ofn.kandu.co.za
 13,1,,,ru,Открытая сеть питания для Африки,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",,,https://ofn.kandu.co.za
-14,1,,,ru,Wiki Timelines,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",,,"http://wiki.isit.su,www.wikitimelines.org"
+14,1,,,en,Wiki Timelines,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",,,"http://wiki.isit.su,www.wikitimelines.org"
 14,1,,,ru,Вики события,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",,,"http://wiki.isit.su,www.wikitimelines.org"
 15,1,,,en,RME Shop with custom AJAX UI,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",,,http://rme.isit.su/shop
 15,1,,,ru,RME магазин с авторским пользовательским интерфесом на AJAX,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",,,http://rme.isit.su/shop
@@ -33,23 +33,23 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 16,1,,1,ru,"Спри-расширения (шопомоб, рме продукты)",,,,"Spree-commerce,Ruby,Ruby On Rails,Git,Heroku",,,
 17,1,,,en,Blog based on Locomotive CMS,,,,"Ruby,locomotiveCMS",,,https://github.com/KosenkoDmitriy/shopomob_locomotivecms
 17,1,,,ru,Блог на Локомотиве (система управления контентом),,,,"Ruby,locomotiveCMS",,,https://github.com/KosenkoDmitriy/shopomob_locomotivecms
-18,1,,,en,Adec Website ,,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,adec.su.png,www.adec.su
+18,1,,,en,Adec Website ,,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,adec.su.png,http://www.adec.su
 18,1,,,ru,Веб-сайт компании Адек,,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,adec.su.png,http://www.adec.su
-19,1,,,en,Adec Shop based on Spree-commerce,,,,"Spree-commerce,Git,Heroku",,mobile.shopomob.ru.png,shop.adec.name
+19,1,,,en,Adec Shop based on Spree-commerce,,,,"Spree-commerce,Git,Heroku",,mobile.shopomob.ru.png,http://shop.adec.name
 19,1,,,ru,Интернет-магазин компании Адек,,,,"Spree-commerce,Git,Heroku",,mobile.shopomob.ru.png,http://shop.adec.name
-20,1,,,en,IT Portfolio,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,portfolio.isit.su
-20,1,,,ru,ИТ Портфолио,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,portfolio.isit.su
-21,1,,,en,Adec corporative website with CMS, CMS and Store of the architectural design firm ADEC (Django/Python/JQuery/CSS3/HTML4.2) ,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,"www.adec.name,www.adec.su"
-22,1,,,ru,Корпоративный сайт компании Адек с системой управления конетном,,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,http://www.adec.name
-23,1,,,en,Online Shop based on Satchmo,,,,"Satchmo,Python,Django,Mercurial",,shop.adec.name.old.png,shop.adec.name
+20,1,,,en,IT Portfolio,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,http://portfolio.isit.su
+20,1,,,ru,ИТ Портфолио,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,http://portfolio.isit.su
+21,1,,,en,Adec corporative website with CMS, CMS and Store of the architectural design firm ADEC (Django/Python/JQuery/CSS3/HTML4.2) ,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,http://www.adec.name
+21,1,,,ru,Корпоративный сайт компании Адек с системой управления контентом,,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,http://www.adec.name
+23,1,,,en,Online Shop based on Satchmo,,,,"Satchmo,Python,Django,Mercurial",,shop.adec.name.old.png,http://shop.adec.name
 23,1,,,ru,Онлайн-Магазин,,,,"Satchmo,Python,Django,Mercurial",,shop.adec.name.old.png,http://shop.adec.name
-24,1,,,en,Parfenon Website,,,,"Rails 4,Twitter Bootstrap 3.x,jQuery,Git,Nginx",,parfenon-design.ru.png,www.parfenon-design.ru
+24,1,,,en,Parfenon Website,,,,"Rails 4,Twitter Bootstrap 3.x,jQuery,Git,Nginx",,parfenon-design.ru.png,http://www.parfenon-design.ru
 24,1,,,ru,Веб-сайт компании Парфенон,,,,"Rails 4,Twitter Bootstrap 3.x,jQuery,Git,Nginx",,parfenon-design.ru.png,http://www.parfenon-design.ru
 25,1,,,en,ShopoMob Website,,,,"Rails 4,Twitter Bootstrap 3.x,jQuery,Git,Nginx",,shopomob.ru.png,http://shopomob.isit.su
 25,1,,,ru,Веб-сайт проекта ШопоМоб,,,,"Rails 4,Twitter Bootstrap 3.x,jQuery,Git,Nginx",,shopomob.ru.png,http://shopomob.isit.su
-26,1,,,en,Parfenon Old Website,,,,"Django,MySQL,HTML5,CSS3,jQuery,Apache2 + wsgi,Mercurial",,parfenon-design.ru.old.png,www.parfenon-design.ru
+26,1,,,en,Parfenon Old Website,,,,"Django,MySQL,HTML5,CSS3,jQuery,Apache2 + wsgi,Mercurial",,parfenon-design.ru.old.png,http://www.parfenon-design.ru
 26,1,,,ru,Устаревший сайт компании Парфенон,,,,"Django,MySQL,HTML5,CSS3,jQuery,Apache2 + wsgi,Mercurial",,parfenon-design.ru.old.png,http://www.parfenon-design.ru
-27,1,,,en,Companies Reference,"Business directory and mobile app on Android, iOS and Windows Phone 8",,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,ref.shopomob.ru.png,ref.isit.su
+27,1,,,en,Companies Reference,"Business directory and mobile app on Android, iOS and Windows Phone 8",,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,ref.shopomob.ru.png,http://ref.isit.su
 27,1,,,ru,Бизнес Справочник Компаний,,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,ref.shopomob.ru.png,http://ref.isit.su
 28,1,,,en,Landing Page for Mobile App,,,,"HTML5,CSS3,Twitter Bootstrap 3.x",,mobile.shopomob.ru.png,http://mobile.shopomob.ru/
 28,1,,,ru,Целевая страница для мобильного приложения,,,,"HTML5,CSS3,Twitter Bootstrap 3.x",,mobile.shopomob.ru.png,http://mobile.shopomob.ru/
@@ -123,8 +123,8 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 62,4,,,ru,Информационная навигационно-гидрографическая система (ИНГС),C/C++/C#," This system allows to determine the coordinates of underwater objects with high accuracy, in order to create high underwater maps (C/C++/C#). "," This system allows to determine the coordinates of underwater objects with high accuracy, in order to create high underwater maps (C/C++/C#). ","C,C++,C# ",,,
 63,4,,,en,Min Way – shortest path,Pure C++ (without using any libraries),"Find and drawing the shortest path between the vertices of the graph. Calculating and drawing the shortest path between the vertices of the graph. Adding an arbitrary number of edges, vertices, and their subsequent editing, saving into the file or database. (C++ without using any libraries) ","Find and drawing the shortest path between the vertices of the graph. Calculating and drawing the shortest path between the vertices of the graph. Adding an arbitrary number of edges, vertices, and their subsequent editing, saving into the file or database. (C++ without using any libraries) ",C++,,,
 63,4,,,ru,Поиск Кратшайшего Пути,С++ без использования библиотек,,,C++,,,
-64,4,,,en,Allocation of flow tasks in computer network,,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks; reallocation of tasks among processors. (C#) ,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks; reallocation of tasks among processors. (C#) ,C#,,,
-64,4,,,ru,Распределение потока задач в компьютерной сети,,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks; reallocation of tasks among processors. (C#) ,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks; reallocation of tasks among processors. (C#) ,C#,,,
+64,4,,,en,Allocation of flow tasks in computer network,,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks, reallocation of tasks among processors. (C#) ,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks, reallocation of tasks among processors. (C#) ,C#,
+64,4,,,ru,Распределение потока задач в компьютерной сети,,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks, reallocation of tasks among processors. (C#) ,Allocation of flow tasks in computer network: loading of flow tasks for processors of computer networks, reallocation of tasks among processors. (C#) ,C#,
 65,4,,1,en,Video driver for tracking moving objects,,,,"C,C++",,,
 65,4,,1,ru,Видео драйвер для отслеживания двигающихся объектов,,,,"C,C++",,,
 66,4,,,en,Emulator of the Laboratory Stand using protocol modbus,work with comport,,,C#,,,
@@ -155,5 +155,5 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 78,1,,,ru,Бига – Вебсайт для строительной компании,статический HTML вебсайт,,,"HTML,CSS",,,
 79,1,,,en,Radiostation Reference,static html website,,,"HTML,CSS",,,
 79,1,,,ru,Справочник радиостанций,статический HTML вебсайт,,,"HTML,CSS",,,
-80,1,,,en,Tiens – online store,,,,"PHP,Woocommerce",,,mytiens.biz
+80,1,,,en,Tiens – online store,,,,"PHP,Woocommerce",,,http://mytiens.biz
 80,1,,,ru,Магазин Тиенс – летающий лев,,,,"PHP,Woocommerce",,,
