@@ -207,6 +207,7 @@
       <!-- Reference detail-->
       <div id="references-masonry" data-animate="fadeInUp">
         <div class="row">
+
           <% @galleries.each do |gallery| %>
           <% gallery.projects.each do |prj| %>
 
@@ -214,8 +215,11 @@
             <div class="reference">
               <a href="#">
                 <!-- <img src="assets/sm/picNews/news1.jpg" alt="" class="img-fluid"> -->
-                <%=image_tag(prj.try(:images).try(:first).try(:image).try(:url, :small), class: "img-fluid", style: "height:190px", alt: prj.title)%>
-
+                <% if prj.images.count > 0 %>
+                <%= image_tag(prj.try(:images).try(:first).try(:image).try(:url, :small), class: "img-fluid", style: "height:190px", alt: prj.title) %>
+                <% else %>
+                <%= image_tag("sm/no_image/NoPhoto.png") %>
+                <% end %>
                 <div class="overlay">
                   <div class="inner">
                     <h3 class="h4 reference-title">
@@ -223,18 +227,17 @@
                     </h3>
                     <p>
                       <%= prj.subtitle %>
-
                     </p>
                   </div>
                 </div>
               </a>
-              <div data-images="<%= prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') %>" class="sr-only reference-description"
-                style="height:190px">
+              <div data-images="<%= prj.images.count > 0 ? prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') : asset_url('sm/no_image/NoPhoto.png') %>"
+                class="sr-only reference-description">
                 <p>
                   <%= prj.text %>
                 </p>
                 <p class="buttons text-center">
-                  <a href="<%=prj.try(:url)%>" class="btn btn-success btn-outline-primary"><i class="fa fa-globe"></i>
+                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary"><i class="fa fa-globe"></i>
                     Visit website</a>
                   <!-- <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i>
                     Download case study</a> -->

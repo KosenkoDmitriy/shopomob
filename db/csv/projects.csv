@@ -151,8 +151,8 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 75,1,,,ru,Блог на Вордпресс,,,,"Wordpress,HTML,CSS",,,
 76,1,,,en,Chemical Website,Project-ppt,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
 76,1,,,ru,Химический Вебсайт,,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
-77,1,,,en,Biga – Website for Building Company,static html website,,,"HTML,CSS",,,
-77,1,,,ru,Бига – Вебсайт для строительной компании,статический HTML вебсайт,,,"HTML,CSS",,,
+77,1,,,en,Biga – Website for Building Company,static html website,,,"HTML,CSS",,htmlBiga.jpg,
+77,1,,,ru,Бига – Вебсайт для строительной компании,статический HTML вебсайт,,,"HTML,CSS",,htmlBiga.jpg,
 78,1,,,en,Radiostation Reference,static html website,,,"HTML,CSS",,htmlRadiostation.jpg,
 78,1,,,ru,Справочник радиостанций,статический HTML вебсайт,,,"HTML,CSS",,htmlRadiostation.jpg,
 79,1,,,en,Tiens – online store,,,,"PHP,Woocommerce",,,http://mytiens.biz
