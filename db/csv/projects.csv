@@ -1,34 +1,34 @@
 id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,image,url
-1,1,,,en,SoulPad – spree-commerce website,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,https://soulpad.com
-1,1,,,ru,Соул Пад – онлайн магазин палаток,,,,"Spree-commerce,Twitter Bootstrap,Saas",,,https://soulpad.com
+1,1,,,en,SoulPad – spree-commerce website,,,,"Spree-commerce,Twitter Bootstrap,Saas",soulpad.com/tb3,"shop.jpg,shop_products.png,shop_product.png,home_page.png,contact_us.png",https://soulpad.com
+1,1,,,ru,Соул Пад – онлайн магазин палаток,,,,"Spree-commerce,Twitter Bootstrap,Saas",soulpad.com/tb3,"shop.jpg,shop_products.png,shop_product.png,home_page.png,contact_us.png",https://soulpad.com
 2,1,,,en,Music App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 2,1,,,ru,Музыкальное Приложение на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 3,1,,,en,Shop on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 3,1,,,ru,Магазин на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 4,1,,,en,Inventory App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 4,1,,,ru,Приложение Учета на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-5,1,,,en,Angular Reddit,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/angular_reddit/index.html
-5,1,,,ru,Аналог Редита на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/angular_reddit/index.html
-6,1,,,en,Booking Engine on Vue,,,,"Vue,HTML,CSS,Material Design",,,http://js.isit.su/vue_booking_engine/index.html
-6,1,,,ru,Движок Бронирования на Вуе,,,,"Vue,HTML,CSS,Material Design",,,http://js.isit.su/vue_booking_engine/index.html
-7,1,,,en,React Shopper,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_shopper/index.html
-7,1,,,ru,Магазин на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_shopper/index.html
-8,1,,,en,Github File List (React Component),,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
-8,1,,,ru,Файловый список как в ГитХаб (Реакт Компонент) ,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
-9,1,,,en,React Tweet Static,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
-9,1,,,ru,Твит на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
-10,1,,,en,Runur - Enterprise Logistics Web Service ,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,
-10,1,,,ru,Рунур – Корпоративный Логистический Веб-сервис,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,
-11,1,,,en,Your Place For Fun,Website for poker game with PayPal integration,,Play in Awesome Games Online,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
-11,1,,,ru,Игровой сайт “Твое место для веселья”,Играй в игры онлайн,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
-12,1,,,en,Tracksmith online sport shop with a lot of spree-extensions,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",,,"track.isit.su,www.tracksmith.com"
-12,1,,,ru,Tracksmith - спортивный магазин с расширениями spree,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",,,"track.isit.su,www.tracksmith.com"
-13,1,,,en,OFN (Open Food Network) with some customizations for Africa,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",,,https://ofn.kandu.co.za
-13,1,,,ru,Открытая сеть питания для Африки,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",,,https://ofn.kandu.co.za
-14,1,,,en,Wiki Timelines,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",,,"http://wiki.isit.su,www.wikitimelines.org"
-14,1,,,ru,Вики события,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",,,"http://wiki.isit.su,www.wikitimelines.org"
-15,1,,,en,RME Shop with custom AJAX UI,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",,,http://rme.isit.su/shop
-15,1,,,ru,RME магазин с авторским пользовательским интерфесом на AJAX,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",,,http://rme.isit.su/shop
+5,1,,,en,Angular Reddit,,,,"Angular,HTML,CSS,Twitter Bootstrap",,Angular4Reddit 2018-12-15.png,http://js.isit.su/angular_reddit/index.html
+5,1,,,ru,Аналог Редита на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,Angular4Reddit 2018-12-15.png,http://js.isit.su/angular_reddit/index.html
+6,1,,,en,Booking Engine on Vue,,,,"Vue,HTML,CSS,Material Design",vue_booking_engine,"Screenshot_2018-12-15 vue_booking_engine step 1 time.png,Screenshot_2018-12-15 vue_booking_engine step 2 .png",http://js.isit.su/vue_booking_engine/index.html
+6,1,,,ru,Движок Бронирования на Вуе,,,,"Vue,HTML,CSS,Material Design",vue_booking_engine,"Screenshot_2018-12-15 vue_booking_engine step 1 time.png,Screenshot_2018-12-15 vue_booking_engine step 2 .png",http://js.isit.su/vue_booking_engine/index.html
+7,1,,,en,React Shopper,,,,"React,HTML,CSS,Twitter Bootstrap",react_shopper,"2018-12-15 React App - products.png,2018-12-15 React App - shopping cart.png",http://js.isit.su/react_shopper/index.html
+7,1,,,ru,Магазин на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",react_shopper,"2018-12-15 React App - products.png,2018-12-15 React App - shopping cart.png",http://js.isit.su/react_shopper/index.html
+8,1,,,en,Github File List (React Component),,,,"React,HTML,CSS,Twitter Bootstrap",react_github_file_list,Screenshot_2018-12-15 Github Files List React App.png,http://js.isit.su/react_github_file_list/index.html
+8,1,,,ru,Файловый список как в ГитХаб (Реакт Компонент) ,,,,"React,HTML,CSS,Twitter Bootstrap",react_github_file_list,Screenshot_2018-12-15 Github Files List React App.png,http://js.isit.su/react_github_file_list/index.html
+9,1,,,en,React Tweet Static,,,,"React,HTML,CSS,Twitter Bootstrap",react_tweet_static,Screenshot_2018-12-15 React App.png,http://js.isit.su/react_tweet_static/index.html
+9,1,,,ru,Твит на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",react_tweet_static,Screenshot_2018-12-15 React App.png,http://js.isit.su/react_tweet_static/index.html
+10,1,,,en,Runur - Enterprise Logistics Web Service ,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,Runur Web Service API.png,
+10,1,,,ru,Рунур – Корпоративный Логистический Веб-сервис,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,Runur Web Service API.png,
+11,1,,,en,Your Place For Fun,Website for poker game with PayPal integration,,Play in Awesome Games Online,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",th,"2018-12-17 You Place For Fun - home footer .png,2018-12-17 You Place For Fun - home games.jpg,2018-12-17-You Place For Fun - home head.jpg",https://yourplaceforfun.com
+11,1,,,ru,Игровой сайт “Твое место для веселья”,Играй в игры онлайн,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",th,"2018-12-17 You Place For Fun - home footer .png,2018-12-17 You Place For Fun - home games.jpg,2018-12-17-You Place For Fun - home head.jpg",https://yourplaceforfun.com
+12,1,,,en,Tracksmith online sport shop with a lot of spree-extensions,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",tracksmith.com,tracksmith.png,"track.isit.su,www.tracksmith.com"
+12,1,,,ru,Tracksmith - спортивный магазин с расширениями spree,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",tracksmith.com,tracksmith.png,"track.isit.su,www.tracksmith.com"
+13,1,,,en,OFN (Open Food Network) with some customizations for Africa,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",ofn.kandu.co.za,ofn.kandu.co.za.png,https://ofn.kandu.co.za
+13,1,,,ru,Открытая сеть питания для Африки,,,,"Spree-commerce,Django,Ruby On Rails,Android,Git,Debian,HTML,CSS",ofn.kandu.co.za,ofn.kandu.co.za.png,https://ofn.kandu.co.za
+14,1,,,en,Wiki Timelines,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",wikitimelines.org,"wiki_video_tag.png,wiki_story_details.png,wiki_new_story.png,wiki_detail_page.png,wiki_add_new_topic.png","http://wiki.isit.su,www.wikitimelines.org"
+14,1,,,ru,Вики события,user collaborated project to build timelines on a wide ranging variety of topics,,,"Ruby On Rails,HTML5,CSS3,jQuery",wikitimelines.org,"wiki_video_tag.png,wiki_story_details.png,wiki_new_story.png,wiki_detail_page.png,wiki_add_new_topic.png","http://wiki.isit.su,www.wikitimelines.org"
+15,1,,,en,RME Shop with custom AJAX UI,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",rme.shopomob.ru,"tdv_shop.png,RME Shop.png,RME Shopping Cart.png",http://rme.isit.su/shop
+15,1,,,ru,RME магазин с авторским пользовательским интерфесом на AJAX,based on spree-commerce ,,,"Spree-commerce,Ruby On Rails,jQuery,HTML,CSS,Git,Heroku",rme.shopomob.ru,"tdv_shop.png,RME Shop.png,RME Shopping Cart.png",http://rme.isit.su/shop
 16,1,,1,en,"Spree-extensions (spree_shopomob, spree_rme_products)",,,,"Spree-commerce,Ruby,Ruby On Rails,Git,Heroku",,,
 16,1,,1,ru,"Спри-расширения (шопомоб, рме продукты)",,,,"Spree-commerce,Ruby,Ruby On Rails,Git,Heroku",,,
 17,1,,,en,Blog based on Locomotive CMS,,,,"Ruby,locomotiveCMS",,,https://github.com/KosenkoDmitriy/shopomob_locomotivecms
@@ -37,8 +37,8 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 18,1,,,ru,Веб-сайт компании Адек,,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx",,adec.su.png,http://www.adec.su
 19,1,,,en,Adec Shop based on Spree-commerce,,,,"Spree-commerce,Git,Heroku",,mobile.shopomob.ru.png,http://shop.adec.name
 19,1,,,ru,Интернет-магазин компании Адек,,,,"Spree-commerce,Git,Heroku",,mobile.shopomob.ru.png,http://shop.adec.name
-20,1,,,en,IT Portfolio,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,http://portfolio.isit.su
-20,1,,,ru,ИТ Портфолио,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit.su.png,http://portfolio.isit.su
+20,1,,,en,IT Portfolio,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit_django_cms_portfolio.png,http://portfolio.isit.su
+20,1,,,ru,ИТ Портфолио,,,,"Django-cms,Custom plugins,MySQL,HTML,CSS,jQuery,Apache2 + wsgi,Mercurial",,isit_django_cms_portfolio.png,http://portfolio.isit.su
 21,1,,,en,Adec corporative website with CMS, CMS and Store of the architectural design firm ADEC (Django/Python/JQuery/CSS3/HTML4.2) ,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,http://www.adec.name
 21,1,,,ru,Корпоративный сайт компании Адек с системой управления контентом,,,,"Django-cms,Python,Django,HTML5,CSS3,Crossbrowsing Markup,jQuery,MySQL,Google Map,Mercurial",,adec.name.png,http://www.adec.name
 23,1,,,en,Online Shop based on Satchmo,,,,"Satchmo,Python,Django,Mercurial",,shop.adec.name.old.png,http://shop.adec.name
