@@ -264,7 +264,7 @@ seeding_teamers()
 seeding_posts()
 seeding_images()
 # seeding_galleries() # for adec
-## seeding_tarifs() # for adec and sm
+# seeding_tarifs() # for adec and sm
 seeding_project_categories()
 seeding_projects()
 seeding_static_content()

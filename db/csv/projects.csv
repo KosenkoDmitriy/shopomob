@@ -17,8 +17,8 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 8,1,,,ru,Файловый список как в ГитХаб (Реакт Компонент) ,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_github_file_list/index.html
 9,1,,,en,React Tweet Static,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
 9,1,,,ru,Твит на Реакте,,,,"React,HTML,CSS,Twitter Bootstrap",,,http://js.isit.su/react_tweet_static/index.html
-10,1,,,en,Runur - Enterprise Logistics Web Service ,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,dev.runur.net
-10,1,,,ru,Рунур – Корпоративный Логистический Веб-сервис,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,dev.runur.net
+10,1,,,en,Runur - Enterprise Logistics Web Service ,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,
+10,1,,,ru,Рунур – Корпоративный Логистический Веб-сервис,Django Enterprise Logistics Web Service Application.,Development and Supporting Infrastructure,Development and Supporting Infrastructure,"Django,Django-ddp,Meteor,Docker,AWS,12factor,MySQL,HTML,CSS,jQuery,Git",,,
 11,1,,,en,Your Place For Fun,Website for poker game with PayPal integration,,Play in Awesome Games Online,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
 11,1,,,ru,Игровой сайт “Твое место для веселья”,Играй в игры онлайн,,,"Rails 4,Bootstrap 3.x,jQuery,Git,Nginx,Facebook Login,PayPal integration,Google Cloud Platform",,,https://yourplaceforfun.com
 12,1,,,en,Tracksmith online sport shop with a lot of spree-extensions,,,,"Spree-commerce,Ruby On Rails,Git,Rspec,Cucumber",,,"track.isit.su,www.tracksmith.com"
