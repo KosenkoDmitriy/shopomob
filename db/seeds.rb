@@ -190,13 +190,17 @@ def seeding_projects()
       GalleryProject.find_or_create_by(gallery_id: row['gallery_id'].to_i, project_id: item.id)
 
       if (row['image'].present?)
-        img_path = "#{path_to_img}/#{row['image_path'].present? ? row['image_path'] +'/' : ''}#{row['image']}"
-        puts "img path: #{img_path}"
+        img_path = "#{path_to_img}/#{row['image_path'].present? ? row['image_path'] +'/' : ''}#{row['image'].split(',').first}"
         if (File.exists?(img_path))
           begin
-            if !Image.exists?(image_file_name:row['image'])
-              # item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
-              item.images.append(Image.create(:image=>File.open(img_path)))
+            images = row['image'].split(',')
+            images.each do |image|
+              img_path = "#{path_to_img}/#{row['image_path'].present? ? row['image_path'] +'/' : ''}#{image}"
+              puts "img path: #{img_path}"
+              if !Image.exists?(image_file_name: image)
+                # item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
+                item.images.append(Image.create(:image=>File.open(img_path)))
+              end
             end
           rescue => exception
             puts "img saving error: #{exception} \n #{item.title} #{img_path} "
@@ -259,12 +263,12 @@ def seeding_static_content()
   end
 end
 
-seeding_services()
-seeding_teamers()
-seeding_posts()
-seeding_images()
-# seeding_galleries() # for adec
-# seeding_tarifs() # for adec and sm
-seeding_project_categories()
+# seeding_services()
+# seeding_teamers()
+# seeding_posts()
+# seeding_images()
+# # seeding_galleries() # for adec
+# # seeding_tarifs() # for adec and sm
+# seeding_static_content()
+# seeding_project_categories()
 seeding_projects()
-seeding_static_content()
