@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  scope :active, -> { where(is_draft: false) }
+
   translates :title, :subtitle, :text, :tags, :url
   active_admin_translates :title, :subtitle, :text, :tags, :url
   
