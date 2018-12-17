@@ -214,7 +214,7 @@
             <div class="reference">
               <a href="#">
                 <!-- <img src="assets/sm/picNews/news1.jpg" alt="" class="img-fluid"> -->
-                <%=image_tag(prj.try(:images).try(:first).try(:image).try(:url, :medium), class: "img-fluid", style: "height:190px", alt: prj.title)%>
+                <%=image_tag(prj.try(:images).try(:first).try(:image).try(:url, :small), class: "img-fluid", style: "height:190px", alt: prj.title)%>
 
                 <div class="overlay">
                   <div class="inner">
@@ -228,7 +228,8 @@
                   </div>
                 </div>
               </a>
-              <div data-images="<%= prj.images.map { |img| asset_url(img.image.url(:medium)) }.join(',') %>" class="sr-only reference-description">
+              <div data-images="<%= prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') %>" class="sr-only reference-description"
+                style="height:190px">
                 <p>
                   <%= prj.text %>
                 </p>
