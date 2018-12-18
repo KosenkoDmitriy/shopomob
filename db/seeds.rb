@@ -70,7 +70,7 @@ def seeding_teamers()
   end
 end
 
-def seeding_images()
+def seeding_posts()
   path_to_img = Rails.root.join('db', 'images', 'posts')
   file_path = "#{@path_to_app}/posts.csv"
   puts file_path
@@ -83,18 +83,6 @@ def seeding_images()
           item.images.append(Image.create(:image=>File.open(img_path)))
         end
       end
-    end
-  end
-end
-
-def seeding_posts()
-  file_path = "#{@path_to_app}/posts.csv"
-  puts file_path
-  CSV.foreach(file_path, :headers => true, :col_sep => ',') do |row|
-    if row['locale'] == @default_locale
-      item = Post.find_or_create_by!(
-        id: row['id'].to_i,
-        title: row['title'], slug: row['slug'], text: row['text'], stext: row['stext'], tags: row['tags'])
     else
       #start translations for posts
       item = Post.find_by(id: row['id'])
@@ -263,12 +251,11 @@ def seeding_static_content()
   end
 end
 
-# seeding_services()
-# seeding_teamers()
-# seeding_posts()
-# seeding_images()
-# # seeding_galleries() # for adec
-# # seeding_tarifs() # for adec and sm
-# seeding_static_content()
-# seeding_project_categories()
+seeding_services()
+seeding_teamers()
+seeding_posts()
+# seeding_galleries() # for adec
+# seeding_tarifs() # for adec and sm
+seeding_static_content()
+seeding_project_categories()
 seeding_projects()
