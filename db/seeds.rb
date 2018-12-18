@@ -185,9 +185,10 @@ def seeding_projects()
             images.each do |image|
               img_path = "#{path_to_img}/#{row['image_path'].present? ? row['image_path'] +'/' : ''}#{image}"
               puts "img path: #{img_path}"
-              if !Image.exists?(image_file_name: image)
-                # item.images.find_or_create_by(Image.create(:image=>File.open(img_path)))
+              if !item.images.exists?(image_file_name: image)
                 item.images.append(Image.create(:image=>File.open(img_path)))
+              else
+                puts "can't add image: #{image}, because isn't found "
               end
             end
           rescue => exception
