@@ -231,7 +231,7 @@
                   </div>
                 </div>
               </a>
-              <div data-images="<%= prj.images.count > 0 ? prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') : asset_url('sm/no_image/NoPhoto.png') %>"
+              <div data-images="<%= prj.images.count > 0 ? prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') : asset_url('sm/no_image/transparent.png') %>"
                 class="sr-only reference-description">
                 <p>
                   <%= prj.text %>

@@ -1,12 +1,12 @@
 id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,image,url
 1,1,,,en,SoulPad – spree-commerce website,,,,"Spree-commerce,Twitter Bootstrap,Saas",soulpad.com/tb3,"shop.jpg,shop_products.png,shop_product.png,home_page.png,contact_us.png",https://soulpad.com
 1,1,,,ru,Соул Пад – онлайн магазин палаток,,,,"Spree-commerce,Twitter Bootstrap,Saas",soulpad.com/tb3,"shop.jpg,shop_products.png,shop_product.png,home_page.png,contact_us.png",https://soulpad.com
-2,1,,,en,Music App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-2,1,,,ru,Музыкальное Приложение на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-3,1,,,en,Shop on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-3,1,,,ru,Магазин на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-4,1,,,en,Inventory App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
-4,1,,,ru,Приложение Учета на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+2,1,,1,en,Music App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+2,1,,1,ru,Музыкальное Приложение на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+3,1,,1,en,Shop on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+3,1,,1,ru,Магазин на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+4,1,,1,en,Inventory App on Angular,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
+4,1,,1,ru,Приложение Учета на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,,
 5,1,,,en,Angular Reddit,,,,"Angular,HTML,CSS,Twitter Bootstrap",,Angular4Reddit 2018-12-15.png,http://js.isit.su/angular_reddit/index.html
 5,1,,,ru,Аналог Редита на Ангуляр,,,,"Angular,HTML,CSS,Twitter Bootstrap",,Angular4Reddit 2018-12-15.png,http://js.isit.su/angular_reddit/index.html
 6,1,,,en,Booking Engine on Vue,,,,"Vue,HTML,CSS,Material Design",vue_booking_engine,"Screenshot_2018-12-15 vue_booking_engine step 1 time.png,Screenshot_2018-12-15 vue_booking_engine step 2 .png",http://js.isit.su/vue_booking_engine/index.html
@@ -83,10 +83,10 @@ id,gallery_id,date,is_draft,locale,title,subtitle,stext,text,tags,image_path,ima
 frog_shooter_game_3.png,frog_shooter_game_4.png,frog_shooter_game_5.png,frog_shooter_game_6.png",https://play.google.com/store/apps/details?id=name.adec.game.frog_shooter
 41,2,,,ru,Лягушка-охотник на Андройд,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",games/frog_shooter,"a_frog_shooter_game_4.png,a_frog_shooter_game_7.png,a_frog_shooter_game_8.png,frog_shooter_game_1.png,frog_shooter_game_2.png
 frog_shooter_game_3.png,frog_shooter_game_4.png,frog_shooter_game_5.png,frog_shooter_game_6.png",https://play.google.com/store/apps/details?id=name.adec.game.frog_shooter
-42,2,,,en,Sea Battle,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",games,,
-42,2,,,ru,Морской бой,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",games,,
-43,3,,,en,I love powerlifting,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",,,
-43,3,,,ru,Я люблю пауэрлифтинг,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",,,
+42,2,,1,en,Sea Battle,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",games,,
+42,2,,1,ru,Морской бой,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",games,,
+43,3,,1,en,I love powerlifting,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",,,
+43,3,,1,ru,Я люблю пауэрлифтинг,Java/libGDX/Android,,,"Android,iOS,HTML5,libGDX,Java",,,
 44,3,,,en,Reference App on Android,,,,"Xamarin,C#,Android",,ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
 44,3,,,ru,Справочник Компаний на Андройд,,,,"Xamarin,C#,Android",,ref.app.png,https://play.google.com/store/apps/details?id=ru.shopomob.ref
 45,3,,,en,Reference App on iOS,,,,"Xamarin,C#,iOS,iPhone,iPad",,ref.app.jpeg,https://itunes.apple.com/us/app/spravocnik-vladikavkaza-sopomob/id936408887?mt=8
@@ -99,8 +99,8 @@ frog_shooter_game_3.png,frog_shooter_game_4.png,frog_shooter_game_5.png,frog_sho
 48,3,,,ru,Мобильное приложение Адек на Андройд,,,,"Xamarin,C#,Android",,adec.app.android.png,https://play.google.com/store/apps/details?id=name.adec.app.android
 49,3,,,en,Adec App on iOS,,,,"Xamarin,C#,iOS,iPhone,iPad",,adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
 49,3,,,ru,Мобильное приложение Адек на Айос,,,,"Xamarin,C#,iOS,iPhone,iPad",,adec.app.png,https://itunes.apple.com/us/app/magazin-kompanii-ooo-adek/id882231530?mt=8
-50,3,,,en,"Reference and Shop on Android, iOS and Windows Phone",,,,"Xamarin,C#,Android,iOS,Windows Phone",,,
-50,3,,,ru,"Справочник и магазин на Android, iOS and Windows Phone",,,,"Xamarin,C#,Android,iOS,Windows Phone",,,
+50,3,,1,en,"Reference and Shop on Android, iOS and Windows Phone",,,,"Xamarin,C#,Android,iOS,Windows Phone",,,
+50,3,,1,ru,"Справочник и магазин на Android, iOS and Windows Phone",,,,"Xamarin,C#,Android,iOS,Windows Phone",,,
 51,1,,,en,London Framework (Django Framework Analog) ,, Wiki Plugin. Collection Core App. Navigation Menu App , Wiki Plugin. Collection Core App. Navigation Menu App ," Python,Jinja,HTML5,mongoDB,Supervisor,Nginx,GIT ",,,
 51,1,,,ru,Лондон Фреймворк (Аналог Джанго Фреймворка),, Wiki Plugin. Collection Core App. Navigation Menu App , Wiki Plugin. Collection Core App. Navigation Menu App ," Python,Jinja,HTML5,mongoDB,Supervisor,Nginx,GIT ",,,
 52,1,,,en,IQShipper – Logistic Web Service,,UPS,UPS,"Java,Spring",,,
@@ -153,11 +153,11 @@ frog_shooter_game_3.png,frog_shooter_game_4.png,frog_shooter_game_5.png,frog_sho
 75,1,,,ru,Блог (как Твиттер),,,,"CodeIgniter,LAMP,Ajax,Tiny Mce Editor",,,
 76,1,,,en,Adec Blog Wordpress,,,,"Wordpress,HTML,CSS",,,
 76,1,,,ru,Блог на Вордпресс,,,,"Wordpress,HTML,CSS",,,
-77,1,,,en,Chemical Website,Project-ppt,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
-77,1,,,ru,Химический Вебсайт,,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
+77,1,,1,en,Chemical Website,Project-ppt,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
+77,1,,1,ru,Химический Вебсайт,,,,"Wordpress,HTML,CSS",,,http://project-ppt.com/
 78,1,,,en,Biga – Website for Building Company,static html website,,,"HTML,CSS",,htmlBiga.jpg,
 78,1,,,ru,Бига – Вебсайт для строительной компании,статический HTML вебсайт,,,"HTML,CSS",,htmlBiga.jpg,
 79,1,,,en,Radiostation Reference,static html website,,,"HTML,CSS",,htmlRadiostation.jpg,
 79,1,,,ru,Справочник радиостанций,статический HTML вебсайт,,,"HTML,CSS",,htmlRadiostation.jpg,
-80,1,,,en,Tiens – online store,,,,"PHP,Woocommerce",,,http://mytiens.biz
-80,1,,,ru,Магазин Тиенс – летающий лев,,,,"PHP,Woocommerce",,,
+80,1,,1,en,Tiens – online store,,,,"PHP,Woocommerce",,,http://mytiens.biz
+80,1,,1,ru,Магазин Тиенс – летающий лев,,,,"PHP,Woocommerce",,,
