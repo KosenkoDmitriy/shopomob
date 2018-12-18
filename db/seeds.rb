@@ -188,7 +188,7 @@ def seeding_projects()
               if !item.images.exists?(image_file_name: image)
                 item.images.append(Image.create(:image=>File.open(img_path)))
               else
-                puts "can't add image: #{image}, because isn't found "
+                puts "skip: #{image}, because already exists"
               end
             end
           rescue => exception
