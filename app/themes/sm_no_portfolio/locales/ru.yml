@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  theme: "sm"
   mail:
     subscribed: "Шопомоб. Вы подписаны на рассылку."
     order_created: "Шопомоб. Заказ успешно создан."

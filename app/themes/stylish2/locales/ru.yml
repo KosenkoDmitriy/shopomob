@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  theme: "stylish2"
   mail:
     subscribed: "Адек. Вы подписаны на рассылку."
     order_created: "Адек. Заказ успешно создан."

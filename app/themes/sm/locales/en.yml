@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  theme: "sm"
   mail:
     subscribed: "Portfolio. You have subscribed."
     order_created: "Portfolio. Your message has been sent successfully."
