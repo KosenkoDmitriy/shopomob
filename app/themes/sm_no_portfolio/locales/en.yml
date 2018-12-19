@@ -23,7 +23,12 @@ en:
   mail:
     subscribed: "Shopomob. You have subscribed."
     order_created: "Shopomob. Order has been created successfully."
-    welcome: "You are welcome!" 
+    welcome: "You are welcome!"
+    thanks:
+      order: "Thank you for your order."
+      subscribe: "Thanks for subscription on news of our website www.shopomob.com!"
+      signup: "Thanks for signing up"
+      join: "Thanks for joining and have a great day! Now sign in and do awesome things!"
   post:
     not_found: "record not found"
   posts:
