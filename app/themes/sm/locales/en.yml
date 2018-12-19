@@ -19,7 +19,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:   
+en:
+  mail:
+    subscribed: "Portfolio. You have subscribed."
+    order_created: "Portfolio. Your message has been sent successfully."
+    welcome: "You are welcome!"
   remove: "Remove"
   portfolio: "Portfolio"
   post:

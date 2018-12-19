@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  mail:
+    subscribed: "Shopomob. You have subscribed."
+    order_created: "Shopomob. Order has been created successfully."
+    welcome: "You are welcome!" 
   post:
     not_found: "record not found"
   posts:

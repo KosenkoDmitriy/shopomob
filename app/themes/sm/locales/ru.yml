@@ -20,6 +20,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 ru:
+  mail:
+    subscribed: "Портфолио. Вы подписаны на рассылку!"
+    order_created: "Портфолио. Ваше обращение отправлено."
+    welcome: "Добро пожаловать!" 
   remove: "Удалить"
   portfolio: "Портфолио"
   post:
