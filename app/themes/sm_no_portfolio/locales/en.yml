@@ -18,10 +18,28 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
+ 
 en:
   theme: "sm"
+  rub: "RUB"
+  m2: "m2"
+  tarif: "Tarif"
+  saved:
+    ok: "Success - saved."
+    not: "Error - not saved."
+  project: "Project"
+  projects: "Projects"
   mail:
+    exists: "email already exists"
+    order:
+      title: "Shopomob. New Order."
+    subscribe: 
+      title: "Shopomob. New user was subscribed."
+      flash_notice: "You subscribed successfully"
+    calculate:
+      title: "Shopomob | Cost/Price Calculation."
+      header: "Cost/Price calculation from Shopomob \n\n"
+      footer: "\n\n Best Regards, Dmitry K.\n www.shopomob.ru shopomob@shopomob.ru"
     subscribed: "Shopomob. You have subscribed."
     order_created: "Shopomob. Order has been created successfully."
     welcome: "You are welcome!"

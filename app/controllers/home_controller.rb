@@ -66,11 +66,12 @@ class HomeController < ApplicationController
 
       customer.orders.append(order)
       if (customer.save!)
-        flash[:notice] = "saved"
+        flash[:notice] = I18n.t("saved.ok")
         UserMailer.order_email(params).deliver
-        UserMailer.notify_me("adec@adec.name", "adec. new order", params.to_s).deliver
+        UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], 
+          I18n.t("mail.order.title"), params.to_s).deliver
       else
-        flash[:error] = "not saved"
+        flash[:error] = I18n.t("saved.not")
       end
     end
 
@@ -99,8 +100,9 @@ class HomeController < ApplicationController
     u.save!
     if email
       UserMailer.subscribe_email(email, params.to_s).deliver
-      UserMailer.notify_me("adec@adec.name", "adec. new user subscribed", params.to_s).deliver
-      flash[:notice] = "успешно подписаны на рассылку"
+      UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], 
+        I18n.t("mail.subscribe.title"), params.to_s).deliver
+      flash[:notice] = I18n.t("mail.subscribe.flash_notice")
     end
     #respond_to do |format|
     #  format.html { render json: params }
@@ -124,7 +126,7 @@ class HomeController < ApplicationController
       customer.phone = phone
       order = Order.new
       order.details = details || "\n\n"
-      calc_info = "Расчет стоимости от ООО \"Адек\"\n\n"
+      calc_info = I18n.t("mail.calculate.header")
       if (services.present?)
         total_price = 0
         services.each do |service|
@@ -142,7 +144,7 @@ class HomeController < ApplicationController
                 if (stp.condition1 <= s_value && s_value <= stp.condition2)
                   price = s_value * stp.price
                   total_price += price
-                  calc_info += "#{s.title} (тариф: \" #{s_tarif.title} \")\n #{stp.price.to_f} руб. x #{s_value} м2 = #{price} руб. \n\n"
+                  calc_info += "#{s.title} (#{I18n.t("tarif")}: \" #{s_tarif.title} \")\n #{stp.price.to_f} #{I18n.t("rub")} x #{s_value} #{I18n.t("m2")} = #{price} #{I18n.t("rub")} \n\n"
                 end
               end
             end
@@ -153,18 +155,18 @@ class HomeController < ApplicationController
           end
         end
         #calc_info += "\nИтого: #{total_price} рублей"
-        calc_info += "\n\n Оплата производится в два этапа:\n1) предоплата в размере 50% от всей стоимости проекта на начальной стадии проектирования \n2) 50% - при сдаче проекта заказчику\n\n С уважением ген. директор Хубулова Ольга Владимировна\n www.adec.name  www.adec.su adec@adec.name +7 (918) 829 02 93"
+        calc_info += I18n.t("mail.calculate.footer")
         order.details += calc_info if calc_info.present?
       end
 
       customer.orders.append(order)
       if (customer.save!)
-        flash[:notice] = "saved"
+        flash[:notice] = I18n.t("saved.ok")
         #UserMailer.order_email(params).deliver
-        UserMailer.notify_me(customer.email, "ООО Адек|Расчет стоимости", calc_info).deliver
-        UserMailer.notify_me("adec@adec.name", "ООО Адек|Расчет стоимости", calc_info).deliver
+        UserMailer.notify_me(customer.email, I18n.t("mail.order.title"), calc_info).deliver
+        UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], I18n.t("mail.order.title"), calc_info).deliver
       else
-        flash[:error] = "not saved"
+        flash[:error] = I18n.t("saved.not")
       end
     end
 
@@ -177,14 +179,14 @@ class HomeController < ApplicationController
       @gallery = Gallery.find(id)
     end
 
-    add_breadcrumb "Проекты", :portfolios_path
-    add_breadcrumb "Проект", :portfolio_path
+    add_breadcrumb I18n.t(:projects), :portfolios_path
+    add_breadcrumb I18n.t(:project), :portfolio_path
   end
 
   def portfolios
     @galleries=Gallery.all
 
-    add_breadcrumb "Проекты", :portfolios_path
+    add_breadcrumb I18n.t(:projects), :portfolios_path
   end
 
   private
@@ -200,7 +202,7 @@ class HomeController < ApplicationController
     username = params['username'] if params['username'].present?
     user = User.find_by(email: email)
     if user
-      flash[:notice] = "already have email"
+      flash[:notice] = I18n.t("mail.exists")
     else
       user = User.create(email: email, name: username)
     end

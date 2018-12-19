@@ -85,10 +85,10 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'kosenkodmitryv@gmail.com'}
+  config.action_mailer.default_options = { from: 'kosenkodmitryv@gmail.com' }
   config.action_mailer.default_url_options = { host: 'isit.su' } #for active admin
 
-  # config.action_mailer.default_options = {from: 'no-reply@isit.su'}
+  # config.action_mailer.default_options = { from: 'no-reply@isit.su' }
   # config.action_mailer.default_url_options = { host: 'isit.su' } #for active admin
 
 

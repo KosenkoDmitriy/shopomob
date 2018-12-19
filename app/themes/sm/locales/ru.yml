@@ -21,7 +21,25 @@
 
 ru:
   theme: "sm"
+  rub: "руб."
+  m2: "м2"
+  tarif: "Тариф"
+  saved:
+    ok: "Успешно сохранено"
+    not: "Ошибка сохранения"
+  project: "Проект"
+  projects: "Проекты"
   mail:
+    exists: "Электронная почта уже используется"
+    order:
+      title: "Портфолио. Новый Заказ."
+    subscribe:
+      title: "Портфолио. Новый подписчик подписан на рассылку."
+      flash_notice: "успешно подписаны на рассылку."
+    calculate:
+      title: "Портфолио | Расчет стоимости."
+      header: "Расчет стоимости: \n\n"
+      footer: "\n\n С уважением Дмитрий \n www.isit.su kosenkodmitryv@gmail.com skype: kosenkodk"
     subscribed: "Портфолио. Вы подписаны на рассылку!"
     order_created: "Портфолио. Ваше обращение отправлено."
     welcome: "Добро пожаловать!"
@@ -33,7 +51,7 @@ ru:
   remove: "Удалить"
   portfolio: "Портфолио"
   post:
-    not_found: "записи не найдены"
+    not_found: "запись не найдена"
   posts:
     not_found: "записи не найдены"
   simple_captcha:
