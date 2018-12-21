@@ -96,7 +96,8 @@
                     </div>
                     <!-- End Carousel -->
                   </p>
-                  <p><a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success" role="button">
+                  <p><a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success <%=prj.try(:url) || 'disabled'%>"
+                      role="button">
                       <%=t("visit_url")%></a>
                     <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
                       <%=t("more_details")%></a></p>
