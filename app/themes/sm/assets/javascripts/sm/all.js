@@ -5,18 +5,21 @@
 // the compiled file.
 //
 
-//=  require sm/jquery-1.8.3.min
-//=  require sm/jquery.mobile.customized.min
-//=  require sm/jquery.easing.1.3
-//=  require sm/camera.min
-//=  require sm/myscript
-//=  require sm/sorting
-//=  require sm/jquery.isotope
+//= require sm/jquery-1.8.3.min
+// top slider under top nav bar menu
+// require sm/camera.min 
+// require sm/jquery.prettyPhoto
+// require sm/jquery.slicknav
 
-//= require sm/jquery.prettyPhoto
+//  require sm/jquery.mobile.customized.min
+//  require sm/jquery.easing.1.3
+
+//  require sm/myscript
+//  require sm/sorting
+//  require sm/jquery.isotope
+
 //= require sm/bootstrap.min
-//= require sm/jquery.slicknav
 
-//= require owl.carousel/owl.carousel.min.js
+// require owl.carousel/owl.carousel.min.js
 
 // require_tree .

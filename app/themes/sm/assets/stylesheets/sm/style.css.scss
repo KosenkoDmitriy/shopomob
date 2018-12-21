@@ -941,7 +941,7 @@ body {
   padding-top: 11px;
 }
 
-#filter li a:hover {
+#filter li a:hover,#filter li.active a {
   cursor: pointer;
   background: $green;;
   //color:#fff;
@@ -2416,6 +2416,15 @@ input[type="submit"].btn_submit:hover {
 
 .dropdown-menu {
   background-color: #101010;
+}
+
+h1.carousel {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 120px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: -2px;
+  padding-bottom: 40px;
 }
 
 @import 'timeline';
