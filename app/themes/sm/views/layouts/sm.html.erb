@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <% if content_for?(:head) %>
-      <%= content_for(:head) %>
+  <%= content_for(:head) %>
   <% else %>
-      <title><%= t("head.meta.title") %></title>
-      <meta name="keywords" content="<%= t("head.meta.keywords") %>"/>
-      <meta name="description" content="<%= t("head.meta.description") %>"/>
-      <meta name="author" content="<%= t("head.meta.author") %>">
+  <title>
+    <%= t("head.meta.title") %>
+  </title>
+  <meta name="keywords" content="<%= t(" head.meta.keywords") %>"/>
+  <meta name="description" content="<%= t(" head.meta.description") %>"/>
+  <meta name="author" content="<%= t(" head.meta.author") %>">
   <% end %>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,24 +25,16 @@
 
   <%= csrf_meta_tags %>
   <script>
-      jQuery(function(){
-          jQuery('#camera_wrap_1').camera({
-              transPeriod: 500,
-              time: 3000,
-              height: '490px',
-              thumbnails: false,
-              pagination: true,
-              playPause: false,
-              loader: false,
-              navigation: false,
-              hover: false
-          });
-      });
+    jQuery(function () {
+
+    });
   </script>
 </head>
+
 <body>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
+
 </html>
