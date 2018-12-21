@@ -57,7 +57,9 @@
                       <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <% prj.images.each do |image| %>
+                        <% if prj.images.count > 1 %>
                         <li data-target="#carousel-project-image<%=prj.id%>" data-slide-to="<%=image.id%>" class="<%= prj.images.first.id == image.id ? 'active' : '' %>"></li>
+                        <% end %>
                         <% end %>
                       </ol>
 
@@ -77,7 +79,7 @@
                         </div>
                         <% end %>
                       </div>
-
+                      <% if prj.images.count > 1 %>
                       <!-- Controls -->
                       <a class="left carousel-control" href="#carousel-project-image<%=prj.id%>" role="button"
                         data-slide="prev">
@@ -89,9 +91,10 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                       </a>
+                      <% end %>
+
                     </div>
                     <!-- End Carousel -->
-
                   </p>
                   <p><a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success" role="button">
                       <%=t("visit_url")%></a>
