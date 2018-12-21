@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   add_breadcrumb I18n.t("menu.main").upcase, :root_path
-  add_breadcrumb I18n.t('menu.projects').upcase, :projects_path
+  add_breadcrumb I18n.t('menu.projects').upcase, "/#{I18n.locale}/#projects"
 
   def show
     page = params[:page].present? ? params[:page] : 1
