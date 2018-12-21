@@ -1,159 +1,3 @@
-<style>
-  /*
-*
-* =====================
-* REFERENCES
-* =====================
-*
-*/
-  #filter {
-    text-align: center;
-    /* margin: 20px 0;
-    padding: 0; */
-  }
-
-  #filter li {
-    /* display: inline-block;
-    list-style-type: none;
-    font-family: "Roboto Slab", serif;
-    margin-bottom: 30px;
-    border-top: solid 1px #429244;
-    border-bottom: solid 1px #429244;
-    margin: 0 10px 20px;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; */
-  }
-
-  #filter li a {
-    /* display: inline-block;
-    padding: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #429244;
-    outline: none;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; */
-  }
-
-  #filter li.active,
-  #filter li:hover {
-    border: none;
-  }
-
-  #filter li.active a,
-  #filter li:hover a {
-    color: #fff;
-    text-decoration: none;
-    background: #429244;
-  }
-
-  .reference {
-    margin-bottom: 30px;
-    overflow: hidden;
-  }
-
-  @media (max-width: 767.98px) {
-    .reference {
-      max-width: 350px;
-      margin: 0 auto;
-      margin-bottom: 30px;
-    }
-  }
-
-  .reference a {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-  }
-
-  .reference h3 {
-    font-weight: 400;
-  }
-
-  .reference img {
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  .reference .overlay {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    padding: 15px;
-  }
-
-  .reference .overlay p {
-    color: #fff;
-  }
-
-  .reference .reference-title {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  .reference:hover img {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-
-  .reference:hover .overlay {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-
-  #detail {
-    display: none;
-  }
-
-  #detail .btn {
-    margin: 10px;
-  }
-
-  #detail .close {
-    position: absolute;
-    right: 0;
-    z-index: 999;
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-    font-size: 3rem;
-    opacity: 0.3;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-
-  #detail .close:hover {
-    opacity: 1;
-  }
-
-  #detail-slider {
-    margin-top: 50px;
-  }
-</style>
 <section id="projects">
   <div class="line3">
     <div class="container">
@@ -180,163 +24,117 @@
           for you.</p> -->
       </div>
 
-      <ul id="filter" data-animate="fadeInUp">
-        <li class="active"><a href="#" data-filter="all">
-            <%=t("all")%></a></li>
+
+      <!-- End Carousel -->
+      <!-- Nav tabs -->
+      <ul id="filter" class="nav nav-tabs" role="tablist">
         <% @galleries.each do |gallery| %>
-        <li><a href="#" data-filter="<%=gallery.title %>">
-            <%= gallery.title %></a></li>
+
+        <li role="presentation" class="active">
+          <a href="#<%=gallery.try(:id) %>" aria-controls="<%=gallery.try(:title) %>" role="tab" data-toggle="tab">
+            <%=gallery.try(:title) %></a></li>
         <% end %>
-        <!-- <li><a href="
-            #" data-filter="webdesign">Webdesign</a></li>
-        <li><a href="#" data-filter="seo">SEO</a></li>
-        <li><a href="#" data-filter="marketing">Marketing</a></li>
-        <li><a href="#" data-filter="other">Other</a></li> -->
       </ul>
-      <div id="detail">
-        <div class="row">
-          <div class="col-lg-10 mx-auto"><span class="close">×</span>
-            <div id="detail-slider" class="owl-carousel owl-theme"></div>
-            <div class="text-center">
-              <h1 id="detail-title" class="title"></h1>
-            </div>
-            <div id="detail-content"></div>
-          </div>
-        </div>
-      </div>
-      <!-- Reference detail-->
-      <div id="references-masonry" data-animate="fadeInUp">
-        <div class="row">
 
-          <% @galleries.each do |gallery| %>
-          <% gallery.projects.with_images.each do |prj| %>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <% @galleries.each do |gallery| %>
 
-          <div data-category="<%= gallery.title %>" class="reference-item col-lg-3 col-md-6">
-            <div class="reference">
-              <a href="#">
-                <!-- <img src="assets/sm/picNews/news1.jpg" alt="" class="img-fluid"> -->
+        <div role="tabpanel" id="<%=gallery.try(:id)%>" class="tab-pane <%= @galleries.first.id == gallery.id ? 'active' : '' %>">
+
+          <div class="row">
+            <% gallery.projects.with_images.each do |prj| %>
+
+            <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                <!-- <img src="..." alt="..." data-toggle="modal" data-target="#myModal"> 
                 <% if prj.images.count > 0 %>
                 <%= image_tag(prj.try(:images).try(:first).try(:image).try(:url, :small), class: "img-fluid", style: "height:190px", alt: prj.title) %>
                 <% else %>
                 <%= image_tag("sm/no_image/NoPhoto.png") %>
-                <% end %>
-                <div class="overlay">
-                  <div class="inner">
-                    <h3 class="h4 reference-title">
-                      <%= prj.title %>
-                    </h3>
-                    <p>
-                      <%= prj.subtitle %>
-                    </p>
+                <% end %>-->
+                <!-- Modal 
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                      </div>
+                      <div class="modal-body"> ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </a>
-              <div data-images="<%= prj.images.count > 0 ? prj.images.map { |img| asset_url(img.image.url(:normal)) }.join(',') : asset_url('sm/no_image/transparent.png') %>"
-                class="sr-only reference-description">
-                <p>
-                  <%= prj.text %>
-                </p>
-                <p class="buttons text-center">
-                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary"><i class="fa fa-globe"></i>
-                    Visit website</a>
-                  <!-- <a href="javascript:void(0);" class="btn btn-outline-primary"><i class="fa fa-download"></i>
-                    Download case study</a> -->
-                </p>
+                -->
+                <div class="caption">
+                  <!-- <h3>
+                    <%=prj.try(:title)%>
+                  </h3> -->
+                  <p>
+
+                    <!-- Start Carousel -->
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <% prj.images.each do |image| %>
+                        <li data-target="#carousel-example-generic" data-slide-to="<%=image.id%>" class="<%= prj.images.first.id == image.id ? 'active' : '' %>"></li>
+                        <% end %>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <% prj.images.each do |image| %>
+
+                        <div class="item <%= prj.images.first.id == image.id ? 'active' : '' %>">
+                          <% if image.present? %>
+                          <%= image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) %>
+                          <% else %>
+                          <%= image_tag("sm/no_image/NoPhoto.png") %>
+                          <% end %>
+                          <div class="carousel-caption">
+                            <%#=prj.try(:title)#%>
+                          </div>
+                        </div>
+                        <% end %>
+                      </div>
+
+                      <!-- Controls -->
+                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    <!-- End Carousel -->
+
+                  </p>
+                  <p><a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success" role="button">
+                      <%=t("visit_url")%></a>
+                    <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
+                      <%=t("more_details")%></a></p>
+                </div>
               </div>
             </div>
+            <% end %>
+
           </div>
-          <% end %>
-          <% end %>
+
+
 
         </div>
+
+        <% end %>
       </div>
+
+
     </div>
   </div>
 </section>
-
-<script type="text/javascript">
-
-  jQuery(window).load(function () {
-    /* =========================================
-    * filter
-    *  =======================================*/
-
-    $('#filter a').click(function (e) {
-      e.preventDefault();
-
-      $('#filter li').removeClass('active');
-      $(this).parent('li').addClass('active');
-
-      var categoryToFilter = $(this).attr('data-filter');
-
-      $('.reference-item').each(function () {
-
-        if ($(this).data('category') === categoryToFilter || categoryToFilter === 'all') {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-
-    });
-
-    /* =========================================
-     * reference functionality
-     *  =======================================*/
-    $('.reference a').on('click', function (e) {
-      e.preventDefault();
-
-      var title = $(this).find('.reference-title').text(),
-        description = $(this).siblings('.reference-description').html();
-
-      $('#detail-title').text(title);
-      $('#detail-content').html(description);
-
-      var images = $(this).siblings('.reference-description').data('images').split(',');
-      if (images.length > 0) {
-        sliderContent = '';
-        for (var i = 0; i < images.length; ++i) {
-          sliderContent = sliderContent + '<div class="item"><img src=' + images[i] + ' alt="" class="img-fluid"></div>';
-        }
-      } else {
-        sliderContent = '';
-      }
-
-      openReference(sliderContent);
-
-    });
-
-    function openReference(sliderContent) {
-      $('#detail').slideDown();
-      $('#references-masonry').slideUp();
-
-
-      if (sliderContent !== '') {
-
-        var slider = $('#detail-slider');
-
-        if (slider.hasClass('owl-loaded')) {
-          slider.trigger('replace.owl.carousel', sliderContent);
-        } else {
-          slider.html(sliderContent);
-          slider.owlCarousel({
-            nav: false,
-            dots: true,
-            items: 1
-          });
-
-        }
-      }
-    }
-
-
-    function closeReference() {
-      $('#references-masonry').slideDown();
-      $('#detail').slideUp();
-    }
-
-    $('#filter button, #detail .close').on('click', function () {
-      closeReference();
-    });
-  });
-</script>

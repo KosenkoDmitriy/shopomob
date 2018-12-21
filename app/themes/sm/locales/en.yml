@@ -60,7 +60,8 @@ en:
     message:
       default: "Secret Code did not match with the Image"
       user: "The secret Image and code were different"
-  visit_url: "visit"
+  visit_url: "visit website"
+  more_details: "more details"
   active_admin:
     globalize:
       language:

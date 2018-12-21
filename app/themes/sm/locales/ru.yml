@@ -61,7 +61,8 @@ ru:
     message:
       default: "Коды отличаются"
       user: "Код картинки и введенный вами отличаются/несовпадают"
-  visit_url: "перейти"
+  visit_url: "перейти на сайт"
+  more_details: "подробности"
   active_admin:
     globalize:
       language:

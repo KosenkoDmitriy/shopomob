@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
     get 'portfolios' => 'home#portfolios', as: :portfolios
     get 'portfolio/:id' => 'home#portfolio', as: :portfolio
+
+    resources :project
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
