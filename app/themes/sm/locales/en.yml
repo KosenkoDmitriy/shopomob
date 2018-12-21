@@ -110,6 +110,7 @@ en:
     all: "All Projects"
     title: "Our Amazing Works"
     sub_title: "Right here we've got something you gonna love"
+    not_found: "Projects are not found"
   all: "All"
   news:
     title: "What’s New?"

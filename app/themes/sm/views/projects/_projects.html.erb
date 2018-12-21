@@ -1,0 +1,25 @@
+<p>
+  <%= render_breadcrumbs separator: ' > ' %>
+</p>
+<% if (@projects.present? && @projects.count > 0) %>
+<!-- <h4>
+  <%=t('menu.projects')%>
+</h4> -->
+
+<%= will_paginate @projects %>
+
+<div class="list-group">
+  <% @projects.with_images.each do |prj| %>
+  <a href="<%=project_url(prj)%>?page=<%=params[:page]%>" class="list-group-item">
+    <%=prj.try(:title)%>
+  </a>
+  <% end %>
+</div>
+
+<%= will_paginate @projects %>
+
+<% else %>
+<h4>
+  <%=t("projects.not_found")%>
+</h4>
+<% end %>
