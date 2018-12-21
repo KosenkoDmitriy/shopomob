@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  subtitle: MyString
-  text: MyText
-  tags: MyText
-  url: MyText
+  title: Project1
+  subtitle: Project1 Subtitle
+  text: Project1Text
+  tags: Project1Tag
+  url: Project1Url
   is_draft: false
 
 two:
-  title: MyString
-  subtitle: MyString
-  text: MyText
-  tags: MyText
-  url: MyText
-  is_draft: false
+  title: ProjectDraft
+  subtitle: ProjectDraft Subtitle
+  text: ProjectDraft Text
+  tags: ProjectDraft Tag
+  url: ProjectDraft Url
+  is_draft: true

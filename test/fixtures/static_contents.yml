@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  text: MyText
-  tags: MyString
-  is_draft: false
+# one:
+#   title: MyString
+#   text: MyText
+#   tags: MyString
+#   is_draft: false
 
-two:
-  title: MyString
-  text: MyText
-  tags: MyString
-  is_draft: false
+# two:
+#   title: MyString
+#   text: MyText
+#   tags: MyString
+#   is_draft: false
