@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
   scope :active, -> { where(is_draft: false) }
+  scope :with_images, -> { joins(:images).distinct }
 
   translates :title, :subtitle, :text, :tags, :url
   active_admin_translates :title, :subtitle, :text, :tags, :url
