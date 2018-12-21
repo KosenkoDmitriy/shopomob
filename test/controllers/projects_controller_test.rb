@@ -7,6 +7,6 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should show project" do
     get :show, id: @project
-    assert_respone :success
+    assert_response :success
   end
 end
