@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
-  theme :theme_resolver
-  before_action :set_locale
-
+  
   add_breadcrumb I18n.t("menu.main").upcase, :root_path
 
   def index
@@ -190,15 +188,7 @@ class HomeController < ApplicationController
   end
 
   private
-  def theme_resolver
-    #params[:theme].presence || 'stylish3'
-    # params[:theme] || I18n.t('theme')
-    # params[:theme] || Rails.application.config.theme
-    Rails.application.config.theme
-  end
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-  end
+ 
   def create_user
     email = params['email'] if params['email'].present?
     username = params['username'] if params['username'].present?
