@@ -7,12 +7,12 @@
   <%=t('menu.posts')%>
 </h4>
 <%#= will_paginate @posts #%>
-<ul class="list">
+<div class="list-group">
   <% @posts.each do |post| %>
-  <li><a href="<%=post_url(post)%>?page=<%=params[:page]%>">
-      <%=post.title%></a></li>
+  <a href="<%=post_url(post)%>?page=<%=params[:page]%>" class="list-group-item">
+    <%=post.title%></a>
   <% end %>
-</ul>
+</div>
 <%= will_paginate @posts %>
 <% else %>
 <h4>

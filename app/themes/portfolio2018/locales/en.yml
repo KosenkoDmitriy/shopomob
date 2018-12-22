@@ -1,0 +1,167 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+en:
+  theme: "sm"
+  rub: "RUB"
+  m2: "m2"
+  tarif: "Tarif"
+  saved:
+    ok: "Success - saved."
+    not: "Error - not saved."
+  project: "Project"
+  projects: "Projects"
+  mail:
+    exists: "email already exists"
+    order:
+      title: "Shopomob. New Order."
+    subscribe: 
+      title: "Shopomob. New user was subscribed."
+      flash_notice: "You subscribed successfully"
+    calculate:
+      title: "Shopomob | Cost/Price Calculation."
+      header: "Cost/Price calculation from Shopomob \n\n"
+      footer: "\n\n Best Regards, Dmitry K.\n www.shopomob.ru shopomob@shopomob.ru"
+    subscribed: "Portfolio. You have subscribed."
+    order_created: "Portfolio. Your message has been sent successfully."
+    welcome: "You are welcome!"
+    thanks:
+      order: "Thank you for your message."
+      subscribe: "Thanks for subscription on news of our website www.isit.su!"
+      signup: "Thanks for signing up."
+      join: "Thanks for joining and have a great day! Now sign in and do awesome things!"
+  remove: "Remove"
+  portfolio: "Portfolio"
+  post:
+    not_found: "record not found"
+  posts:
+    not_found: "records not found"
+  simple_captcha:
+    placeholder: "Enter the image value"
+    label: "Enter the code in the box:"
+    refresh_button_text: "Refresh"
+    message:
+      default: "Secret Code did not match with the Image"
+      user: "The secret Image and code were different"
+  visit_url: "visit website"
+  more_details: "more details"
+  active_admin:
+    globalize:
+      language:
+        ru: "Русский"
+        en-US: "en-US"
+        en: "English"
+  lang: "Language:"
+  menu:
+    main: "Home"
+    about: "About"
+    services: "Services"
+    projects: "Projects"
+    contacts: "Contacts"
+    news: "News"
+    posts: "Articles"
+    tarifs: "Tarifs"
+    timeline: "Timeline"
+  slider:
+    we_listen: "We listen ..."
+    we_discuss: "We discuss ..."
+    we_develop: "We develop ..."
+  stats:
+    title1: "Awesome Projects"
+    title2: "Happy Customers"
+    title3: "Happy Clients"
+    text1: ""
+    text2: ""
+    text3: ""
+  home:
+    title1: "Shopomob - Mobile and Web Applications for phones and tablets on Android and iOS (iPhone, iPad)"
+    text1: "Selling your products and services with ShopoMob! Save money and time - ready solutions for online-business."
+    title2: "The Best Way to Create Business Site – Attractive One Page"
+    text2: "Discover elegant solution for your online business fast, easy, affordable."
+  technologies:
+    rails: "Ruby-on-Rails"
+    spree: "Spree-commerce"
+    bootstrap: "Bootstrap 3.x"
+    ios: "iOS(iPhone/iPad)"
+    android: "Android"
+  about:
+    title: "Who We Are? Meet Our Team!"
+    sub_title: "We listen, we discuss, we advise and develop. We love to learn and use the latest technologies."
+  services:
+    title: "Services"
+  projects:
+    all: "All Projects"
+    title: "Our Amazing Works"
+    sub_title: "Right here we've got something you gonna love"
+    not_found: "Projects are not found"
+  all: "All"
+  news:
+    title: "What’s New?"
+    sub_title: "Get the latest news from our blog"
+    more: "go to our blog"
+    read_more: "Read More"
+    all_news: "Read All News"
+  contacts:
+    title: "Got a Question? We’re Here to Help!"
+    sub_title: "Get in touch with us"
+    address: "Kirova 3, Vladikavkaz, 362000"
+    phones: "+7 (938) 861 67 88, +7 (989) 748 03 10 "
+    email: "shopomob@shopomob.ru"
+    skype: "shopomob.ru"
+    facebook_url: "https://www.facebook.com/groups/1431288837131060/"
+    facebook: "Facebook"
+    vk: "Vk.com"
+    vk_url: "http://vk.com/shopomob"
+    linkedin: "Linked in"
+    linkedin_url: "https://www.linkedin.com/groups/ShopoMob-%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%BB%D1%8F-6703874"
+  order:
+    name: "Name and Surname (*)"
+    phone: "Your phone (*)"
+    email: "Your email (*)"
+    msg: "Message:"
+    order_button: "Send message!"
+  subscribe:
+    label: "Get news on email"
+    title: "Subscribe for Our Newsletter!"
+    sub_title: "Subscribe to our newsletter email to get notification about fresh news, latest promos, giveaways and free stuff from Skew. Stay always up-to-date!"
+  care:
+    title: "We Care About Our Clients and Can Make Their Life Easier!"
+    text: "The main peculiarity of our business applications - ordering goods or services from your phone or tablet without the Internet, as well as a to find the necessary information about your company conveniently and easily."
+    button1: "View our Projects"
+    button2: "Order now"
+  head:
+    meta:
+      title: "mobile and web applications for online business"
+      description: "mobile and web applications for online business"
+      keywords: "mobile applications, web applications, online business, ecommerce, mobile app, ios app, android app, iphone app, eshop, responsive website, bootstrap website, spree commerce"
+      author: "Dmitry Kosenko"
+  nav:
+    title: "Portfolio"
+    subtitle: "mobile and web applications for online business"
+  footer_sm:
+    title: "Copyright &copy; "
+    subtitle: "Portfolio. All Rights Reserved."
+  date:
+    formats:
+      long: "Y%M%D%"
+  enter_email: "Enter email pls ..."
+  will_paginate:
+      previous_label: "<"
+      next_label: ">"

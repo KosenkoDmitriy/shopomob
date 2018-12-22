@@ -8,8 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="<%=root_url%>">
-        <%=image_tag("sm/logo2.jpg", alt:"ShopoMob",  class:"", style:"height:64px;") %>
+      <a class="navbar-brand" href="<%=root_url%>#home">
+        <%#=image_tag("portfolio2018/logo2.jpg", alt:"ShopoMob", class:"", style:"height:64px;") #%>
+        <%=t(:portfolio) %>
       </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0.571428596973419px;">
@@ -18,8 +19,10 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
             <%=t("lang")%> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a></li>
-            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>ru</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en/#{request.parameters[:controller]}/#{request.parameters[:id]}"%>'>en</a></li>
+            <!-- <li><a href='<%="#{request.protocol}#{request.host_with_port}/ru"%>'>ru</a></li>
+            <li><a href='<%="#{request.protocol}#{request.host_with_port}/en"%>'>en</a></li> -->
           </ul>
         </li>
       </ul>

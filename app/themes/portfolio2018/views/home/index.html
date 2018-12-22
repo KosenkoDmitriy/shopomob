@@ -1,0 +1,23 @@
+<%#=params.inspect#%>
+<%#=request.inspect#%>
+
+<% if flash.present? %>
+<div class="alert alert-danger" style="margin:0px" role="alert">
+  <% flash.each do |name, msg| %>
+  <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+  <span class="sr-only <%=name%>">msg:</span>
+  <%=msg%>
+  <% end %>
+</div>
+<% end %>
+
+<%= render :partial=>'home/header' %>
+<%= render :partial=>'home/home' %>
+<%= render :partial=>'home/services' %>
+<%#= render :partial=>'home/tarifs' #%>
+<%#= render :partial=>'home/about_team' #%>
+<%#= render :partial=>'home/projects' #%>
+<%= render partial: 'portfolio' %>
+
+<%= render :partial=>'home/news' %>
+<%= render :partial=>'home/contacts' %>

@@ -4,13 +4,9 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *
 
- *= require sm/bootstrap
- *= require sm/font-awesome
- *= require sm/camera
- *= require sm/slicknav
- *= require sm/prettyPhoto
- *= require sm/style
-
+ *= require ./bootstrap
+ *= require ./font-awesome
+ *= require ./style
 
  * require_self
  * require_tree .

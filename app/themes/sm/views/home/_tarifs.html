@@ -1,25 +1,22 @@
 <!--tarifs start-->
 <div>
 
-  <% if (@services.count > 0) %>
-  <div class="container" id="tarifs">
-    <div class="row">
-      <h1 align="center">
-        <%=t("menu.tarifs")%>
-      </h1>
-      <% @services.each do |service| %>
-      <% if service.text.present? %>
-      <div class="col-md-12 wwa">
-        <!--<span name="about"></span>-->
-        <h2>
-          <%=service.title%>
-        </h2>
-        <%=service.text.html_safe %>
-      </div>
-      <% end %>
-      <% end %>
+    <% if (@services.count > 0) %>
+    <div class="container" id="tarifs">
+        <div class="row">
+            <h1 align="center"><%=t("menu.tarifs")%></h1>
+            <% @services.each do |service| %>
+            <% if service.text.present? %>
+            <div class="col-md-12 wwa">
+                <!--<span name="about"></span>-->
+                <h2><%=service.title%></h2>
+                <%=service.text.html_safe %>
+            </div>
+            <% end %>
+            <% end %>
+        </div>
     </div>
-  </div>
-  <% end %>
+    <% end %>
 
 </div>
+

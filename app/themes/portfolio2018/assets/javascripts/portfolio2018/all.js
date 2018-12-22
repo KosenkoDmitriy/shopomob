@@ -5,17 +5,7 @@
 // the compiled file.
 //
 
-//=  require sm/jquery-1.8.3.min
-//=  require sm/jquery.mobile.customized.min
-//=  require sm/jquery.easing.1.3
-//=  require sm/camera.min
-//=  require sm/myscript
-//=  require sm/sorting
-//=  require sm/jquery.isotope
+//= require ./jquery-1.8.3.min
+//= require ./bootstrap.min
 
-//= require sm/jquery.prettyPhoto
-//= require sm/bootstrap.min
-//= require sm/jquery.slicknav
-
-//  require sm/bootstrap.min
 // require_tree .
