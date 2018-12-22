@@ -66,7 +66,7 @@ class HomeController < ApplicationController
       if (customer.save!)
         flash[:notice] = I18n.t("saved.ok")
         UserMailer.order_email(params).deliver
-        UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], 
+        UserMailer.notify_me(Rails.application.config.my_email, 
           I18n.t("mail.order.title"), params.to_s).deliver
       else
         flash[:error] = I18n.t("saved.not")
@@ -98,7 +98,7 @@ class HomeController < ApplicationController
     u.save!
     if email
       UserMailer.subscribe_email(email, params.to_s).deliver
-      UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], 
+      UserMailer.notify_me(Rails.application.config.my_email, 
         I18n.t("mail.subscribe.title"), params.to_s).deliver
       flash[:notice] = I18n.t("mail.subscribe.flash_notice")
     end
@@ -162,7 +162,7 @@ class HomeController < ApplicationController
         flash[:notice] = I18n.t("saved.ok")
         #UserMailer.order_email(params).deliver
         UserMailer.notify_me(customer.email, I18n.t("mail.order.title"), calc_info).deliver
-        UserMailer.notify_me(Rails.application.config.action_mailer.default_options[:from], I18n.t("mail.order.title"), calc_info).deliver
+        UserMailer.notify_me(Rails.application.config.my_email, I18n.t("mail.order.title"), calc_info).deliver
       else
         flash[:error] = I18n.t("saved.not")
       end

@@ -44,4 +44,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:3000' } #for active admin
 
   config.theme = 'portfolio2018'
+  config.my_email = 'kosenkodmitryv@gmail.com'
 end
