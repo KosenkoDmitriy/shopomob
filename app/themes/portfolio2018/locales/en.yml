@@ -163,5 +163,5 @@ en:
       long: "Y%M%D%"
   enter_email: "Enter email pls ..."
   will_paginate:
-      previous_label: "<"
-      next_label: ">"
+    previous_label: "<"
+    next_label: ">"

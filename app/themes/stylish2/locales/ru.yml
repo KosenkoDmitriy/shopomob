@@ -18,7 +18,6 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 ru:
   theme: "stylish2"
   rub: "руб."
@@ -60,13 +59,10 @@ ru:
     subtitle: "проектирование зданий и сооружений, архитектура, дизайн интерьера"
   footer:
     title: "ООО \"Адек\""
-
   date:
     formats:
       long: "Y%M%D%"
-
-
   enter_email: "Введите email"
   will_paginate:
-      previous_label: "<"
-      next_label: ">"
+    previous_label: "<"
+    next_label: ">"

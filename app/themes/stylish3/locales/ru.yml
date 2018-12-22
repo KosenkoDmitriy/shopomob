@@ -40,7 +40,6 @@
 #       title: "Adec | Cost/Price Calculation."
 #       header: "Cost/Price calculation from Adec LLC \n\n"
 #       footer: "\n\n Best Regards, Hubulova Olga Vladimirovna (CEO in Adec LLC)\n www.adec.name  www.adec.su adec@adec.name +7 (918) 829 02 93"
-  
 ru:
   theme: "stylish3"
   rub: "руб."
@@ -85,13 +84,10 @@ ru:
     subtitle: "проектирование зданий и сооружений, архитектура, дизайн интерьера"
   footer:
     title: "ООО \"Адек\""
-
   date:
     formats:
       long: "Y%M%D%"
-
-
   enter_email: "Введите email"
   will_paginate:
-      previous_label: "<"
-      next_label: ">"
+    previous_label: "<"
+    next_label: ">"

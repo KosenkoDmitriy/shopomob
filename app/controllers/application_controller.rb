@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def default_url_options(options={})
-    logger.debug "default_url_options is passed options: #{options.inspect}\n"
+    # logger.debug "default_url_options is passed options: #{options.inspect}\n"
     { locale: I18n.locale }
   end
 
@@ -16,8 +16,8 @@ class ApplicationController < ActionController::Base
   def theme_resolver
     #params[:theme].presence || 'stylish3'
     # params[:theme] || I18n.t('theme')
-    # params[:theme] || Rails.application.config.theme
-    Rails.application.config.theme
+    params[:theme] || Rails.application.config.theme
+    # Rails.application.config.theme
   end
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
