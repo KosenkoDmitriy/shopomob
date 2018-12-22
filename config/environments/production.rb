@@ -92,5 +92,5 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'isit.su' } #for active admin
 
   config.theme = 'portfolio2018'
-  config.my_email = 'kosenkodmitryv@gmail.com'
+  config.my_email = 'bond-007-89@mail.ru'
 end
