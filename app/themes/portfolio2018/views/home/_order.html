@@ -1,4 +1,4 @@
-<% locale = params[:locale] || I18n.locale %>
+<% locale = params[:locale] || I18n.locale.to_s %>
 <%= form_tag("/" + locale + "/order", method: "post", id:"", class: "contact-form", role:"") do %>
 <% if flash[:notice] %>
 <div class="success" style="display: none;">Заказ успешно отправлен!<strong><br>Мы свяжемся с Вам в ближайшее время.</strong>
