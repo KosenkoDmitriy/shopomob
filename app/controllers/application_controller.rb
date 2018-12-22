@@ -13,14 +13,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
-  def theme_resolver
-    #params[:theme].presence || 'stylish3'
-    # params[:theme] || I18n.t('theme')
-    params[:theme] || Rails.application.config.theme
-    # Rails.application.config.theme
-  end
-  def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale
-  end
+  
+    def theme_resolver
+      I18n.load_path = Dir[Rails.root.join('app/themes', Rails.application.config.theme, 'locales', '**', '*.yml').to_s]
+      params[:theme].presence || Rails.application.config.theme
+    end
+
+    def set_locale
+      I18n.locale = params[:locale].presence || I18n.default_locale
+    end
 
 end

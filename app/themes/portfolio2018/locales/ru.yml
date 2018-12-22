@@ -18,8 +18,8 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
+
 ru:
-  theme: "sm"
   rub: "руб."
   m2: "м2"
   tarif: "Тариф"
@@ -71,7 +71,7 @@ ru:
   lang: "Язык:"
   menu:
     main: "Главная"
-    about: "Кто мы?"
+    about: "Кто я?"
     services: "Услуги"
     projects: "Проекты"
     contacts: "Контакты"

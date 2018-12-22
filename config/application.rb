@@ -25,6 +25,6 @@ module Shopomob
     #config.i18n.load_path += Dir[Rails.root.join('app/themes/*', 'locales', '**', '*.yml').to_s]
     #config.i18n.default_locale = :ru
     #config.i18n.available_locales = [:ru, :en]#, :"en-US"]
-    config.i18n.locale = :ru
+    # config.i18n.locale = :ru
   end
 end

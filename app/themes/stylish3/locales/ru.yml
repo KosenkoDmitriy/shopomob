@@ -20,7 +20,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 # en:
-#   theme: "stylish3"
 #   rub: "RUB"
 #   m2: "m2"
 #   tarif: "Tarif"
@@ -41,7 +40,6 @@
 #       header: "Cost/Price calculation from Adec LLC \n\n"
 #       footer: "\n\n Best Regards, Hubulova Olga Vladimirovna (CEO in Adec LLC)\n www.adec.name  www.adec.su adec@adec.name +7 (918) 829 02 93"
 ru:
-  theme: "stylish3"
   rub: "руб."
   m2: "м2"
   tarif: "Тариф"

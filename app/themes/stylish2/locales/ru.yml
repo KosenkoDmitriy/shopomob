@@ -19,7 +19,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 ru:
-  theme: "stylish2"
   rub: "руб."
   m2: "м2"
   tarif: "Тариф"
