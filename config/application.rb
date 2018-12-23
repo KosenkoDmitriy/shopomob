@@ -21,7 +21,7 @@ module Shopomob
     config.theme = 'portfolio2018'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path = Dir[Rails.root.join('app', 'themes', config.theme, 'locales', '**', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('app', 'themes', config.theme, 'locales', '**', '*.{rb,yml}').to_s]
 
     # config.i18n.default_locale = :ru
     # config.i18n.locale = :ru
