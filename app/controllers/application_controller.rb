@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
   private
   
     def theme_resolver
-      # I18n.load_path = Dir[Rails.root.join('app/themes', Rails.application.config.theme, 'locales', '**', '*.yml').to_s]
       params[:theme].presence || Rails.application.config.theme
     end
 
