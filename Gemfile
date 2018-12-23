@@ -64,7 +64,8 @@ gem 'formtastic', '~> 3.0'
 gem 'fancybox2-rails', '~> 0.2.8'
 
 #gem 'meta-tags' #seo
-gem 'themes_on_rails'
+# gem 'themes_on_rails'
+gem 'themes_on_rails', '0.4.0', path: 'vendor/gems/themes_on_rails'
 gem "breadcrumbs_on_rails"
 
 gem 'globalize', '~> 4.0.2'
