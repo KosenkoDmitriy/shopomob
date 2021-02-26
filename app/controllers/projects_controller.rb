@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def show
     page = params[:page].present? ? params[:page] : 1
-    @projects = Project.all.paginate(page: page, per_page: 10)
+    @projects = Project.order(id: :desc).paginate(page: page, per_page: 10)
     @project = Project.find(params[:id])
     add_breadcrumb @project.title, project_path
   end
