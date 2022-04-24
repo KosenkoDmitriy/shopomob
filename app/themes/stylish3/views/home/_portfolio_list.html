@@ -10,7 +10,7 @@
                         <a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>">
                             <%=image_tag(gallery.try(:images).try(:last).try(:image).try(:url, :medium), style:"height:160px", alt:gallery.title, class:"img-circle")%>
                         </a>
-                        <h5><a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>"><%=gallery.title%></a></h5>
+                        <h5 class="text-center"><a href="<%=portfolio_path(gallery)%>" alt="<%=gallery.title%>"><%=gallery.title%></a></h5>
                     </div>
                 </div>
                 <% end %>

@@ -28,7 +28,6 @@ ActiveAdmin.register Image do
     f.inputs "image"  do
       f.input :title, :label => 'image name'
       f.input :url, :label => 'image url'
-
     end
     f.inputs "image url"  do
       f.file_field :image

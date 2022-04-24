@@ -2,8 +2,15 @@
     <div class="sub-content">
         <div class="container">
             <div class="row">
+              <div class="col-xs-12">
                 <p><%= render_breadcrumbs :separator => ' > ' %></p>
                 <h4>Портфолио: "<%=@gallery.title%>"</h4>
+                <p><%= @gallery.text %></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
                 <% @gallery.images.reverse.each do |image| %>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
                     <a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:normal)%>">
@@ -11,7 +18,11 @@
                     </a>
                 </div>
                 <% end %>
-            </div>
+              </div>
+              <!-- <div class="col-xs-12 col-sm-4"> -->
+                <%#= @gallery.text #%>
+              <!-- </div>-->
+            </div> 
         </div>
     </div>
 </section>
