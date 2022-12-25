@@ -48,7 +48,9 @@
               <div class="thumbnail">
                 <div class="caption">
                   <h3>
-                    <%#=prj.try(:title)#%>
+                  <a href="<%=project_url(prj) || '#projects'%>" role="button">
+                    <%=prj.try(:title)%>
+                  </a>
                   </h3>
                   <p>
 
@@ -98,12 +100,17 @@
                   </p>
                   <p>
 
-                    <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary <%=prj.try(:url) || 'disabled'%>"
+                  
+                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary <%=prj.try(:url) || 'disabled'%>"
                       role="button">
-                      <!-- <span class="glyphicon glyphicon-globe"></span> -->
+                      <!--<span class="glyphicon glyphicon-globe"></span>-->
                       <%=t("visit_url")%></a>
-                    <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
+                      <!--
+                      <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
                       <%=t("more_details")%></a>
+                      -->
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#projectModalId" 
+                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive')} }}.to_json()%>"><%=t("more_details")%> </button>
                   </p>
                 </div>
               </div>
@@ -111,6 +118,10 @@
             <% end %>
           </div>
         </div>
+
+                      <%= render partial: 'project_modal' %>
+                      <%#=render partial: 'project_modal', locals: {gallery: gallery, items: gallery.projects}#%>
+
 
         <% end %>
 

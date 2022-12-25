@@ -20,6 +20,14 @@ body {
   font-family: 'Roboto', 'sans-serif';
 }
 
+.thumbnail .caption h3 {
+  height: 1em;
+  overflow-y: scroll;
+  a {
+    color: #2f2f2f;
+  }
+}
+
 .headerLine {
   position: relative;
   width: 100%;

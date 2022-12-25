@@ -23,6 +23,8 @@ en:
   rub: "RUB"
   m2: "m2"
   tarif: "Tarif"
+  close:
+    "close"
   saved:
     ok: "Success - saved."
     not: "Error - not saved."

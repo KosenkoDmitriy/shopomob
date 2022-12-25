@@ -1,0 +1,47 @@
+<div class="modal fade" id="projectModalId" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="projectModalLabel"></h4>
+        <h5 class="modal-subtitle" id="projectModalSubLabel"></h5>
+        <h5 class="modal-tags" id="projectModalTagsLabel"></h5>
+      </div>
+      <div class="modal-body">
+        <div id="projectText"></div>
+        <div id="projectModalGalleryId">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-default" data-dismiss="modal"><%=t(:close)%></a>
+        <a id="projectUrl" href="#projects" type="button" class="btn btn-primary"><%=t(:visit_url)%></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+jQuery(window).load(function(){
+  $('#projectModalId').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var project = button.data('project') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    
+    modal.find('.modal-title').text(project.project.title || '')
+    modal.find('.modal-subtitle').text(project.project.subtitle || '')
+    modal.find('.modal-tags').text(project.project.tags || '')
+    modal.find('#projectText').text(project.project.text || '')
+    //modal.find('.modal-body input').val(project.project.title || '')
+    modal.find('#projectUrl').attr("href", project.project.url || '')
+
+    modal.find('#projectModalGalleryId').html('')
+    //$.each(project.images, function(i, image)
+    //project.images.forEach(function(image)
+    project.images.map((image) =>
+    {
+      return modal.find('#projectModalGalleryId').append(image.tag || '')
+    })
+  })
+})
+</script>

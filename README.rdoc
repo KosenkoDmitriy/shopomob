@@ -26,3 +26,73 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Debian 11 (rvm installation)
+sudo apt update
+sudo apt install curl
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.bashrc
+sudo nano /etc/apt/sources.list
+#deb http://deb.debian.org/debian sid main contrib non-free
+deb http://deb.debian.org/debian bullseye main
+deb-src http://deb.debian.org/debian bullseye main
+
+deb http://security.debian.org/debian-security bullseye-security main
+deb-src http://security.debian.org/debian-security bullseye-security main
+
+deb http://deb.debian.org/debian bullseye-updates main
+deb-src http://deb.debian.org/debian bullseye-updates main
+
+deb http://deb.debian.org/debian bullseye-backports main
+deb-src http://deb.debian.org/debian bullseye-backports main
+
+sudo apt update
+sudo apt upgrade
+sudo apt install aptitude
+sudo aptitude install g++ gcc automake bison libc6-dev libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libtool libyaml-dev make pkg-config sqlite3 zlib1g-dev libgmp-dev libreadline6-dev libssl-dev
+
+#sudo apt install patch g++ gcc autoconf automake bison libc6-dev libffi-dev libgdbm-dev libncurses5-dev libsqlite3-dev libtool libyaml-dev make patch sqlite3 zlib1g-dev libgmp-dev libreadline-dev libssl-dev
+#sudo apt remove automake g++ gawk gcc libc6-dev -y
+#sudo apt autoremove automake g++ gawk gcc libc6-dev -y
+
+rvm install 2.2.3
+source /etc/profile
+
+#error (during compilation process)
+Error running '__rvm_make -j2',
+please read /home/pc/.rvm/log/1671897265_ruby-2.2.3/make.log
+There has been an error while running make. Halting the installation.
+fix:
+rvm pkg install openssl
+rvm install ruby-2.2.3 --with-openssl-dir=/home/pc/.rvm/usr
+rvm use 2.2.3@sm --create
+#sudo apt install rubygems
+git config --global url."https://".insteadOf git://
+
+# nano ~/.gitconfig 
+gem install bundle
+
+/bin/bash --login # or move this line from ~/.bash_profile to ~/.bashrc
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+bundle install
+
+# git connection is timed out
+nano /etc/gai.conf
+precedence  ::1/128       50
+precedence  ::/0          40
+precedence  2002::/16     30
+precedence ::/96          20
+precedence ::ffff:0:0/96  10
+#
+#    For sites which prefer IPv4 connections change the last line to
+#
+#precedence ::ffff:0:0/96  100
+precedence  2a04:4e42::0/32  5
+
+bundle update bcrypt # to fix BCrypt::Errors::InvalidHash: invalid hash 
+
+ActiveRecord::RecordNotSaved: Failed to save the new associated image.
+
