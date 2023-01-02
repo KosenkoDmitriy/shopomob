@@ -5,7 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.2.3
+* Development on the local server
+cp db/production.sqlite3 db/development.sqlite3 
+#rake db:migrate
+#rake db:seed
+#rake assets:precompile
+rails s
 
 * System dependencies
 
@@ -20,12 +26,6 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
 Debian 11 (rvm installation)
 sudo apt update
@@ -57,8 +57,29 @@ sudo aptitude install g++ gcc automake bison libc6-dev libffi-dev libgdbm-dev li
 #sudo apt remove automake g++ gawk gcc libc6-dev -y
 #sudo apt autoremove automake g++ gawk gcc libc6-dev -y
 
+
+rvm install 2.2.3
+
+
+Error running 'requirements_debian_libs_install libssl1.0-dev',
+Requirements installation failed with status: 100.
+    sudo nano /etc/apt/sources.list
+    deb http://archive.ubuntu.com/ubuntu bionic main restricted
+    #add deb http://security.ubuntu.com/ubuntu bionic-security main
+    sudo apt update && apt-cache policy libssl1.0-dev
+    sudo apt install libssl1.0-dev
+
+GPG error: http://security.ubuntu.com/ubuntu bionic-security InRelease: 
+The following signatures couldn't be verified because the public key is not available: 
+NO_PUBKEY 3B4FE6ACC0B21F32
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+#sudo gpg --verbose --keyserver  hkp://keys.gnupg.net --recv 3B4FE6ACC0B21F32
+#sudo gpg --verbose --keyserver  keyserver.ubuntu.com --recv 3B4FE6ACC0B21F32
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3B4FE6ACC0B21F32
+
 rvm install 2.2.3
 source /etc/profile
+cd ../sm_portfolio
 
 #error (during compilation process)
 Error running '__rvm_make -j2',
@@ -80,7 +101,7 @@ gem install bundle
 bundle install
 
 # git connection is timed out
-nano /etc/gai.conf
+sudo nano /etc/gai.conf
 precedence  ::1/128       50
 precedence  ::/0          40
 precedence  2002::/16     30
@@ -92,7 +113,7 @@ precedence ::ffff:0:0/96  10
 #precedence ::ffff:0:0/96  100
 precedence  2a04:4e42::0/32  5
 
-bundle update bcrypt # to fix BCrypt::Errors::InvalidHash: invalid hash 
+bundle update bcrypt # to fix BCrypt::Errors::InvalidHash: invalid hash  
 
 ActiveRecord::RecordNotSaved: Failed to save the new associated image.
 
