@@ -21,9 +21,9 @@
   <% end %>
   <div>
     <p class="lead p2">
-      <%=@post.stext.try(:html_safe) %>
+      <%#=@post.stext.try(:html_safe) #%>
+      <%=@post.text.try(:html_safe)%>
     </p>
-    <%=@post.text.try(:html_safe)%>
     <br>
     <!--<a href="more.html" class="btn btn_">more info</a>-->
   </div>
