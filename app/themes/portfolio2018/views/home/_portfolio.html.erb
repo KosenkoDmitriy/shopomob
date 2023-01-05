@@ -109,6 +109,7 @@
                       <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
                       <%=t("more_details")%></a>
                       -->
+                      <%prj.text = prj.try(:text).try(:html_safe) %>
                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#projectModalId" 
                     data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive')} }}.to_json()%>"><%=t("more_details")%> </button>
                   </p>

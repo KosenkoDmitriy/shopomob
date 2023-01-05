@@ -32,7 +32,7 @@
           <!--<li><a href="#"><i class="fa fa-comments"></i>17 comments</a></li>-->
         </ul>
         <p>
-          <%=post.text[0..250]%> <a href="<%=post_url(post)%>?page=<%=params[:page]%>" class="readMore">
+          <%=post.text[0..250].html_safe%> <a href="<%=post_url(post)%>?page=<%=params[:page]%>" class="readMore">
             <%=t("news.read_more")%> <i class="fa fa-angle-right"></i></a></p>
         <hr class="hrNews">
       </div>
