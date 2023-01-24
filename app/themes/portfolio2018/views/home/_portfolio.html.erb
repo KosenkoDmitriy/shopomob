@@ -68,7 +68,7 @@
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
                         <% prj.images.each do |image| %>
-
+                          
                         <div class="item <%= prj.images.first.id == image.id ? 'active' : '' %>">
                           <% if image.present? %>
                           <%= image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) %>
@@ -111,7 +111,7 @@
                       -->
                       <%prj.text = prj.try(:text).try(:html_safe) %>
                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#projectModalId" 
-                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive')} }}.to_json()%>"><%=t("more_details")%> </button>
+                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>"><%=t("more_details")%> </button>
                   </p>
                 </div>
               </div>
