@@ -46,12 +46,15 @@ gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_
 gem 'bootstrap-will_paginate'
 
 #for admin panel
-gem 'activeadmin', github: 'gregbell/active_admin'
-#gem 'activeadmin', github: 'activeadmin'
+# gem 'activeadmin', github: 'KosenkoDmitriy/activeadmin-1.0.0.pre', branch: '1.0.0.pre'
+# gem 'activeadmin', github: 'gregbell/active_admin', tag: 'v1.0.0.pre'
+# gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0'
+gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre1'
+# gem 'yousty-activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre'
 gem 'devise'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
 gem "paperclip", "~> 4.2" #for image support
-gem 'formtastic', '~> 3.0'
+gem 'formtastic', '~> 3.1'
 #end for admin panel
 
 #gem 'simple-navigation-bootstrap'
