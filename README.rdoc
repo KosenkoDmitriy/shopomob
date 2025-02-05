@@ -22,22 +22,28 @@ Things you may want to cover:
 * Deployment instructions
 gems path `/usr/local/bundle`
 $ docker build . -t adec-app
-$ docker run --rm -it adec-app cp db/production.sqlite3.bak db/production.sqlite3
-docker run --rm -it --env RAILS_ENV=production adec-app rake assets:precompile
-docker run --rm -it --env RAILS_ENV=production --publish 3000:3000 --volume ${PWD}:/app adec-app # rails s
-docker run --rm -it --env RAILS_ENV=production --env RACK_ENV=production --publish 3000:3000 --volume ${PWD}:/app adec-app /bin/sh
 
-docker run --rm -it --env RAILS_ENV=development --publish 3000:3000 --volume ${PWD}:/app adec-app /bin/sh
+Production
+$ docker run --rm -it adec-app cp db/production.sqlite3.bak db/production.sqlite3
+#$ docker run --rm -it --env RAILS_ENV=production adec-app rake assets:precompile
+$ docker run --rm -it --env RAILS_ENV=production --publish 3000:3000 --volume ${PWD}:/app adec-app # rails s
+
+$ docker run --rm -it --env RAILS_ENV=production --env RACK_ENV=production --volume ${PWD}:/app adec-app /bin/sh
+RAILS_ENV=production rake assets:clobber
+RAILS_ENV=production rake assets:clean
 RAILS_ENV=production rake assets:precompile
 
-
-$ docker run --rm -it --env RAILS_ENV=development --publish 3000:3000 --volume ${PWD}:/app adec-app cp db/development.sqlite3.bak db/development.sqlite3
+Development
+$ docker run --rm -it --volume ${PWD}:/app adec-app cp db/development.sqlite3.bak db/development.sqlite3
 #$ docker run --rm --env RAILS_ENV=development --volume ${PWD}:/app adec-app bin/rails db:create db:migrate
-$ docker run --rm --env RAILS_ENV=development --volume ${PWD}:/app adec-app bin/rails s
-$ docker run --rm -it --env RAILS_ENV=development --publish 3000:3000 --volume ${PWD}:/app adec-app
+$ docker run --rm --env RAILS_ENV=development --volume ${PWD}:/app adec-app rake assets:precompile
+$ docker run --rm -it --env RAILS_ENV=development --publish 3000:3000 --volume ${PWD}:/app adec-app # rails s
 
+$ docker run --rm -it --env RAILS_ENV=development --volume ${PWD}:/app adec-app /bin/sh
+RAILS_ENV=development rake assets:clobber
+RAILS_ENV=development rake assets:clean
+RAILS_ENV=development rake assets:precompile
 
- RAILS_ENV=production rails s
 * ...
 
 

@@ -1,0 +1,5 @@
+.git
+db/production.sqlite3.bak
+db/production.sqlite3
+db/images
+db/csv
