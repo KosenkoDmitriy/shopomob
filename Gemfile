@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2' #4.1.6
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -15,7 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.1'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -46,12 +45,16 @@ gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_
 gem 'bootstrap-will_paginate'
 
 #for admin panel
+gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.1.0' 
 # gem 'activeadmin', github: 'KosenkoDmitriy/activeadmin-1.0.0.pre', branch: '1.0.0.pre'
+# gem 'activeadmin', path: 'activeadmin'#'gems/activeadmin-1.0.0.pre' # customer.rb:3:in `block in <top (required)>': undefined method `permit_params' for #<ActiveAdmin::ResourceDSL:0x005574c8f86fc8> (NoMethodError)
 # gem 'activeadmin', github: 'gregbell/active_admin', tag: 'v1.0.0.pre'
 # gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0'
-gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre1'
+# Sass::SyntaxError: Invalid CSS after "...ype='submit']",": expected expression (e.g. 1px, bold), was ");"
+#   (in /app/vendor/assets/stylesheets/active_admin.css.scss:14)
+gem 'jquery-ui-rails', '~> 5.0.1'
 # gem 'yousty-activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre'
-gem 'devise'
+gem 'devise', '~> 3.4.0'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
 gem "paperclip", "~> 4.2" #for image support
 gem 'formtastic', '~> 3.1'
@@ -70,3 +73,8 @@ gem "breadcrumbs_on_rails"
 
 gem 'simple_captcha2', require: 'simple_captcha'
 
+# fix SyntaxError: /usr/local/bundle/gems/execjs-2.9.0/lib/execjs/external_runtime.rb:106: syntax error, unexpected ',', expecting keyword_end
+        # instance_eval <<~RUBY, __FILE__, __LINE__
+gem 'logger', '~> 1.2.8' 
+gem 'loofah', '~> 2.20.0'
+gem 'rails-html-sanitizer', '~> 1.4'

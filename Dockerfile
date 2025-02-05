@@ -1,5 +1,5 @@
 # /path/to/app/Dockerfile
-FROM ruby:2.1-alpine
+FROM ruby:2.2-alpine
 
 # Установка часового пояса
 RUN apk add --update tzdata && \
@@ -9,14 +9,22 @@ RUN apk add --update tzdata && \
 # Установка в контейнер runtime-зависимостей приложения
 # RUN apk add --update --virtual runtime-deps postgresql-client nodejs libffi-dev readline sqlite
 # RUN apk add --update --virtual nodejs sqlite git
-RUN apk add --update nodejs sqlite-dev git imagemagick
+RUN apk add --update nodejs sqlite-dev git imagemagick  libffi-dev readline nano
+# RUN apk add --update nodejs sqlite-dev git imagemagick 
+
 RUN git config --global url.https://github.com/.insteadOf git://github.com/
 
 # Соберем все во временной директории
 # COPY gems/activeadmin-1.0.0.pre /tmp/gems/activeadmin-1.0.0.pre
-WORKDIR /tmp
-# ADD Gemfile.lock ./
-ADD Gemfile ./
+# COPY ../activeadmin /activeadmin
+# WORKDIR /tmp
+# # ADD Gemfile.lock ./
+# ADD Gemfile* ./
+
+# Копирование кода приложения в контейнер
+ENV APP_HOME=/app
+COPY . $APP_HOME
+WORKDIR $APP_HOME
 
 RUN apk add --update --virtual build-deps build-base
 # RUN apk add --virtual build-deps build-base openssl-dev postgresql-dev libc-dev linux-headers libxml2-dev libxslt-dev readline-dev && \
@@ -29,12 +37,13 @@ RUN gem install bundler -v ">= 1.3.0, < 2.0"
 # RUN bundle config set local.activeadmin ./app/gems/activeadmin-1.0.0.pre
 RUN bundle install
 # RUN bundle update rails
+# bundle exec rake rails:update:bin # fix kernel_require.rb:55:in `require': cannot load such file -- bundler/setup (LoadError)
 # RUN apk del build-deps
 
-# Копирование кода приложения в контейнер
-ENV APP_HOME=/app
-COPY . $APP_HOME
-WORKDIR $APP_HOME
+# # Копирование кода приложения в контейнер
+# ENV APP_HOME=/app
+# COPY . $APP_HOME
+# WORKDIR $APP_HOME
 
 # Настройка переменных окружения для production
 ENV RAILS_ENV=production
