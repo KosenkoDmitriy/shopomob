@@ -1,0 +1,5 @@
+FROM alpine:3.19
+
+RUN apk add --no-cache sqlite
+COPY ./ror_adec_app/db/*.sqlite3 /database/
+WORKDIR /database

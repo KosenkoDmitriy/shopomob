@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  ror_app:
+    container_name: ror_app
+    build:
+      context: ./ror_adec_app
+      dockerfile: prod.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      # - ./ror_adec_app:/app
+      - ror_adec_app_tmp:/app/tmp
+      - ror_adec_app_public:/app/public
+      - ror_adec_app_db:/app/db
+    # depends_on:
+    #   - db
+    env_file:
+    - '.env.prod'
+  # db:
+  #   container_name: ror_app_sqlite_db
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.sqlite
+  #   volumes:
+  #     # host path:container path
+  #     - ror_adec_app_sqlite_db:/database
+  #   networks:
+  #     - mynet3
+  #   command: ["tail", "-f", "/dev/null"]
+
+volumes:
+  ror_adec_app_db:
+  ror_adec_app_public:
+  ror_adec_app_tmp:
+  # ror_adec_app_sqlite_db:
+
+networks:
+  mynet3:
+    driver: bridge

@@ -5,15 +5,15 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+ror_adec_app/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+ror_adec_app/db/*.sqlite3
+ror_adec_app/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+ror_adec_app/log/*.log
+ror_adec_app/tmp
 
-.idea
-public/assets
+ror_adec_app/.idea
+ror_adec_app/public/assets
