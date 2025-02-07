@@ -9,10 +9,11 @@ services:
     ports:
       - 3000:3000
     volumes:
-      # - ./ror_adec_app:/app
+      - ./ror_adec_app:/app
       - ror_adec_app_tmp:/app/tmp
       - ror_adec_app_public:/app/public
       - ror_adec_app_db:/app/db
+      - ror_adec_app_bundle_volume:/usr/local/bundle
     # depends_on:
     #   - db
     env_file:
@@ -26,15 +27,40 @@ services:
   #     # host path:container path
   #     - ror_adec_app_sqlite_db:/database
   #   networks:
-  #     - mynet3
+  #     - docker-network
   #   command: ["tail", "-f", "/dev/null"]
-
+  letsencrypt-nginx-container:
+    container_name: 'letsencrypt-nginx-container'
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - docker-network
+  production-nginx-container:
+    container_name: 'production-nginx-container'
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.prod.conf:/etc/nginx/conf.d/default.conf
+      - ./ror_adec_app:/usr/share/nginx/adec
+      - ./dh-param/dhparam-2048.pem:/etc/ssl/certs/dhparam-2048.pem
+      - /docker-volumes/etc/letsencrypt/live/adec.name/fullchain.pem:/etc/letsencrypt/live/adec.name/fullchain.pem
+      - /docker-volumes/etc/letsencrypt/live/adec.name/privkey.pem:/etc/letsencrypt/live/adec.name/privkey.pem
+      - /docker-volumes/data/letsencrypt:/data/letsencrypt
+    networks:
+      - docker-network
 volumes:
   ror_adec_app_db:
   ror_adec_app_public:
   ror_adec_app_tmp:
+  ror_adec_app_bundle_volume:
   # ror_adec_app_sqlite_db:
+  docker-volumes:
 
 networks:
-  mynet3:
+  docker-network:
     driver: bridge
