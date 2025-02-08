@@ -60,18 +60,19 @@
 
 
 <script>
-    //    $(document).ready(function () {
-    var heights = $("#services .thumbnail").map(function () {
-                return $(this).height();
-            }).get(),
-            maxHeight = Math.max.apply(null, heights);
-    var heights2 = $("#services .thumbnail .caption").map(function () {
-                return $(this).height();
-            }).get(),
-            maxHeight2 = Math.max.apply(null, heights2);
-
-    $("#services .thumbnail").height(maxHeight+maxHeight2+$(".btn").height());
-    //    });
+//    $(document).ready(function () {
+    var heights = $("#services .thumbnail img").map(function () {
+        return $(this).height();
+    }).get(),
+    maxHeightImage = Math.max.apply(null, heights);
+    $("#services .thumbnail img").height(maxHeightImage)
+    
+    var heights3 = $("#services .thumbnail .caption h4").map(function () {
+        return $(this).height();
+    }).get(),
+    maxHeightCaptionH4 = Math.max.apply(null, heights3);
+    $("#services .thumbnail .caption h4").height(maxHeightCaptionH4)
+//    });
 </script>
 
 <% end %>
