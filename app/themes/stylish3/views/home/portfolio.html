@@ -9,7 +9,7 @@
               </div>
               <% @gallery.images.reverse.each do |image| %>
                 <div class="col-xs-6 col-sm-4 col-md-4">
-                    <a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:normal)%>">
+                    <a class="fancybox thumbnail" rel="group" href="<%=image.image.url(:original)%>">
                         <%=image_tag(image.image.url(:medium), class:"", style:"", alt:image.title)%>
                     </a>
                 </div>
