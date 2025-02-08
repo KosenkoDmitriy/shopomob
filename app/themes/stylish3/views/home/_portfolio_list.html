@@ -3,7 +3,13 @@
     <div class="sub-content">
         <div class="container">
             <div class="row" id="gallery">
-                <p><%= render_breadcrumbs :separator => ' > ' %></p>
+                <div class="col-xs-12">
+                <% if root_path == '/' %>
+                    <h4>Проекты</h4>
+                <% else $>
+                    <h5><%= render_breadcrumbs :separator => ' > ' %></h5>
+                <% end %>
+                </div>
                 <% @galleries.each do |gallery| %>
                 <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
                     <div class="thumbnail">
