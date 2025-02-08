@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -15,7 +14,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.1'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -40,20 +39,16 @@ gem 'spring',        group: :development
 
 #gem 'simple-navigation'
 #gem 'simple-navigation-bootstrap'
-#gem 'simple_navigation_renderers'
 gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_renderers'
-#gem 'simple_navigation_renderers', path: "../simple_navigation_renderers" #for local testing
+#gem 'simple_navigation_renderers', path: '../simple_navigation_renderers' #for local testing
 gem 'bootstrap-will_paginate'
 
 #for admin panel
-# gem 'activeadmin', github: 'KosenkoDmitriy/activeadmin-1.0.0.pre', branch: '1.0.0.pre'
-# gem 'activeadmin', github: 'gregbell/active_admin', tag: 'v1.0.0.pre'
-# gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0'
-gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre1'
-# gem 'yousty-activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.0.0.pre'
-gem 'devise'
+gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.1.0'
+gem 'jquery-ui-rails', '~> 5.0.1'
+gem 'devise', '~> 3.4.0'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
-gem "paperclip", "~> 4.2" #for image support
+gem 'paperclip', '~> 4.2' #for image support
 gem 'formtastic', '~> 3.1'
 #end for admin panel
 
@@ -66,7 +61,12 @@ gem 'fancybox2-rails', '~> 0.2.8'
 
 #gem 'meta-tags' #seo
 gem 'themes_on_rails'
-gem "breadcrumbs_on_rails"
+gem 'breadcrumbs_on_rails'
 
 gem 'simple_captcha2', require: 'simple_captcha'
 
+gem 'logger', '~> 1.2.8'
+#gem 'rails-html-sanitizer', '~> 1.4'
+gem 'loofah', '~> 2.20.0'
+gem 'kaminari', '= 1.0.1'
+gem 'will_paginate', '= 3.0.6'
