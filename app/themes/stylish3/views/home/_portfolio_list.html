@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row" id="gallery">
                 <div class="col-xs-12">
-                <% if root_path == '/' %>
+                <% if request.original_fullpath == '/' %>
                     <h4>Проекты</h4>
                 <% else $>
                     <h5><%= render_breadcrumbs :separator => ' > ' %></h5>
