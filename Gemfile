@@ -2,13 +2,13 @@ source 'https://rubygems.org'
 # ruby 2.2.3
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.9'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '~> 4.0.5'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 2.5.3'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -17,7 +17,7 @@ gem 'therubyracer', '0.12.3'
 #gem uninstall libv8 && gem install libv8 -v '3.16.14.19' -- --with-system-v8
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.1'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -48,12 +48,14 @@ gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_
 gem 'bootstrap-will_paginate'
 
 #for admin panel
-gem 'activeadmin', github: 'gregbell/active_admin'
+#gem 'activeadmin', github: 'gregbell/active_admin'
 #gem 'activeadmin', github: 'activeadmin'
-gem 'devise'
+gem 'activeadmin', github: 'activeadmin/activeadmin', tag: 'v1.1.0'
+gem 'jquery-ui-rails', '~> 5.0.1'
+gem 'devise', '~> 3.4.0'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
 gem "paperclip", "~> 4.2" #for image support
-gem 'formtastic', '~> 3.0'
+gem 'formtastic', '~> 3.1'
 #end for admin panel
 
 #gem 'simple-navigation-bootstrap'
@@ -69,6 +71,16 @@ gem 'themes_on_rails', '0.4.0', path: 'vendor/gems/themes_on_rails'
 gem "breadcrumbs_on_rails"
 
 gem 'globalize', '~> 4.0.2'
-gem "activeadmin-globalize", github: 'stefanoverna/activeadmin-globalize', branch: 'master'
+gem "activeadmin-globalize", '~> 1.0.0.pre'
+#, github: 'stefanoverna/activeadmin-globalize', branch: 'master'
 
 gem 'simple_captcha2', require: 'simple_captcha'
+
+gem 'logger', '~> 1.2.8'
+#gem 'rails-html-sanitizer', '~> 1.4'
+gem 'loofah', '~> 2.20.0'
+gem 'kaminari', '= 1.0.1'
+gem 'will_paginate', '= 3.0.6'
+
+#
+#gem 'execjs', '~> 2.2.1'
