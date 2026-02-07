@@ -42,7 +42,7 @@
 
         <div role="tabpanel" id="<%=gallery.try(:id)%>" class="tab-pane <%= @galleries.first.id == gallery.id ? 'active' : '' %>">
           <div class="row">
-            <% gallery.projects.with_images.each do |prj| %>
+            <% gallery.projects.where(is_draft: false).with_images.each do |prj| %>
 
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
@@ -101,7 +101,7 @@
                   <p>
 
                   
-                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary <%=prj.try(:url) || 'disabled'%>"
+                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary disabled <%=prj.try(:url) || 'disabled'%>"
                       role="button">
                       <!--<span class="glyphicon glyphicon-globe"></span>-->
                       <%=t("visit_url")%></a>

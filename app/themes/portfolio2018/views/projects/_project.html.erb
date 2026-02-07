@@ -57,7 +57,7 @@
       <%=prj.try(:text).try(:html_safe)%>
     </p>
     <p>
-      <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success <%=prj.try(:url) || 'disabled'%>" role="button">
+      <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success disabled <%=prj.try(:url) || 'disabled'%>" role="button">
         <span class="glyphicon glyphicon-globe"></span>
         <%=t("visit_url")%>
       </a>
