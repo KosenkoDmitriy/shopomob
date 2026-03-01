@@ -1,14 +1,18 @@
 ActiveAdmin.register Project do
-  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, 
-  images_attributes: [:id, :image, :_destroy], 
-  gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy], 
-  galleries_attributes: [:id, :title, :_destroy], 
+  permit_params :title, :subtitle, :text, :tags, :url, :is_draft, :order_id,
+  images_attributes: [:id, :image, :_destroy],
+  gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy],
+  galleries_attributes: [:id, :title, :_destroy],
   translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
 
   form do |f|
+    f.inputs '' do
+      f.input :order_id
+    end
     f.translated_inputs I18n.t("project"), switch_locale: true do |f|
       f.input :title #, :label => 'title'
       f.input :subtitle
+#      f.input :order_id
       f.input :text
       f.input :tags
       f.input :url
@@ -38,6 +42,7 @@ ActiveAdmin.register Project do
     actions
 
     column :id
+    column :order_id
     column :images do |ad|
       image_tag ad.try(:images).try(:first).try(:image).try(:url, :thumb)
     end

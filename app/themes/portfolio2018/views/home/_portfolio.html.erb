@@ -42,7 +42,7 @@
 
         <div role="tabpanel" id="<%=gallery.try(:id)%>" class="tab-pane <%= @galleries.first.id == gallery.id ? 'active' : '' %>">
           <div class="row">
-            <% gallery.projects.where(is_draft: false).with_images.each do |prj| %>
+            <% gallery.projects.where(is_draft: false).order(order_id: :asc).with_images.each do |prj| %>
 
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
