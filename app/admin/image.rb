@@ -6,7 +6,7 @@ ActiveAdmin.register Image do
   #
 
 
-  permit_params :image, :title, :text, :url, translations_attributes: [:id, :locale, :title, :text]
+  permit_params :image, :title, :text, :url, :is_cover, translations_attributes: [:id, :locale, :title, :text]
   #
   # or
   #
@@ -43,6 +43,7 @@ ActiveAdmin.register Image do
 
     f.inputs "image" do
       f.file_field :image
+      f.input :is_cover
       #f.input :url
       #  file_field_tag("image_attached_images_image", multiple: true, name: "images[attached_images_attributes][][image]")
     end

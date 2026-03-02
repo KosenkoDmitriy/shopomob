@@ -1,6 +1,6 @@
 ActiveAdmin.register Project do
   permit_params :title, :subtitle, :text, :tags, :url, :is_draft, :order_id,
-  images_attributes: [:id, :image, :_destroy],
+  images_attributes: [:id, :image, :is_cover, :_destroy],
   gallery_projects_attributes: [:id, :gallery_id, :project_id, :_destroy],
   galleries_attributes: [:id, :title, :_destroy],
   translations_attributes: [:id, :locale, :title, :subtitle, :text, :tags, :url]
@@ -23,6 +23,7 @@ ActiveAdmin.register Project do
 
       f.has_many :images, :heading => 'Images' do |ff|
         ff.input :image, :label => "Image", :hint => ff.template.image_tag(ff.object.image.url(:thumb))
+        ff.input :is_cover, :label => "Is Cover Image"
         ff.input :_destroy, :as => :boolean, :required => false, :label => I18n.t('remove')
       end
 

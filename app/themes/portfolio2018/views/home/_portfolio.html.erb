@@ -47,68 +47,32 @@
               <div class="thumbnail">
                 <div class="caption">
                   <h3>
-                  <a style="cursor:pointer;" data-toggle="modal" data-target="#projectModalId" 
-                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
-                    <%=prj.try(:title)%>
-                  </a>
-                  <!--<a href="<%=project_url(prj) || '#projects'%>" role="button">
-                    <%=prj.try(:title)%>
-                  </a>-->
+                    <a href="<%=project_url(prj) || '#projects'%>" role="button">
+                      <%=prj.try(:title)%>
+                    </a>
                   </h3>
 
                   <p>
                     <!-- Start Carousel -->
                     <div id="carousel-project-image<%=prj.id%>" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <% prj.images.each do |image| %>
-                          <% if prj.images.count > 1 %>
-                            <li data-target="#carousel-project-image<%=prj.id%>" data-slide-to="<%=image.id%>" class="<%= prj.images.first.id == image.id ? 'active' : '' %>"></li>
-                          <% end %>
-                        <% end %>
-                      </ol>
-
-                      <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
-                        <% if prj.images.count == 0 %>
-                          <%= image_tag("portfolio2018/no_image/NoPhoto.png", class: "img-fluid center-block", style: "height:190px", alt: "no picture") %>
-                        <% end %>
-
-                        <% prj.images.each do |image| %>  
-                        <div class="item <%= prj.images.first.id == image.id ? 'active' : '' %>">
-                          <%= image.present? ? image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) : '' %>
-                          <div class="carousel-caption">
-                            <%#=prj.try(:title)#%>
-                          </div>
-                        </div>
-                        <% end %>
-                      </div>
-                      <% if prj.images.count > 1 %>
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel-project-image<%=prj.id%>" role="button"
-                        data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel-project-image<%=prj.id%>" role="button"
-                        data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                      <% end %>
-
+                            <div class="item active">
+                                <% cover_image = prj.cover_image %>                                
+                                <a style="cursor:pointer;" data-toggle="modal" data-target="#projectModalId" 
+                      data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
+                                  <% if prj.images.count > 0 %>
+                                    <%=image_tag(cover_image.try(:image).try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: cover_image.try(:title)) %>
+                                  <% else %>
+                                    <%=image_tag("portfolio2018/no_image/NoPhoto.png", class: "img-fluid center-block", style: "height:190px", alt: "no picture") %>
+                                  <% end %>
+                                </a>                            
+                            </div>
+                        
+                      </div>                       
                     </div>
                     <!-- End Carousel -->
                   </p>
-                  <!--<p>
-                    <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary disabled <%=prj.try(:url) || 'disabled'%>" role="button">
-                      <%=t("visit_url")%>
-                    </a>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#projectModalId" 
-                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
-                      <%=t("more_details")%>
-                    </button>
-                  </p>-->
+                   
                 </div>
               </div>
             </div>

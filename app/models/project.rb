@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   scope :active, -> { where(is_draft: false) }
   scope :with_images, -> { joins(:images).distinct }
-
+  
   translates :title, :subtitle, :text, :tags, :url
   active_admin_translates :title, :subtitle, :text, :tags, :url
   
@@ -12,4 +12,8 @@ class Project < ActiveRecord::Base
   has_many :gallery_projects
   has_many :galleries, through: :gallery_projects
   accepts_nested_attributes_for :gallery_projects, :allow_destroy => true
+
+  def cover_image
+    images.where(is_cover: true).first || images.first
+  end
 end
