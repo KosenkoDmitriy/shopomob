@@ -48,7 +48,7 @@ gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_
 gem 'bootstrap-will_paginate'
 
 #for admin panel
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'#, tag: 'v1.0.0'
 #gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
@@ -70,5 +70,5 @@ gem "breadcrumbs_on_rails"
 
 gem 'globalize', '~> 4.0.2'
 gem "activeadmin-globalize", github: 'stefanoverna/activeadmin-globalize', branch: 'master'
-
+#gem 'activeadmin-globalize', '~> 1.0.0.pre'
 gem 'simple_captcha2', require: 'simple_captcha'

@@ -38,10 +38,11 @@
       <!-- Tab panes -->
       <div class="tab-content">
         <% @galleries.each do |gallery| %>
-          
+
+
         <div role="tabpanel" id="<%=gallery.try(:id)%>" class="tab-pane <%= @galleries.first.id == gallery.id ? 'active' : '' %>">
           <div class="row">
-            <% gallery.projects.where(is_draft: false).order(order_id: :asc).each do |prj| %>
+            <% gallery.projects.where(is_draft: false).order(order_id: :asc).with_images.each do |prj| %>
 
             <div class="col-sm-6 col-md-4">
               <div class="thumbnail">
@@ -66,14 +67,13 @@
 
                       <!-- Wrapper for slides -->
                       <div class="carousel-inner" role="listbox">
-                        <% if prj.images.count == 0 %>
-                          <%= image_tag("portfolio2018/no_image/NoPhoto.png", class: "img-fluid center-block", style: "height:190px", alt: "no picture") %>
-                        <% end %>
-
-                        <% prj.images.each do |image| %>  
+                        <% prj.images.each do |image| %>
+                          
                         <div class="item <%= prj.images.first.id == image.id ? 'active' : '' %>">
                           <% if image.present? %>
                           <%= image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) %>
+                          <% else %>
+                          <%= image_tag("portfolio2018/no_image/NoPhoto.png") %>
                           <% end %>
                           <div class="carousel-caption">
                             <%#=prj.try(:title)#%>
