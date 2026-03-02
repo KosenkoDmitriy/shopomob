@@ -40,7 +40,7 @@ jQuery(window).load(function(){
     //project.images.forEach(function(image)
     project.images.map((image) =>
     {
-      return modal.find('#projectModalGalleryId').append(image.tag || '')
+      return modal.find('#projectModalGalleryId').append(image.tag + "<br/>" || '')
     })
   })
 })

@@ -47,20 +47,24 @@
               <div class="thumbnail">
                 <div class="caption">
                   <h3>
-                  <a href="<%=project_url(prj) || '#projects'%>" role="button">
+                  <a style="cursor:pointer;" data-toggle="modal" data-target="#projectModalId" 
+                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
                     <%=prj.try(:title)%>
                   </a>
+                  <!--<a href="<%=project_url(prj) || '#projects'%>" role="button">
+                    <%=prj.try(:title)%>
+                  </a>-->
                   </h3>
-                  <p>
 
+                  <p>
                     <!-- Start Carousel -->
                     <div id="carousel-project-image<%=prj.id%>" class="carousel slide" data-ride="carousel">
                       <!-- Indicators -->
                       <ol class="carousel-indicators">
                         <% prj.images.each do |image| %>
-                        <% if prj.images.count > 1 %>
-                        <li data-target="#carousel-project-image<%=prj.id%>" data-slide-to="<%=image.id%>" class="<%= prj.images.first.id == image.id ? 'active' : '' %>"></li>
-                        <% end %>
+                          <% if prj.images.count > 1 %>
+                            <li data-target="#carousel-project-image<%=prj.id%>" data-slide-to="<%=image.id%>" class="<%= prj.images.first.id == image.id ? 'active' : '' %>"></li>
+                          <% end %>
                         <% end %>
                       </ol>
 
@@ -72,9 +76,7 @@
 
                         <% prj.images.each do |image| %>  
                         <div class="item <%= prj.images.first.id == image.id ? 'active' : '' %>">
-                          <% if image.present? %>
-                          <%= image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) %>
-                          <% end %>
+                          <%= image.present? ? image_tag(image.image.try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: image.title) : '' %>
                           <div class="carousel-caption">
                             <%#=prj.try(:title)#%>
                           </div>
@@ -98,21 +100,15 @@
                     </div>
                     <!-- End Carousel -->
                   </p>
-                  <p>
-
-                  
-                  <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary disabled <%=prj.try(:url) || 'disabled'%>"
-                      role="button">
-                      <!--<span class="glyphicon glyphicon-globe"></span>-->
-                      <%=t("visit_url")%></a>
-                      <!--
-                      <a href="<%=project_url(prj) || '#projects'%>" class="btn btn-default" role="button">
-                      <%=t("more_details")%></a>
-                      -->
-                      <%prj.text = prj.try(:text).try(:html_safe) %>
+                  <!--<p>
+                    <a href="<%=prj.try(:url) || '#projects'%>" class="btn btn-success btn-outline-primary disabled <%=prj.try(:url) || 'disabled'%>" role="button">
+                      <%=t("visit_url")%>
+                    </a>
                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#projectModalId" 
-                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>"><%=t("more_details")%> </button>
-                  </p>
+                    data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
+                      <%=t("more_details")%>
+                    </button>
+                  </p>-->
                 </div>
               </div>
             </div>

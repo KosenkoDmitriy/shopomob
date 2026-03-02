@@ -42,14 +42,12 @@ gem 'bcrypt', '~> 3.1.18'
 
 #gem 'simple-navigation'
 #gem 'simple-navigation-bootstrap'
-#gem 'simple_navigation_renderers'
 gem 'simple_navigation_renderers', :github => 'KosenkoDmitriy/simple_navigation_renderers'
 #gem 'simple_navigation_renderers', path: "../simple_navigation_renderers" #for local testing
 gem 'bootstrap-will_paginate'
 
 #for admin panel
-gem 'activeadmin', github: 'gregbell/active_admin'#, tag: 'v1.0.0'
-#gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'russian', '~> 0.6.0' #for fix translation missing: ru.time.formats.long
 gem "paperclip", "~> 4.2" #for image support
@@ -64,7 +62,6 @@ gem 'formtastic', '~> 3.0'
 gem 'fancybox2-rails', '~> 0.2.8'
 
 #gem 'meta-tags' #seo
-# gem 'themes_on_rails'
 gem 'themes_on_rails', '0.4.0', path: 'vendor/gems/themes_on_rails'
 gem "breadcrumbs_on_rails"
 
