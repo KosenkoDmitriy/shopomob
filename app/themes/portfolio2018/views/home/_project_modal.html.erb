@@ -31,7 +31,7 @@ jQuery(window).load(function(){
     modal.find('.modal-title').text(project.project.title || '')
     modal.find('.modal-subtitle').text(project.project.subtitle || '')
     modal.find('.modal-tags').text(project.project.tags || '')
-    modal.find('#projectText').text(project.project.text || '')
+    modal.find('#projectText').html(project.project.text || '')
     //modal.find('.modal-body input').val(project.project.title || '')
     modal.find('#projectUrl').attr("href", project.project.url || '')
 
