@@ -8,7 +8,13 @@
         <h5 class="modal-tags" id="projectModalTagsLabel"></h5>
       </div>
       <div class="modal-body">
-        <div id="projectText"></div>
+      
+        <div id="projectTextShort"></div>
+        <a id="more_less_link" href="#more_less" data-toggle="collapse"></a>
+        <div id="more_less" class="collapse">
+            <div id="projectText"></div>
+        </div>
+
         <div id="projectModalGalleryId">
         </div>
       </div>
@@ -21,17 +27,27 @@
 </div>
 <script type="text/javascript">
 jQuery(window).load(function(){
+
   $('#projectModalId').on('show.bs.modal', function (event) {
+
     var button = $(event.relatedTarget) // Button that triggered the modal
     var project = button.data('project') // Extract info from data-* attributes
     // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
     // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
     var modal = $(this)
-    
+
+    modal.find('#more_less').attr('class', 'collapse')
+
+    if (!project.stext2)
+      modal.find('#more_less_link').text('')
+    else
+      modal.find('#more_less_link').text('More...')
+
     modal.find('.modal-title').text(project.project.title || '')
     modal.find('.modal-subtitle').text(project.project.subtitle || '')
     modal.find('.modal-tags').text(project.project.tags || '')
-    modal.find('#projectText').html(project.project.text || '')
+    modal.find('#projectTextShort').html(project.stext1 || '')
+    modal.find('#projectText').html(project.stext2 || '')
     //modal.find('.modal-body input').val(project.project.title || '')
     modal.find('#projectUrl').attr("href", project.project.url || '')
 

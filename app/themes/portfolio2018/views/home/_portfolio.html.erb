@@ -59,7 +59,7 @@
                             <div class="item active">
                                 <% cover_image = prj.cover_image %>                                
                                 <a style="cursor:pointer;" data-toggle="modal" data-target="#projectModalId" 
-                      data-project="<%={project: prj, images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
+                      data-project="<%={project: prj, stext1: prj.try(:text).try(:truncate, 150, omission: '...'), stext2: prj.try(:text).try(:slice, 147, 100000), images: prj.images.map{ |image| {url:image.try(:image).try(:url, :original), tag: image_tag(image.image.try(:url, :original), class: 'img-responsive center-block')} }}.to_json()%>">
                                   <% if prj.images.count > 0 %>
                                     <%=image_tag(cover_image.try(:image).try(:url, :small), class: "img-fluid center-block", style: "height:190px", alt: cover_image.try(:title)) %>
                                   <% else %>
